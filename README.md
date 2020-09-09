@@ -1,9 +1,17 @@
 # Pickle.finance Contracts
 
-Masterchef - 0xee61135f0584bad5a6c80f4457c78d4670dfcf50
+PickleToken: 0xbb401399dE63Cd38A09308446C346Ad020A5abCb
 
-Timelock - 0xc2d82a3e2bae0a50f4aeb438285804354b467bc0
+Timelock: 0xc2d82a3e2bae0a50f4aeb438285804354b467bc0
 
-PickleToken - 0xcb9e106e86b3c2349ea7c6dda63cd8b8267135aa
+Masterchef: 0x931f5e2a76cee70c9a8da00a206f086a76fd9180
 
-PickleJar - 0x9299c58d5bb83d1109c27bd3682c7f03eb42966a
+PickleJar: 0x9299c58d5bb83d1109c27bd3682c7f03eb42966a
+
+## Ownerships
+
+Timelock's owner = 0x9d074E37d408542FD38be78848e8814AFB38db17 (Gnosis multisig)
+
+MasterChef's owner = Timelock
+
+PickleToken's owner = Masterchef
