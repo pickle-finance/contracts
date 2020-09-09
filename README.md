@@ -5,3 +5,5 @@ Masterchef - 0xee61135f0584bad5a6c80f4457c78d4670dfcf50
 Timelock - 0xc2d82a3e2bae0a50f4aeb438285804354b467bc0
 
 PickleToken - 0xcb9e106e86b3c2349ea7c6dda63cd8b8267135aa
+
+PickleJar - 0x9299c58d5bb83d1109c27bd3682c7f03eb42966a
