@@ -26,8 +26,8 @@ Timelock's owner = Gnosis Multisig
 
 1 = USDT <> WETH = 0x0d4a11d5EEaaC28EC3F61d100daF4d40471f1852, 19.1% of block rewards
 
-1 = USDC <> WETH = 0xB4e16d0168e52d35CaCD2c6185b44281Ec28C9Dc, 17% of block rewards
+2 = USDC <> WETH = 0xB4e16d0168e52d35CaCD2c6185b44281Ec28C9Dc, 17% of block rewards
 
-2 = DAI <> WETH = 0xA478c2975Ab1Ea89e8196811F51A7B7Ade33eB11, 5.75% of block rewards
+3 = DAI <> WETH = 0xA478c2975Ab1Ea89e8196811F51A7B7Ade33eB11, 5.75% of block rewards
 
 4 = SUSD <> WETH = 0xf80758aB42C3B07dA84053Fd88804bCB6BAA4b5c, 8.15% of block rewards
