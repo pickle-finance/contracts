@@ -6,7 +6,7 @@ Timelock: [0xc2d82a3e2bae0a50f4aeb438285804354b467bc0](https://etherscan.io/addr
 
 Masterchef: [0xbD17B1ce622d73bD438b9E658acA5996dc394b0d](https://etherscan.io/address/0xbD17B1ce622d73bD438b9E658acA5996dc394b0d)
 
-PickleJar: [0x9299c58d5bb83d1109c27bd3682c7f03eb42966a](https://etherscan.io/address/0x9299c58d5bb83d1109c27bd3682c7f03eb42966a)
+PickleJar: [0xc83d3a7e32467c453eb1ad99f2f5c6fce399df98](https://etherscan.io/address/0xc83d3a7e32467c453eb1ad99f2f5c6fce399df98)
 
 Gnosis Multisig (dev): [0x9d074E37d408542FD38be78848e8814AFB38db17](https://etherscan.io/address/0x9d074E37d408542FD38be78848e8814AFB38db17)
 
