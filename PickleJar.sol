@@ -217,6 +217,16 @@ contract PickleJar {
             msg.sender,
             now + 60
         );
+
+        // Refund sender any remaining tokens
+        IUniswapV2ERC20(weth).transfer(
+            msg.sender,
+            IUniswapV2ERC20(weth).balanceOf(address(this))
+        );
+        IUniswapV2ERC20(_to).transfer(
+            msg.sender,
+            IUniswapV2ERC20(_to).balanceOf(address(this))
+        );
     }
 
     function convertWETHPairWithPermit(
