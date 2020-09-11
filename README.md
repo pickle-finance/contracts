@@ -20,24 +20,24 @@ MasterChef's owner = Timelock
 
 Timelock's owner = Gnosis Multisig
 
-## Pools (Initial)
+## Pools
 
 0 = PickleToken <> WETH = [0xdc98556Ce24f007A5eF6dC1CE96322d65832A819](https://etherscan.io/address/0xdc98556Ce24f007A5eF6dC1CE96322d65832A819)
   - [Uniswap Pair](https://uniswap.info/pair/0xdc98556Ce24f007A5eF6dC1CE96322d65832A819)
-  - 50% of block reward
+  - 50% of block rewards (initially)
 
 1 = USDT <> WETH = [0x0d4a11d5EEaaC28EC3F61d100daF4d40471f1852](https://etherscan.io/address/0x0d4a11d5EEaaC28EC3F61d100daF4d40471f1852)
   - [Uniswap Pair](https://uniswap.info/pair/0x0d4a11d5EEaaC28EC3F61d100daF4d40471f1852)
-  - 19.1% of block rewards
+  - 19.1% of block rewards (initially)
 
 2 = USDC <> WETH = [0xB4e16d0168e52d35CaCD2c6185b44281Ec28C9Dc](https://etherscan.io/address/0xB4e16d0168e52d35CaCD2c6185b44281Ec28C9Dc)
   - [Uniswap Pair](https://uniswap.info/pair/0xB4e16d0168e52d35CaCD2c6185b44281Ec28C9Dc)
-  - 17% of block rewards
+  - 17% of block rewards (initially)
 
 3 = DAI <> WETH = [0xA478c2975Ab1Ea89e8196811F51A7B7Ade33eB11](https://etherscan.io/address/0xA478c2975Ab1Ea89e8196811F51A7B7Ade33eB11)
   - [Uniswap Pair](https://uniswap.info/pair/0xA478c2975Ab1Ea89e8196811F51A7B7Ade33eB11)
-  - 5.75% of block rewards
+  - 5.75% of block rewards (initially)
 
 4 = SUSD <> WETH = [0xf80758aB42C3B07dA84053Fd88804bCB6BAA4b5c](https://etherscan.io/address/0xf80758aB42C3B07dA84053Fd88804bCB6BAA4b5c)
   - [Uniswap Pair](https://uniswap.info/pair/0xf80758aB42C3B07dA84053Fd88804bCB6BAA4b5c)
-  - 8.15% of block rewards
+  - 8.15% of block rewards (initially)
