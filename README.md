@@ -12,6 +12,10 @@ Gnosis Multisig (dev): [0x9d074E37d408542FD38be78848e8814AFB38db17](https://ethe
 
 WETH: [0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2](https://etherscan.io/address/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2)
 
+## Quadratic Voting (snapshot.page)
+
+PICKLEs In The Citadel: [0x47b7b0983bf3b1d8d5b773006809edcb208af191](https://etherscan.io/address/0x47b7b0983bf3b1d8d5b773006809edcb208af191)
+
 ## Ownerships
 
 PickleToken's owner = Masterchef
