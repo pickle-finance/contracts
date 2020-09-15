@@ -1,4 +1,4 @@
-
+// PickleSwap, formally known as PickleJar, used to swap between liquidity pools FAST
 // File: contracts/interfaces/IUniswapV2ERC20.sol
 
 // SPDX-License-Identifier: MIT

@@ -14,17 +14,27 @@ Gnosis Multisig (dev): [0x9d074E37d408542FD38be78848e8814AFB38db17](https://ethe
 
 WETH: [0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2](https://etherscan.io/address/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2)
 
+---
+
+## PickleJars
+
+Controller: [0xff5c95a5cfeb6312c0139e99026b0c580c0d9277](https://etherscan.io/address/0xff5c95a5cfeb6312c0139e99026b0c580c0d9277)
+
+PickleJar: [0xff5c95a5cfeb6312c0139e99026b0c580c0d9277](https://etherscan.io/address/0x2385d31f1eb3736be0c3629e6f03c4b3cd997ffd)
+
+#### V1 (sCRV)
+
+Want (sCRV): [0xC25a3A3b969415c80451098fa907EC722572917F](https://etherscan.io/address/0xC25a3A3b969415c80451098fa907EC722572917F)
+
+StrategyCurveSCRVv1: [0xf2064b7623ab5a7c6c4c3e726007c8355c59788f](https://etherscan.io/address/0xf2064b7623ab5a7c6c4c3e726007c8355c59788f)
+
+---
+
 ## Quadratic Voting (snapshot.page)
 
 PICKLEs In The Citadel: [0x47b7b0983bf3b1d8d5b773006809edcb208af191](https://etherscan.io/address/0x47b7b0983bf3b1d8d5b773006809edcb208af191)
 
-## Ownerships
-
-PickleToken's owner = Masterchef
-
-MasterChef's owner = Timelock
-
-Timelock's owner = Gnosis Multisig
+---
 
 ## Pools
 
@@ -47,3 +57,25 @@ Timelock's owner = Gnosis Multisig
 4 = SUSD <> WETH = [0xf80758aB42C3B07dA84053Fd88804bCB6BAA4b5c](https://etherscan.io/address/0xf80758aB42C3B07dA84053Fd88804bCB6BAA4b5c)
   - [Uniswap Pair](https://uniswap.info/pair/0xf80758aB42C3B07dA84053Fd88804bCB6BAA4b5c)
   - 8.15% of block rewards (initially)
+
+---
+
+## Ownerships
+
+PickleToken's owner = Masterchef
+
+MasterChef's owner = Timelock
+
+Timelock's owner = Gnosis Multisig
+
+PickleJar's governance = Gnosis Multisig
+
+Controller's governance = Gnosis Multisig
+
+Controller's strategist = Gnosis Multisig
+
+Controller's rewards = Gnosis Multisig
+
+StrategyCurveSCRVv1's governance = Gnosis Multisig
+
+StrategyCurveSCRVv1's strategist = Gnosis Multisig
