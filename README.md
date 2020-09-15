@@ -20,7 +20,7 @@ WETH: [0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2](https://etherscan.io/address/
 
 Controller: [0xff5c95a5cfeb6312c0139e99026b0c580c0d9277](https://etherscan.io/address/0xff5c95a5cfeb6312c0139e99026b0c580c0d9277)
 
-PickleJar: [0xff5c95a5cfeb6312c0139e99026b0c580c0d9277](https://etherscan.io/address/0x2385d31f1eb3736be0c3629e6f03c4b3cd997ffd)
+PickleJar: [0x2385d31f1eb3736be0c3629e6f03c4b3cd997ffd](https://etherscan.io/address/0x2385d31f1eb3736be0c3629e6f03c4b3cd997ffd)
 
 #### V1 (sCRV)
 
