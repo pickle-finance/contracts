@@ -20,11 +20,11 @@ WETH: [0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2](https://etherscan.io/address/
 
 Controller: [0xff5c95a5cfeb6312c0139e99026b0c580c0d9277](https://etherscan.io/address/0xff5c95a5cfeb6312c0139e99026b0c580c0d9277)
 
-PickleJar: [0x2385d31f1eb3736be0c3629e6f03c4b3cd997ffd](https://etherscan.io/address/0x2385d31f1eb3736be0c3629e6f03c4b3cd997ffd)
-
 #### V1 (sCRV)
 
 Want (sCRV): [0xC25a3A3b969415c80451098fa907EC722572917F](https://etherscan.io/address/0xC25a3A3b969415c80451098fa907EC722572917F)
+
+psCRV (Pickle Jar): [0x2385d31f1eb3736be0c3629e6f03c4b3cd997ffd](https://etherscan.io/address/0x2385d31f1eb3736be0c3629e6f03c4b3cd997ffd)
 
 StrategyCurveSCRVv1: [0xf2064b7623ab5a7c6c4c3e726007c8355c59788f](https://etherscan.io/address/0xf2064b7623ab5a7c6c4c3e726007c8355c59788f)
 
