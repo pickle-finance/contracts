@@ -22,7 +22,7 @@ Controller: [0xff5c95a5cfeb6312c0139e99026b0c580c0d9277](https://etherscan.io/ad
 
 #### V1 (sCRV)
 
-Want (sCRV): [0xC25a3A3b969415c80451098fa907EC722572917F](https://etherscan.io/address/0xC25a3A3b969415c80451098fa907EC722572917F)
+sCRV (Want): [0xC25a3A3b969415c80451098fa907EC722572917F](https://etherscan.io/address/0xC25a3A3b969415c80451098fa907EC722572917F)
 
 psCRV (Pickle Jar): [0x2385d31f1eb3736be0c3629e6f03c4b3cd997ffd](https://etherscan.io/address/0x2385d31f1eb3736be0c3629e6f03c4b3cd997ffd)
 
