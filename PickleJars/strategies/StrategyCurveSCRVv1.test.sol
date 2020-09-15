@@ -177,7 +177,7 @@ contract PickleJarTest is DSTest {
 
             log_named_uint("ok", 2);
 
-            // Caller is given some stablecoin as gas compensation
+            // Caller is given some stablecoin as reward
             assertEq(callerRewards, _userAfter.sub(_userBefore));
 
             log_named_uint("ok", 3);
