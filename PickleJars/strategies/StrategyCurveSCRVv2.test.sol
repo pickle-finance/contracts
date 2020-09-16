@@ -178,6 +178,34 @@ contract StrategyCurveSCRVv2Test is DSTestApprox {
     }
 
     // **** Tests ***
+    
+    function test_withdraw() public {
+        _getSCRV(10000000 ether); // 1 million DAI
+        uint256 _scrv = IERC20(scrv).balanceOf(address(this));
+        IERC20(scrv).approve(address(pickleJar), _scrv);
+        pickleJar.deposit(_scrv);
+
+        // Deposits to strategy
+        pickleJar.earn();
+
+        // Fast forwards
+        hevm.warp(block.timestamp + 1 weeks);
+
+        strategy.harvest();
+
+        // Withdraws back to controller
+        uint256 _before = IERC20(scrv).balanceOf(address(controller));
+        controller.withdrawAll(scrv);
+        uint256 _after = IERC20(scrv).balanceOf(address(controller));
+
+        assertTrue(_after > _before);
+
+        _before = IERC20(scrv).balanceOf(address(this));
+        pickleJar.withdrawAll();
+        _after = IERC20(scrv).balanceOf(address(this));
+
+        assertTrue(_after > _before);
+    }
 
     function test_get_earn_harvest_rewards() public {
         User user = new User();
