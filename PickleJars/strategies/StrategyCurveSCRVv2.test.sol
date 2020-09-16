@@ -193,10 +193,10 @@ contract StrategyCurveSCRVv2Test is DSTestApprox {
 
         strategy.harvest();
 
-        // Withdraws back to controller
-        uint256 _before = IERC20(scrv).balanceOf(address(controller));
+        // Withdraws back to pickleJar
+        uint256 _before = IERC20(scrv).balanceOf(address(pickleJar));
         controller.withdrawAll(scrv);
-        uint256 _after = IERC20(scrv).balanceOf(address(controller));
+        uint256 _after = IERC20(scrv).balanceOf(address(pickleJar));
 
         assertTrue(_after > _before);
 
@@ -205,6 +205,9 @@ contract StrategyCurveSCRVv2Test is DSTestApprox {
         _after = IERC20(scrv).balanceOf(address(this));
 
         assertTrue(_after > _before);
+
+        // Gained some interest
+        assertTrue(_after > _scrv);
     }
 
     function test_get_earn_harvest_rewards() public {
