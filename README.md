@@ -30,6 +30,14 @@ StrategyCurveSCRVv1: [0xf2064b7623ab5a7c6c4c3e726007c8355c59788f](https://ethers
 
 StrategyCurveSCRVv2: [0xf856e784b2083dd77f3caa4613896922f6e1ecff](https://etherscan.io/address/0xf856e784b2083dd77f3caa4613896922f6e1ecff)
 
+#### 0.69(a) (UNIv2-ETH-DAI LP)
+
+UNIv2-ETH-DAI LP (Want): [0xA478c2975Ab1Ea89e8196811F51A7B7Ade33eB11](https://etherscan.io/address/0xA478c2975Ab1Ea89e8196811F51A7B7Ade33eB11)
+
+psUNIv2-ETH-DAI (Pickle Jar): [0xf79Ae82DCcb71ca3042485c85588a3E0C395D55b](https://etherscan.io/address/0xf79Ae82DCcb71ca3042485c85588a3E0C395D55b)
+
+StrategyUniEthDaiLpV1: [0xC732a299684726A9feb2A72FF29f1aF785940747](https://etherscan.io/address/0xC732a299684726A9feb2A72FF29f1aF785940747)
+
 ---
 
 ## Quadratic Voting (snapshot.page)
