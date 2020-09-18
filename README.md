@@ -38,6 +38,16 @@ psUNIv2-ETH-DAI (Pickle Jar): [0xf79Ae82DCcb71ca3042485c85588a3E0C395D55b](https
 
 StrategyUniEthDaiLpV1: [0xCb6C15c01232C679f3362B07Eb958E91a617da36](https://etherscan.io/address/0xCb6C15c01232C679f3362B07Eb958E91a617da36)
 
+
+#### 0.69(b) (UNIv2-ETH-USDC LP)
+
+UNIv2-ETH-USDC LP (Want): [0xB4e16d0168e52d35CaCD2c6185b44281Ec28C9Dc](https://etherscan.io/address/0xB4e16d0168e52d35CaCD2c6185b44281Ec28C9Dc)
+
+psUNIv2-ETH-USDC (Pickle Jar): [0x46206E9BDaf534d057be5EcF231DaD2A1479258B](https://etherscan.io/address/0x46206E9BDaf534d057be5EcF231DaD2A1479258B)
+
+StrategyUniEthUsdcLpV1: [0x93Bb0DF4bf901e44E4c998543CD7284015694923](https://etherscan.io/address/0x93Bb0DF4bf901e44E4c998543CD7284015694923)
+
+
 ---
 
 ## Quadratic Voting (snapshot.page)
