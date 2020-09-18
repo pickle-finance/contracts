@@ -1093,6 +1093,11 @@ contract StrategyUniEthDaiLpV1 {
 
     // **** Setters ****
 
+    function setKeepUNI(uint256 _keepUNI) external {
+        require(msg.sender == governance, "!governance");
+        keepUNI = _keepUNI;
+    }
+
     function setWithdrawalFee(uint256 _withdrawalFee) external {
         require(msg.sender == governance, "!governance");
         withdrawalFee = _withdrawalFee;
