@@ -26,8 +26,6 @@ sCRV (Want): [0xC25a3A3b969415c80451098fa907EC722572917F](https://etherscan.io/a
 
 psCRV (Pickle Jar): [0x2385d31f1eb3736be0c3629e6f03c4b3cd997ffd](https://etherscan.io/address/0x2385d31f1eb3736be0c3629e6f03c4b3cd997ffd)
 
-StrategyCurveSCRVv1: [0xf2064b7623ab5a7c6c4c3e726007c8355c59788f](https://etherscan.io/address/0xf2064b7623ab5a7c6c4c3e726007c8355c59788f)
-
 StrategyCurveSCRVv2: [0xf856e784b2083dd77f3caa4613896922f6e1ecff](https://etherscan.io/address/0xf856e784b2083dd77f3caa4613896922f6e1ecff)
 
 #### 0.69(a) (UNIv2-ETH-DAI LP)
@@ -36,7 +34,7 @@ UNIv2-ETH-DAI LP (Want): [0xA478c2975Ab1Ea89e8196811F51A7B7Ade33eB11](https://et
 
 psUNIv2-ETH-DAI (Pickle Jar): [0xf79Ae82DCcb71ca3042485c85588a3E0C395D55b](https://etherscan.io/address/0xf79Ae82DCcb71ca3042485c85588a3E0C395D55b)
 
-StrategyUniEthDaiLpV1: [0xCb6C15c01232C679f3362B07Eb958E91a617da36](https://etherscan.io/address/0xCb6C15c01232C679f3362B07Eb958E91a617da36)
+StrategyUniEthDaiLpV2: [0xa39412C169d15Dd1163B0F7d0d28BA696fAC4520](https://etherscan.io/address/0xa39412C169d15Dd1163B0F7d0d28BA696fAC4520)
 
 
 #### 0.69(b) (UNIv2-ETH-USDC LP)
@@ -45,7 +43,7 @@ UNIv2-ETH-USDC LP (Want): [0xB4e16d0168e52d35CaCD2c6185b44281Ec28C9Dc](https://e
 
 psUNIv2-ETH-USDC (Pickle Jar): [0x46206E9BDaf534d057be5EcF231DaD2A1479258B](https://etherscan.io/address/0x46206E9BDaf534d057be5EcF231DaD2A1479258B)
 
-StrategyUniEthUsdcLpV1: [0x93Bb0DF4bf901e44E4c998543CD7284015694923](https://etherscan.io/address/0x93Bb0DF4bf901e44E4c998543CD7284015694923)
+StrategyUniEthUsdcLpV2: [0xf92b0916d938ec57dea03de4806846eee7c0cabe](https://etherscan.io/address/0xf92b0916d938ec57dea03de4806846eee7c0cabe)
 
 #### 0.69(c) (UNIv2-ETH-USDT LP)
 
@@ -53,7 +51,7 @@ UNIv2-ETH-USDT LP (Want): [0x0d4a11d5EEaaC28EC3F61d100daF4d40471f1852](https://e
 
 psUNIv2-ETH-USDT (Pickle Jar): [0x3a41AB1e362169974132dEa424Fb8079Fd0E94d8](https://etherscan.io/address/0x3a41AB1e362169974132dEa424Fb8079Fd0E94d8)
 
-StrategyUniEthUsdtLpV1: [0xa7edC2905Ae0bBdBE24F24B0962DF77DC64348F1](https://etherscan.io/address/0xa7edC2905Ae0bBdBE24F24B0962DF77DC64348F1)
+StrategyUniEthUsdtLpV2: [0x6cb797f795bbef9381fc299e3d707c22e2559893](https://etherscan.io/address/0x6cb797f795bbef9381fc299e3d707c22e2559893)
 
 
 ---
