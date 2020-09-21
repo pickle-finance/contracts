@@ -84,6 +84,14 @@ PICKLEs In The Citadel: [0x47b7b0983bf3b1d8d5b773006809edcb208af191](https://eth
   - [Uniswap Pair](https://uniswap.info/pair/0xf80758aB42C3B07dA84053Fd88804bCB6BAA4b5c)
   - 8.15% of block rewards (initially)
 
+5 = pUNIDAI = [0xf79Ae82DCcb71ca3042485c85588a3E0C395D55b](https://etherscan.io/address/0xf79Ae82DCcb71ca3042485c85588a3E0C395D55b)
+
+6 = pUNIUSDC = [0x46206E9BDaf534d057be5EcF231DaD2A1479258B](https://etherscan.io/address/0x46206E9BDaf534d057be5EcF231DaD2A1479258B)
+
+7 = pUNIUSDT = [0x3a41AB1e362169974132dEa424Fb8079Fd0E94d8](https://etherscan.io/address/0x3a41AB1e362169974132dEa424Fb8079Fd0E94d8)
+
+8 = psCRV = [0x2385D31f1EB3736bE0C3629E6f03C4b3cd997Ffd](https://etherscan.io/address/0x2385D31f1EB3736bE0C3629E6f03C4b3cd997Ffd)
+
 ---
 
 ## Ownerships
