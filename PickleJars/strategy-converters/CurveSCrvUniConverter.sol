@@ -1,4 +1,4 @@
-// hevm: flattened sources of src/strategies/strategy-uni-eth-usdt-lp-v2.sol
+// hevm: flattened sources of src/strategy-converters/curve-scrv-uni-converter.sol
 pragma solidity >=0.4.23 >=0.6.0 <0.7.0 >=0.6.2 <0.7.0 >=0.6.7 <0.7.0;
 
 ////// src/interfaces/controller.sol
@@ -17,7 +17,124 @@ interface IController {
 
     function withdraw(address, uint256) external;
 
+    function freeWithdraw(address, uint256) external;
+
     function earn(address, uint256) external;
+}
+
+////// src/interfaces/curve.sol
+
+/* pragma solidity ^0.6.2; */
+
+interface ICurveFi {
+    function get_virtual_price() external view returns (uint256);
+
+    function add_liquidity(uint256[4] calldata amounts, uint256 min_mint_amount)
+        external;
+
+    function remove_liquidity_imbalance(
+        uint256[4] calldata amounts,
+        uint256 max_burn_amount
+    ) external;
+
+    function remove_liquidity(uint256 _amount, uint256[4] calldata amounts)
+        external;
+
+    function exchange(
+        int128 from,
+        int128 to,
+        uint256 _from_amount,
+        uint256 _min_to_amount
+    ) external;
+
+    function balances(int128) external view returns (uint256);
+}
+
+interface ICurveZap {
+    function add_liquidity(
+        uint256[4] calldata uamounts,
+        uint256 min_mint_amount
+    ) external;
+
+    function remove_liquidity(uint256 _amount, uint256[4] calldata min_uamounts)
+        external;
+
+    function remove_liquidity_imbalance(
+        uint256[4] calldata uamounts,
+        uint256 max_burn_amount
+    ) external;
+
+    function calc_withdraw_one_coin(uint256 _token_amount, int128 i)
+        external
+        returns (uint256);
+
+    function remove_liquidity_one_coin(
+        uint256 _token_amount,
+        int128 i,
+        uint256 min_uamount
+    ) external;
+
+    function remove_liquidity_one_coin(
+        uint256 _token_amount,
+        int128 i,
+        uint256 min_uamount,
+        bool donate_dust
+    ) external;
+
+    function withdraw_donated_dust() external;
+
+    function coins(int128 arg0) external returns (address);
+
+    function underlying_coins(int128 arg0) external returns (address);
+
+    function curve() external returns (address);
+
+    function token() external returns (address);
+}
+
+interface ICurveGauge {
+    function deposit(uint256 _value) external;
+
+    function deposit(uint256 _value, address addr) external;
+
+    function balanceOf(address arg0) external view returns (uint256);
+
+    function withdraw(uint256 _value) external;
+
+    function withdraw(uint256 _value, bool claim_rewards) external;
+
+    function claim_rewards() external;
+
+    function claim_rewards(address addr) external;
+
+    function claimable_tokens(address addr) external returns (uint256);
+
+    function claimable_reward(address addr) external view returns (uint256);
+
+    function integrate_fraction(address arg0) external view returns (uint256);
+}
+
+interface ICurveMintr {
+    function mint(address) external;
+
+    function minted(address arg0, address arg1) external view returns (uint256);
+}
+
+interface ICurveVotingEscrow {
+    function locked(address arg0)
+        external
+        view
+        returns (int128 amount, uint256 end);
+
+    function locked__end(address _addr) external view returns (uint256);
+
+    function create_lock(uint256 _value, uint256 _unlock_time) external;
+
+    function increase_amount(uint256 _value) external;
+
+    function increase_unlock_time(uint256 _unlock_time) external;
+
+    function withdraw() external;
 }
 
 ////// src/lib/safe-math.sol
@@ -817,89 +934,6 @@ interface IJar is IERC20 {
     function earn() external;
 }
 
-////// src/interfaces/staking-rewards.sol
-
-/* pragma solidity ^0.6.2; */
-
-interface IStakingRewards {
-    function balanceOf(address account) external view returns (uint256);
-
-    function earned(address account) external view returns (uint256);
-
-    function exit() external;
-
-    function getReward() external;
-
-    function getRewardForDuration() external view returns (uint256);
-
-    function lastTimeRewardApplicable() external view returns (uint256);
-
-    function lastUpdateTime() external view returns (uint256);
-
-    function notifyRewardAmount(uint256 reward) external;
-
-    function periodFinish() external view returns (uint256);
-
-    function rewardPerToken() external view returns (uint256);
-
-    function rewardPerTokenStored() external view returns (uint256);
-
-    function rewardRate() external view returns (uint256);
-
-    function rewards(address) external view returns (uint256);
-
-    function rewardsDistribution() external view returns (address);
-
-    function rewardsDuration() external view returns (uint256);
-
-    function rewardsToken() external view returns (address);
-
-    function stake(uint256 amount) external;
-
-    function stakeWithPermit(
-        uint256 amount,
-        uint256 deadline,
-        uint8 v,
-        bytes32 r,
-        bytes32 s
-    ) external;
-
-    function stakingToken() external view returns (address);
-
-    function totalSupply() external view returns (uint256);
-
-    function userRewardPerTokenPaid(address) external view returns (uint256);
-
-    function withdraw(uint256 amount) external;
-}
-
-interface IStakingRewardsFactory {
-    function deploy(address stakingToken, uint256 rewardAmount) external;
-
-    function isOwner() external view returns (bool);
-
-    function notifyRewardAmount(address stakingToken) external;
-
-    function notifyRewardAmounts() external;
-
-    function owner() external view returns (address);
-
-    function renounceOwnership() external;
-
-    function rewardsToken() external view returns (address);
-
-    function stakingRewardsGenesis() external view returns (uint256);
-
-    function stakingRewardsInfoByStakingToken(address)
-        external
-        view
-        returns (address stakingRewards, uint256 rewardAmount);
-
-    function stakingTokens(uint256) external view returns (address);
-
-    function transferOwnership(address newOwner) external;
-}
-
 ////// src/interfaces/uniswapv2.sol
 
 
@@ -983,15 +1017,137 @@ interface UniswapRouterV2 {
     ) external payable returns (uint256[] memory amounts);
 }
 
-interface UniswapPair {
+interface IUniswapV2Pair {
+    event Approval(
+        address indexed owner,
+        address indexed spender,
+        uint256 value
+    );
+    event Transfer(address indexed from, address indexed to, uint256 value);
+
+    function name() external pure returns (string memory);
+
+    function symbol() external pure returns (string memory);
+
+    function decimals() external pure returns (uint8);
+
+    function totalSupply() external view returns (uint256);
+
+    function balanceOf(address owner) external view returns (uint256);
+
+    function allowance(address owner, address spender)
+        external
+        view
+        returns (uint256);
+
+    function approve(address spender, uint256 value) external returns (bool);
+
+    function transfer(address to, uint256 value) external returns (bool);
+
+    function transferFrom(
+        address from,
+        address to,
+        uint256 value
+    ) external returns (bool);
+
+    function DOMAIN_SEPARATOR() external view returns (bytes32);
+
+    function PERMIT_TYPEHASH() external pure returns (bytes32);
+
+    function nonces(address owner) external view returns (uint256);
+
+    function permit(
+        address owner,
+        address spender,
+        uint256 value,
+        uint256 deadline,
+        uint8 v,
+        bytes32 r,
+        bytes32 s
+    ) external;
+
+    event Mint(address indexed sender, uint256 amount0, uint256 amount1);
+    event Burn(
+        address indexed sender,
+        uint256 amount0,
+        uint256 amount1,
+        address indexed to
+    );
+    event Swap(
+        address indexed sender,
+        uint256 amount0In,
+        uint256 amount1In,
+        uint256 amount0Out,
+        uint256 amount1Out,
+        address indexed to
+    );
+    event Sync(uint112 reserve0, uint112 reserve1);
+
+    function MINIMUM_LIQUIDITY() external pure returns (uint256);
+
+    function factory() external view returns (address);
+
+    function token0() external view returns (address);
+
+    function token1() external view returns (address);
+
     function getReserves()
         external
         view
         returns (
             uint112 reserve0,
             uint112 reserve1,
-            uint32 blockTimestamp
+            uint32 blockTimestampLast
         );
+
+    function price0CumulativeLast() external view returns (uint256);
+
+    function price1CumulativeLast() external view returns (uint256);
+
+    function kLast() external view returns (uint256);
+
+    function mint(address to) external returns (uint256 liquidity);
+
+    function burn(address to)
+        external
+        returns (uint256 amount0, uint256 amount1);
+
+    function swap(
+        uint256 amount0Out,
+        uint256 amount1Out,
+        address to,
+        bytes calldata data
+    ) external;
+
+    function skim(address to) external;
+
+    function sync() external;
+}
+
+interface IUniswapV2Factory {
+    event PairCreated(
+        address indexed token0,
+        address indexed token1,
+        address pair,
+        uint256
+    );
+
+    function getPair(address tokenA, address tokenB)
+        external
+        view
+        returns (address pair);
+
+    function allPairs(uint256) external view returns (address pair);
+
+    function allPairsLength() external view returns (uint256);
+
+    function feeTo() external view returns (address);
+
+    function feeToSetter() external view returns (address);
+
+    function createPair(address tokenA, address tokenB)
+        external
+        returns (address pair);
 }
 
 ////// src/interfaces/usdt.sol
@@ -1007,359 +1163,154 @@ interface USDT {
     function transfer(address _to, uint256 _value) external;
 }
 
-////// src/strategies/strategy-uni-eth-usdt-lp-v2.sol
-// https://etherscan.io/address/0xF147b8125d2ef93FB6965Db97D6746952a133934
-
+////// src/strategy-converters/curve-scrv-uni-converter.sol
 
 /* pragma solidity ^0.6.2; */
 
 /* import "../lib/erc20.sol"; */
 /* import "../lib/safe-math.sol"; */
 
-/* import "../interfaces/usdt.sol"; */
 /* import "../interfaces/jar.sol"; */
-/* import "../interfaces/staking-rewards.sol"; */
+/* import "../interfaces/curve.sol"; */
+/* import "../interfaces/usdt.sol"; */
 /* import "../interfaces/uniswapv2.sol"; */
 /* import "../interfaces/controller.sol"; */
 
-contract StrategyUniEthUsdtLpV2 {
-    // v2 Uses uniswap for less gas
-    // We can roll back to v1 if the liquidity is there
-
-    using SafeERC20 for IERC20;
-    using Address for address;
+contract CurveSCrvUniConverter {
     using SafeMath for uint256;
 
-    // Staking rewards address for ETH/USDT LP providers
-    address
-        public constant rewards = 0x6C3e4cb2E96B01F4b866965A91ed4437839A121a;
+    // Curve's SUsdV2 Zap
+    address constant zap = 0xFCBa3E75865d2d561BE8D220616520c171F12851;
 
-    // want eth/usdt lp tokens
-    address public constant want = 0x0d4a11d5EEaaC28EC3F61d100daF4d40471f1852;
+    // Uniswap router
+    address constant univ2Router = 0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D;
 
-    // tokens we're farming
-    address public constant uni = 0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984;
+    address constant weth = 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2;
+    address constant dai = 0x6B175474E89094C44Da98b954EedeAC495271d0F;
+    address constant usdc = 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48;
+    address constant usdt = 0xdAC17F958D2ee523a2206206994597C13D831ec7;
+    address constant susd = 0x57Ab1ec28D129707052df4dF418D58a2D46d5f51;
 
-    // stablecoins
-    address public constant usdt = 0xdAC17F958D2ee523a2206206994597C13D831ec7;
+    // Converts Uni LP tokens to Uni LP tokens
+    function convert(
+        address _refundExcess,
+        address _fromWant,
+        address _toWant,
+        uint256 _wantAmount
+    ) external returns (uint256) {
+        // 1. Gets liquidity tokens from msg.sender
+        IERC20(_fromWant).transferFrom(msg.sender, address(this), _wantAmount);
 
-    // pickle token
-    address public constant pickle = 0x429881672B9AE42b8EbA0E26cD9C73711b891Ca5;
+        // 2. Which stablecoin do we want?
+        address toStablecoin = IUniswapV2Pair(_toWant).token0() == weth
+            ? IUniswapV2Pair(_toWant).token1()
+            : IUniswapV2Pair(_toWant).token0();
 
-    // weth
-    address public constant weth = 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2;
-
-    // burn address
-    address public constant burn = 0x000000000000000000000000000000000000dEaD;
-
-    // dex
-    address public univ2Router2 = 0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D;
-
-    // How much UNI tokens to keep (0%)
-    uint256 public keepUNI = 0;
-    uint256 public constant keepUNIMax = 10000;
-
-    // Fees ~4.5% in total
-    // - 3%  performance fee
-    // - 1.5%   used to burn pickles
-
-    // 3% of 98% = 2.94% of original 100%
-    uint256 public performanceFee = 300;
-    uint256 public constant performanceMax = 10000;
-
-    uint256 public burnFee = 150;
-    uint256 public constant burnMax = 10000;
-
-    uint256 public withdrawalFee = 50;
-    uint256 public constant withdrawalMax = 10000;
-
-    address public governance;
-    address public controller;
-    address public strategist;
-    address public timelock;
-
-    constructor(
-        address _governance,
-        address _strategist,
-        address _controller,
-        address _timelock
-    ) public {
-        governance = _governance;
-        strategist = _strategist;
-        controller = _controller;
-        timelock = _timelock;
-    }
-
-    // **** Views ****
-
-    function balanceOfWant() public view returns (uint256) {
-        return IERC20(want).balanceOf(address(this));
-    }
-
-    function balanceOfPool() public view returns (uint256) {
-        return IStakingRewards(rewards).balanceOf(address(this));
-    }
-
-    function balanceOf() public view returns (uint256) {
-        return balanceOfWant().add(balanceOfPool());
-    }
-
-    function getName() external pure returns (string memory) {
-        return "StrategyUniEthUsdtLpV2";
-    }
-
-    // **** Setters ****
-
-    function setKeepUNI(uint256 _keepUNI) external {
-        require(msg.sender == governance, "!governance");
-        keepUNI = _keepUNI;
-    }
-
-    function setWithdrawalFee(uint256 _withdrawalFee) external {
-        require(msg.sender == governance, "!governance");
-        withdrawalFee = _withdrawalFee;
-    }
-
-    function setPerformanceFee(uint256 _performanceFee) external {
-        require(msg.sender == governance, "!governance");
-        performanceFee = _performanceFee;
-    }
-
-    function setBurnFee(uint256 _burnFee) external {
-        require(msg.sender == governance, "!governance");
-        burnFee = _burnFee;
-    }
-
-    function setStrategist(address _strategist) external {
-        require(msg.sender == governance, "!governance");
-        strategist = _strategist;
-    }
-
-    function setGovernance(address _governance) external {
-        require(msg.sender == governance, "!governance");
-        governance = _governance;
-    }
-
-    function setController(address _controller) external {
-        require(msg.sender == governance, "!governance");
-        controller = _controller;
-    }
-
-    function setTimelock(address _timelock) external {
-        require(msg.sender == timelock, "!timelock");
-        timelock = _timelock;
-    }
-
-    // **** State Mutations ****
-
-    function deposit() public {
-        uint256 _want = IERC20(want).balanceOf(address(this));
-        if (_want > 0) {
-            IERC20(want).safeApprove(rewards, 0);
-            IERC20(want).approve(rewards, _want);
-            IStakingRewards(rewards).stake(_want);
-        }
-    }
-
-    // Controller only function for creating additional rewards from dust
-    function withdraw(IERC20 _asset) external returns (uint256 balance) {
-        require(msg.sender == controller, "!controller");
-        require(want != address(_asset), "want");
-        balance = _asset.balanceOf(address(this));
-        _asset.safeTransfer(controller, balance);
-    }
-
-    // Withdraw partial funds, normally used with a jar withdrawal
-    function withdraw(uint256 _amount) external {
-        require(msg.sender == controller, "!controller");
-        uint256 _balance = IERC20(want).balanceOf(address(this));
-        if (_balance < _amount) {
-            _amount = _withdrawSome(_amount.sub(_balance));
-            _amount = _amount.add(_balance);
-        }
-
-        uint256 _fee = _amount.mul(withdrawalFee).div(withdrawalMax);
-
-        IERC20(want).safeTransfer(IController(controller).rewards(), _fee);
-        address _jar = IController(controller).jars(address(want));
-        require(_jar != address(0), "!jar"); // additional protection so we don't burn the funds
-
-        IERC20(want).safeTransfer(_jar, _amount.sub(_fee));
-    }
-
-    // Withdraw all funds, normally used when migrating strategies
-    function withdrawAll() external returns (uint256 balance) {
-        require(msg.sender == controller, "!controller");
-        _withdrawAll();
-
-        balance = IERC20(want).balanceOf(address(this));
-
-        address _jar = IController(controller).jars(address(want));
-        require(_jar != address(0), "!jar"); // additional protection so we don't burn the funds
-        IERC20(want).safeTransfer(_jar, balance);
-    }
-
-    function _withdrawAll() internal {
-        _withdrawSome(balanceOfPool());
-    }
-
-    function _withdrawSome(uint256 _amount) internal returns (uint256) {
-        IStakingRewards(rewards).withdraw(_amount);
-        return _amount;
-    }
-
-    function brine() public {
-        harvest();
-    }
-
-    function harvest() public {
-        // Anyone can harvest it at any given time.
-        // I understand the possibility of being frontrun
-        // But ETH is a dark forest, and I wanna see how this plays out
-        // i.e. will be be heavily frontrunned?
-        //      if so, a new strategy will be deployed.
-
-        // Collects UNI tokens
-        IStakingRewards(rewards).getReward();
-        uint256 _uni = IERC20(uni).balanceOf(address(this));
-        if (_uni > 0) {
-            // 10% is locked up for future gov
-            uint256 _keepUNI = _uni.mul(keepUNI).div(keepUNIMax);
-            IERC20(uni).safeTransfer(
-                IController(controller).rewards(),
-                _keepUNI
-            );
-            _swap(uni, weth, _uni.sub(_keepUNI));
-        }
-
-        // Swap half WETH for USDT
-        uint256 _weth = IERC20(weth).balanceOf(address(this));
-        if (_weth > 0) {
-            // Burn some pickles first
-            uint256 _burnFee = _weth.mul(burnFee).div(burnMax);
-            _swap(weth, pickle, _burnFee);
-            IERC20(pickle).transfer(
-                burn,
-                IERC20(pickle).balanceOf(address(this))
-            );
-
-            _weth = _weth.sub(_burnFee);
-            _swap(weth, usdt, _weth.div(2));
-        }
-
-        // Adds in liquidity for ETH/usdt
-        _weth = IERC20(weth).balanceOf(address(this));
-        uint256 _usdt = IERC20(usdt).balanceOf(address(this));
-        if (_weth > 0 && _usdt > 0) {
-            IERC20(weth).safeApprove(univ2Router2, 0);
-            IERC20(weth).safeApprove(univ2Router2, _weth);
-
-            USDT(usdt).approve(univ2Router2, _usdt);
-
-            UniswapRouterV2(univ2Router2).addLiquidity(
-                weth,
-                usdt,
-                _weth,
-                _usdt,
-                0,
-                0,
-                address(this),
-                now + 60
-            );
-
-            // Donates DUST
-            IERC20(weth).transfer(
-                IController(controller).rewards(),
-                IERC20(weth).balanceOf(address(this))
-            );
-            USDT(usdt).transfer(
-                IController(controller).rewards(),
-                IERC20(usdt).balanceOf(address(this))
-            );
-        }
-
-        // We want to get back UNI ETH/usdt LP tokens
-        uint256 _want = IERC20(want).balanceOf(address(this));
-        if (_want > 0) {
-            // Performance fee
-            IERC20(want).safeTransfer(
-                IController(controller).rewards(),
-                _want.mul(performanceFee).div(performanceMax)
-            );
-
-            deposit();
-        }
-    }
-
-    // Emergency function call
-    function execute(address _target, bytes memory _data)
-        public
-        payable
-        returns (bytes memory response)
-    {
-        require(msg.sender == timelock, "!timelock");
-
-        require(_target != address(0), "!target");
-
-        // call contract in current context
-        assembly {
-            let succeeded := delegatecall(
-                sub(gas(), 5000),
-                _target,
-                add(_data, 0x20),
-                mload(_data),
-                0,
-                0
-            )
-            let size := returndatasize()
-
-            response := mload(0x40)
-            mstore(
-                0x40,
-                add(response, and(add(add(size, 0x20), 0x1f), not(0x1f)))
-            )
-            mstore(response, size)
-            returndatacopy(add(response, 0x20), 0, size)
-
-            switch iszero(succeeded)
-                case 1 {
-                    // throw if delegatecall failed
-                    revert(add(response, 0x20), size)
-                }
-        }
-    }
-
-    // **** Internal functions ****
-
-    function _swap(
-        address _from,
-        address _to,
-        uint256 _amount
-    ) internal {
-        // Swap with uniswap
-        IERC20(_from).safeApprove(univ2Router2, 0);
-        IERC20(_from).safeApprove(univ2Router2, _amount);
-
-        address[] memory path;
-
-        if (_from == weth || _to == weth) {
-            path = new address[](2);
-            path[0] = _from;
-            path[1] = _to;
-        } else {
-            path = new address[](3);
-            path[0] = _from;
-            path[1] = weth;
-            path[2] = _to;
-        }
-
-        UniswapRouterV2(univ2Router2).swapExactTokensForTokens(
-            _amount,
-            0,
-            path,
-            address(this),
-            now.add(60)
+        // 3. Removes liquidity
+        IERC20(_fromWant).approve(zap, _wantAmount);
+        ICurveZap(zap).remove_liquidity_one_coin(
+            _wantAmount,
+            _getIndex(toStablecoin),
+            0
         );
+
+        // 4. Converts half to weth
+        uint256 _toConvert = IERC20(toStablecoin).balanceOf(address(this)).div(
+            2
+        );
+        if (toStablecoin != usdt) {
+            IERC20(toStablecoin).approve(univ2Router, _toConvert);
+        } else {
+            USDT(toStablecoin).approve(univ2Router, _toConvert);
+        }
+        UniswapRouterV2(univ2Router).swapExactTokensForTokens(
+            _toConvert,
+            0,
+            _getPath(toStablecoin),
+            address(this),
+            now + 60
+        );
+
+        // 5. Supplies liquidity
+        IERC20(weth).approve(
+            univ2Router,
+            IERC20(weth).balanceOf(address(this))
+        );
+
+        if (toStablecoin != usdt) {
+            IERC20(toStablecoin).approve(
+                univ2Router,
+                IERC20(toStablecoin).balanceOf(address(this))
+            );
+        } else {
+            USDT(toStablecoin).approve(
+                univ2Router,
+                IERC20(toStablecoin).balanceOf(address(this))
+            );
+        }
+
+        (, , uint256 liquidity) = UniswapRouterV2(univ2Router).addLiquidity(
+            weth,
+            toStablecoin,
+            IERC20(weth).balanceOf(address(this)),
+            IERC20(toStablecoin).balanceOf(address(this)),
+            0,
+            0,
+            msg.sender,
+            now + 60
+        );
+
+        // Refund excess tokens
+        IERC20(weth).transfer(
+            _refundExcess,
+            IERC20(weth).balanceOf(address(this))
+        );
+
+        if (toStablecoin != usdt) {
+            IERC20(toStablecoin).transfer(
+                _refundExcess,
+                IERC20(toStablecoin).balanceOf(address(this))
+            );
+        } else {
+            USDT(toStablecoin).transfer(
+                _refundExcess,
+                IERC20(toStablecoin).balanceOf(address(this))
+            );
+        }
+
+        return liquidity;
+    }
+
+    function _getIndex(address stablecoin) internal pure returns (int128) {
+        if (stablecoin == dai) {
+            return 0;
+        }
+
+        if (stablecoin == usdc) {
+            return 1;
+        }
+
+        if (stablecoin == usdt) {
+            return 2;
+        }
+
+        if (stablecoin == susd) {
+            return 3;
+        }
+
+        revert("!index");
+    }
+
+    function _getPath(address stablecoin)
+        internal
+        pure
+        returns (address[] memory)
+    {
+        address[] memory path = new address[](2);
+        path[0] = stablecoin;
+        path[1] = weth;
+
+        return path;
     }
 }
 

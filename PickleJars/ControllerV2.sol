@@ -1,4 +1,4 @@
-// hevm: flattened sources of src/strategies/strategy-uni-eth-usdc-lp-v2.sol
+// hevm: flattened sources of src/controller-v2.sol
 pragma solidity >=0.4.23 >=0.6.0 <0.7.0 >=0.6.2 <0.7.0 >=0.6.7 <0.7.0;
 
 ////// src/interfaces/controller.sol
@@ -17,7 +17,17 @@ interface IController {
 
     function withdraw(address, uint256) external;
 
+    function freeWithdraw(address, uint256) external;
+
     function earn(address, uint256) external;
+}
+
+////// src/interfaces/converter.sol
+
+/* pragma solidity ^0.6.2; */
+
+interface Converter {
+    function convert(address) external returns (uint256);
 }
 
 ////// src/lib/safe-math.sol
@@ -817,536 +827,448 @@ interface IJar is IERC20 {
     function earn() external;
 }
 
-////// src/interfaces/staking-rewards.sol
+////// src/interfaces/onesplit.sol
 
 /* pragma solidity ^0.6.2; */
 
-interface IStakingRewards {
-    function balanceOf(address account) external view returns (uint256);
-
-    function earned(address account) external view returns (uint256);
-
-    function exit() external;
-
-    function getReward() external;
-
-    function getRewardForDuration() external view returns (uint256);
-
-    function lastTimeRewardApplicable() external view returns (uint256);
-
-    function lastUpdateTime() external view returns (uint256);
-
-    function notifyRewardAmount(uint256 reward) external;
-
-    function periodFinish() external view returns (uint256);
-
-    function rewardPerToken() external view returns (uint256);
-
-    function rewardPerTokenStored() external view returns (uint256);
-
-    function rewardRate() external view returns (uint256);
-
-    function rewards(address) external view returns (uint256);
-
-    function rewardsDistribution() external view returns (address);
-
-    function rewardsDuration() external view returns (uint256);
-
-    function rewardsToken() external view returns (address);
-
-    function stake(uint256 amount) external;
-
-    function stakeWithPermit(
+interface OneSplitAudit {
+    function getExpectedReturn(
+        address fromToken,
+        address toToken,
         uint256 amount,
-        uint256 deadline,
-        uint8 v,
-        bytes32 r,
-        bytes32 s
-    ) external;
-
-    function stakingToken() external view returns (address);
-
-    function totalSupply() external view returns (uint256);
-
-    function userRewardPerTokenPaid(address) external view returns (uint256);
-
-    function withdraw(uint256 amount) external;
-}
-
-interface IStakingRewardsFactory {
-    function deploy(address stakingToken, uint256 rewardAmount) external;
-
-    function isOwner() external view returns (bool);
-
-    function notifyRewardAmount(address stakingToken) external;
-
-    function notifyRewardAmounts() external;
-
-    function owner() external view returns (address);
-
-    function renounceOwnership() external;
-
-    function rewardsToken() external view returns (address);
-
-    function stakingRewardsGenesis() external view returns (uint256);
-
-    function stakingRewardsInfoByStakingToken(address)
+        uint256 parts,
+        uint256 featureFlags
+    )
         external
         view
-        returns (address stakingRewards, uint256 rewardAmount);
+        returns (uint256 returnAmount, uint256[] memory distribution);
 
-    function stakingTokens(uint256) external view returns (address);
-
-    function transferOwnership(address newOwner) external;
+    function swap(
+        address fromToken,
+        address toToken,
+        uint256 amount,
+        uint256 minReturn,
+        uint256[] calldata distribution,
+        uint256 featureFlags
+    ) external payable;
 }
 
-////// src/interfaces/uniswapv2.sol
-
-
+////// src/interfaces/strategy-converter.sol
 
 /* pragma solidity ^0.6.2; */
 
-interface UniswapRouterV2 {
-    function swapExactTokensForTokens(
-        uint256 amountIn,
-        uint256 amountOutMin,
-        address[] calldata path,
-        address to,
-        uint256 deadline
-    ) external returns (uint256[] memory amounts);
-
-    function addLiquidity(
-        address tokenA,
-        address tokenB,
-        uint256 amountADesired,
-        uint256 amountBDesired,
-        uint256 amountAMin,
-        uint256 amountBMin,
-        address to,
-        uint256 deadline
-    )
-        external
-        returns (
-            uint256 amountA,
-            uint256 amountB,
-            uint256 liquidity
-        );
-
-    function addLiquidityETH(
-        address token,
-        uint256 amountTokenDesired,
-        uint256 amountTokenMin,
-        uint256 amountETHMin,
-        address to,
-        uint256 deadline
-    )
-        external
-        payable
-        returns (
-            uint256 amountToken,
-            uint256 amountETH,
-            uint256 liquidity
-        );
-
-    function removeLiquidity(
-        address tokenA,
-        address tokenB,
-        uint256 liquidity,
-        uint256 amountAMin,
-        uint256 amountBMin,
-        address to,
-        uint256 deadline
-    ) external returns (uint256 amountA, uint256 amountB);
-
-    function getAmountsOut(uint256 amountIn, address[] calldata path)
-        external
-        view
-        returns (uint256[] memory amounts);
-
-    function getAmountsIn(uint256 amountOut, address[] calldata path)
-        external
-        view
-        returns (uint256[] memory amounts);
-
-    function swapETHForExactTokens(
-        uint256 amountOut,
-        address[] calldata path,
-        address to,
-        uint256 deadline
-    ) external payable returns (uint256[] memory amounts);
-
-    function swapExactETHForTokens(
-        uint256 amountOutMin,
-        address[] calldata path,
-        address to,
-        uint256 deadline
-    ) external payable returns (uint256[] memory amounts);
+interface IStrategyConverter {
+    function convert(
+        address _refundExcess, // address to send the excess amount when adding liquidity
+        address _fromWant,
+        address _toWant,
+        uint256 _wantAmount
+    ) external returns (uint256);
 }
 
-interface UniswapPair {
-    function getReserves()
-        external
-        view
-        returns (
-            uint112 reserve0,
-            uint112 reserve1,
-            uint32 blockTimestamp
-        );
-}
-
-////// src/strategies/strategy-uni-eth-usdc-lp-v2.sol
-// https://etherscan.io/address/0xF147b8125d2ef93FB6965Db97D6746952a133934
-
+////// src/interfaces/strategy.sol
 
 /* pragma solidity ^0.6.2; */
 
-/* import "../lib/erc20.sol"; */
-/* import "../lib/safe-math.sol"; */
+interface IStrategy {
+    function want() external view returns (address);
 
-/* import "../interfaces/jar.sol"; */
-/* import "../interfaces/staking-rewards.sol"; */
-/* import "../interfaces/uniswapv2.sol"; */
-/* import "../interfaces/controller.sol"; */
+    function deposit() external;
 
-contract StrategyUniEthUsdcLpV2 {
-    // v2 Uses uniswap for less gas
-    // We can roll back to v1 if the liquidity is there
+    function withdraw(address) external;
 
+    function withdraw(uint256) external;
+
+    function skim() external;
+
+    function withdrawAll() external returns (uint256);
+
+    function balanceOf() external view returns (uint256);
+
+    function freeWithdraw(uint256 _amount) external;
+
+    function harvest() external;
+}
+
+////// src/lib/reentrancy-guard.sol
+
+
+/* pragma solidity ^0.6.0; */
+
+/**
+ * @dev Contract module that helps prevent reentrant calls to a function.
+ *
+ * Inheriting from `ReentrancyGuard` will make the {nonReentrant} modifier
+ * available, which can be applied to functions to make sure there are no nested
+ * (reentrant) calls to them.
+ *
+ * Note that because there is a single `nonReentrant` guard, functions marked as
+ * `nonReentrant` may not call one another. This can be worked around by making
+ * those functions `private`, and then adding `external` `nonReentrant` entry
+ * points to them.
+ *
+ * TIP: If you would like to learn more about reentrancy and alternative ways
+ * to protect against it, check out our blog post
+ * https://blog.openzeppelin.com/reentrancy-after-istanbul/[Reentrancy After Istanbul].
+ */
+contract ReentrancyGuard {
+    // Booleans are more expensive than uint256 or any type that takes up a full
+    // word because each write operation emits an extra SLOAD to first read the
+    // slot's contents, replace the bits taken up by the boolean, and then write
+    // back. This is the compiler's defense against contract upgrades and
+    // pointer aliasing, and it cannot be disabled.
+
+    // The values being non-zero value makes deployment a bit more expensive,
+    // but in exchange the refund on every call to nonReentrant will be lower in
+    // amount. Since refunds are capped to a percentage of the total
+    // transaction's gas, it is best to keep them low in cases like this one, to
+    // increase the likelihood of the full refund coming into effect.
+    uint256 private constant _NOT_ENTERED = 1;
+    uint256 private constant _ENTERED = 2;
+
+    uint256 private _status;
+
+    constructor () internal {
+        _status = _NOT_ENTERED;
+    }
+
+    /**
+     * @dev Prevents a contract from calling itself, directly or indirectly.
+     * Calling a `nonReentrant` function from another `nonReentrant`
+     * function is not supported. It is possible to prevent this from happening
+     * by making the `nonReentrant` function external, and make it call a
+     * `private` function that does the actual work.
+     */
+    modifier nonReentrant() {
+        // On the first call to nonReentrant, _notEntered will be true
+        require(_status != _ENTERED, "ReentrancyGuard: reentrant call");
+
+        // Any calls to nonReentrant after this point will fail
+        _status = _ENTERED;
+
+        _;
+
+        // By storing the original value once again, a refund is triggered (see
+        // https://eips.ethereum.org/EIPS/eip-2200)
+        _status = _NOT_ENTERED;
+    }
+}
+////// src/controller-v2.sol
+// https://github.com/iearn-finance/jars/blob/master/contracts/controllers/StrategyControllerV1.sol
+
+/* pragma solidity ^0.6.7; */
+
+/* import "./interfaces/controller.sol"; */
+
+/* import "./lib/reentrancy-guard.sol"; */
+/* import "./lib/erc20.sol"; */
+/* import "./lib/safe-math.sol"; */
+
+/* import "./interfaces/jar.sol"; */
+/* import "./interfaces/onesplit.sol"; */
+/* import "./interfaces/strategy.sol"; */
+/* import "./interfaces/converter.sol"; */
+/* import "./interfaces/strategy-converter.sol"; */
+
+contract ControllerV2 is ReentrancyGuard {
     using SafeERC20 for IERC20;
     using Address for address;
     using SafeMath for uint256;
 
-    // Staking rewards address for ETH/USDC LP providers
-    address
-        public constant rewards = 0x7FBa4B8Dc5E7616e59622806932DBea72537A56b;
-
-    // want eth/usdc lp tokens
-    address public constant want = 0xB4e16d0168e52d35CaCD2c6185b44281Ec28C9Dc;
-
-    // tokens we're farming
-    address public constant uni = 0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984;
-
-    // stablecoins
-    address public constant usdc = 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48;
-
-    // pickle token
-    address public constant pickle = 0x429881672B9AE42b8EbA0E26cD9C73711b891Ca5;
-
-    // weth
-    address public constant weth = 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2;
-
-    // burn address
     address public constant burn = 0x000000000000000000000000000000000000dEaD;
-
-    // dex
-    address public univ2Router2 = 0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D;
-
-    // How much UNI tokens to keep (10%)
-    uint256 public keepUNI = 0;
-    uint256 public constant keepUNIMax = 10000;
-
-    // Fees ~4.5% in total
-    // - 3%  performance fee
-    // - 1.5%   used to burn pickles
-
-    // 3% of 98% = 2.94% of original 100%
-    uint256 public performanceFee = 300;
-    uint256 public constant performanceMax = 10000;
-
-    uint256 public burnFee = 150;
-    uint256 public constant burnMax = 10000;
-
-    uint256 public withdrawalFee = 50;
-    uint256 public constant withdrawalMax = 10000;
+    address public onesplit = 0xC586BeF4a0992C495Cf22e1aeEE4E446CECDee0E;
 
     address public governance;
-    address public controller;
     address public strategist;
     address public timelock;
+
+    address public rewards;
+    mapping(address => address) public jars;
+    mapping(address => address) public strategies;
+    mapping(address => mapping(address => address)) public converters;
+    mapping(address => mapping(address => address)) public strategyConverters;
+
+    mapping(address => mapping(address => bool)) public approvedStrategies;
+
+    uint256 public split = 500;
+    uint256 public constant max = 10000;
 
     constructor(
         address _governance,
         address _strategist,
-        address _controller,
+        address _rewards, // Rewards should be the multisig
         address _timelock
     ) public {
         governance = _governance;
         strategist = _strategist;
-        controller = _controller;
+        rewards = _rewards;
         timelock = _timelock;
     }
 
-    // **** Views ****
-
-    function balanceOfWant() public view returns (uint256) {
-        return IERC20(want).balanceOf(address(this));
-    }
-
-    function balanceOfPool() public view returns (uint256) {
-        return IStakingRewards(rewards).balanceOf(address(this));
-    }
-
-    function balanceOf() public view returns (uint256) {
-        return balanceOfWant().add(balanceOfPool());
-    }
-
-    function getName() external pure returns (string memory) {
-        return "StrategyUniEthUsdcLpV2";
-    }
-
-    // **** Setters ****
-
-    function setKeepUNI(uint256 _keepUNI) external {
+    function setRewards(address _rewards) public {
         require(msg.sender == governance, "!governance");
-        keepUNI = _keepUNI;
+        rewards = _rewards;
     }
 
-    function setWithdrawalFee(uint256 _withdrawalFee) external {
-        require(msg.sender == governance, "!governance");
-        withdrawalFee = _withdrawalFee;
-    }
-
-    function setPerformanceFee(uint256 _performanceFee) external {
-        require(msg.sender == governance, "!governance");
-        performanceFee = _performanceFee;
-    }
-
-    function setBurnFee(uint256 _burnFee) external {
-        require(msg.sender == governance, "!governance");
-        burnFee = _burnFee;
-    }
-
-    function setStrategist(address _strategist) external {
+    function setStrategist(address _strategist) public {
         require(msg.sender == governance, "!governance");
         strategist = _strategist;
     }
 
-    function setGovernance(address _governance) external {
+    function setSplit(uint256 _split) public {
+        require(msg.sender == governance, "!governance");
+        split = _split;
+    }
+
+    function setOneSplit(address _onesplit) public {
+        require(msg.sender == governance, "!governance");
+        onesplit = _onesplit;
+    }
+
+    function setGovernance(address _governance) public {
         require(msg.sender == governance, "!governance");
         governance = _governance;
     }
 
-    function setTimelock(address _timelock) external {
+    function setTimelock(address _timelock) public {
         require(msg.sender == timelock, "!timelock");
         timelock = _timelock;
     }
 
-    function setController(address _controller) external {
-        require(msg.sender == governance, "!governance");
-        controller = _controller;
-    }
-
-    // **** State Mutations ****
-
-    function deposit() public {
-        uint256 _want = IERC20(want).balanceOf(address(this));
-        if (_want > 0) {
-            IERC20(want).safeApprove(rewards, 0);
-            IERC20(want).approve(rewards, _want);
-            IStakingRewards(rewards).stake(_want);
-        }
-    }
-
-    // Controller only function for creating additional rewards from dust
-    function withdraw(IERC20 _asset) external returns (uint256 balance) {
-        require(msg.sender == controller, "!controller");
-        require(want != address(_asset), "want");
-        balance = _asset.balanceOf(address(this));
-        _asset.safeTransfer(controller, balance);
-    }
-
-    // Withdraw partial funds, normally used with a jar withdrawal
-    function withdraw(uint256 _amount) external {
-        require(msg.sender == controller, "!controller");
-        uint256 _balance = IERC20(want).balanceOf(address(this));
-        if (_balance < _amount) {
-            _amount = _withdrawSome(_amount.sub(_balance));
-            _amount = _amount.add(_balance);
-        }
-
-        uint256 _fee = _amount.mul(withdrawalFee).div(withdrawalMax);
-
-        IERC20(want).safeTransfer(IController(controller).rewards(), _fee);
-        address _jar = IController(controller).jars(address(want));
-        require(_jar != address(0), "!jar"); // additional protection so we don't burn the funds
-
-        IERC20(want).safeTransfer(_jar, _amount.sub(_fee));
-    }
-
-    // Withdraw all funds, normally used when migrating strategies
-    function withdrawAll() external returns (uint256 balance) {
-        require(msg.sender == controller, "!controller");
-        _withdrawAll();
-
-        balance = IERC20(want).balanceOf(address(this));
-
-        address _jar = IController(controller).jars(address(want));
-        require(_jar != address(0), "!jar"); // additional protection so we don't burn the funds
-        IERC20(want).safeTransfer(_jar, balance);
-    }
-
-    function _withdrawAll() internal {
-        _withdrawSome(balanceOfPool());
-    }
-
-    function _withdrawSome(uint256 _amount) internal returns (uint256) {
-        IStakingRewards(rewards).withdraw(_amount);
-        return _amount;
-    }
-
-    function brine() public {
-        harvest();
-    }
-
-    function harvest() public {
-        // Anyone can harvest it at any given time.
-        // I understand the possibility of being frontrun
-        // But ETH is a dark forest, and I wanna see how this plays out
-        // i.e. will be be heavily frontrunned?
-        //      if so, a new strategy will be deployed.
-
-        // Collects UNI tokens
-        IStakingRewards(rewards).getReward();
-        uint256 _uni = IERC20(uni).balanceOf(address(this));
-        if (_uni > 0) {
-            // 10% is locked up for future gov
-            uint256 _keepUNI = _uni.mul(keepUNI).div(keepUNIMax);
-            IERC20(uni).safeTransfer(
-                IController(controller).rewards(),
-                _keepUNI
-            );
-            _swap(uni, weth, _uni.sub(_keepUNI));
-        }
-
-        // Swap half WETH for USDC
-        uint256 _weth = IERC20(weth).balanceOf(address(this));
-        if (_weth > 0) {
-            // Burn some pickles first
-            uint256 _burnFee = _weth.mul(burnFee).div(burnMax);
-            _swap(weth, pickle, _burnFee);
-            IERC20(pickle).transfer(
-                burn,
-                IERC20(pickle).balanceOf(address(this))
-            );
-
-            _weth = _weth.sub(_burnFee);
-            _swap(weth, usdc, _weth.div(2));
-        }
-
-        // Adds in liquidity for ETH/USDC
-        _weth = IERC20(weth).balanceOf(address(this));
-        uint256 _usdc = IERC20(usdc).balanceOf(address(this));
-        if (_weth > 0 && _usdc > 0) {
-            IERC20(weth).safeApprove(univ2Router2, 0);
-            IERC20(weth).safeApprove(univ2Router2, _weth);
-
-            IERC20(usdc).safeApprove(univ2Router2, 0);
-            IERC20(usdc).safeApprove(univ2Router2, _usdc);
-
-            UniswapRouterV2(univ2Router2).addLiquidity(
-                weth,
-                usdc,
-                _weth,
-                _usdc,
-                0,
-                0,
-                address(this),
-                now + 60
-            );
-
-            // Donates DUST
-            IERC20(weth).transfer(
-                IController(controller).rewards(),
-                IERC20(weth).balanceOf(address(this))
-            );
-            IERC20(usdc).transfer(
-                IController(controller).rewards(),
-                IERC20(usdc).balanceOf(address(this))
-            );
-        }
-
-        // We want to get back UNI ETH/USDC LP tokens
-        uint256 _want = IERC20(want).balanceOf(address(this));
-        if (_want > 0) {
-            // Performance fee
-            IERC20(want).safeTransfer(
-                IController(controller).rewards(),
-                _want.mul(performanceFee).div(performanceMax)
-            );
-
-            deposit();
-        }
-    }
-
-    // Emergency function call
-    function execute(address _target, bytes memory _data)
-        public
-        payable
-        returns (bytes memory response)
-    {
-        require(msg.sender == timelock, "!timelock");
-
-        require(_target != address(0), "!target");
-
-        // call contract in current context
-        assembly {
-            let succeeded := delegatecall(
-                sub(gas(), 5000),
-                _target,
-                add(_data, 0x20),
-                mload(_data),
-                0,
-                0
-            )
-            let size := returndatasize()
-
-            response := mload(0x40)
-            mstore(
-                0x40,
-                add(response, and(add(add(size, 0x20), 0x1f), not(0x1f)))
-            )
-            mstore(response, size)
-            returndatacopy(add(response, 0x20), 0, size)
-
-            switch iszero(succeeded)
-                case 1 {
-                    // throw if delegatecall failed
-                    revert(add(response, 0x20), size)
-                }
-        }
-    }
-
-    // **** Internal functions ****
-
-    function _swap(
-        address _from,
-        address _to,
-        uint256 _amount
-    ) internal {
-        // Swap with uniswap
-        IERC20(_from).safeApprove(univ2Router2, 0);
-        IERC20(_from).safeApprove(univ2Router2, _amount);
-
-        address[] memory path;
-
-        if (_from == weth || _to == weth) {
-            path = new address[](2);
-            path[0] = _from;
-            path[1] = _to;
-        } else {
-            path = new address[](3);
-            path[0] = _from;
-            path[1] = weth;
-            path[2] = _to;
-        }
-
-        UniswapRouterV2(univ2Router2).swapExactTokensForTokens(
-            _amount,
-            0,
-            path,
-            address(this),
-            now.add(60)
+    function setJar(address _token, address _jar) public {
+        require(
+            msg.sender == strategist || msg.sender == governance,
+            "!strategist"
         );
+        require(jars[_token] == address(0), "jar");
+        jars[_token] = _jar;
+    }
+
+    function approveStrategy(address _token, address _strategy) public {
+        require(msg.sender == timelock, "!timelock");
+        approvedStrategies[_token][_strategy] = true;
+    }
+
+    function revokeStrategy(address _token, address _strategy) public {
+        require(msg.sender == governance, "!governance");
+        approvedStrategies[_token][_strategy] = false;
+    }
+
+    function setConverter(
+        address _input,
+        address _output,
+        address _converter
+    ) public {
+        require(
+            msg.sender == strategist || msg.sender == governance,
+            "!strategist"
+        );
+        converters[_input][_output] = _converter;
+    }
+
+    function setStrategyConverter(
+        address[] memory stratFrom,
+        address[] memory stratTo,
+        address _stratConverter
+    ) public {
+        require(
+            msg.sender == strategist || msg.sender == governance,
+            "!strategist"
+        );
+
+        for (uint256 i = 0; i < stratFrom.length; i++) {
+            for (uint256 j = 0; j < stratTo.length; j++) {
+                strategyConverters[stratFrom[i]][stratTo[j]] = _stratConverter;
+            }
+        }
+    }
+
+    function setStrategy(address _token, address _strategy) public {
+        require(
+            msg.sender == strategist || msg.sender == governance,
+            "!strategist"
+        );
+        require(approvedStrategies[_token][_strategy] == true, "!approved");
+
+        address _current = strategies[_token];
+        if (_current != address(0)) {
+            IStrategy(_current).withdrawAll();
+        }
+        strategies[_token] = _strategy;
+    }
+
+    function earn(address _token, uint256 _amount) public {
+        address _strategy = strategies[_token];
+        address _want = IStrategy(_strategy).want();
+        if (_want != _token) {
+            address converter = converters[_token][_want];
+            IERC20(_token).safeTransfer(converter, _amount);
+            _amount = Converter(converter).convert(_strategy);
+            IERC20(_want).safeTransfer(_strategy, _amount);
+        } else {
+            IERC20(_token).safeTransfer(_strategy, _amount);
+        }
+        IStrategy(_strategy).deposit();
+    }
+
+    function balanceOf(address _token) external view returns (uint256) {
+        return IStrategy(strategies[_token]).balanceOf();
+    }
+
+    function withdrawAll(address _token) public {
+        require(
+            msg.sender == strategist || msg.sender == governance,
+            "!strategist"
+        );
+        IStrategy(strategies[_token]).withdrawAll();
+    }
+
+    function inCaseTokensGetStuck(address _token, uint256 _amount) public {
+        require(
+            msg.sender == strategist || msg.sender == governance,
+            "!governance"
+        );
+        IERC20(_token).safeTransfer(msg.sender, _amount);
+    }
+
+    function inCaseStrategyTokenGetStuck(address _strategy, address _token)
+        public
+    {
+        require(
+            msg.sender == strategist || msg.sender == governance,
+            "!governance"
+        );
+        IStrategy(_strategy).withdraw(_token);
+    }
+
+    function getExpectedReturn(
+        address _strategy,
+        address _token,
+        uint256 parts
+    ) public view returns (uint256 expected) {
+        uint256 _balance = IERC20(_token).balanceOf(_strategy);
+        address _want = IStrategy(_strategy).want();
+        (expected, ) = OneSplitAudit(onesplit).getExpectedReturn(
+            _token,
+            _want,
+            _balance,
+            parts,
+            0
+        );
+    }
+
+    // Only allows to withdraw non-core strategy tokens ~ this is over and above normal yield
+    function yearn(
+        address _strategy,
+        address _token,
+        uint256 parts
+    ) public {
+        require(
+            msg.sender == strategist || msg.sender == governance,
+            "!governance"
+        );
+        // This contract should never have value in it, but just incase since this is a public call
+        uint256 _before = IERC20(_token).balanceOf(address(this));
+        IStrategy(_strategy).withdraw(_token);
+        uint256 _after = IERC20(_token).balanceOf(address(this));
+        if (_after > _before) {
+            uint256 _amount = _after.sub(_before);
+            address _want = IStrategy(_strategy).want();
+            uint256[] memory _distribution;
+            uint256 _expected;
+            _before = IERC20(_want).balanceOf(address(this));
+            IERC20(_token).safeApprove(onesplit, 0);
+            IERC20(_token).safeApprove(onesplit, _amount);
+            (_expected, _distribution) = OneSplitAudit(onesplit)
+                .getExpectedReturn(_token, _want, _amount, parts, 0);
+            OneSplitAudit(onesplit).swap(
+                _token,
+                _want,
+                _amount,
+                _expected,
+                _distribution,
+                0
+            );
+            _after = IERC20(_want).balanceOf(address(this));
+            if (_after > _before) {
+                _amount = _after.sub(_before);
+                uint256 _reward = _amount.mul(split).div(max);
+                earn(_want, _amount.sub(_reward));
+                IERC20(_want).safeTransfer(rewards, _reward);
+            }
+        }
+    }
+
+    function withdraw(address _token, uint256 _amount) public {
+        require(msg.sender == jars[_token], "!jar");
+        IStrategy(strategies[_token]).withdraw(_amount);
+    }
+
+    // Swaps between jars
+    // Note: This is supposed to be called
+    //       by a user if they'd like to swap between jars w/o the 0.5% fee
+    function userSwapJar(
+        address _fromToken,
+        address _toToken,
+        uint256 _pAmount // Pickling token amount to convert
+    ) public nonReentrant returns (uint256) {
+        address _fromJar = jars[_fromToken];
+        address _toJar = jars[_toToken];
+
+        address _fromStrategy = strategies[_fromToken];
+        address _toStrategy = strategies[_toToken];
+
+
+            address _strategyConverter
+         = strategyConverters[_fromStrategy][_toStrategy];
+
+        require(_strategyConverter != address(0), "!strategy-converter");
+
+        // 1. Transfers pJar tokens from msg.sender
+        IJar(_fromJar).transferFrom(msg.sender, address(this), _pAmount);
+
+        // 2. Get amount of tokens to transfer from strategy to burn
+        // Note: this token amount is the LP token
+        uint256 _fromTokenAmount = IJar(_fromJar).getRatio().mul(_pAmount).div(
+            1e18
+        );
+
+        // If we don't have enough funds in the strategy
+        // We'll deposit funds from the jar to the strategy
+        // Note: This assumes that no single person is responsible
+        //       for 100% of the liquidity.
+        // If this a single person is 100% responsible for the liquidity
+        // we can simply set min = max in pickle-jars
+        if (IStrategy(_fromStrategy).balanceOf() < _fromTokenAmount) {
+            IJar(_fromJar).earn();
+        }
+
+        // 3. Withdraw tokens from strategy and burns pToken
+        IJar(_fromJar).transfer(burn, _pAmount);
+        IStrategy(_fromStrategy).freeWithdraw(_fromTokenAmount);
+
+        // 4. Converts to Token
+        IERC20(_fromToken).approve(_strategyConverter, _fromTokenAmount);
+        IStrategyConverter(_strategyConverter).convert(
+            msg.sender,
+            _fromToken,
+            _toToken,
+            _fromTokenAmount
+        );
+
+        // 5. Deposits into PickleJar
+        uint256 _toTokenAmount = IERC20(_toToken).balanceOf(address(this));
+        IERC20(_toToken).approve(_toJar, _toTokenAmount);
+        IJar(_toJar).deposit(_toTokenAmount);
+
+        // 6. Sends msg.sender all the pickle jar tokens
+        uint256 _retPAmount = IJar(_toJar).balanceOf(address(this));
+        IJar(_toJar).transfer(
+            msg.sender,
+            _retPAmount
+        );
+
+        return _retPAmount;
     }
 }
 
