@@ -4,6 +4,8 @@ PickleToken: [0x429881672B9AE42b8EbA0E26cD9C73711b891Ca5](https://etherscan.io/a
 
 Timelock (48 hours): [0xc2d82a3e2bae0a50f4aeb438285804354b467bc0](https://etherscan.io/address/0xc2d82a3e2bae0a50f4aeb438285804354b467bc0)
 
+Timelock (24 hours): [0x0040E05CE9A5fc9C0aBF89889f7b60c2fC278416](https://etherscan.io/address/0x0040E05CE9A5fc9C0aBF89889f7b60c2fC278416)
+
 Masterchef: [0xbD17B1ce622d73bD438b9E658acA5996dc394b0d](https://etherscan.io/address/0xbD17B1ce622d73bD438b9E658acA5996dc394b0d)
 
 Governance (multi-sig): [0x9d074E37d408542FD38be78848e8814AFB38db17](https://etherscan.io/address/0x9d074E37d408542FD38be78848e8814AFB38db17)
