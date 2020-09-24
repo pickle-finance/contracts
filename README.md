@@ -87,12 +87,8 @@ PickleMigrator: [0xC0CF2CbD0c6bB1da4c671FBb07D40E88676DBe82](https://etherscan.i
 2 = USDC <> WETH = [0xB4e16d0168e52d35CaCD2c6185b44281Ec28C9Dc](https://etherscan.io/address/0xB4e16d0168e52d35CaCD2c6185b44281Ec28C9Dc)
 
 3 = DAI <> WETH = [0xA478c2975Ab1Ea89e8196811F51A7B7Ade33eB11](https://etherscan.io/address/0xA478c2975Ab1Ea89e8196811F51A7B7Ade33eB11)
-  - [Uniswap Pair](https://uniswap.info/pair/0xA478c2975Ab1Ea89e8196811F51A7B7Ade33eB11)
-  - 5.75% of block rewards (initially)
 
 4 = SUSD <> WETH = [0xf80758aB42C3B07dA84053Fd88804bCB6BAA4b5c](https://etherscan.io/address/0xf80758aB42C3B07dA84053Fd88804bCB6BAA4b5c)
-  - [Uniswap Pair](https://uniswap.info/pair/0xf80758aB42C3B07dA84053Fd88804bCB6BAA4b5c)
-  - 8.15% of block rewards (initially)
 
 5 = pUNIDAI = [0xf79Ae82DCcb71ca3042485c85588a3E0C395D55b](https://etherscan.io/address/0xf79Ae82DCcb71ca3042485c85588a3E0C395D55b)
 
