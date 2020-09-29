@@ -1,4 +1,4 @@
-// hevm: flattened sources of src/controller-v2.sol
+// hevm: flattened sources of src/controller-v3.sol
 pragma solidity >=0.4.23 >=0.6.0 <0.7.0 >=0.6.2 <0.7.0 >=0.6.7 <0.7.0;
 
 ////// src/interfaces/controller.sol
@@ -9,15 +9,13 @@ pragma solidity >=0.4.23 >=0.6.0 <0.7.0 >=0.6.2 <0.7.0 >=0.6.7 <0.7.0;
 interface IController {
     function jars(address) external view returns (address);
 
-    function rewards() external view returns (address);
+    function devfund() external view returns (address);
 
-    function want(address) external view returns (address); // NOTE: Only StrategyControllerV2 implements this
+    function treasury() external view returns (address);
 
     function balanceOf(address) external view returns (uint256);
 
     function withdraw(address, uint256) external;
-
-    function freeWithdraw(address, uint256) external;
 
     function earn(address, uint256) external;
 }
@@ -873,6 +871,8 @@ interface IStrategyConverter {
 interface IStrategy {
     function want() external view returns (address);
 
+    function timelock() external view returns (address);
+
     function deposit() external;
 
     function withdraw(address) external;
@@ -885,82 +885,18 @@ interface IStrategy {
 
     function balanceOf() external view returns (uint256);
 
-    function freeWithdraw(uint256 _amount) external;
-
     function harvest() external;
+
+    function setTimelock(address) external;
 }
 
-////// src/lib/reentrancy-guard.sol
-
-
-/* pragma solidity ^0.6.0; */
-
-/**
- * @dev Contract module that helps prevent reentrant calls to a function.
- *
- * Inheriting from `ReentrancyGuard` will make the {nonReentrant} modifier
- * available, which can be applied to functions to make sure there are no nested
- * (reentrant) calls to them.
- *
- * Note that because there is a single `nonReentrant` guard, functions marked as
- * `nonReentrant` may not call one another. This can be worked around by making
- * those functions `private`, and then adding `external` `nonReentrant` entry
- * points to them.
- *
- * TIP: If you would like to learn more about reentrancy and alternative ways
- * to protect against it, check out our blog post
- * https://blog.openzeppelin.com/reentrancy-after-istanbul/[Reentrancy After Istanbul].
- */
-contract ReentrancyGuard {
-    // Booleans are more expensive than uint256 or any type that takes up a full
-    // word because each write operation emits an extra SLOAD to first read the
-    // slot's contents, replace the bits taken up by the boolean, and then write
-    // back. This is the compiler's defense against contract upgrades and
-    // pointer aliasing, and it cannot be disabled.
-
-    // The values being non-zero value makes deployment a bit more expensive,
-    // but in exchange the refund on every call to nonReentrant will be lower in
-    // amount. Since refunds are capped to a percentage of the total
-    // transaction's gas, it is best to keep them low in cases like this one, to
-    // increase the likelihood of the full refund coming into effect.
-    uint256 private constant _NOT_ENTERED = 1;
-    uint256 private constant _ENTERED = 2;
-
-    uint256 private _status;
-
-    constructor () internal {
-        _status = _NOT_ENTERED;
-    }
-
-    /**
-     * @dev Prevents a contract from calling itself, directly or indirectly.
-     * Calling a `nonReentrant` function from another `nonReentrant`
-     * function is not supported. It is possible to prevent this from happening
-     * by making the `nonReentrant` function external, and make it call a
-     * `private` function that does the actual work.
-     */
-    modifier nonReentrant() {
-        // On the first call to nonReentrant, _notEntered will be true
-        require(_status != _ENTERED, "ReentrancyGuard: reentrant call");
-
-        // Any calls to nonReentrant after this point will fail
-        _status = _ENTERED;
-
-        _;
-
-        // By storing the original value once again, a refund is triggered (see
-        // https://eips.ethereum.org/EIPS/eip-2200)
-        _status = _NOT_ENTERED;
-    }
-}
-////// src/controller-v2.sol
+////// src/controller-v3.sol
 // https://github.com/iearn-finance/jars/blob/master/contracts/controllers/StrategyControllerV1.sol
 
 /* pragma solidity ^0.6.7; */
 
 /* import "./interfaces/controller.sol"; */
 
-/* import "./lib/reentrancy-guard.sol"; */
 /* import "./lib/erc20.sol"; */
 /* import "./lib/safe-math.sol"; */
 
@@ -970,7 +906,7 @@ contract ReentrancyGuard {
 /* import "./interfaces/converter.sol"; */
 /* import "./interfaces/strategy-converter.sol"; */
 
-contract ControllerV2 is ReentrancyGuard {
+contract ControllerV3 {
     using SafeERC20 for IERC20;
     using Address for address;
     using SafeMath for uint256;
@@ -980,9 +916,9 @@ contract ControllerV2 is ReentrancyGuard {
 
     address public governance;
     address public strategist;
-    address public timelock;
+    address public devfund;
+    address public treasury;
 
-    address public rewards;
     mapping(address => address) public jars;
     mapping(address => address) public strategies;
     mapping(address => mapping(address => address)) public converters;
@@ -996,18 +932,23 @@ contract ControllerV2 is ReentrancyGuard {
     constructor(
         address _governance,
         address _strategist,
-        address _rewards, // Rewards should be the multisig
-        address _timelock
+        address _devfund,
+        address _treasury
     ) public {
         governance = _governance;
         strategist = _strategist;
-        rewards = _rewards;
-        timelock = _timelock;
+        devfund = _devfund;
+        treasury = _treasury;
     }
 
-    function setRewards(address _rewards) public {
+    function setDevFund(address _devfund) public {
         require(msg.sender == governance, "!governance");
-        rewards = _rewards;
+        devfund = _devfund;
+    }
+
+    function setTreasury(address _treasury) public {
+        require(msg.sender == governance, "!governance");
+        treasury = _treasury;
     }
 
     function setStrategist(address _strategist) public {
@@ -1030,11 +971,6 @@ contract ControllerV2 is ReentrancyGuard {
         governance = _governance;
     }
 
-    function setTimelock(address _timelock) public {
-        require(msg.sender == timelock, "!timelock");
-        timelock = _timelock;
-    }
-
     function setJar(address _token, address _jar) public {
         require(
             msg.sender == strategist || msg.sender == governance,
@@ -1045,7 +981,7 @@ contract ControllerV2 is ReentrancyGuard {
     }
 
     function approveStrategy(address _token, address _strategy) public {
-        require(msg.sender == timelock, "!timelock");
+        require(msg.sender == governance, "!governance");
         approvedStrategies[_token][_strategy] = true;
     }
 
@@ -1064,23 +1000,6 @@ contract ControllerV2 is ReentrancyGuard {
             "!strategist"
         );
         converters[_input][_output] = _converter;
-    }
-
-    function setStrategyConverter(
-        address[] memory stratFrom,
-        address[] memory stratTo,
-        address _stratConverter
-    ) public {
-        require(
-            msg.sender == strategist || msg.sender == governance,
-            "!strategist"
-        );
-
-        for (uint256 i = 0; i < stratFrom.length; i++) {
-            for (uint256 j = 0; j < stratTo.length; j++) {
-                strategyConverters[stratFrom[i]][stratTo[j]] = _stratConverter;
-            }
-        }
     }
 
     function setStrategy(address _token, address _strategy) public {
@@ -1192,9 +1111,9 @@ contract ControllerV2 is ReentrancyGuard {
             _after = IERC20(_want).balanceOf(address(this));
             if (_after > _before) {
                 _amount = _after.sub(_before);
-                uint256 _reward = _amount.mul(split).div(max);
-                earn(_want, _amount.sub(_reward));
-                IERC20(_want).safeTransfer(rewards, _reward);
+                uint256 _treasury = _amount.mul(split).div(max);
+                earn(_want, _amount.sub(_treasury));
+                IERC20(_want).safeTransfer(treasury, _treasury);
             }
         }
     }
@@ -1202,73 +1121,6 @@ contract ControllerV2 is ReentrancyGuard {
     function withdraw(address _token, uint256 _amount) public {
         require(msg.sender == jars[_token], "!jar");
         IStrategy(strategies[_token]).withdraw(_amount);
-    }
-
-    // Swaps between jars
-    // Note: This is supposed to be called
-    //       by a user if they'd like to swap between jars w/o the 0.5% fee
-    function userSwapJar(
-        address _fromToken,
-        address _toToken,
-        uint256 _pAmount // Pickling token amount to convert
-    ) public nonReentrant returns (uint256) {
-        address _fromJar = jars[_fromToken];
-        address _toJar = jars[_toToken];
-
-        address _fromStrategy = strategies[_fromToken];
-        address _toStrategy = strategies[_toToken];
-
-
-            address _strategyConverter
-         = strategyConverters[_fromStrategy][_toStrategy];
-
-        require(_strategyConverter != address(0), "!strategy-converter");
-
-        // 1. Transfers pJar tokens from msg.sender
-        IJar(_fromJar).transferFrom(msg.sender, address(this), _pAmount);
-
-        // 2. Get amount of tokens to transfer from strategy to burn
-        // Note: this token amount is the LP token
-        uint256 _fromTokenAmount = IJar(_fromJar).getRatio().mul(_pAmount).div(
-            1e18
-        );
-
-        // If we don't have enough funds in the strategy
-        // We'll deposit funds from the jar to the strategy
-        // Note: This assumes that no single person is responsible
-        //       for 100% of the liquidity.
-        // If this a single person is 100% responsible for the liquidity
-        // we can simply set min = max in pickle-jars
-        if (IStrategy(_fromStrategy).balanceOf() < _fromTokenAmount) {
-            IJar(_fromJar).earn();
-        }
-
-        // 3. Withdraw tokens from strategy and burns pToken
-        IJar(_fromJar).transfer(burn, _pAmount);
-        IStrategy(_fromStrategy).freeWithdraw(_fromTokenAmount);
-
-        // 4. Converts to Token
-        IERC20(_fromToken).approve(_strategyConverter, _fromTokenAmount);
-        IStrategyConverter(_strategyConverter).convert(
-            msg.sender,
-            _fromToken,
-            _toToken,
-            _fromTokenAmount
-        );
-
-        // 5. Deposits into PickleJar
-        uint256 _toTokenAmount = IERC20(_toToken).balanceOf(address(this));
-        IERC20(_toToken).approve(_toJar, _toTokenAmount);
-        IJar(_toJar).deposit(_toTokenAmount);
-
-        // 6. Sends msg.sender all the pickle jar tokens
-        uint256 _retPAmount = IJar(_toJar).balanceOf(address(this));
-        IJar(_toJar).transfer(
-            msg.sender,
-            _retPAmount
-        );
-
-        return _retPAmount;
     }
 }
 

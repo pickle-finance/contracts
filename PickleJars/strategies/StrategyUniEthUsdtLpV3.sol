@@ -1,4 +1,4 @@
-// hevm: flattened sources of src/strategies/strategy-uni-eth-usdt-lp-v3.sol
+// hevm: flattened sources of src/strategies/uniswapv2/strategy-uni-eth-usdt-lp-v3.sol
 pragma solidity >=0.4.23 >=0.6.0 <0.7.0 >=0.6.2 <0.7.0 >=0.6.7 <0.7.0;
 
 ////// src/interfaces/controller.sol
@@ -9,15 +9,13 @@ pragma solidity >=0.4.23 >=0.6.0 <0.7.0 >=0.6.2 <0.7.0 >=0.6.7 <0.7.0;
 interface IController {
     function jars(address) external view returns (address);
 
-    function rewards() external view returns (address);
+    function devfund() external view returns (address);
 
-    function want(address) external view returns (address); // NOTE: Only StrategyControllerV2 implements this
+    function treasury() external view returns (address);
 
     function balanceOf(address) external view returns (uint256);
 
     function withdraw(address, uint256) external;
-
-    function freeWithdraw(address, uint256) external;
 
     function earn(address, uint256) external;
 }
@@ -1131,20 +1129,20 @@ interface USDT {
     function transfer(address _to, uint256 _value) external;
 }
 
-////// src/strategies/strategy-uni-eth-usdt-lp-v3.sol
+////// src/strategies/uniswapv2/strategy-uni-eth-usdt-lp-v3.sol
 // https://etherscan.io/address/0xF147b8125d2ef93FB6965Db97D6746952a133934
 
 
 /* pragma solidity ^0.6.2; */
 
-/* import "../lib/erc20.sol"; */
-/* import "../lib/safe-math.sol"; */
+/* import "../../lib/erc20.sol"; */
+/* import "../../lib/safe-math.sol"; */
 
-/* import "../interfaces/usdt.sol"; */
-/* import "../interfaces/jar.sol"; */
-/* import "../interfaces/staking-rewards.sol"; */
-/* import "../interfaces/uniswapv2.sol"; */
-/* import "../interfaces/controller.sol"; */
+/* import "../../interfaces/usdt.sol"; */
+/* import "../../interfaces/jar.sol"; */
+/* import "../../interfaces/staking-rewards.sol"; */
+/* import "../../interfaces/uniswapv2.sol"; */
+/* import "../../interfaces/controller.sol"; */
 
 contract StrategyUniEthUsdtLpV3 {
     // v2 Uses uniswap for less gas
@@ -1183,19 +1181,18 @@ contract StrategyUniEthUsdtLpV3 {
     uint256 public keepUNI = 0;
     uint256 public constant keepUNIMax = 10000;
 
-    // Fees ~4.5% in total
-    // - 3%  performance fee
-    // - 1.5%   used to burn pickles
-
-    // 3% of 98% = 2.94% of original 100%
-    uint256 public performanceFee = 300;
+    // Perfomance fee 4.5%
+    uint256 public performanceFee = 450;
     uint256 public constant performanceMax = 10000;
 
-    uint256 public burnFee = 150;
-    uint256 public constant burnMax = 10000;
+    // Withdrawal fee 0.5%
+    // - 0.375% to treasury
+    // - 0.125% to dev fund
+    uint256 public treasuryFee = 375;
+    uint256 public constant treasuryMax = 100000;
 
-    uint256 public withdrawalFee = 50;
-    uint256 public constant withdrawalMax = 10000;
+    uint256 public devFundFee = 125;
+    uint256 public constant devFundMax = 100000;
 
     address public governance;
     address public controller;
@@ -1239,19 +1236,19 @@ contract StrategyUniEthUsdtLpV3 {
         keepUNI = _keepUNI;
     }
 
-    function setWithdrawalFee(uint256 _withdrawalFee) external {
+    function setDevFundFee(uint256 _devFundFee) external {
         require(msg.sender == governance, "!governance");
-        withdrawalFee = _withdrawalFee;
+        devFundFee = _devFundFee;
+    }
+
+    function setTreasuryFee(uint256 _treasuryFee) external {
+        require(msg.sender == governance, "!governance");
+        treasuryFee = _treasuryFee;
     }
 
     function setPerformanceFee(uint256 _performanceFee) external {
         require(msg.sender == governance, "!governance");
         performanceFee = _performanceFee;
-    }
-
-    function setBurnFee(uint256 _burnFee) external {
-        require(msg.sender == governance, "!governance");
-        burnFee = _burnFee;
     }
 
     function setStrategist(address _strategist) external {
@@ -1285,18 +1282,6 @@ contract StrategyUniEthUsdtLpV3 {
         }
     }
 
-    // Contoller only function for withdrawing for free
-    // This is used to swap between jars
-    function freeWithdraw(uint256 _amount) external {
-        require(msg.sender == controller, "!controller");
-        uint256 _balance = IERC20(want).balanceOf(address(this));
-        if (_balance < _amount) {
-            _amount = _withdrawSome(_amount.sub(_balance));
-            _amount = _amount.add(_balance);
-        }
-        IERC20(want).safeTransfer(msg.sender, _amount);
-    }
-
     // Controller only function for creating additional rewards from dust
     function withdraw(IERC20 _asset) external returns (uint256 balance) {
         require(msg.sender == controller, "!controller");
@@ -1314,13 +1299,19 @@ contract StrategyUniEthUsdtLpV3 {
             _amount = _amount.add(_balance);
         }
 
-        uint256 _fee = _amount.mul(withdrawalFee).div(withdrawalMax);
+        uint256 _feeDev = _amount.mul(devFundFee).div(devFundMax);
+        IERC20(want).safeTransfer(IController(controller).devfund(), _feeDev);
 
-        IERC20(want).safeTransfer(IController(controller).rewards(), _fee);
+        uint256 _feeTreasury = _amount.mul(treasuryFee).div(treasuryMax);
+        IERC20(want).safeTransfer(
+            IController(controller).treasury(),
+            _feeTreasury
+        );
+
         address _jar = IController(controller).jars(address(want));
         require(_jar != address(0), "!jar"); // additional protection so we don't burn the funds
 
-        IERC20(want).safeTransfer(_jar, _amount.sub(_fee));
+        IERC20(want).safeTransfer(_jar, _amount.sub(_feeDev).sub(_feeTreasury));
     }
 
     // Withdraw all funds, normally used when migrating strategies
@@ -1362,7 +1353,7 @@ contract StrategyUniEthUsdtLpV3 {
             // 10% is locked up for future gov
             uint256 _keepUNI = _uni.mul(keepUNI).div(keepUNIMax);
             IERC20(uni).safeTransfer(
-                IController(controller).rewards(),
+                IController(controller).treasury(),
                 _keepUNI
             );
             _swap(uni, weth, _uni.sub(_keepUNI));
@@ -1371,15 +1362,6 @@ contract StrategyUniEthUsdtLpV3 {
         // Swap half WETH for USDT
         uint256 _weth = IERC20(weth).balanceOf(address(this));
         if (_weth > 0) {
-            // Burn some pickles first
-            uint256 _burnFee = _weth.mul(burnFee).div(burnMax);
-            _swap(weth, pickle, _burnFee);
-            IERC20(pickle).transfer(
-                burn,
-                IERC20(pickle).balanceOf(address(this))
-            );
-
-            _weth = _weth.sub(_burnFee);
             _swap(weth, usdt, _weth.div(2));
         }
 
@@ -1405,11 +1387,11 @@ contract StrategyUniEthUsdtLpV3 {
 
             // Donates DUST
             IERC20(weth).transfer(
-                IController(controller).rewards(),
+                IController(controller).treasury(),
                 IERC20(weth).balanceOf(address(this))
             );
             USDT(usdt).transfer(
-                IController(controller).rewards(),
+                IController(controller).treasury(),
                 IERC20(usdt).balanceOf(address(this))
             );
         }
@@ -1419,7 +1401,7 @@ contract StrategyUniEthUsdtLpV3 {
         if (_want > 0) {
             // Performance fee
             IERC20(want).safeTransfer(
-                IController(controller).rewards(),
+                IController(controller).treasury(),
                 _want.mul(performanceFee).div(performanceMax)
             );
 

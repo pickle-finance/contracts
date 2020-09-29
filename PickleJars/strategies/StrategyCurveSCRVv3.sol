@@ -1,4 +1,4 @@
-// hevm: flattened sources of src/strategies/strategy-curve-scrv-v3.sol
+// hevm: flattened sources of src/strategies/curve/strategy-curve-scrv-v3.sol
 pragma solidity >=0.4.23 >=0.6.0 <0.7.0 >=0.6.2 <0.7.0 >=0.6.7 <0.7.0;
 
 ////// src/interfaces/controller.sol
@@ -9,15 +9,13 @@ pragma solidity >=0.4.23 >=0.6.0 <0.7.0 >=0.6.2 <0.7.0 >=0.6.7 <0.7.0;
 interface IController {
     function jars(address) external view returns (address);
 
-    function rewards() external view returns (address);
+    function devfund() external view returns (address);
 
-    function want(address) external view returns (address); // NOTE: Only StrategyControllerV2 implements this
+    function treasury() external view returns (address);
 
     function balanceOf(address) external view returns (uint256);
 
     function withdraw(address, uint256) external;
-
-    function freeWithdraw(address, uint256) external;
 
     function earn(address, uint256) external;
 }
@@ -128,13 +126,21 @@ interface ICurveVotingEscrow {
 
     function locked__end(address _addr) external view returns (uint256);
 
-    function create_lock(uint256 _value, uint256 _unlock_time) external;
+    function create_lock(uint256, uint256) external;
 
-    function increase_amount(uint256 _value) external;
+    function increase_amount(uint256) external;
 
     function increase_unlock_time(uint256 _unlock_time) external;
 
     function withdraw() external;
+
+    function smart_wallet_checker() external returns (address);
+}
+
+interface ICurveSmartContractChecker {
+    function wallets(address) external returns (bool);
+
+    function approveWallet(address _wallet) external;
 }
 
 ////// src/lib/safe-math.sol
@@ -1150,24 +1156,341 @@ interface IUniswapV2Factory {
         returns (address pair);
 }
 
-////// src/strategies/strategy-curve-scrv-v3.sol
-// https://github.com/iearn-finance/contracts/blob/master/contracts/strategies/StrategyCurveYCRVVoter.sol
+////// src/strategies/curve/crv-locker.sol
+// CurveYCRVVoter: https://etherscan.io/address/0xF147b8125d2ef93FB6965Db97D6746952a133934#code
 
 
 /* pragma solidity ^0.6.2; */
 
-/* import "../lib/erc20.sol"; */
-/* import "../lib/safe-math.sol"; */
+/* import "../../lib/erc20.sol"; */
+/* import "../../lib/safe-math.sol"; */
 
-/* import "../interfaces/jar.sol"; */
-/* import "../interfaces/curve.sol"; */
-/* import "../interfaces/uniswapv2.sol"; */
-/* import "../interfaces/controller.sol"; */
+/* import "../../interfaces/curve.sol"; */
+
+contract CRVLocker {
+    using SafeERC20 for IERC20;
+    using Address for address;
+    using SafeMath for uint256;
+
+    address public constant want = 0xC25a3A3b969415c80451098fa907EC722572917F;
+    address
+        public constant scrvGauge = 0xA90996896660DEcC6E997655E065b23788857849;
+    address public constant mintr = 0xd061D61a4d941c39E5453435B6345Dc261C2fcE0;
+    address public constant crv = 0xD533a949740bb3306d119CC777fa900bA034cd52;
+
+    address public constant escrow = 0x5f3b5DfEb7B28CDbD7FAba78963EE202a494e2A2;
+
+    address public governance;
+    address public voter;
+
+    constructor(address _governance) public {
+        governance = _governance;
+    }
+
+    function getName() external pure returns (string memory) {
+        return "CRVLocker";
+    }
+
+    function setVoter(address _voter) external {
+        require(msg.sender == governance, "!governance");
+        voter = _voter;
+    }
+
+    function deposit() public {
+        uint256 _want = IERC20(want).balanceOf(address(this));
+        if (_want > 0) {
+            IERC20(want).safeApprove(scrvGauge, 0);
+            IERC20(want).safeApprove(scrvGauge, _want);
+            ICurveGauge(scrvGauge).deposit(_want);
+        }
+    }
+
+    // Controller only function for creating additional rewards from dust
+    function withdraw(IERC20 _asset) external returns (uint256 balance) {
+        require(msg.sender == voter, "!voter");
+        balance = _asset.balanceOf(address(this));
+        _asset.safeTransfer(voter, balance);
+    }
+
+    // Withdraw partial funds, normally used with a vault withdrawal
+    function withdraw(uint256 _amount) external {
+        require(msg.sender == voter, "!voter");
+        uint256 _balance = IERC20(want).balanceOf(address(this));
+        if (_balance < _amount) {
+            _amount = _withdrawSome(_amount.sub(_balance));
+            _amount = _amount.add(_balance);
+        }
+        IERC20(want).safeTransfer(voter, _amount);
+    }
+
+    // Withdraw all funds, normally used when migrating strategies
+    function withdrawAll() external returns (uint256 balance) {
+        require(msg.sender == voter, "!voter");
+        _withdrawAll();
+
+        balance = IERC20(want).balanceOf(address(this));
+        IERC20(want).safeTransfer(voter, balance);
+    }
+
+    function _withdrawAll() internal {
+        ICurveGauge(scrvGauge).withdraw(
+            ICurveGauge(scrvGauge).balanceOf(address(this))
+        );
+    }
+
+    function createLock(uint256 _value, uint256 _unlockTime) external {
+        require(msg.sender == voter || msg.sender == governance, "!authorized");
+        IERC20(crv).safeApprove(escrow, 0);
+        IERC20(crv).safeApprove(escrow, _value);
+        ICurveVotingEscrow(escrow).create_lock(_value, _unlockTime);
+    }
+
+    function increaseAmount(uint256 _value) external {
+        require(msg.sender == voter || msg.sender == governance, "!authorized");
+        IERC20(crv).safeApprove(escrow, 0);
+        IERC20(crv).safeApprove(escrow, _value);
+        ICurveVotingEscrow(escrow).increase_amount(_value);
+    }
+
+    function increaseUnlockTime(uint256 _unlockTime) external {
+        require(msg.sender == voter || msg.sender == governance, "!authorized");
+        ICurveVotingEscrow(escrow).increase_unlock_time(_unlockTime);
+    }
+
+    function release() external {
+        require(msg.sender == voter || msg.sender == governance, "!authorized");
+        ICurveVotingEscrow(escrow).withdraw();
+    }
+
+    function _withdrawSome(uint256 _amount) internal returns (uint256) {
+        ICurveGauge(scrvGauge).withdraw(_amount);
+        return _amount;
+    }
+
+    function balanceOfWant() public view returns (uint256) {
+        return IERC20(want).balanceOf(address(this));
+    }
+
+    function balanceOfPool() public view returns (uint256) {
+        return ICurveGauge(scrvGauge).balanceOf(address(this));
+    }
+
+    function balanceOf() public view returns (uint256) {
+        return balanceOfWant().add(balanceOfPool());
+    }
+
+    function setGovernance(address _governance) external {
+        require(msg.sender == governance, "!governance");
+        governance = _governance;
+    }
+
+    function execute(
+        address to,
+        uint256 value,
+        bytes calldata data
+    ) external returns (bool, bytes memory) {
+        require(msg.sender == voter || msg.sender == governance, "!governance");
+        
+        (bool success, bytes memory result) = to.call{value: value}(data);
+        require(success, "!execute-success");
+
+        return (success, result);
+    }
+}
+
+////// src/strategies/curve/scrv-voter.sol
+// StrategyProxy: https://etherscan.io/address/0x5886e475e163f78cf63d6683abc7fe8516d12081#code
+/* pragma solidity ^0.6.7; */
+
+/* import "../../lib/erc20.sol"; */
+/* import "../../lib/safe-math.sol"; */
+
+/* import "./crv-locker.sol"; */
+
+/* import "../../interfaces/curve.sol"; */
+
+contract SCRVVoter {
+    using SafeERC20 for IERC20;
+    using Address for address;
+    using SafeMath for uint256;
+
+    CRVLocker public crvLocker;
+    address public constant mintr = 0xd061D61a4d941c39E5453435B6345Dc261C2fcE0;
+    address public constant crv = 0xD533a949740bb3306d119CC777fa900bA034cd52;
+    address public constant snx = 0xC011a73ee8576Fb46F5E1c5751cA3B9Fe0af2a6F;
+    address
+        public constant gaugeController = 0x2F50D538606Fa9EDD2B11E2446BEb18C9D5846bB;
+    address
+        public constant scrvGauge = 0xA90996896660DEcC6E997655E065b23788857849;
+
+    mapping(address => bool) public strategies;
+    address public governance;
+
+    constructor(address _governance, address _crvLocker) public {
+        governance = _governance;
+        crvLocker = CRVLocker(_crvLocker);
+    }
+
+    function setGovernance(address _governance) external {
+        require(msg.sender == governance, "!governance");
+        governance = _governance;
+    }
+
+    function approveStrategy(address _strategy) external {
+        require(msg.sender == governance, "!governance");
+        strategies[_strategy] = true;
+    }
+
+    function revokeStrategy(address _strategy) external {
+        require(msg.sender == governance, "!governance");
+        strategies[_strategy] = false;
+    }
+
+    function lock() external {
+        crvLocker.increaseAmount(IERC20(crv).balanceOf(address(crvLocker)));
+    }
+
+    function vote(address _gauge, uint256 _amount) public {
+        require(strategies[msg.sender], "!strategy");
+        crvLocker.execute(
+            gaugeController,
+            0,
+            abi.encodeWithSignature(
+                "vote_for_gauge_weights(address,uint256)",
+                _gauge,
+                _amount
+            )
+        );
+    }
+
+    function max() external {
+        require(strategies[msg.sender], "!strategy");
+        vote(scrvGauge, 10000);
+    }
+
+    function withdraw(
+        address _gauge,
+        address _token,
+        uint256 _amount
+    ) public returns (uint256) {
+        require(strategies[msg.sender], "!strategy");
+        uint256 _before = IERC20(_token).balanceOf(address(crvLocker));
+        crvLocker.execute(
+            _gauge,
+            0,
+            abi.encodeWithSignature("withdraw(uint256)", _amount)
+        );
+        uint256 _after = IERC20(_token).balanceOf(address(crvLocker));
+        uint256 _net = _after.sub(_before);
+        crvLocker.execute(
+            _token,
+            0,
+            abi.encodeWithSignature(
+                "transfer(address,uint256)",
+                msg.sender,
+                _net
+            )
+        );
+        return _net;
+    }
+
+    function balanceOf(address _gauge) public view returns (uint256) {
+        return IERC20(_gauge).balanceOf(address(crvLocker));
+    }
+
+    function withdrawAll(address _gauge, address _token)
+        external
+        returns (uint256)
+    {
+        require(strategies[msg.sender], "!strategy");
+        return withdraw(_gauge, _token, balanceOf(_gauge));
+    }
+
+    function deposit(address _gauge, address _token) external {
+        uint256 _balance = IERC20(_token).balanceOf(address(this));
+        IERC20(_token).safeTransfer(address(crvLocker), _balance);
+
+        _balance = IERC20(_token).balanceOf(address(crvLocker));
+        crvLocker.execute(
+            _token,
+            0,
+            abi.encodeWithSignature("approve(address,uint256)", _gauge, 0)
+        );
+        crvLocker.execute(
+            _token,
+            0,
+            abi.encodeWithSignature(
+                "approve(address,uint256)",
+                _gauge,
+                _balance
+            )
+        );
+        crvLocker.execute(
+            _gauge,
+            0,
+            abi.encodeWithSignature("deposit(uint256)", _balance)
+        );
+    }
+
+    function harvest(address _gauge) external {
+        require(strategies[msg.sender], "!strategy");
+        uint256 _before = IERC20(crv).balanceOf(address(crvLocker));
+        crvLocker.execute(
+            mintr,
+            0,
+            abi.encodeWithSignature("mint(address)", _gauge)
+        );
+        uint256 _after = IERC20(crv).balanceOf(address(crvLocker));
+        uint256 _balance = _after.sub(_before);
+        crvLocker.execute(
+            crv,
+            0,
+            abi.encodeWithSignature(
+                "transfer(address,uint256)",
+                msg.sender,
+                _balance
+            )
+        );
+    }
+
+    function claimRewards() external {
+        require(strategies[msg.sender], "!strategy");
+
+        uint256 _before = IERC20(snx).balanceOf(address(crvLocker));
+        crvLocker.execute(crv, 0, abi.encodeWithSignature("claim_rewards()"));
+        uint256 _after = IERC20(snx).balanceOf(address(crvLocker));
+        uint256 _balance = _after.sub(_before);
+
+        crvLocker.execute(
+            snx,
+            0,
+            abi.encodeWithSignature(
+                "transfer(address,uint256)",
+                msg.sender,
+                _balance
+            )
+        );
+    }
+}
+
+////// src/strategies/curve/strategy-curve-scrv-v3.sol
+// https://etherscan.io/address/0x594a198048501a304267e63b3bad0f0638da7628#code
+
+
+/* pragma solidity ^0.6.2; */
+
+/* import "../../lib/erc20.sol"; */
+/* import "../../lib/safe-math.sol"; */
+
+/* import "./scrv-voter.sol"; */
+/* import "./crv-locker.sol"; */
+
+/* import "../../interfaces/jar.sol"; */
+/* import "../../interfaces/curve.sol"; */
+/* import "../../interfaces/uniswapv2.sol"; */
+/* import "../../interfaces/controller.sol"; */
 
 contract StrategyCurveSCRVv3 {
-    // v2 Uses uniswap for less gas
-    // We can roll back to v1 if the liquidity is there
-
     using SafeERC20 for IERC20;
     using Address for address;
     using SafeMath for uint256;
@@ -1205,46 +1528,34 @@ contract StrategyCurveSCRVv3 {
     address public univ2Router2 = 0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D;
 
     // How much CRV tokens to keep
-    uint256 public keepCRV = 1000;
+    uint256 public keepCRV = 0;
     uint256 public constant keepCRVMax = 10000;
 
-    // Fees ~4.93% in total
-    // - 2.94%  performance fee
-    // - 1.5%   used to burn pickles
-    // - 0.5%   gas compensation fee (for caller)
-
-    // 3% of 98% = 2.94% of original 100%
-    uint256 public performanceFee = 300;
+    // Perfomance fee 4.5%
+    uint256 public performanceFee = 450;
     uint256 public constant performanceMax = 10000;
 
-    uint256 public burnFee = 150;
-    uint256 public constant burnMax = 10000;
+    // Withdrawal fee 0.5%
+    // - 0.375% to treasury
+    // - 0.125% to dev fund
+    uint256 public treasuryFee = 375;
+    uint256 public constant treasuryMax = 100000;
 
-    uint256 public callerFee = 50;
-    uint256 public constant callerMax = 10000;
-
-    uint256 public withdrawalFee = 50;
-    uint256 public constant withdrawalMax = 10000;
+    uint256 public devFundFee = 125;
+    uint256 public constant devFundMax = 100000;
 
     address public governance;
     address public controller;
     address public strategist;
-    address public timelock;
-
-    // Proxy implementation
-    // Once we get whitelisted by curve
-    address implementation;
 
     constructor(
         address _governance,
         address _strategist,
-        address _controller,
-        address _timelock
+        address _controller
     ) public {
         governance = _governance;
         strategist = _strategist;
         controller = _controller;
-        timelock = _timelock;
     }
 
     // **** Views ****
@@ -1318,24 +1629,19 @@ contract StrategyCurveSCRVv3 {
 
     // **** Setters ****
 
-    function setWithdrawalFee(uint256 _withdrawalFee) external {
+    function setDevFundFee(uint256 _devFundFee) external {
         require(msg.sender == governance, "!governance");
-        withdrawalFee = _withdrawalFee;
+        devFundFee = _devFundFee;
+    }
+
+    function setTreasuryFee(uint256 _treasuryFee) external {
+        require(msg.sender == governance, "!governance");
+        treasuryFee = _treasuryFee;
     }
 
     function setPerformanceFee(uint256 _performanceFee) external {
         require(msg.sender == governance, "!governance");
         performanceFee = _performanceFee;
-    }
-
-    function setCallerFee(uint256 _callerFee) external {
-        require(msg.sender == governance, "!governance");
-        callerFee = _callerFee;
-    }
-
-    function setBurnFee(uint256 _burnFee) external {
-        require(msg.sender == governance, "!governance");
-        burnFee = _burnFee;
     }
 
     function setStrategist(address _strategist) external {
@@ -1353,16 +1659,6 @@ contract StrategyCurveSCRVv3 {
         controller = _controller;
     }
 
-    function setTimelock(address _timelock) external {
-        require(msg.sender == timelock, "!timelock");
-        timelock = _timelock;
-    }
-
-    function setImplementation(address _implementation) external {
-        require(msg.sender == timelock, "!timelock");
-        implementation = _implementation;
-    }
-
     function setKeepCRV(uint256 _keepCRV) external {
         require(msg.sender == governance, "!governance");
         keepCRV = _keepCRV;
@@ -1377,18 +1673,6 @@ contract StrategyCurveSCRVv3 {
             IERC20(want).approve(gauge, _want);
             ICurveGauge(gauge).deposit(_want);
         }
-    }
-
-    // Contoller only function for withdrawing for free
-    // This is used to swap between jars
-    function freeWithdraw(uint256 _amount) external {
-        require(msg.sender == controller, "!controller");
-        uint256 _balance = IERC20(want).balanceOf(address(this));
-        if (_balance < _amount) {
-            _amount = _withdrawSome(_amount.sub(_balance));
-            _amount = _amount.add(_balance);
-        }
-        IERC20(want).safeTransfer(msg.sender, _amount);
     }
 
     // Controller only function for creating additional rewards from dust
@@ -1414,13 +1698,19 @@ contract StrategyCurveSCRVv3 {
             _amount = _amount.add(_balance);
         }
 
-        uint256 _fee = _amount.mul(withdrawalFee).div(withdrawalMax);
+        uint256 _feeDev = _amount.mul(devFundFee).div(devFundMax);
+        IERC20(want).safeTransfer(IController(controller).devfund(), _feeDev);
 
-        IERC20(want).safeTransfer(IController(controller).rewards(), _fee);
+        uint256 _feeTreasury = _amount.mul(treasuryFee).div(treasuryMax);
+        IERC20(want).safeTransfer(
+            IController(controller).treasury(),
+            _feeTreasury
+        );
+
         address _jar = IController(controller).jars(address(want));
         require(_jar != address(0), "!jar"); // additional protection so we don't burn the funds
 
-        IERC20(want).safeTransfer(_jar, _amount.sub(_fee));
+        IERC20(want).safeTransfer(_jar, _amount.sub(_feeDev).sub(_feeTreasury));
     }
 
     // Withdraw all funds, normally used when migrating strategies
@@ -1468,12 +1758,13 @@ contract StrategyCurveSCRVv3 {
             // x% is sent back to the rewards holder
             // to be used to lock up in as veCRV in a future date
             uint256 _keepCRV = _crv.mul(keepCRV).div(keepCRVMax);
-            IERC20(crv).safeTransfer(
-                IController(controller).rewards(),
-                _keepCRV
-            );
+            if (_keepCRV > 0) {
+                IERC20(crv).safeTransfer(
+                    IController(controller).treasury(),
+                    _keepCRV
+                );
+            }
             _crv = _crv.sub(_keepCRV);
-
             _swap(crv, to, _crv);
         }
 
@@ -1488,21 +1779,6 @@ contract StrategyCurveSCRVv3 {
         // to get back want (scrv)
         uint256 _to = IERC20(to).balanceOf(address(this));
         if (_to > 0) {
-            // Fees (in stablecoin)
-            // 0.5% sent to msg.sender to refund gas
-            uint256 _callerFee = _to.mul(callerFee).div(callerMax);
-            IERC20(to).safeTransfer(msg.sender, _callerFee);
-
-            // 1.5% used to buy and BURN pickles
-            uint256 _burnFee = _to.mul(burnFee).div(burnMax);
-            _swap(to, pickle, _burnFee);
-            IERC20(pickle).transfer(
-                burn,
-                IERC20(pickle).balanceOf(address(this))
-            );
-
-            // Supply to curve to get sCRV
-            _to = _to.sub(_callerFee).sub(_burnFee);
             IERC20(to).safeApprove(curve, 0);
             IERC20(to).safeApprove(curve, _to);
             uint256[4] memory liquidity;
@@ -1513,13 +1789,9 @@ contract StrategyCurveSCRVv3 {
         // We want to get back sCRV
         uint256 _want = IERC20(want).balanceOf(address(this));
         if (_want > 0) {
-            // Fees (in sCRV)
-            // 3% performance fee
-            // This 3% comes AFTER deducing 2%
-            // So in reality its actually around 2.94%
-            // 0.98 * 0.03 = 0.0294
+            // Fees 4.5% goes to treasury
             IERC20(want).safeTransfer(
-                IController(controller).rewards(),
+                IController(controller).treasury(),
                 _want.mul(performanceFee).div(performanceMax)
             );
 
@@ -1548,45 +1820,6 @@ contract StrategyCurveSCRVv3 {
             address(this),
             now.add(60)
         );
-    }
-
-    // Proxy pattern
-    // Implementation is only settable by timelock
-    function execute(bytes memory _data)
-        public
-        payable
-        returns (bytes memory response)
-    {
-        address _target = implementation;
-
-        require(_target != address(0), "!target");
-
-        // call contract in current context
-        assembly {
-            let succeeded := delegatecall(
-                sub(gas(), 5000),
-                _target,
-                add(_data, 0x20),
-                mload(_data),
-                0,
-                0
-            )
-            let size := returndatasize()
-
-            response := mload(0x40)
-            mstore(
-                0x40,
-                add(response, and(add(add(size, 0x20), 0x1f), not(0x1f)))
-            )
-            mstore(response, size)
-            returndatacopy(add(response, 0x20), 0, size)
-
-            switch iszero(succeeded)
-                case 1 {
-                    // throw if delegatecall failed
-                    revert(add(response, 0x20), size)
-                }
-        }
     }
 }
 
