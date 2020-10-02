@@ -73,7 +73,7 @@ PICKLEs In The Citadel: [0x47b7b0983bf3b1d8d5b773006809edcb208af191](https://eth
 
 ## Tools
 
-PickleSwap: [0xc83d3a7e32467c453eb1ad99f2f5c6fce399df98](https://etherscan.io/address/0xc83d3a7e32467c453eb1ad99f2f5c6fce399df98)
+PickleSwap: [0x439923a086069d4171fdf1bbe12470cbbe5262ef](https://etherscan.io/address/0x439923a086069d4171fdf1bbe12470cbbe5262ef)
 
 PickleMigrator: [0xC0CF2CbD0c6bB1da4c671FBb07D40E88676DBe82](https://etherscan.io/address/0xC0CF2CbD0c6bB1da4c671FBb07D40E88676DBe82)
 
