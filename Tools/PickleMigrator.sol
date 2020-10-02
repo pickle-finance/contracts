@@ -4,7 +4,7 @@
 
 // File: contracts/interfaces/IUniswapV2ERC20.sol
 
-// SPDX-License-Identifier: MIT
+
 pragma solidity ^0.6.12;
 
 interface IUniswapV2ERC20 {

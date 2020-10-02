@@ -9,6 +9,8 @@ pragma solidity >=0.4.23 >=0.6.0 <0.7.0 >=0.6.2 <0.7.0 >=0.6.7 <0.7.0;
 interface IController {
     function jars(address) external view returns (address);
 
+    function rewards() external view returns (address);
+
     function devfund() external view returns (address);
 
     function treasury() external view returns (address);
@@ -21,7 +23,7 @@ interface IController {
 }
 
 ////// src/lib/safe-math.sol
-
+// SPDX-License-Identifier: MIT
 
 /* pragma solidity ^0.6.0; */
 
@@ -184,7 +186,7 @@ library SafeMath {
 
 // File: contracts/GSN/Context.sol
 
-
+// SPDX-License-Identifier: MIT
 
 /* pragma solidity ^0.6.0; */
 
@@ -798,7 +800,7 @@ library SafeERC20 {
     }
 }
 ////// src/interfaces/jar.sol
-
+// SPDX-License-Identifier: MIT
 /* pragma solidity ^0.6.2; */
 
 /* import "../lib/erc20.sol"; */
@@ -818,7 +820,7 @@ interface IJar is IERC20 {
 }
 
 ////// src/interfaces/staking-rewards.sol
-
+// SPDX-License-Identifier: MIT
 /* pragma solidity ^0.6.2; */
 
 interface IStakingRewards {
@@ -901,9 +903,9 @@ interface IStakingRewardsFactory {
 }
 
 ////// src/interfaces/uniswapv2.sol
+// SPDX-License-Identifier: MIT
 
-
-
+// SPDX-License-Identifier: MIT
 /* pragma solidity ^0.6.2; */
 
 interface UniswapRouterV2 {
@@ -1119,7 +1121,7 @@ interface IUniswapV2Factory {
 ////// src/strategies/uniswapv2/strategy-uni-eth-usdc-lp-v3.sol
 // https://etherscan.io/address/0xF147b8125d2ef93FB6965Db97D6746952a133934
 
-
+// SPDX-License-Identifier: MIT
 /* pragma solidity ^0.6.2; */
 
 /* import "../../lib/erc20.sol"; */
@@ -1253,7 +1255,7 @@ contract StrategyUniEthUsdcLpV3 {
     }
 
     function setController(address _controller) external {
-        require(msg.sender == governance, "!governance");
+        require(msg.sender == timelock, "!timelock");
         controller = _controller;
     }
 
@@ -1396,7 +1398,7 @@ contract StrategyUniEthUsdcLpV3 {
         }
     }
 
-    // Emergency function call
+    // Emergency proxy pattern
     function execute(address _target, bytes memory _data)
         public
         payable

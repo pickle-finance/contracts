@@ -14,7 +14,9 @@ Governance (multi-sig): [0x9d074E37d408542FD38be78848e8814AFB38db17](https://eth
 
 ## pJars
 
-Controller: [0x6cBC1D6fC265023BB4Ae265F0f2EFffC76128dc7](https://etherscan.io/address/0x6cBC1D6fC265023BB4Ae265F0f2EFffC76128dc7)
+Controller: [0x2ff3e6C2E054ABf45E21f790163970df82b0ea90](https://etherscan.io/address/0x2ff3e6C2E054ABf45E21f790163970df82b0ea90)
+
+Strategist: [0x907D9B32654B8D43e8737E0291Ad9bfcce01DAD6](https://etherscan.io/address/0x907D9B32654B8D43e8737E0291Ad9bfcce01DAD6)
 
 DevFund: [0x9d074E37d408542FD38be78848e8814AFB38db17](https://etherscan.io/address/0x9d074E37d408542FD38be78848e8814AFB38db17)
 
@@ -26,34 +28,34 @@ Timelock (12 hours): [0xD92c7fAa0Ca0e6AE4918f3a83d9832d9CAEAA0d3](https://ethers
 
 sCRV (Want): [0xC25a3A3b969415c80451098fa907EC722572917F](https://etherscan.io/address/0xC25a3A3b969415c80451098fa907EC722572917F)
 
-psCRV (Pickle Jar): [0xD1dd7029d01a0a0966cc0e18aCfe6F9bE900d759](https://etherscan.io/address/0xD1dd7029d01a0a0966cc0e18aCfe6F9bE900d759)
+psCRV (Pickle Jar): [0x68d14d66B2B0d6E157c06Dc8Fefa3D8ba0e66a89](https://etherscan.io/address/0x68d14d66B2B0d6E157c06Dc8Fefa3D8ba0e66a89)
 
-StrategyCurveSCRVv3: [0x8E7627Db25f2e73F9B2dD2CdCd365b17c59901b2](https://etherscan.io/address/0x8E7627Db25f2e73F9B2dD2CdCd365b17c59901b2)
+StrategyCurveSCRVv3: [0x1c17C71cD9eD9fb35C4b2B0cCbe46cfAcC85dE0a](https://etherscan.io/address/0x1c17C71cD9eD9fb35C4b2B0cCbe46cfAcC85dE0a)
 
 #### 0.69(a) (UNIv2-ETH-DAI LP)
 
 UNIv2-ETH-DAI LP (Want): [0xA478c2975Ab1Ea89e8196811F51A7B7Ade33eB11](https://etherscan.io/address/0xA478c2975Ab1Ea89e8196811F51A7B7Ade33eB11)
 
-psUNIv2-ETH-DAI (Pickle Jar): [0xac08549396c2934694D3cB6d0Bc7fE0dB2Bda154](https://etherscan.io/address/0xac08549396c2934694D3cB6d0Bc7fE0dB2Bda154)
+psUNIv2-ETH-DAI (Pickle Jar): [0xCffA068F1E44D98D3753966eBd58D4CFe3BB5162](https://etherscan.io/address/0xCffA068F1E44D98D3753966eBd58D4CFe3BB5162)
 
-StrategyUniEthDaiLpV3: [0xd8614d226BFE5bc47ADd64bE66329B165d9B2E3b](https://etherscan.io/address/0xd8614d226BFE5bc47ADd64bE66329B165d9B2E3b)
+StrategyUniEthDaiLpV3: [0x99E71Af1d19bC3f1E67D67696354C0df218441bc](https://etherscan.io/address/0x99E71Af1d19bC3f1E67D67696354C0df218441bc)
 
 
 #### 0.69(b) (UNIv2-ETH-USDC LP)
 
 UNIv2-ETH-USDC LP (Want): [0xB4e16d0168e52d35CaCD2c6185b44281Ec28C9Dc](https://etherscan.io/address/0xB4e16d0168e52d35CaCD2c6185b44281Ec28C9Dc)
 
-psUNIv2-ETH-USDC (Pickle Jar): [0xF6d4633e2799C3d48Ffd93AFEbeb1c53d8feF0d2](https://etherscan.io/address/0xF6d4633e2799C3d48Ffd93AFEbeb1c53d8feF0d2)
+psUNIv2-ETH-USDC (Pickle Jar): [0x53Bf2E62fA20e2b4522f05de3597890Ec1b352C6](https://etherscan.io/address/0x53Bf2E62fA20e2b4522f05de3597890Ec1b352C6)
 
-StrategyUniEthUsdcLpV3: [0x54D17C4a42dAB5Ec565aBe70a3900F791638469d](https://etherscan.io/address/0x54D17C4a42dAB5Ec565aBe70a3900F791638469d)
+StrategyUniEthUsdcLpV3: [0x3191BeCBf4f94c92200d50C6DbFaf84C3043B7f0](https://etherscan.io/address/0x3191BeCBf4f94c92200d50C6DbFaf84C3043B7f0)
 
 #### 0.69(c) (UNIv2-ETH-USDT LP)
 
 UNIv2-ETH-USDT LP (Want): [0x0d4a11d5EEaaC28EC3F61d100daF4d40471f1852](https://etherscan.io/address/0x0d4a11d5EEaaC28EC3F61d100daF4d40471f1852)
 
-psUNIv2-ETH-USDT (Pickle Jar): [0xF64419de962b9E647204b8689E103deE6E63b5b3](https://etherscan.io/address/0xF64419de962b9E647204b8689E103deE6E63b5b3)
+psUNIv2-ETH-USDT (Pickle Jar): [0x09FC573c502037B149ba87782ACC81cF093EC6ef](https://etherscan.io/address/0x09FC573c502037B149ba87782ACC81cF093EC6ef)
 
-StrategyUniEthUsdtLpV3: [0xB168FFE3cF06b71d52254eDB81B581ABD8a899CB](https://etherscan.io/address/0xB168FFE3cF06b71d52254eDB81B581ABD8a899CB)
+StrategyUniEthUsdtLpV3: [0x228b401eBBb3ec55dd5724c07445549F78F98612](https://etherscan.io/address/0x228b401eBBb3ec55dd5724c07445549F78F98612)
 
 ---
 

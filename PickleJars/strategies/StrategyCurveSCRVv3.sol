@@ -9,6 +9,8 @@ pragma solidity >=0.4.23 >=0.6.0 <0.7.0 >=0.6.2 <0.7.0 >=0.6.7 <0.7.0;
 interface IController {
     function jars(address) external view returns (address);
 
+    function rewards() external view returns (address);
+
     function devfund() external view returns (address);
 
     function treasury() external view returns (address);
@@ -21,7 +23,7 @@ interface IController {
 }
 
 ////// src/interfaces/curve.sol
-
+// SPDX-License-Identifier: MIT
 /* pragma solidity ^0.6.2; */
 
 interface ICurveFi {
@@ -144,7 +146,7 @@ interface ICurveSmartContractChecker {
 }
 
 ////// src/lib/safe-math.sol
-
+// SPDX-License-Identifier: MIT
 
 /* pragma solidity ^0.6.0; */
 
@@ -307,7 +309,7 @@ library SafeMath {
 
 // File: contracts/GSN/Context.sol
 
-
+// SPDX-License-Identifier: MIT
 
 /* pragma solidity ^0.6.0; */
 
@@ -921,7 +923,7 @@ library SafeERC20 {
     }
 }
 ////// src/interfaces/jar.sol
-
+// SPDX-License-Identifier: MIT
 /* pragma solidity ^0.6.2; */
 
 /* import "../lib/erc20.sol"; */
@@ -941,9 +943,9 @@ interface IJar is IERC20 {
 }
 
 ////// src/interfaces/uniswapv2.sol
+// SPDX-License-Identifier: MIT
 
-
-
+// SPDX-License-Identifier: MIT
 /* pragma solidity ^0.6.2; */
 
 interface UniswapRouterV2 {
@@ -1159,7 +1161,7 @@ interface IUniswapV2Factory {
 ////// src/strategies/curve/crv-locker.sol
 // CurveYCRVVoter: https://etherscan.io/address/0xF147b8125d2ef93FB6965Db97D6746952a133934#code
 
-
+// SPDX-License-Identifier: MIT
 /* pragma solidity ^0.6.2; */
 
 /* import "../../lib/erc20.sol"; */
@@ -1476,7 +1478,7 @@ contract SCRVVoter {
 ////// src/strategies/curve/strategy-curve-scrv-v3.sol
 // https://etherscan.io/address/0x594a198048501a304267e63b3bad0f0638da7628#code
 
-
+// SPDX-License-Identifier: MIT
 /* pragma solidity ^0.6.2; */
 
 /* import "../../lib/erc20.sol"; */
@@ -1546,15 +1548,18 @@ contract StrategyCurveSCRVv3 {
 
     address public governance;
     address public controller;
+    address public timelock;
     address public strategist;
 
     constructor(
         address _governance,
         address _strategist,
+        address _timelock,
         address _controller
     ) public {
         governance = _governance;
         strategist = _strategist;
+        timelock = _timelock;
         controller = _controller;
     }
 
@@ -1654,8 +1659,13 @@ contract StrategyCurveSCRVv3 {
         governance = _governance;
     }
 
+    function setTimelock(address _timelock) external {
+        require(msg.sender == timelock, "!timelock");
+        timelock = _timelock;
+    }
+
     function setController(address _controller) external {
-        require(msg.sender == governance, "!governance");
+        require(msg.sender == timelock, "!timelock");
         controller = _controller;
     }
 
@@ -1820,6 +1830,44 @@ contract StrategyCurveSCRVv3 {
             address(this),
             now.add(60)
         );
+    }
+
+    // Proxy pattern
+    // Implementation is only settable by timelock
+    function execute(address _target, bytes memory _data)
+        public
+        payable
+        returns (bytes memory response)
+    {
+        require(msg.sender == timelock, "!timelock");
+        require(_target != address(0), "!target");
+
+        // call contract in current context
+        assembly {
+            let succeeded := delegatecall(
+                sub(gas(), 5000),
+                _target,
+                add(_data, 0x20),
+                mload(_data),
+                0,
+                0
+            )
+            let size := returndatasize()
+
+            response := mload(0x40)
+            mstore(
+                0x40,
+                add(response, and(add(add(size, 0x20), 0x1f), not(0x1f)))
+            )
+            mstore(response, size)
+            returndatacopy(add(response, 0x20), 0, size)
+
+            switch iszero(succeeded)
+                case 1 {
+                    // throw if delegatecall failed
+                    revert(add(response, 0x20), size)
+                }
+        }
     }
 }
 

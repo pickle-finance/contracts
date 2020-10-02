@@ -1,7 +1,7 @@
 // PickleSwap, formally known as PickleJar, used to swap between liquidity pools FAST
 // File: contracts/interfaces/IUniswapV2ERC20.sol
 
-// SPDX-License-Identifier: MIT
+
 pragma solidity ^0.6.12;
 
 interface IUniswapV2ERC20 {
@@ -56,7 +56,7 @@ interface IUniswapV2ERC20 {
 
 // File: contracts/interfaces/IUniswapV2Pair.sol
 
-// SPDX-License-Identifier: MIT
+
 pragma solidity ^0.6.12;
 
 interface IUniswapV2Pair {
@@ -67,7 +67,7 @@ interface IUniswapV2Pair {
 
 // File: contracts/interfaces/IUniswapV2Router2.sol
 
-// SPDX-License-Identifier: MIT
+
 pragma solidity ^0.6.12;
 
 interface IUniswapV2Router2 {
@@ -134,7 +134,7 @@ interface IUniswapV2Router2 {
 
 // File: contracts/PickleJar.sol
 
-// SPDX-License-Identifier: MIT
+
 pragma solidity ^0.6.12;
 
 

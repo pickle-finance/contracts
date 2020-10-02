@@ -9,6 +9,8 @@ pragma solidity >=0.4.23 >=0.6.0 <0.7.0 >=0.6.2 <0.7.0 >=0.6.7 <0.7.0;
 interface IController {
     function jars(address) external view returns (address);
 
+    function rewards() external view returns (address);
+
     function devfund() external view returns (address);
 
     function treasury() external view returns (address);
@@ -21,7 +23,7 @@ interface IController {
 }
 
 ////// src/interfaces/converter.sol
-
+// SPDX-License-Identifier: MIT
 /* pragma solidity ^0.6.2; */
 
 interface Converter {
@@ -29,7 +31,7 @@ interface Converter {
 }
 
 ////// src/lib/safe-math.sol
-
+// SPDX-License-Identifier: MIT
 
 /* pragma solidity ^0.6.0; */
 
@@ -192,7 +194,7 @@ library SafeMath {
 
 // File: contracts/GSN/Context.sol
 
-
+// SPDX-License-Identifier: MIT
 
 /* pragma solidity ^0.6.0; */
 
@@ -806,7 +808,7 @@ library SafeERC20 {
     }
 }
 ////// src/interfaces/jar.sol
-
+// SPDX-License-Identifier: MIT
 /* pragma solidity ^0.6.2; */
 
 /* import "../lib/erc20.sol"; */
@@ -826,7 +828,7 @@ interface IJar is IERC20 {
 }
 
 ////// src/interfaces/onesplit.sol
-
+// SPDX-License-Identifier: MIT
 /* pragma solidity ^0.6.2; */
 
 interface OneSplitAudit {
@@ -852,7 +854,7 @@ interface OneSplitAudit {
 }
 
 ////// src/interfaces/strategy-converter.sol
-
+// SPDX-License-Identifier: MIT
 /* pragma solidity ^0.6.2; */
 
 interface IStrategyConverter {
@@ -865,7 +867,7 @@ interface IStrategyConverter {
 }
 
 ////// src/interfaces/strategy.sol
-
+// SPDX-License-Identifier: MIT
 /* pragma solidity ^0.6.2; */
 
 interface IStrategy {
@@ -918,6 +920,7 @@ contract ControllerV3 {
     address public strategist;
     address public devfund;
     address public treasury;
+    address public timelock;
 
     mapping(address => address) public jars;
     mapping(address => address) public strategies;
@@ -932,11 +935,13 @@ contract ControllerV3 {
     constructor(
         address _governance,
         address _strategist,
+        address _timelock,
         address _devfund,
         address _treasury
     ) public {
         governance = _governance;
         strategist = _strategist;
+        timelock = _timelock;
         devfund = _devfund;
         treasury = _treasury;
     }
@@ -971,6 +976,11 @@ contract ControllerV3 {
         governance = _governance;
     }
 
+    function setTimelock(address _timelock) public {
+        require(msg.sender == timelock, "!timelock");
+        timelock = _timelock;
+    }
+
     function setJar(address _token, address _jar) public {
         require(
             msg.sender == strategist || msg.sender == governance,
@@ -981,7 +991,7 @@ contract ControllerV3 {
     }
 
     function approveStrategy(address _token, address _strategy) public {
-        require(msg.sender == governance, "!governance");
+        require(msg.sender == timelock, "!timelock");
         approvedStrategies[_token][_strategy] = true;
     }
 

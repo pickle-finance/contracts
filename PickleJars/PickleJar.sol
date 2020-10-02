@@ -11,7 +11,9 @@ interface IController {
 
     function rewards() external view returns (address);
 
-    function want(address) external view returns (address); // NOTE: Only StrategyControllerV2 implements this
+    function devfund() external view returns (address);
+
+    function treasury() external view returns (address);
 
     function balanceOf(address) external view returns (uint256);
 
@@ -21,7 +23,7 @@ interface IController {
 }
 
 ////// src/lib/safe-math.sol
-
+// SPDX-License-Identifier: MIT
 
 /* pragma solidity ^0.6.0; */
 
@@ -184,7 +186,7 @@ library SafeMath {
 
 // File: contracts/GSN/Context.sol
 
-
+// SPDX-License-Identifier: MIT
 
 /* pragma solidity ^0.6.0; */
 
@@ -818,9 +820,10 @@ contract PickleJar is ERC20 {
     uint256 public constant max = 10000;
 
     address public governance;
+    address public timelock;
     address public controller;
 
-    constructor(address _token, address _governance, address _controller)
+    constructor(address _token, address _governance, address _timelock, address _controller)
         public
         ERC20(
             string(abi.encodePacked("pickling ", ERC20(_token).name())),
@@ -830,6 +833,7 @@ contract PickleJar is ERC20 {
         _setupDecimals(ERC20(_token).decimals());
         token = IERC20(_token);
         governance = _governance;
+        timelock = _timelock;
         controller = _controller;
     }
 
@@ -850,8 +854,13 @@ contract PickleJar is ERC20 {
         governance = _governance;
     }
 
+    function setTimelock(address _timelock) public {
+        require(msg.sender == timelock, "!timelock");
+        timelock = _timelock;
+    }
+
     function setController(address _controller) public {
-        require(msg.sender == governance, "!governance");
+        require(msg.sender == timelock, "!timelock");
         controller = _controller;
     }
 
