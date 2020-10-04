@@ -1,224 +1,8 @@
-// hevm: flattened sources of src/pickle-swap.sol
+// hevm: flattened sources of src/staking-rewards.sol
 pragma solidity >=0.4.23 >=0.6.0 <0.7.0 >=0.6.2 <0.7.0 >=0.6.7 <0.7.0;
 
-////// src/interfaces/uniswapv2.sol
-// SPDX-License-Identifier: MIT
-
-
-/* pragma solidity ^0.6.2; */
-
-interface UniswapRouterV2 {
-    function swapExactTokensForTokens(
-        uint256 amountIn,
-        uint256 amountOutMin,
-        address[] calldata path,
-        address to,
-        uint256 deadline
-    ) external returns (uint256[] memory amounts);
-
-    function addLiquidity(
-        address tokenA,
-        address tokenB,
-        uint256 amountADesired,
-        uint256 amountBDesired,
-        uint256 amountAMin,
-        uint256 amountBMin,
-        address to,
-        uint256 deadline
-    )
-        external
-        returns (
-            uint256 amountA,
-            uint256 amountB,
-            uint256 liquidity
-        );
-
-    function addLiquidityETH(
-        address token,
-        uint256 amountTokenDesired,
-        uint256 amountTokenMin,
-        uint256 amountETHMin,
-        address to,
-        uint256 deadline
-    )
-        external
-        payable
-        returns (
-            uint256 amountToken,
-            uint256 amountETH,
-            uint256 liquidity
-        );
-
-    function removeLiquidity(
-        address tokenA,
-        address tokenB,
-        uint256 liquidity,
-        uint256 amountAMin,
-        uint256 amountBMin,
-        address to,
-        uint256 deadline
-    ) external returns (uint256 amountA, uint256 amountB);
-
-    function getAmountsOut(uint256 amountIn, address[] calldata path)
-        external
-        view
-        returns (uint256[] memory amounts);
-
-    function getAmountsIn(uint256 amountOut, address[] calldata path)
-        external
-        view
-        returns (uint256[] memory amounts);
-
-    function swapETHForExactTokens(
-        uint256 amountOut,
-        address[] calldata path,
-        address to,
-        uint256 deadline
-    ) external payable returns (uint256[] memory amounts);
-
-    function swapExactETHForTokens(
-        uint256 amountOutMin,
-        address[] calldata path,
-        address to,
-        uint256 deadline
-    ) external payable returns (uint256[] memory amounts);
-}
-
-interface IUniswapV2Pair {
-    event Approval(
-        address indexed owner,
-        address indexed spender,
-        uint256 value
-    );
-    event Transfer(address indexed from, address indexed to, uint256 value);
-
-    function name() external pure returns (string memory);
-
-    function symbol() external pure returns (string memory);
-
-    function decimals() external pure returns (uint8);
-
-    function totalSupply() external view returns (uint256);
-
-    function balanceOf(address owner) external view returns (uint256);
-
-    function allowance(address owner, address spender)
-        external
-        view
-        returns (uint256);
-
-    function approve(address spender, uint256 value) external returns (bool);
-
-    function transfer(address to, uint256 value) external returns (bool);
-
-    function transferFrom(
-        address from,
-        address to,
-        uint256 value
-    ) external returns (bool);
-
-    function DOMAIN_SEPARATOR() external view returns (bytes32);
-
-    function PERMIT_TYPEHASH() external pure returns (bytes32);
-
-    function nonces(address owner) external view returns (uint256);
-
-    function permit(
-        address owner,
-        address spender,
-        uint256 value,
-        uint256 deadline,
-        uint8 v,
-        bytes32 r,
-        bytes32 s
-    ) external;
-
-    event Mint(address indexed sender, uint256 amount0, uint256 amount1);
-    event Burn(
-        address indexed sender,
-        uint256 amount0,
-        uint256 amount1,
-        address indexed to
-    );
-    event Swap(
-        address indexed sender,
-        uint256 amount0In,
-        uint256 amount1In,
-        uint256 amount0Out,
-        uint256 amount1Out,
-        address indexed to
-    );
-    event Sync(uint112 reserve0, uint112 reserve1);
-
-    function MINIMUM_LIQUIDITY() external pure returns (uint256);
-
-    function factory() external view returns (address);
-
-    function token0() external view returns (address);
-
-    function token1() external view returns (address);
-
-    function getReserves()
-        external
-        view
-        returns (
-            uint112 reserve0,
-            uint112 reserve1,
-            uint32 blockTimestampLast
-        );
-
-    function price0CumulativeLast() external view returns (uint256);
-
-    function price1CumulativeLast() external view returns (uint256);
-
-    function kLast() external view returns (uint256);
-
-    function mint(address to) external returns (uint256 liquidity);
-
-    function burn(address to)
-        external
-        returns (uint256 amount0, uint256 amount1);
-
-    function swap(
-        uint256 amount0Out,
-        uint256 amount1Out,
-        address to,
-        bytes calldata data
-    ) external;
-
-    function skim(address to) external;
-
-    function sync() external;
-}
-
-interface IUniswapV2Factory {
-    event PairCreated(
-        address indexed token0,
-        address indexed token1,
-        address pair,
-        uint256
-    );
-
-    function getPair(address tokenA, address tokenB)
-        external
-        view
-        returns (address pair);
-
-    function allPairs(uint256) external view returns (address pair);
-
-    function allPairsLength() external view returns (uint256);
-
-    function feeTo() external view returns (address);
-
-    function feeToSetter() external view returns (address);
-
-    function createPair(address tokenA, address tokenB)
-        external
-        returns (address pair);
-}
-
 ////// src/lib/safe-math.sol
-
+// SPDX-License-Identifier: MIT
 
 /* pragma solidity ^0.6.0; */
 
@@ -994,104 +778,363 @@ library SafeERC20 {
         }
     }
 }
-////// src/pickle-swap.sol
+////// src/lib/owned.sol
+/* pragma solidity ^0.6.7; */
+
+// https://docs.synthetix.io/contracts/Owned
+contract Owned {
+    address public owner;
+    address public nominatedOwner;
+
+    constructor(address _owner) public {
+        require(_owner != address(0), "Owner address cannot be 0");
+        owner = _owner;
+        emit OwnerChanged(address(0), _owner);
+    }
+
+    function nominateNewOwner(address _owner) external onlyOwner {
+        nominatedOwner = _owner;
+        emit OwnerNominated(_owner);
+    }
+
+    function acceptOwnership() external {
+        require(
+            msg.sender == nominatedOwner,
+            "You must be nominated before you can accept ownership"
+        );
+        emit OwnerChanged(owner, nominatedOwner);
+        owner = nominatedOwner;
+        nominatedOwner = address(0);
+    }
+
+    modifier onlyOwner {
+        _onlyOwner();
+        _;
+    }
+
+    function _onlyOwner() private view {
+        require(
+            msg.sender == owner,
+            "Only the contract owner may perform this action"
+        );
+    }
+
+    event OwnerNominated(address newOwner);
+    event OwnerChanged(address oldOwner, address newOwner);
+}
+
+////// src/lib/pausable.sol
+/* pragma solidity ^0.6.7; */
+
+// Inheritance
+/* import "./owned.sol"; */
+
+// https://docs.synthetix.io/contracts/Pausable
+abstract contract Pausable is Owned {
+    uint256 public lastPauseTime;
+    bool public paused;
+
+    constructor() internal {
+        // This contract is abstract, and thus cannot be instantiated directly
+        require(owner != address(0), "Owner must be set");
+        // Paused will be false, and lastPauseTime will be 0 upon initialisation
+    }
+
+    /**
+     * @notice Change the paused state of the contract
+     * @dev Only the contract owner may call this.
+     */
+    function setPaused(bool _paused) external onlyOwner {
+        // Ensure we're actually changing the state before we do anything
+        if (_paused == paused) {
+            return;
+        }
+
+        // Set our paused state.
+        paused = _paused;
+
+        // If applicable, set the last pause time.
+        if (paused) {
+            lastPauseTime = now;
+        }
+
+        // Let everyone know that our pause state has changed.
+        emit PauseChanged(paused);
+    }
+
+    event PauseChanged(bool isPaused);
+
+    modifier notPaused {
+        require(
+            !paused,
+            "This action cannot be performed while the contract is paused"
+        );
+        _;
+    }
+}
+
+////// src/lib/reentrancy-guard.sol
+
+
+/* pragma solidity ^0.6.0; */
+
+/**
+ * @dev Contract module that helps prevent reentrant calls to a function.
+ *
+ * Inheriting from `ReentrancyGuard` will make the {nonReentrant} modifier
+ * available, which can be applied to functions to make sure there are no nested
+ * (reentrant) calls to them.
+ *
+ * Note that because there is a single `nonReentrant` guard, functions marked as
+ * `nonReentrant` may not call one another. This can be worked around by making
+ * those functions `private`, and then adding `external` `nonReentrant` entry
+ * points to them.
+ *
+ * TIP: If you would like to learn more about reentrancy and alternative ways
+ * to protect against it, check out our blog post
+ * https://blog.openzeppelin.com/reentrancy-after-istanbul/[Reentrancy After Istanbul].
+ */
+contract ReentrancyGuard {
+    // Booleans are more expensive than uint256 or any type that takes up a full
+    // word because each write operation emits an extra SLOAD to first read the
+    // slot's contents, replace the bits taken up by the boolean, and then write
+    // back. This is the compiler's defense against contract upgrades and
+    // pointer aliasing, and it cannot be disabled.
+
+    // The values being non-zero value makes deployment a bit more expensive,
+    // but in exchange the refund on every call to nonReentrant will be lower in
+    // amount. Since refunds are capped to a percentage of the total
+    // transaction's gas, it is best to keep them low in cases like this one, to
+    // increase the likelihood of the full refund coming into effect.
+    uint256 private constant _NOT_ENTERED = 1;
+    uint256 private constant _ENTERED = 2;
+
+    uint256 private _status;
+
+    constructor () internal {
+        _status = _NOT_ENTERED;
+    }
+
+    /**
+     * @dev Prevents a contract from calling itself, directly or indirectly.
+     * Calling a `nonReentrant` function from another `nonReentrant`
+     * function is not supported. It is possible to prevent this from happening
+     * by making the `nonReentrant` function external, and make it call a
+     * `private` function that does the actual work.
+     */
+    modifier nonReentrant() {
+        // On the first call to nonReentrant, _notEntered will be true
+        require(_status != _ENTERED, "ReentrancyGuard: reentrant call");
+
+        // Any calls to nonReentrant after this point will fail
+        _status = _ENTERED;
+
+        _;
+
+        // By storing the original value once again, a refund is triggered (see
+        // https://eips.ethereum.org/EIPS/eip-2200)
+        _status = _NOT_ENTERED;
+    }
+}
+////// src/staking-rewards.sol
 
 
 /* pragma solidity ^0.6.7; */
 
+/* import "./lib/reentrancy-guard.sol"; */
+/* import "./lib/pausable.sol"; */
 /* import "./lib/erc20.sol"; */
+/* import "./lib/safe-math.sol"; */
 
-/* import "./interfaces/uniswapv2.sol"; */
-
-contract PickleSwap {
+contract StakingRewards is ReentrancyGuard, Pausable {
+    using SafeMath for uint256;
     using SafeERC20 for IERC20;
 
-    UniswapRouterV2 router = UniswapRouterV2(
-        0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D
-    );
+    /* ========== STATE VARIABLES ========== */
 
-    address public constant weth = 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2;
+    IERC20 public rewardsToken;
+    IERC20 public stakingToken;
+    uint256 public periodFinish = 0;
+    uint256 public rewardRate = 0;
+    uint256 public rewardsDuration = 7 days;
+    uint256 public lastUpdateTime;
+    uint256 public rewardPerTokenStored;
 
-    function convertWETHPair(
-        address fromLP,
-        address toLP,
-        uint256 value
-    ) public {
-        IUniswapV2Pair fromPair = IUniswapV2Pair(fromLP);
-        IUniswapV2Pair toPair = IUniswapV2Pair(toLP);
+    mapping(address => uint256) public userRewardPerTokenPaid;
+    mapping(address => uint256) public rewards;
 
-        // Only for WETH/<TOKEN> pairs
-        if (!(fromPair.token0() == weth || fromPair.token1() == weth)) {
-            revert("!eth-from");
-        }
-        if (!(toPair.token0() == weth || toPair.token1() == weth)) {
-            revert("!eth-to");
-        }
+    uint256 private _totalSupply;
+    mapping(address => uint256) private _balances;
 
-        // Get non-eth token from pairs
-        address _from = fromPair.token0() != weth
-            ? fromPair.token0()
-            : fromPair.token1();
+    /* ========== CONSTRUCTOR ========== */
 
-        address _to = toPair.token0() != weth
-            ? toPair.token0()
-            : toPair.token1();
-
-        // Transfer
-        IERC20(fromLP).safeTransferFrom(msg.sender, address(this), value);
-
-        // Remove liquidity
-        IERC20(fromLP).safeApprove(address(router), 0);
-        IERC20(fromLP).safeApprove(address(router), value);
-        router.removeLiquidity(
-            fromPair.token0(),
-            fromPair.token1(),
-            value,
-            0,
-            0,
-            address(this),
-            now + 60
-        );
-
-        // Convert to target token
-        address[] memory path = new address[](3);
-        path[0] = _from;
-        path[1] = weth;
-        path[2] = _to;
-
-        IERC20(_from).safeApprove(address(router), 0);
-        IERC20(_from).safeApprove(address(router), uint256(-1));
-        router.swapExactTokensForTokens(
-            IERC20(_from).balanceOf(address(this)),
-            0,
-            path,
-            address(this),
-            now + 60
-        );
-
-        // Supply liquidity
-        IERC20(weth).safeApprove(address(router), 0);
-        IERC20(weth).safeApprove(address(router), uint256(-1));
-
-        IERC20(_to).safeApprove(address(router), 0);
-        IERC20(_to).safeApprove(address(router), uint256(-1));
-        router.addLiquidity(
-            weth,
-            _to,
-            IERC20(weth).balanceOf(address(this)),
-            IERC20(_to).balanceOf(address(this)),
-            0,
-            0,
-            msg.sender,
-            now + 60
-        );
-
-        // Refund sender any remaining tokens
-        IERC20(weth).safeTransfer(
-            msg.sender,
-            IERC20(weth).balanceOf(address(this))
-        );
-        IERC20(_to).safeTransfer(msg.sender, IERC20(_to).balanceOf(address(this)));
+    constructor(
+        address _owner,
+        address _rewardsToken,
+        address _stakingToken
+    ) public Owned(_owner) {
+        rewardsToken = IERC20(_rewardsToken);
+        stakingToken = IERC20(_stakingToken);
     }
+
+    /* ========== VIEWS ========== */
+
+    function totalSupply() external view returns (uint256) {
+        return _totalSupply;
+    }
+
+    function balanceOf(address account) external view returns (uint256) {
+        return _balances[account];
+    }
+
+    function lastTimeRewardApplicable() public view returns (uint256) {
+        return min(block.timestamp, periodFinish);
+    }
+
+    function rewardPerToken() public view returns (uint256) {
+        if (_totalSupply == 0) {
+            return rewardPerTokenStored;
+        }
+        return
+            rewardPerTokenStored.add(
+                lastTimeRewardApplicable()
+                    .sub(lastUpdateTime)
+                    .mul(rewardRate)
+                    .mul(1e18)
+                    .div(_totalSupply)
+            );
+    }
+
+    function earned(address account) public view returns (uint256) {
+        return
+            _balances[account]
+                .mul(rewardPerToken().sub(userRewardPerTokenPaid[account]))
+                .div(1e18)
+                .add(rewards[account]);
+    }
+
+    function getRewardForDuration() external view returns (uint256) {
+        return rewardRate.mul(rewardsDuration);
+    }
+
+    function min(uint256 a, uint256 b) public pure returns (uint256) {
+        return a < b ? a : b;
+    }
+
+    /* ========== MUTATIVE FUNCTIONS ========== */
+
+    function stake(uint256 amount)
+        external
+        nonReentrant
+        notPaused
+        updateReward(msg.sender)
+    {
+        require(amount > 0, "Cannot stake 0");
+        _totalSupply = _totalSupply.add(amount);
+        _balances[msg.sender] = _balances[msg.sender].add(amount);
+        stakingToken.safeTransferFrom(msg.sender, address(this), amount);
+        emit Staked(msg.sender, amount);
+    }
+
+    function withdraw(uint256 amount)
+        public
+        nonReentrant
+        updateReward(msg.sender)
+    {
+        require(amount > 0, "Cannot withdraw 0");
+        _totalSupply = _totalSupply.sub(amount);
+        _balances[msg.sender] = _balances[msg.sender].sub(amount);
+        stakingToken.safeTransfer(msg.sender, amount);
+        emit Withdrawn(msg.sender, amount);
+    }
+
+    function getReward() public nonReentrant updateReward(msg.sender) {
+        uint256 reward = rewards[msg.sender];
+        if (reward > 0) {
+            rewards[msg.sender] = 0;
+            rewardsToken.safeTransfer(msg.sender, reward);
+            emit RewardPaid(msg.sender, reward);
+        }
+    }
+
+    function exit() external {
+        withdraw(_balances[msg.sender]);
+        getReward();
+    }
+
+    /* ========== RESTRICTED FUNCTIONS ========== */
+
+    function notifyRewardAmount(uint256 reward)
+        external
+        onlyOwner
+        updateReward(address(0))
+    {
+        if (block.timestamp >= periodFinish) {
+            rewardRate = reward.div(rewardsDuration);
+        } else {
+            uint256 remaining = periodFinish.sub(block.timestamp);
+            uint256 leftover = remaining.mul(rewardRate);
+            rewardRate = reward.add(leftover).div(rewardsDuration);
+        }
+
+        // Ensure the provided reward amount is not more than the balance in the contract.
+        // This keeps the reward rate in the right range, preventing overflows due to
+        // very high values of rewardRate in the earned and rewardsPerToken functions;
+        // Reward + leftover must be less than 2^256 / 10^18 to avoid overflow.
+        uint256 balance = rewardsToken.balanceOf(address(this));
+        require(
+            rewardRate <= balance.div(rewardsDuration),
+            "Provided reward too high"
+        );
+
+        lastUpdateTime = block.timestamp;
+        periodFinish = block.timestamp.add(rewardsDuration);
+        emit RewardAdded(reward);
+    }
+
+    // Added to support recovering LP Rewards from other systems such as BAL to be distributed to holders
+    function recoverERC20(address tokenAddress, uint256 tokenAmount)
+        external
+        onlyOwner
+    {
+        // Cannot recover the staking token or the rewards token
+        require(
+            tokenAddress != address(stakingToken) &&
+                tokenAddress != address(rewardsToken),
+            "Cannot withdraw the staking or rewards tokens"
+        );
+        IERC20(tokenAddress).safeTransfer(owner, tokenAmount);
+        emit Recovered(tokenAddress, tokenAmount);
+    }
+
+    function setRewardsDuration(uint256 _rewardsDuration) external onlyOwner {
+        require(
+            block.timestamp > periodFinish,
+            "Previous rewards period must be complete before changing the duration for the new period"
+        );
+        rewardsDuration = _rewardsDuration;
+        emit RewardsDurationUpdated(rewardsDuration);
+    }
+
+    /* ========== MODIFIERS ========== */
+
+    modifier updateReward(address account) {
+        rewardPerTokenStored = rewardPerToken();
+        lastUpdateTime = lastTimeRewardApplicable();
+        if (account != address(0)) {
+            rewards[account] = earned(account);
+            userRewardPerTokenPaid[account] = rewardPerTokenStored;
+        }
+        _;
+    }
+
+    /* ========== EVENTS ========== */
+
+    event RewardAdded(uint256 reward);
+    event Staked(address indexed user, uint256 amount);
+    event Withdrawn(address indexed user, uint256 amount);
+    event RewardPaid(address indexed user, uint256 reward);
+    event RewardsDurationUpdated(uint256 newDuration);
+    event Recovered(address token, uint256 amount);
 }
 

@@ -1,8 +1,132 @@
-// hevm: flattened sources of src/pickle-swap.sol
+// hevm: flattened sources of src/uni-curve-converter.sol
 pragma solidity >=0.4.23 >=0.6.0 <0.7.0 >=0.6.2 <0.7.0 >=0.6.7 <0.7.0;
 
-////// src/interfaces/uniswapv2.sol
+////// src/interfaces/curve.sol
 // SPDX-License-Identifier: MIT
+
+/* pragma solidity ^0.6.2; */
+
+interface ICurveFi {
+    function get_virtual_price() external view returns (uint256);
+
+    function add_liquidity(uint256[4] calldata amounts, uint256 min_mint_amount)
+        external;
+
+    function remove_liquidity_imbalance(
+        uint256[4] calldata amounts,
+        uint256 max_burn_amount
+    ) external;
+
+    function remove_liquidity(uint256 _amount, uint256[4] calldata amounts)
+        external;
+
+    function exchange(
+        int128 from,
+        int128 to,
+        uint256 _from_amount,
+        uint256 _min_to_amount
+    ) external;
+
+    function balances(int128) external view returns (uint256);
+}
+
+interface ICurveZap {
+    function add_liquidity(
+        uint256[4] calldata uamounts,
+        uint256 min_mint_amount
+    ) external;
+
+    function remove_liquidity(uint256 _amount, uint256[4] calldata min_uamounts)
+        external;
+
+    function remove_liquidity_imbalance(
+        uint256[4] calldata uamounts,
+        uint256 max_burn_amount
+    ) external;
+
+    function calc_withdraw_one_coin(uint256 _token_amount, int128 i)
+        external
+        returns (uint256);
+
+    function remove_liquidity_one_coin(
+        uint256 _token_amount,
+        int128 i,
+        uint256 min_uamount
+    ) external;
+
+    function remove_liquidity_one_coin(
+        uint256 _token_amount,
+        int128 i,
+        uint256 min_uamount,
+        bool donate_dust
+    ) external;
+
+    function withdraw_donated_dust() external;
+
+    function coins(int128 arg0) external returns (address);
+
+    function underlying_coins(int128 arg0) external returns (address);
+
+    function curve() external returns (address);
+
+    function token() external returns (address);
+}
+
+interface ICurveGauge {
+    function deposit(uint256 _value) external;
+
+    function deposit(uint256 _value, address addr) external;
+
+    function balanceOf(address arg0) external view returns (uint256);
+
+    function withdraw(uint256 _value) external;
+
+    function withdraw(uint256 _value, bool claim_rewards) external;
+
+    function claim_rewards() external;
+
+    function claim_rewards(address addr) external;
+
+    function claimable_tokens(address addr) external returns (uint256);
+
+    function claimable_reward(address addr) external view returns (uint256);
+
+    function integrate_fraction(address arg0) external view returns (uint256);
+}
+
+interface ICurveMintr {
+    function mint(address) external;
+
+    function minted(address arg0, address arg1) external view returns (uint256);
+}
+
+interface ICurveVotingEscrow {
+    function locked(address arg0)
+        external
+        view
+        returns (int128 amount, uint256 end);
+
+    function locked__end(address _addr) external view returns (uint256);
+
+    function create_lock(uint256, uint256) external;
+
+    function increase_amount(uint256) external;
+
+    function increase_unlock_time(uint256 _unlock_time) external;
+
+    function withdraw() external;
+
+    function smart_wallet_checker() external returns (address);
+}
+
+interface ICurveSmartContractChecker {
+    function wallets(address) external returns (bool);
+
+    function approveWallet(address _wallet) external;
+}
+
+////// src/interfaces/uniswapv2.sol
+
 
 
 /* pragma solidity ^0.6.2; */
@@ -994,104 +1118,186 @@ library SafeERC20 {
         }
     }
 }
-////// src/pickle-swap.sol
+////// src/uni-curve-converter.sol
 
 
 /* pragma solidity ^0.6.7; */
 
+/* import "./lib/safe-math.sol"; */
 /* import "./lib/erc20.sol"; */
 
 /* import "./interfaces/uniswapv2.sol"; */
+/* import "./interfaces/curve.sol"; */
 
-contract PickleSwap {
+// Converts UNI LP Tokens to Curve LP Tokens
+// Mainly for treasury
+contract UniCurveConverter {
+    using SafeMath for uint256;
     using SafeERC20 for IERC20;
 
-    UniswapRouterV2 router = UniswapRouterV2(
+    UniswapRouterV2 public router = UniswapRouterV2(
         0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D
     );
 
+    // Stablecoins
+    address public constant dai = 0x6B175474E89094C44Da98b954EedeAC495271d0F;
+    address public constant usdc = 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48;
+    address public constant usdt = 0xdAC17F958D2ee523a2206206994597C13D831ec7;
+    address public constant susd = 0x57Ab1ec28D129707052df4dF418D58a2D46d5f51;
+
+    // Wrapped stablecoins
+    address public constant scrv = 0xC25a3A3b969415c80451098fa907EC722572917F;
+
+    // Weth
     address public constant weth = 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2;
 
-    function convertWETHPair(
-        address fromLP,
-        address toLP,
-        uint256 value
-    ) public {
-        IUniswapV2Pair fromPair = IUniswapV2Pair(fromLP);
-        IUniswapV2Pair toPair = IUniswapV2Pair(toLP);
+    // susd v2 pool
+    ICurveFi public curve = ICurveFi(
+        0xA5407eAE9Ba41422680e2e00537571bcC53efBfD
+    );
+
+    // UNI LP -> Curve LP
+    // Assume th
+    function convert(address _lp, uint256 _amount) public {
+        // Get LP Tokens
+        IERC20(_lp).safeTransferFrom(msg.sender, address(this), _amount);
+
+        // Get Uniswap pair
+        IUniswapV2Pair fromPair = IUniswapV2Pair(_lp);
 
         // Only for WETH/<TOKEN> pairs
         if (!(fromPair.token0() == weth || fromPair.token1() == weth)) {
             revert("!eth-from");
         }
-        if (!(toPair.token0() == weth || toPair.token1() == weth)) {
-            revert("!eth-to");
-        }
-
-        // Get non-eth token from pairs
-        address _from = fromPair.token0() != weth
-            ? fromPair.token0()
-            : fromPair.token1();
-
-        address _to = toPair.token0() != weth
-            ? toPair.token0()
-            : toPair.token1();
-
-        // Transfer
-        IERC20(fromLP).safeTransferFrom(msg.sender, address(this), value);
 
         // Remove liquidity
-        IERC20(fromLP).safeApprove(address(router), 0);
-        IERC20(fromLP).safeApprove(address(router), value);
+        IERC20(_lp).safeApprove(address(router), 0);
+        IERC20(_lp).safeApprove(address(router), _amount);
         router.removeLiquidity(
             fromPair.token0(),
             fromPair.token1(),
-            value,
+            _amount,
             0,
             0,
             address(this),
             now + 60
         );
 
-        // Convert to target token
-        address[] memory path = new address[](3);
-        path[0] = _from;
-        path[1] = weth;
-        path[2] = _to;
+        // Most premium stablecoin
+        (address premiumStablecoin, ) = getMostPremiumStablecoin();
 
-        IERC20(_from).safeApprove(address(router), 0);
-        IERC20(_from).safeApprove(address(router), uint256(-1));
+        // Convert weth -> most premium stablecoin
+        address[] memory path = new address[](2);
+        path[0] = weth;
+        path[1] = premiumStablecoin;
+
+        IERC20(weth).safeApprove(address(router), 0);
+        IERC20(weth).safeApprove(address(router), uint256(-1));
         router.swapExactTokensForTokens(
-            IERC20(_from).balanceOf(address(this)),
+            IERC20(weth).balanceOf(address(this)),
             0,
             path,
             address(this),
             now + 60
         );
 
-        // Supply liquidity
-        IERC20(weth).safeApprove(address(router), 0);
-        IERC20(weth).safeApprove(address(router), uint256(-1));
+        // Convert the other asset into stablecoin if its not a stablecoin
+        address _from = fromPair.token0() != weth
+            ? fromPair.token0()
+            : fromPair.token1();
 
-        IERC20(_to).safeApprove(address(router), 0);
-        IERC20(_to).safeApprove(address(router), uint256(-1));
-        router.addLiquidity(
-            weth,
-            _to,
-            IERC20(weth).balanceOf(address(this)),
-            IERC20(_to).balanceOf(address(this)),
-            0,
-            0,
-            msg.sender,
-            now + 60
+        if (_from != dai && _from != usdc && _from != usdt && _from != susd) {
+            path = new address[](3);
+            path[0] = _from;
+            path[1] = weth;
+            path[2] = premiumStablecoin;
+
+            IERC20(_from).safeApprove(address(router), 0);
+            IERC20(_from).safeApprove(address(router), uint256(-1));
+            router.swapExactTokensForTokens(
+                IERC20(_from).balanceOf(address(this)),
+                0,
+                path,
+                address(this),
+                now + 60
+            );
+        }
+
+        // Add liquidity to curve
+        IERC20(dai).safeApprove(address(curve), 0);
+        IERC20(dai).safeApprove(address(curve), uint256(-1));
+
+        IERC20(usdc).safeApprove(address(curve), 0);
+        IERC20(usdc).safeApprove(address(curve), uint256(-1));
+
+        IERC20(usdt).safeApprove(address(curve), 0);
+        IERC20(usdt).safeApprove(address(curve), uint256(-1));
+
+        IERC20(susd).safeApprove(address(curve), 0);
+        IERC20(susd).safeApprove(address(curve), uint256(-1));
+
+        curve.add_liquidity(
+            [
+                IERC20(dai).balanceOf(address(this)),
+                IERC20(usdc).balanceOf(address(this)),
+                IERC20(usdt).balanceOf(address(this)),
+                IERC20(susd).balanceOf(address(this))
+            ],
+            0
         );
 
-        // Refund sender any remaining tokens
-        IERC20(weth).safeTransfer(
+        // Sends token back to user
+        IERC20(scrv).transfer(
             msg.sender,
-            IERC20(weth).balanceOf(address(this))
+            IERC20(scrv).balanceOf(address(this))
         );
-        IERC20(_to).safeTransfer(msg.sender, IERC20(_to).balanceOf(address(this)));
+    }
+
+    function getMostPremiumStablecoin() public view returns (address, uint256) {
+        uint256[] memory balances = new uint256[](4);
+        balances[0] = ICurveFi(curve).balances(0); // DAI
+        balances[1] = ICurveFi(curve).balances(1).mul(10**12); // USDC
+        balances[2] = ICurveFi(curve).balances(2).mul(10**12); // USDT
+        balances[3] = ICurveFi(curve).balances(3); // sUSD
+
+        // DAI
+        if (
+            balances[0] < balances[1] &&
+            balances[0] < balances[2] &&
+            balances[0] < balances[3]
+        ) {
+            return (dai, 0);
+        }
+
+        // USDC
+        if (
+            balances[1] < balances[0] &&
+            balances[1] < balances[2] &&
+            balances[1] < balances[3]
+        ) {
+            return (usdc, 1);
+        }
+
+        // USDT
+        if (
+            balances[2] < balances[0] &&
+            balances[2] < balances[1] &&
+            balances[2] < balances[3]
+        ) {
+            return (usdt, 2);
+        }
+
+        // SUSD
+        if (
+            balances[3] < balances[0] &&
+            balances[3] < balances[1] &&
+            balances[3] < balances[2]
+        ) {
+            return (susd, 3);
+        }
+
+        // If they're somehow equal, we just want DAI
+        return (dai, 0);
     }
 }
 

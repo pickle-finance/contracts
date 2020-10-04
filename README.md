@@ -12,7 +12,19 @@ Governance (multi-sig): [0x9d074E37d408542FD38be78848e8814AFB38db17](https://eth
 
 ---
 
-## pJars
+## Staking Rewards
+
+PICKLE Staking Rewards: [0xD86F33388BF0bfDF0cCb1ECB4A48a1579504DC0a](https://etherscan.io/address/0xd86f33388bf0bfdf0ccb1ecb4a48a1579504dc0a)
+
+Owner (Treasury): [0x066419EaEf5DE53cc5da0d8702b990c5bc7D1AB3](https://etherscan.io/address/0x066419EaEf5DE53cc5da0d8702b990c5bc7D1AB3)
+
+Staking Token (PICKLE): [0x429881672B9AE42b8EbA0E26cD9C73711b891Ca5](https://etherscan.io/address/0x429881672B9AE42b8EbA0E26cD9C73711b891Ca5)
+
+Rewards Token (SCRV): [0xC25a3A3b969415c80451098fa907EC722572917F](https://etherscan.io/address/0xC25a3A3b969415c80451098fa907EC722572917F)
+
+---
+
+## Pickle Jars (pJars)
 
 Controller: [0x2ff3e6C2E054ABf45E21f790163970df82b0ea90](https://etherscan.io/address/0x2ff3e6C2E054ABf45E21f790163970df82b0ea90)
 
@@ -59,12 +71,6 @@ StrategyUniEthUsdtLpV3: [0x228b401eBBb3ec55dd5724c07445549F78F98612](https://eth
 
 ---
 
-## Logic
-
-Logic: [0xD7054d07E2bD5F0ed91dbD8d44F8a10a56AFe355](https://etherscan.io/address/0xD7054d07E2bD5F0ed91dbD8d44F8a10a56AFe355)
-
----
-
 ## Quadratic Voting (snapshot.page)
 
 PICKLEs In The Citadel: [0x47b7b0983bf3b1d8d5b773006809edcb208af191](https://etherscan.io/address/0x47b7b0983bf3b1d8d5b773006809edcb208af191)
@@ -73,9 +79,11 @@ PICKLEs In The Citadel: [0x47b7b0983bf3b1d8d5b773006809edcb208af191](https://eth
 
 ## Tools
 
-PickleSwap: [0x439923a086069d4171fdf1bbe12470cbbe5262ef](https://etherscan.io/address/0x439923a086069d4171fdf1bbe12470cbbe5262ef)
+PickleSwap: [0x7C0D8598560Cb19d46bFF6a41CECD80E7Ef3a15a](https://etherscan.io/address/0x7C0D8598560Cb19d46bFF6a41CECD80E7Ef3a15a)
 
 PickleMigrator: [0xC0CF2CbD0c6bB1da4c671FBb07D40E88676DBe82](https://etherscan.io/address/0xC0CF2CbD0c6bB1da4c671FBb07D40E88676DBe82)
+
+UniCurveConverter: [0x8EfAFBD731d779390e4F2392315eea42c14E2B69](https://etherscan.io/address/0x8EfAFBD731d779390e4F2392315eea42c14E2B69)
 
 ---
 
@@ -83,40 +91,29 @@ PickleMigrator: [0xC0CF2CbD0c6bB1da4c671FBb07D40E88676DBe82](https://etherscan.i
 
 0 = PickleToken <> WETH = [0xdc98556Ce24f007A5eF6dC1CE96322d65832A819](https://etherscan.io/address/0xdc98556Ce24f007A5eF6dC1CE96322d65832A819)
 
-1 = USDT <> WETH = [0x0d4a11d5EEaaC28EC3F61d100daF4d40471f1852](https://etherscan.io/address/0x0d4a11d5EEaaC28EC3F61d100daF4d40471f1852)
+1 = USDT <> WETH (DEPRECIATED) = [0x0d4a11d5EEaaC28EC3F61d100daF4d40471f1852](https://etherscan.io/address/0x0d4a11d5EEaaC28EC3F61d100daF4d40471f1852)
 
-2 = USDC <> WETH = [0xB4e16d0168e52d35CaCD2c6185b44281Ec28C9Dc](https://etherscan.io/address/0xB4e16d0168e52d35CaCD2c6185b44281Ec28C9Dc)
+2 = USDC <> WETH (DEPRECIATED) = [0xB4e16d0168e52d35CaCD2c6185b44281Ec28C9Dc](https://etherscan.io/address/0xB4e16d0168e52d35CaCD2c6185b44281Ec28C9Dc)
 
-3 = DAI <> WETH = [0xA478c2975Ab1Ea89e8196811F51A7B7Ade33eB11](https://etherscan.io/address/0xA478c2975Ab1Ea89e8196811F51A7B7Ade33eB11)
+3 = DAI <> WETH (DEPRECIATED) = [0xA478c2975Ab1Ea89e8196811F51A7B7Ade33eB11](https://etherscan.io/address/0xA478c2975Ab1Ea89e8196811F51A7B7Ade33eB11)
 
-4 = SUSD <> WETH = [0xf80758aB42C3B07dA84053Fd88804bCB6BAA4b5c](https://etherscan.io/address/0xf80758aB42C3B07dA84053Fd88804bCB6BAA4b5c)
+4 = SUSD <> WETH (DEPRECIATED) = [0xf80758aB42C3B07dA84053Fd88804bCB6BAA4b5c](https://etherscan.io/address/0xf80758aB42C3B07dA84053Fd88804bCB6BAA4b5c)
 
-5 = pUNIDAI = [0xf79Ae82DCcb71ca3042485c85588a3E0C395D55b](https://etherscan.io/address/0xf79Ae82DCcb71ca3042485c85588a3E0C395D55b)
+5 = pUNIDAI (DEPRECIATED) = [0xf79Ae82DCcb71ca3042485c85588a3E0C395D55b](https://etherscan.io/address/0xf79Ae82DCcb71ca3042485c85588a3E0C395D55b)
 
-6 = pUNIUSDC = [0x46206E9BDaf534d057be5EcF231DaD2A1479258B](https://etherscan.io/address/0x46206E9BDaf534d057be5EcF231DaD2A1479258B)
+6 = pUNIUSDC (DEPRECIATED) = [0x46206E9BDaf534d057be5EcF231DaD2A1479258B](https://etherscan.io/address/0x46206E9BDaf534d057be5EcF231DaD2A1479258B)
 
-7 = pUNIUSDT = [0x3a41AB1e362169974132dEa424Fb8079Fd0E94d8](https://etherscan.io/address/0x3a41AB1e362169974132dEa424Fb8079Fd0E94d8)
+7 = pUNIUSDT (DEPRECIATED) = [0x3a41AB1e362169974132dEa424Fb8079Fd0E94d8](https://etherscan.io/address/0x3a41AB1e362169974132dEa424Fb8079Fd0E94d8)
 
-8 = psCRV = [0x2385D31f1EB3736bE0C3629E6f03C4b3cd997Ffd](https://etherscan.io/address/0x2385D31f1EB3736bE0C3629E6f03C4b3cd997Ffd)
+8 = psCRV (DEPRECIATED) = [0x2385D31f1EB3736bE0C3629E6f03C4b3cd997Ffd](https://etherscan.io/address/0x2385D31f1EB3736bE0C3629E6f03C4b3cd997Ffd)
+
+9 = psCRV v2 = [0x68d14d66B2B0d6E157c06Dc8Fefa3D8ba0e66a89](https://etherscan.io/address/0x68d14d66B2B0d6E157c06Dc8Fefa3D8ba0e66a89)
+
+10 = pUNIDAI v2 = [0xCffA068F1E44D98D3753966eBd58D4CFe3BB5162](https://etherscan.io/address/0xCffA068F1E44D98D3753966eBd58D4CFe3BB5162)
+
+11 = pUNIUSDC v2 = [0x53Bf2E62fA20e2b4522f05de3597890Ec1b352C6](https://etherscan.io/address/0x53Bf2E62fA20e2b4522f05de3597890Ec1b352C6)
+
+12 = pUNIUSDT v2 = [0x09FC573c502037B149ba87782ACC81cF093EC6ef](https://etherscan.io/address/0x09FC573c502037B149ba87782ACC81cF093EC6ef)
 
 ---
 
-## Ownerships
-
-PickleToken's owner = Masterchef
-
-MasterChef's owner = Timelock
-
-Timelock's owner = Gnosis Multisig
-
-PickleJar's governance = Gnosis Multisig
-
-Controller's governance = Gnosis Multisig
-
-Controller's strategist = Gnosis Multisig
-
-Controller's rewards = Gnosis Multisig
-
-StrategyCurveSCRVv1's governance = Gnosis Multisig
-
-StrategyCurveSCRVv1's strategist = Gnosis Multisig
