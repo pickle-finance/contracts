@@ -38,13 +38,13 @@ Timelock (12 hours): [0xD92c7fAa0Ca0e6AE4918f3a83d9832d9CAEAA0d3](https://ethers
 
 | Name | Want | PickleJar | Strategy |
 | ---  | --- | --- | --- |
-| pJar 0 v2     | [sCRV](https://etherscan.io/address/0xC25a3A3b969415c80451098fa907EC722572917F)              | [psCRV-v2](https://etherscan.io/address/0x68d14d66B2B0d6E157c06Dc8Fefa3D8ba0e66a89)       | [StrategyCurveSCRVv3](https://etherscan.io/address/0x1c17C71cD9eD9fb35C4b2B0cCbe46cfAcC85dE0a)    |
+| pJar 0a v2     | [sCRV](https://etherscan.io/address/0xC25a3A3b969415c80451098fa907EC722572917F)              | [psCRV-v2](https://etherscan.io/address/0x68d14d66B2B0d6E157c06Dc8Fefa3D8ba0e66a89)       | [StrategyCurveSCRVv3](https://etherscan.io/address/0x1c17C71cD9eD9fb35C4b2B0cCbe46cfAcC85dE0a)    |
+| pJar 0b       | [3CRV](https://etherscan.io/address/0x6c3F90f043a72FA612cbac8115EE7e52BDe6E490)              | [p3CRV](https://etherscan.io/address/0x1BB74b5DdC1f4fC91D6f9E7906cf68bc93538e33)          | [StrategyCurve3CRVv1](https://etherscan.io/address/0x42AD7C7fCD4D1B1eCaAC9f14813e0136C7F414Bf) |
+| pJar 0c       | [renCRV](https://etherscan.io/address/0x49849C98ae39Fff122806C06791Fa73784FB3675)            | [prenCRV](https://etherscan.io/address/0x2E35392F4c36EBa7eCAFE4de34199b2373Af22ec)        | [StrategyCurveRenCRVv1](https://etherscan.io/address/0xa68EAD350155e0BC1264B3aA43aa62Ca3bc443e0) |
 | pJar 0.69a v2 | [UNIv2-ETH-DAI LP](https://etherscan.io/address/0xA478c2975Ab1Ea89e8196811F51A7B7Ade33eB11)  | [psUNIETHDAI-v2](https://etherscan.io/address/0xCffA068F1E44D98D3753966eBd58D4CFe3BB5162) | [StrategyUniEthDaiLpV3](https://etherscan.io/address/0x99E71Af1d19bC3f1E67D67696354C0df218441bc)  |
 | pJar 0.69b v2 | [UNIv2-ETH-USDC LP](https://etherscan.io/address/0xB4e16d0168e52d35CaCD2c6185b44281Ec28C9Dc) | [psUNIUSDC-v2](https://etherscan.io/address/0x53Bf2E62fA20e2b4522f05de3597890Ec1b352C6)   | [StrategyUniEthUsdcLpV3](https://etherscan.io/address/0x3191BeCBf4f94c92200d50C6DbFaf84C3043B7f0) |
 | pJar 0.69c v2 | [UNIv2-ETH-USDT LP](https://etherscan.io/address/0x0d4a11d5EEaaC28EC3F61d100daF4d40471f1852) | [psUNIUSDT-v2](https://etherscan.io/address/0x09FC573c502037B149ba87782ACC81cF093EC6ef)   | [StrategyUniEthUsdtLpV3](https://etherscan.io/address/0x228b401eBBb3ec55dd5724c07445549F78F98612) |
 | pJar 0.69d    | [UNIv2-ETH-WBTC LP](https://etherscan.io/address/0xBb2b8038a1640196FbE3e38816F3e67Cba72D940) | [psUNIWBTC](https://etherscan.io/address/0xc80090AA05374d336875907372EE4ee636CBC562)      | [StrategyUniEthWBtcLpV1](https://etherscan.io/address/0xdCBA1A2A4977bc4A3fF20C85e9CA155dfA17B341) |
-| pJar 0b       | [3CRV](https://etherscan.io/address/0x6c3F90f043a72FA612cbac8115EE7e52BDe6E490)              | [p3CRV](https://etherscan.io/address/0x1BB74b5DdC1f4fC91D6f9E7906cf68bc93538e33)          | [StrategyCurve3CRVv1](https://etherscan.io/address/0x42AD7C7fCD4D1B1eCaAC9f14813e0136C7F414Bf) |
-| pJar 0c       | [renCRV](https://etherscan.io/address/0x49849C98ae39Fff122806C06791Fa73784FB3675)            | [prenCRV](https://etherscan.io/address/0x2E35392F4c36EBa7eCAFE4de34199b2373Af22ec)        | [StrategyCurveRenCRVv1](https://etherscan.io/address/0xa68EAD350155e0BC1264B3aA43aa62Ca3bc443e0) |
 
 ---
 
