@@ -34,6 +34,8 @@ Governance / DevFund: [0x9d074E37d408542FD38be78848e8814AFB38db17](https://ether
 
 Treasury: [0x066419EaEf5DE53cc5da0d8702b990c5bc7D1AB3](https://etherscan.io/address/0x066419EaEf5DE53cc5da0d8702b990c5bc7D1AB3)
 
+CRVLocker: [0xb5208a3754a8592e2e934d4e1e7b985ed3ae78a1](https://etherscan.io/address/0xb5208a3754a8592e2e934d4e1e7b985ed3ae78a1)
+
 Timelock (12 hours): [0xD92c7fAa0Ca0e6AE4918f3a83d9832d9CAEAA0d3](https://etherscan.io/address/0xD92c7fAa0Ca0e6AE4918f3a83d9832d9CAEAA0d3)
 
 | Name | Want | PickleJar | Strategy |
