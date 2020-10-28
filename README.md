@@ -12,7 +12,18 @@ Governance (multi-sig): [0x9d074E37d408542FD38be78848e8814AFB38db17](https://eth
 
 ---
 
-## Staking Rewards
+## Staking Rewards (WETH)
+
+PICKLE Staking Rewards: [0xa17a8883dA1aBd57c690DF9Ebf58fC194eDAb66F](https://etherscan.io/address/0xa17a8883dA1aBd57c690DF9Ebf58fC194eDAb66F)
+
+Owner (Treasury): [0x066419EaEf5DE53cc5da0d8702b990c5bc7D1AB3](https://etherscan.io/address/0x066419EaEf5DE53cc5da0d8702b990c5bc7D1AB3)
+
+Staking Token (PICKLE): [0x429881672B9AE42b8EbA0E26cD9C73711b891Ca5](https://etherscan.io/address/0x429881672B9AE42b8EbA0E26cD9C73711b891Ca5)
+
+Rewards Token (SCRV): [0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2](https://etherscan.io/address/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2)
+
+
+## Staking Rewards (sCRV, Deprecated)
 
 PICKLE Staking Rewards: [0xD86F33388BF0bfDF0cCb1ECB4A48a1579504DC0a](https://etherscan.io/address/0xd86f33388bf0bfdf0ccb1ecb4a48a1579504dc0a)
 
@@ -26,13 +37,11 @@ Rewards Token (SCRV): [0xC25a3A3b969415c80451098fa907EC722572917F](https://ether
 
 ## Pickle Jars (pJars)
 
-Controller v3: [0x2ff3e6C2E054ABf45E21f790163970df82b0ea90](https://etherscan.io/address/0x2ff3e6C2E054ABf45E21f790163970df82b0ea90)
-
 Controller v4: [0x6847259b2B3A4c17e7c43C54409810aF48bA5210](https://etherscan.io/address/0x6847259b2B3A4c17e7c43C54409810aF48bA5210)
 
 Strategist: [0x907D9B32654B8D43e8737E0291Ad9bfcce01DAD6](https://etherscan.io/address/0x907D9B32654B8D43e8737E0291Ad9bfcce01DAD6)
 
-Governance / DevFund: [0x9d074E37d408542FD38be78848e8814AFB38db17](https://etherscan.io/address/0x9d074E37d408542FD38be78848e8814AFB38db17)
+Governance: [0x9d074E37d408542FD38be78848e8814AFB38db17](https://etherscan.io/address/0x9d074E37d408542FD38be78848e8814AFB38db17)
 
 Treasury: [0x066419EaEf5DE53cc5da0d8702b990c5bc7D1AB3](https://etherscan.io/address/0x066419EaEf5DE53cc5da0d8702b990c5bc7D1AB3)
 
