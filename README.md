@@ -24,7 +24,7 @@ Owner (Treasury): [0x066419EaEf5DE53cc5da0d8702b990c5bc7D1AB3](https://etherscan
 
 Staking Token (PICKLE): [0x429881672B9AE42b8EbA0E26cD9C73711b891Ca5](https://etherscan.io/address/0x429881672B9AE42b8EbA0E26cD9C73711b891Ca5)
 
-Rewards Token (SCRV): [0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2](https://etherscan.io/address/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2)
+Rewards Token (WETH): [0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2](https://etherscan.io/address/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2)
 
 
 ## Staking Rewards (sCRV, Deprecated)
