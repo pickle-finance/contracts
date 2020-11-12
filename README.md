@@ -51,6 +51,8 @@ Treasury: [0x066419EaEf5DE53cc5da0d8702b990c5bc7D1AB3](https://etherscan.io/addr
 
 CRVLocker: [0xb5208a3754a8592e2e934d4e1e7b985ed3ae78a1](https://etherscan.io/address/0xb5208a3754a8592e2e934d4e1e7b985ed3ae78a1)
 
+Instabrine: [0x8F9676bfa268E94A2480352cC5296A943D5A2809](https://etherscan.io/address/0x8F9676bfa268E94A2480352cC5296A943D5A2809)
+
 Timelock (12 hours): [0xD92c7fAa0Ca0e6AE4918f3a83d9832d9CAEAA0d3](https://etherscan.io/address/0xD92c7fAa0Ca0e6AE4918f3a83d9832d9CAEAA0d3)
 
 | Name | Want | PickleJar | Strategy |
