@@ -45,7 +45,7 @@ Controller v4: [0x6847259b2B3A4c17e7c43C54409810aF48bA5210](https://etherscan.io
 
 Strategist: [0x907D9B32654B8D43e8737E0291Ad9bfcce01DAD6](https://etherscan.io/address/0x907D9B32654B8D43e8737E0291Ad9bfcce01DAD6)
 
-Governance: [0x9d074E37d408542FD38be78848e8814AFB38db17](https://etherscan.io/address/0x9d074E37d408542FD38be78848e8814AFB38db17)
+Governance: [0xD92c7fAa0Ca0e6AE4918f3a83d9832d9CAEAA0d3](https://etherscan.io/address/0xD92c7fAa0Ca0e6AE4918f3a83d9832d9CAEAA0d3)
 
 Treasury: [0x066419EaEf5DE53cc5da0d8702b990c5bc7D1AB3](https://etherscan.io/address/0x066419EaEf5DE53cc5da0d8702b990c5bc7D1AB3)
 
