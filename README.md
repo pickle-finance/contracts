@@ -105,7 +105,7 @@ UniCurveConverter: [0x8EfAFBD731d779390e4F2392315eea42c14E2B69](https://ethersca
 | 6 | :x: |  [pUNIUSDC](https://etherscan.io/address/0x46206E9BDaf534d057be5EcF231DaD2A1479258B) |
 | 7 | :x: |  [pUNIUSDT](https://etherscan.io/address/0x3a41AB1e362169974132dEa424Fb8079Fd0E94d8) |
 | 8 | :x: |  [psCRV](https://etherscan.io/address/0x2385D31f1EB3736bE0C3629E6f03C4b3cd997Ffd) |
-| 9 | :heavy_check_mark: |  [psCRV v2](https://etherscan.io/address/0x68d14d66B2B0d6E157c06Dc8Fefa3D8ba0e66a89) |
+| 9 | :x: |  [psCRV v2](https://etherscan.io/address/0x68d14d66B2B0d6E157c06Dc8Fefa3D8ba0e66a89) |
 | 10 | :heavy_check_mark: |  [pUNIDAI v2](https://etherscan.io/address/0xCffA068F1E44D98D3753966eBd58D4CFe3BB5162) |
 | 11 | :heavy_check_mark: |  [pUNIUSDC v2](https://etherscan.io/address/0x53Bf2E62fA20e2b4522f05de3597890Ec1b352C6) |
 | 12 | :heavy_check_mark: |  [pUNIUSDT v2](https://etherscan.io/address/0x09FC573c502037B149ba87782ACC81cF093EC6ef) |
