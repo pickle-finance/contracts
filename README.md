@@ -64,7 +64,7 @@ Timelock (12 hours): [0xD92c7fAa0Ca0e6AE4918f3a83d9832d9CAEAA0d3](https://ethers
 | pJar 0.69b v2 | [UNIv2-ETH-USDC LP](https://etherscan.io/address/0xB4e16d0168e52d35CaCD2c6185b44281Ec28C9Dc) | [pUNIUSDC-v2](https://etherscan.io/address/0x53Bf2E62fA20e2b4522f05de3597890Ec1b352C6)   | [StrategyUniEthUsdcLpV4](https://etherscan.io/address/0xb48B92F8962F880D2F072F4e5fdfC748ceDa7727) |
 | pJar 0.69c v2 | [UNIv2-ETH-USDT LP](https://etherscan.io/address/0x0d4a11d5EEaaC28EC3F61d100daF4d40471f1852) | [pUNIUSDT-v2](https://etherscan.io/address/0x09FC573c502037B149ba87782ACC81cF093EC6ef)   | [StrategyUniEthUsdtLpV4](https://etherscan.io/address/0x3577797668c6Fe415B21bf85Ba44DF34318dD80D) |
 | pJar 0.69d    | [UNIv2-ETH-WBTC LP](https://etherscan.io/address/0xBb2b8038a1640196FbE3e38816F3e67Cba72D940) | [pUNIWBTC](https://etherscan.io/address/0xc80090AA05374d336875907372EE4ee636CBC562)      | [StrategyUniEthWBtcLpV4](https://etherscan.io/address/0xD8dE542D2140eeCc49FfDf056e51aa9261f974d6) |
-| pJar 0.88a    | [DAI](https://etherscan.io/address/0x6b175474e89094c44da98b954eedeac495271d0f) | [pDAI](https://etherscan.io/address/0x6949Bb624E8e8A90F87cD2058139fcd77D2F3F87)      | [StrategyCmpdDaiV2](https://etherscan.io/address/0xCd892a97951d46615484359355e3Ed88131f829D) |
+| pJar 0.88a    | [DAI](https://etherscan.io/address/0x6b175474e89094c44da98b954eedeac495271d0f) | [pDAI](https://etherscan.io/address/0x6949Bb624E8e8A90F87cD2058139fcd77D2F3F87)      | [StrategyCmpdDaiV3](https://etherscan.io/address/0x79FbF3b010Dd3a93D1412da7A42F5FbfD0A07c2a) |
 
 ---
 
