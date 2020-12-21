@@ -65,7 +65,11 @@ Timelock (12 hours): [0xD92c7fAa0Ca0e6AE4918f3a83d9832d9CAEAA0d3](https://ethers
 | pJar 0.69c v2 | [UNIv2-ETH-USDT LP](https://etherscan.io/address/0x0d4a11d5EEaaC28EC3F61d100daF4d40471f1852) | [pUNIUSDT-v2](https://etherscan.io/address/0x09FC573c502037B149ba87782ACC81cF093EC6ef)   | [StrategyUniEthUsdtLpV4](https://etherscan.io/address/0x3577797668c6Fe415B21bf85Ba44DF34318dD80D) |
 | pJar 0.69d    | [UNIv2-ETH-WBTC LP](https://etherscan.io/address/0xBb2b8038a1640196FbE3e38816F3e67Cba72D940) | [pUNIWBTC](https://etherscan.io/address/0xc80090AA05374d336875907372EE4ee636CBC562)      | [StrategyUniEthWBtcLpV4](https://etherscan.io/address/0xD8dE542D2140eeCc49FfDf056e51aa9261f974d6) |
 | pJar 0.88a    | [DAI](https://etherscan.io/address/0x6b175474e89094c44da98b954eedeac495271d0f) | [pDAI](https://etherscan.io/address/0x6949Bb624E8e8A90F87cD2058139fcd77D2F3F87)      | [StrategyCmpdDaiV2](https://etherscan.io/address/0xCd892a97951d46615484359355e3Ed88131f829D) |
-
+| pJar 0.99a    | [SUSHI-ETH-DAI LP](https://etherscan.io/address/0xC3D03e4F041Fd4cD388c549Ee2A29a9E5075882f) | [pSUSHIDAI](https://etherscan.io/address/0x55282dA27a3a02ffe599f6D11314D239dAC89135)      | [StrategySushiEthdAILp](https://etherscan.io/address/0x8E4e4cfCa2fF1DB24708dfAE8c97385CC63149e1) |
+| pJar 0.99b    | [SUSHI-ETH-USDC LP](https://etherscan.io/address/0xBb2b8038a1640196FbE3e38816F3e67Cba72D940) | [pSUSHIUSDC](https://etherscan.io/address/0x397FF1542f962076d0BFE58eA045FfA2d347ACa0)      | [StrategySushiEthUsdcLp](https://etherscan.io/address/0xAA430e7886B60A925ac77e79e91924ce544B0690) |
+| pJar 0.99c    | [SUSHI-ETH-USDT LP](https://etherscan.io/address/0xBb2b8038a1640196FbE3e38816F3e67Cba72D940) | [pSUSHIUSDT](https://etherscan.io/address/0x06da0fd433c1a5d7a4faa01111c044910a184553)      | [StrategySushiEthUsdtLp](https://etherscan.io/address/0x10d2740FFb6c38f14221dF8346d07253cEf8902d) |
+| pJar 0.99d    | [SUSHI-ETH-WBTC LP](https://etherscan.io/address/0xBb2b8038a1640196FbE3e38816F3e67Cba72D940) | [pSUSHIWBTC](https://etherscan.io/address/0xCEfF51756c56CeFFCA006cD410B03FFC46dd3a58)      | [StrategySushiEthWBtcLp](https://etherscan.io/address/0xceD8EEd93677bCF0100F05A38d5B0b2761b09F26) |
+| pJar 0.99e    | [SUSHI-ETH-YFI LP](https://etherscan.io/address/0x088ee5007C98a9677165D78dD2109AE4a3D04d0C) | [pSUSHIYFI](https://etherscan.io/address/0x3261D9408604CC8607b687980D40135aFA26FfED)      | [StrategySushiEthYfiLp](https://etherscan.io/address/0x8785A589237A8699aFAaF5dEb407010DB0950043) |
 ---
 
 ## Swap Logic
