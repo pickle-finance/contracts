@@ -70,6 +70,7 @@ Timelock (12 hours): [0xD92c7fAa0Ca0e6AE4918f3a83d9832d9CAEAA0d3](https://ethers
 | pJar 0.99c    | [SUSHI-ETH-USDT LP](https://etherscan.io/address/0x06da0fd433c1a5d7a4faa01111c044910a184553) | [pSUSHIUSDT](https://etherscan.io/address/0xa7a37aE5Cb163a3147DE83F15e15D8E5f94D6bCE)      | [StrategySushiEthUsdtLp](https://etherscan.io/address/0x10d2740FFb6c38f14221dF8346d07253cEf8902d) |
 | pJar 0.99d    | [SUSHI-ETH-WBTC LP](https://etherscan.io/address/0xCEfF51756c56CeFFCA006cD410B03FFC46dd3a58) | [pSUSHIWBTC](https://etherscan.io/address/0xde74b6c547bd574c3527316a2eE30cd8F6041525)      | [StrategySushiEthWBtcLp](https://etherscan.io/address/0xceD8EEd93677bCF0100F05A38d5B0b2761b09F26) |
 | pJar 0.99e    | [SUSHI-ETH-YFI LP](https://etherscan.io/address/0x088ee5007C98a9677165D78dD2109AE4a3D04d0C) | [pSUSHIYFI](https://etherscan.io/address/0x3261D9408604CC8607b687980D40135aFA26FfED)      | [StrategySushiEthYfiLp](https://etherscan.io/address/0x8785A589237A8699aFAaF5dEb407010DB0950043) |
+| pJar 0.99f    | [UNIv2-BAC-DAI LP](https://etherscan.io/address/0xd4405F0704621DBe9d4dEA60E128E0C3b26bddbD) | [pUNIBACDAI](https://etherscan.io/address/0x2350fc7268F3f5a6cC31f26c38f706E41547505d)      | [StrategyBasisBacDaiLp](https://etherscan.io/address/0xf06ffEf3adA3725919699BFF7EC5D38c743Bb3cB) |
 ---
 
 ## Swap Logic
