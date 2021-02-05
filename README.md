@@ -16,7 +16,7 @@ Treasury-DAO (multi-sig): [0x066419EaEf5DE53cc5da0d8702b990c5bc7D1AB3](https://e
 
 ---
 
-## Staking Rewards (WETH)
+## Staking Rewards (WETH, Deprecated)
 
 PICKLE Staking Rewards: [0xa17a8883dA1aBd57c690DF9Ebf58fC194eDAb66F](https://etherscan.io/address/0xa17a8883dA1aBd57c690DF9Ebf58fC194eDAb66F)
 
@@ -116,9 +116,17 @@ UniCurveConverter: [0x8EfAFBD731d779390e4F2392315eea42c14E2B69](https://ethersca
 | 10 | :x: |  [pUNIDAI v2](https://etherscan.io/address/0xCffA068F1E44D98D3753966eBd58D4CFe3BB5162) |
 | 11 | :x: |  [pUNIUSDC v2](https://etherscan.io/address/0x53Bf2E62fA20e2b4522f05de3597890Ec1b352C6) |
 | 12 | :x: |  [pUNIUSDT v2](https://etherscan.io/address/0x09FC573c502037B149ba87782ACC81cF093EC6ef) |
-| 13 | :heavy_check_mark: |  [prenCRV](https://etherscan.io/address/0x2E35392F4c36EBa7eCAFE4de34199b2373Af22ec) |
+| 13 | :x: |  [prenCRV](https://etherscan.io/address/0x2E35392F4c36EBa7eCAFE4de34199b2373Af22ec) |
 | 14 | :heavy_check_mark: |  [p3CRV](https://etherscan.io/address/0x1BB74b5DdC1f4fC91D6f9E7906cf68bc93538e33) |
 | 15 | :x: |  [pUNIWBTC](https://etherscan.io/address/0xc80090AA05374d336875907372EE4ee636CBC562) |
 | 16 | :x: |  [pDAI](https://etherscan.io/address/0x6949Bb624E8e8A90F87cD2058139fcd77D2F3F87) |
+| 17 | :heavy_check_mark: |  [pSLPDAI](https://etherscan.io/address/0x55282dA27a3a02ffe599f6D11314D239dAC89135) |
+| 18 | :heavy_check_mark: |  [pSLPUSDC](https://etherscan.io/address/0x8c2D16B7F6D3F989eb4878EcF13D695A7d504E43) |
+| 19 | :heavy_check_mark: |  [pSLPUSDT](https://etherscan.io/address/0xa7a37aE5Cb163a3147DE83F15e15D8E5f94D6bCE) |
+| 20 | :heavy_check_mark: |  [pSLPWBTC](https://etherscan.io/address/0xde74b6c547bd574c3527316a2eE30cd8F6041525) |
+| 21 | :heavy_check_mark: |  [pSLPYFI](https://etherscan.io/address/0x3261D9408604CC8607b687980D40135aFA26FfED) |
+| 22 | :heavy_check_mark: |  [pUNIBAC](https://etherscan.io/address/0x2350fc7268F3f5a6cC31f26c38f706E41547505d) |
+| 23 | :heavy_check_mark: |  [pSLPMIC](https://etherscan.io/address/0xC66583Dd4E25b3cfc8D881F6DbaD8288C7f5Fd30) |
+
 ---
 
