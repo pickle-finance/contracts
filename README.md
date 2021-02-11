@@ -129,6 +129,9 @@ UniCurveConverter: [0x8EfAFBD731d779390e4F2392315eea42c14E2B69](https://ethersca
 | 21 | :heavy_check_mark: |  [pSLPYFI](https://etherscan.io/address/0x3261D9408604CC8607b687980D40135aFA26FfED) |
 | 22 | :heavy_check_mark: |  [pUNIBAC](https://etherscan.io/address/0x2350fc7268F3f5a6cC31f26c38f706E41547505d) |
 | 23 | :heavy_check_mark: |  [pSLPMIC](https://etherscan.io/address/0xC66583Dd4E25b3cfc8D881F6DbaD8288C7f5Fd30) |
+| 24 | :heavy_check_mark: |  [pstETHCRV](https://etherscan.io/address/0x77C8A58D940a322Aea02dBc8EE4A30350D4239AD) |
+| 25 | :heavy_check_mark: |  [pSLPMIS](https://etherscan.io/address/0x0faa189afe8ae97de1d2f01e471297678842146d) |
+| 26 | :heavy_check_mark: |  [pSLPYVECRV](https://etherscan.io/address/0x5eff6d166d66bacbc1bf52e2c54dd391ae6b1f48) |
 
 ---
 
