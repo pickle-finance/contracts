@@ -75,6 +75,8 @@ Timelock (12 hours): [0xD92c7fAa0Ca0e6AE4918f3a83d9832d9CAEAA0d3](https://ethers
 | pJar 0.99g    | [SUSHI-MIC-USDT LP](https://etherscan.io/address/0xC9cB53B48A2f3A9e75982685644c1870F1405CCb) | [pSUSHIMIC](https://etherscan.io/address/0xC66583Dd4E25b3cfc8D881F6DbaD8288C7f5Fd30 )      | [StrategyMithMicUsdtLp](https://etherscan.io/address/0x905B8FE1ED69aae663C6af45492360289dF27aF1 ) |
 | pJar 0.99h    | [SUSHI-MIS-USDT](https://etherscan.io/address/0x066f3a3b7c8fa077c71b9184d862ed0a4d5cf3e0) | [pSUSHIMIS](https://etherscan.io/address/0x0faa189afe8ae97de1d2f01e471297678842146d )      | [StrategyMithMisUsdtLp](https://etherscan.io/address/0xC931C4E90E07A1a9ec6f5Ee3D24dDdA29c8da369 ) |
 | pJar 0.99i    | [SUSHI-YVECRV-ETH](https://etherscan.io/address/0x10b47177e92ef9d5c6059055d92ddf6290848991) | [pSUSHIYVECRV](https://etherscan.io/address/0x5eff6d166d66bacbc1bf52e2c54dd391ae6b1f48 )      | [StrategySushiEthYVeCrvLp](https://etherscan.io/address/0x5807424c47ea796d4c6be03b840ccc8c8a642711 ) |
+| pJar 0.99j    | [UNIv2-BASv2-DAI LP](https://etherscan.io/address/0x3E78F2E7daDe07ea685F8612F00477FD97162F1e) | [pUNIBASV2DAI](https://etherscan.io/address/0x748712686a78737da0b7643df78fdf2778dc5944 )      | [StrategyBasisBasDaiLpV2](https://etherscan.io/address/0x4F8aac798111e212Cf403ce8C464C51e270C422d ) |
+| pJar 0.99k    | [UNIv2-MIR-UST LP](https://etherscan.io/address/0x87dA823B6fC8EB8575a235A824690fda94674c88) | [pUNIMIRUST](https://etherscan.io/address/0x3bcd97dca7b1ced292687c97702725f37af01cac )      | [StrategyMirrorMirUstLp](https://etherscan.io/address/0x66006cdA4c7aa92A5ca586d799829916DcB6e595 ) |
 ---
 
 ## Swap Logic
@@ -128,10 +130,13 @@ UniCurveConverter: [0x8EfAFBD731d779390e4F2392315eea42c14E2B69](https://ethersca
 | 20 | :heavy_check_mark: |  [pSLPWBTC](https://etherscan.io/address/0xde74b6c547bd574c3527316a2eE30cd8F6041525) |
 | 21 | :heavy_check_mark: |  [pSLPYFI](https://etherscan.io/address/0x3261D9408604CC8607b687980D40135aFA26FfED) |
 | 22 | :heavy_check_mark: |  [pUNIBAC](https://etherscan.io/address/0x2350fc7268F3f5a6cC31f26c38f706E41547505d) |
-| 23 | :heavy_check_mark: |  [pSLPMIC](https://etherscan.io/address/0xC66583Dd4E25b3cfc8D881F6DbaD8288C7f5Fd30) |
+| 23 | :x: |  [pSLPMIC](https://etherscan.io/address/0xC66583Dd4E25b3cfc8D881F6DbaD8288C7f5Fd30) |
 | 24 | :heavy_check_mark: |  [pstETHCRV](https://etherscan.io/address/0x77C8A58D940a322Aea02dBc8EE4A30350D4239AD) |
-| 25 | :heavy_check_mark: |  [pSLPMIS](https://etherscan.io/address/0x0faa189afe8ae97de1d2f01e471297678842146d) |
+| 25 | :x: |  [pSLPMIS](https://etherscan.io/address/0x0faa189afe8ae97de1d2f01e471297678842146d) |
 | 26 | :heavy_check_mark: |  [pSLPYVECRV](https://etherscan.io/address/0x5eff6d166d66bacbc1bf52e2c54dd391ae6b1f48) |
+| 27 | :heavy_check_mark: |  [pUNIBASV2DAI](https://etherscan.io/address/0x748712686a78737DA0b7643DF78Fdf2778dC5944) |
+| 28 | :heavy_check_mark: |  [pUNIMIRUST](https://etherscan.io/address/0x3bcd97dca7b1ced292687c97702725f37af01cac) |
+
 
 ---
 
