@@ -82,6 +82,7 @@ Timelock (12 hours): [0xD92c7fAa0Ca0e6AE4918f3a83d9832d9CAEAA0d3](https://ethers
 | pJar 0.99n    | [UNIv2-mQQQ-UST LP](https://etherscan.io/address/0x9E3B47B861B451879d43BBA404c35bdFb99F0a6c) | [pUNImQQQUST](https://etherscan.io/address/0x7C8de3eE2244207A54b57f45286c9eE1465fee9f )      | [StrategyMirrorMqqqUstLp](https://etherscan.io/address/0x0e5a5b89e2529c52d7cdea1a6db9dc7933d8d32a ) |
 | pJar 0.99o    | [UNIv2-mSLV-UST LP](https://etherscan.io/address/0x860425bE6ad1345DC7a3e287faCBF32B18bc4fAe) | [pUNImSLVUST](https://etherscan.io/address/0x1ed1fD33b62bEa268e527A622108fe0eE0104C07 )      | [StrategyMirrorMslvUstLp](https://etherscan.io/address/0xCE0248D6a290a1a455646F9aFe43b145eabDA767 ) |
 | pJar 0.99p    | [UNIv2-mBABA-UST LP](https://etherscan.io/address/0x676Ce85f66aDB8D7b8323AeEfe17087A3b8CB363) | [pUNImBABAUST](https://etherscan.io/address/0x1CF137F651D8f0A4009deD168B442ea2E870323A )      | [StrategyMirrorMbabaUstLp](https://etherscan.io/address/0xa28217D2242AA23bcD8211a520a96515815D201d ) |
+| pJar 0.99q    | [SUSHI-SUSHI-ETH LP](https://etherscan.io/address/0x795065dcc9f64b5614c407a6efdc400da6221fb0) | [pSUSHIETH](https://etherscan.io/address/0xECb520217DccC712448338B0BB9b08Ce75AD61AE )      | [StrategySushiEthLp](https://etherscan.io/address/0x8d54048Ce339c2D258205A7B85c6358a83DAc6a0 ) |
 ---
 
 ## Swap Logic
@@ -142,6 +143,7 @@ UniCurveConverter: [0x8EfAFBD731d779390e4F2392315eea42c14E2B69](https://ethersca
 | 27 | :heavy_check_mark: |  [pUNIBASV2DAI](https://etherscan.io/address/0x748712686a78737DA0b7643DF78Fdf2778dC5944) |
 | 28 | :heavy_check_mark: |  [pUNIMIRUST](https://etherscan.io/address/0x3bcd97dca7b1ced292687c97702725f37af01cac) |
 | 29 | :heavy_check_mark: |  [mDILL](https://etherscan.io/address/0x73feA839bEad0E4100B6e5f59Fb6E896Ad69910f) |
+| 30 | :x: |  [pSUSHIETH](https://etherscan.io/address/0xECb520217DccC712448338B0BB9b08Ce75AD61AE) |
 
 ---
 
