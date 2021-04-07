@@ -83,6 +83,7 @@ Timelock (12 hours): [0xD92c7fAa0Ca0e6AE4918f3a83d9832d9CAEAA0d3](https://ethers
 | pJar 0.99o    | [UNIv2-mSLV-UST LP](https://etherscan.io/address/0x860425bE6ad1345DC7a3e287faCBF32B18bc4fAe) | [pUNImSLVUST](https://etherscan.io/address/0x1ed1fD33b62bEa268e527A622108fe0eE0104C07 )      | [StrategyMirrorMslvUstLp](https://etherscan.io/address/0xCE0248D6a290a1a455646F9aFe43b145eabDA767 ) |
 | pJar 0.99p    | [UNIv2-mBABA-UST LP](https://etherscan.io/address/0x676Ce85f66aDB8D7b8323AeEfe17087A3b8CB363) | [pUNImBABAUST](https://etherscan.io/address/0x1CF137F651D8f0A4009deD168B442ea2E870323A )      | [StrategyMirrorMbabaUstLp](https://etherscan.io/address/0xa28217D2242AA23bcD8211a520a96515815D201d ) |
 | pJar 0.99q    | [SUSHI-SUSHI-ETH LP](https://etherscan.io/address/0x795065dcc9f64b5614c407a6efdc400da6221fb0) | [pSUSHIETH](https://etherscan.io/address/0xECb520217DccC712448338B0BB9b08Ce75AD61AE )      | [StrategySushiEthLp](https://etherscan.io/address/0x8d54048Ce339c2D258205A7B85c6358a83DAc6a0 ) |
+| pJar 0.99r    | [UNIv2-FEI-TRIBE LP](https://etherscan.io/address/0x9928e4046d7c6513326cCeA028cD3e7a91c7590A) | [pUNIFEITRIBE](https://etherscan.io/address/0xC1513C1b0B359Bc5aCF7b772100061217838768B )      | [StrategyFeiTribeLp](https://etherscan.io/address/0xCD678491CC646856Ce19AB692f9070861332E300 ) |
 ---
 
 ## Swap Logic
