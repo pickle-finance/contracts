@@ -144,7 +144,6 @@ UniCurveConverter: [0x8EfAFBD731d779390e4F2392315eea42c14E2B69](https://ethersca
 | 27 | :heavy_check_mark: |  [pUNIBASV2DAI](https://etherscan.io/address/0x748712686a78737DA0b7643DF78Fdf2778dC5944) | 160 |
 | 28 | :heavy_check_mark: |  [pUNIMIRUST](https://etherscan.io/address/0x3bcd97dca7b1ced292687c97702725f37af01cac) | 160 |
 | 29 | :heavy_check_mark: |  [mDILL](https://etherscan.io/address/0x73feA839bEad0E4100B6e5f59Fb6E896Ad69910f) | 10 |
-| 30 | :x: |  [pSUSHIETH](https://etherscan.io/address/0xECb520217DccC712448338B0BB9b08Ce75AD61AE) |
 
 ---
 
