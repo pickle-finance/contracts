@@ -182,7 +182,7 @@ UniCurveConverter: [0x8EfAFBD731d779390e4F2392315eea42c14E2B69](https://ethersca
 | 26 | :heavy_check_mark: |  [pSLPYVECRV](https://etherscan.io/address/0x5eff6d166d66bacbc1bf52e2c54dd391ae6b1f48) | 240 |
 | 27 | :heavy_check_mark: |  [pUNIBASV2DAI](https://etherscan.io/address/0x748712686a78737DA0b7643DF78Fdf2778dC5944) | 120 |
 | 28 | :heavy_check_mark: |  [pUNIMIRUST](https://etherscan.io/address/0x3bcd97dca7b1ced292687c97702725f37af01cac) | 200 |
-| 29 | :heavy_check_mark: |  [mDILL](https://etherscan.io/address/0x45f7fa97bd0e0c212a844baea35876c7560f465b) | 10 |
+| 29 | :x: |  [mDILL](https://etherscan.io/address/0x45f7fa97bd0e0c212a844baea35876c7560f465b) | 0 |
 | 30 | :heavy_check_mark: |  [pUNImTSLAUST](https://etherscan.io/address/0xaFB2FE266c215B5aAe9c4a9DaDC325cC7a497230) | 40 |
 | 31 | :heavy_check_mark: |  [pUNImAAPLUST](https://etherscan.io/address/0xF303B35D5bCb4d9ED20fB122F5E268211dEc0EBd) | 40 |
 | 32 | :heavy_check_mark: |  [pUNImQQQUST](https://etherscan.io/address/0x7C8de3eE2244207A54b57f45286c9eE1465fee9f) | 40 |
@@ -190,6 +190,7 @@ UniCurveConverter: [0x8EfAFBD731d779390e4F2392315eea42c14E2B69](https://ethersca
 | 34 | :heavy_check_mark: |  [pUNImBABAUST](https://etherscan.io/address/0x1CF137F651D8f0A4009deD168B442ea2E870323A) | 40 |
 | 35 | :heavy_check_mark: |  [pSUSHIETH](https://etherscan.io/address/0xECb520217DccC712448338B0BB9b08Ce75AD61AE) | 40 |
 | 36 | :heavy_check_mark: |  [pUNIFEITRIBE](https://etherscan.io/address/0xC1513C1b0B359Bc5aCF7b772100061217838768B) | 200 |
+| 37 | :heavy_check_mark: |  [mDILLv2](https://etherscan.io/address/0x45F7fa97BD0e0C212A844BAea35876C7560F465B) | 10 |
 
 ---
 
