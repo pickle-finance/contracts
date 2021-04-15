@@ -84,6 +84,7 @@ Timelock (12 hours): [0xD92c7fAa0Ca0e6AE4918f3a83d9832d9CAEAA0d3](https://ethers
 | pJar 0.99p    | [UNIv2-mBABA-UST LP](https://etherscan.io/address/0x676Ce85f66aDB8D7b8323AeEfe17087A3b8CB363) | [pUNImBABAUST](https://etherscan.io/address/0x1CF137F651D8f0A4009deD168B442ea2E870323A )      | [StrategyMirrorMbabaUstLp](https://etherscan.io/address/0xa28217D2242AA23bcD8211a520a96515815D201d ) |
 | pJar 0.99q    | [SUSHI-SUSHI-ETH LP](https://etherscan.io/address/0x795065dcc9f64b5614c407a6efdc400da6221fb0) | [pSUSHIETH](https://etherscan.io/address/0xECb520217DccC712448338B0BB9b08Ce75AD61AE )      | [StrategySushiEthLp](https://etherscan.io/address/0x8d54048Ce339c2D258205A7B85c6358a83DAc6a0 ) |
 | pJar 0.99r    | [UNIv2-FEI-TRIBE LP](https://etherscan.io/address/0x9928e4046d7c6513326cCeA028cD3e7a91c7590A) | [pUNIFEITRIBE](https://etherscan.io/address/0xC1513C1b0B359Bc5aCF7b772100061217838768B )      | [StrategyFeiTribeLp](https://etherscan.io/address/0xCD678491CC646856Ce19AB692f9070861332E300 ) |
+| pJar 0.99s    | [yvBOOST-ETH_SLP](https://etherscan.io/address/0x9461173740D27311b176476FA27e94C681b1Ea6b) | [pyvBOOSTETH](https://etherscan.io/address/0xCeD67a187b923F0E5ebcc77C7f2F7da20099e378 )      | [StrategyYvboostEthLp](https://etherscan.io/address/0xeFf9D9e776a7A381aa6A348E3A81E578b6699346 ) |
 ---
 
 ## Swap Logic
@@ -143,7 +144,7 @@ UniCurveConverter: [0x8EfAFBD731d779390e4F2392315eea42c14E2B69](https://ethersca
 | 26 | :heavy_check_mark: |  [pSLPYVECRV](https://etherscan.io/address/0x5eff6d166d66bacbc1bf52e2c54dd391ae6b1f48) | 240 |
 | 27 | :heavy_check_mark: |  [pUNIBASV2DAI](https://etherscan.io/address/0x748712686a78737DA0b7643DF78Fdf2778dC5944) | 120 |
 | 28 | :heavy_check_mark: |  [pUNIMIRUST](https://etherscan.io/address/0x3bcd97dca7b1ced292687c97702725f37af01cac) | 200 |
-| 29 | :heavy_check_mark: |  [mDILL](https://etherscan.io/address/0x73feA839bEad0E4100B6e5f59Fb6E896Ad69910f) | 10 |
+| 29 | :heavy_check_mark: |  [mDILL](https://etherscan.io/address/0x45f7fa97bd0e0c212a844baea35876c7560f465b) | 10 |
 | 30 | :heavy_check_mark: |  [pUNImTSLAUST](https://etherscan.io/address/0xaFB2FE266c215B5aAe9c4a9DaDC325cC7a497230) | 40 |
 | 31 | :heavy_check_mark: |  [pUNImAAPLUST](https://etherscan.io/address/0xF303B35D5bCb4d9ED20fB122F5E268211dEc0EBd) | 40 |
 | 32 | :heavy_check_mark: |  [pUNImQQQUST](https://etherscan.io/address/0x7C8de3eE2244207A54b57f45286c9eE1465fee9f) | 40 |
