@@ -16,6 +16,17 @@ Treasury-DAO (multi-sig): [0x066419EaEf5DE53cc5da0d8702b990c5bc7D1AB3](https://e
 
 ---
 
+## DILL Contracts
+
+### Main Contracts
+
+DILL: [0xbBCf169eE191A1Ba7371F30A1C344bFC498b29Cf](https://etherscan.io/address/0xbBCf169eE191A1Ba7371F30A1C344bFC498b29Cf)
+GaugeProxy: [0x2e57627ACf6c1812F99e274d0ac61B786c19E74f](https://etherscan.io/address/0x2e57627ACf6c1812F99e274d0ac61B786c19E74f)
+mDILL: [0x45f7fa97bd0e0c212a844baea35876c7560f465b](https://etherscan.io/address/0x45f7fa97bd0e0c212a844baea35876c7560f465b)
+FeeDistributor: [0x74c6cade3ef61d64dcc9b97490d9fbb231e4bdcc](https://etherscan.io/address/0x74c6cade3ef61d64dcc9b97490d9fbb231e4bdcc)
+
+---
+
 ## Staking Rewards (WETH, Deprecated)
 
 PICKLE Staking Rewards: [0xa17a8883dA1aBd57c690DF9Ebf58fC194eDAb66F](https://etherscan.io/address/0xa17a8883dA1aBd57c690DF9Ebf58fC194eDAb66F)
