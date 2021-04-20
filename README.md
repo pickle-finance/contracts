@@ -26,7 +26,7 @@ GaugeProxy: [0x2e57627ACf6c1812F99e274d0ac61B786c19E74f](https://etherscan.io/ad
 
 mDILL: [0x45f7fa97bd0e0c212a844baea35876c7560f465b](https://etherscan.io/address/0x45f7fa97bd0e0c212a844baea35876c7560f465b)
 
-FeeDistributor: [0x74c6cade3ef61d64dcc9b97490d9fbb231e4bdcc](https://etherscan.io/address/0x74c6cade3ef61d64dcc9b97490d9fbb231e4bdcc)
+FeeDistributor: [0x74C6CadE3eF61d64dcc9b97490d9FbB231e4BdCc](https://etherscan.io/address/0x74c6cade3ef61d64dcc9b97490d9fbb231e4bdcc)
 
 ### Gauges
 
