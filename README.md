@@ -125,6 +125,7 @@ Timelock (12 hours): [0xD92c7fAa0Ca0e6AE4918f3a83d9832d9CAEAA0d3](https://ethers
 | pJar 0.99r    | [UNIv2-FEI-TRIBE LP](https://etherscan.io/address/0x9928e4046d7c6513326cCeA028cD3e7a91c7590A) | [pUNIFEITRIBE](https://etherscan.io/address/0xC1513C1b0B359Bc5aCF7b772100061217838768B )      | [StrategyFeiTribeLp](https://etherscan.io/address/0xCD678491CC646856Ce19AB692f9070861332E300 ) |
 | pJar 0.99s    | [yvBOOST-ETH_SLP](https://etherscan.io/address/0x9461173740D27311b176476FA27e94C681b1Ea6b) | [pyvBOOSTETH](https://etherscan.io/address/0xCeD67a187b923F0E5ebcc77C7f2F7da20099e378 )      | [StrategyYvboostEthLp](https://etherscan.io/address/0xeFf9D9e776a7A381aa6A348E3A81E578b6699346 ) |
 | pJar 0.99t    | [UNIv2-LUSD-ETH LP](https://etherscan.io/address/0xF20EF17b889b437C151eB5bA15A47bFc62bfF469) | [pUNILUSDETH](https://etherscan.io/address/0x927e3bCBD329e89A8765B52950861482f0B227c4 )      | [StrategyLusdEthLp](https://etherscan.io/address/0x6716836647074B1a6b4A7e0566af3e6A4e9e891F ) |
+| pJar 0.99u    | [SUSHI-ALCX-ETH](https://etherscan.io/address/0xC3f279090a47e80990Fe3a9c30d24Cb117EF91a8) | [pSUSHIALCX](https://etherscan.io/address/0x9eb0aAd5Bb943D3b2F7603Deb772faa35f60aDF9 )      | [StrategyAlcxEthLp](https://etherscan.io/address/0xa4a9F66344Bf806FA1329E665f3F33A5f106b1C2 ) |
 
 ---
 
@@ -156,7 +157,7 @@ UniCurveConverter: [0x8EfAFBD731d779390e4F2392315eea42c14E2B69](https://ethersca
 
 | Index | Active | Token | AllocPoint
 | --- | --- | --- | ---
-| 0 | :heavy_check_mark: | [PickleToken <> WETH](https://etherscan.io/address/0xdc98556Ce24f007A5eF6dC1CE96322d65832A819) | 2000 |
+| 0 | :x: | [PickleToken <> WETH](https://etherscan.io/address/0xdc98556Ce24f007A5eF6dC1CE96322d65832A819) | 0 |
 | 1 | :x: |  [USDT <> WETH](https://etherscan.io/address/0x0d4a11d5EEaaC28EC3F61d100daF4d40471f1852) | 0 |
 | 2 | :x: |  [USDC <> WETH](https://etherscan.io/address/0xB4e16d0168e52d35CaCD2c6185b44281Ec28C9Dc) | 0 |
 | 3 | :x: |  [DAI <> WETH](https://etherscan.io/address/0xA478c2975Ab1Ea89e8196811F51A7B7Ade33eB11) | 0 |
@@ -170,31 +171,31 @@ UniCurveConverter: [0x8EfAFBD731d779390e4F2392315eea42c14E2B69](https://ethersca
 | 11 | :x: |  [pUNIUSDC v2](https://etherscan.io/address/0x53Bf2E62fA20e2b4522f05de3597890Ec1b352C6) | 0 |
 | 12 | :x: |  [pUNIUSDT v2](https://etherscan.io/address/0x09FC573c502037B149ba87782ACC81cF093EC6ef) | 0 |
 | 13 | :x: |  [prenCRV](https://etherscan.io/address/0x2E35392F4c36EBa7eCAFE4de34199b2373Af22ec) | 0 |
-| 14 | :x: |  [p3CRV](https://etherscan.io/address/0x1BB74b5DdC1f4fC91D6f9E7906cf68bc93538e33) | 120 |
+| 14 | :x: |  [p3CRV](https://etherscan.io/address/0x1BB74b5DdC1f4fC91D6f9E7906cf68bc93538e33) | 0 |
 | 15 | :x: |  [pUNIWBTC](https://etherscan.io/address/0xc80090AA05374d336875907372EE4ee636CBC562) | 0 |
 | 16 | :x: |  [pDAI](https://etherscan.io/address/0x6949Bb624E8e8A90F87cD2058139fcd77D2F3F87) | 0 |
-| 17 | :x: |  [pSLPDAI](https://etherscan.io/address/0x55282dA27a3a02ffe599f6D11314D239dAC89135) | 40 |
-| 18 | :x: |  [pSLPUSDC](https://etherscan.io/address/0x8c2D16B7F6D3F989eb4878EcF13D695A7d504E43) | 40 |
-| 19 | :x: |  [pSLPUSDT](https://etherscan.io/address/0xa7a37aE5Cb163a3147DE83F15e15D8E5f94D6bCE) | 40 |
-| 20 | :x: |  [pSLPWBTC](https://etherscan.io/address/0xde74b6c547bd574c3527316a2eE30cd8F6041525) | 40 |
-| 21 | :x: |  [pSLPYFI](https://etherscan.io/address/0x3261D9408604CC8607b687980D40135aFA26FfED) | 40 |
-| 22 | :x: |  [pUNIBAC](https://etherscan.io/address/0x4Cac56929B98d4C52dDfDF998329622013Fed2a5) | 240 |
+| 17 | :x: |  [pSLPDAI](https://etherscan.io/address/0x55282dA27a3a02ffe599f6D11314D239dAC89135) | 0 |
+| 18 | :x: |  [pSLPUSDC](https://etherscan.io/address/0x8c2D16B7F6D3F989eb4878EcF13D695A7d504E43) | 0 |
+| 19 | :x: |  [pSLPUSDT](https://etherscan.io/address/0xa7a37aE5Cb163a3147DE83F15e15D8E5f94D6bCE) | 0 |
+| 20 | :x: |  [pSLPWBTC](https://etherscan.io/address/0xde74b6c547bd574c3527316a2eE30cd8F6041525) | 0 |
+| 21 | :x: |  [pSLPYFI](https://etherscan.io/address/0x3261D9408604CC8607b687980D40135aFA26FfED) | 0 |
+| 22 | :x: |  [pUNIBAC](https://etherscan.io/address/0x4Cac56929B98d4C52dDfDF998329622013Fed2a5) | 0 |
 | 23 | :x: |  [pSLPMIC](https://etherscan.io/address/0xC66583Dd4E25b3cfc8D881F6DbaD8288C7f5Fd30) | 0 |
-| 24 | :x: |  [pstETHCRV](https://etherscan.io/address/0x77C8A58D940a322Aea02dBc8EE4A30350D4239AD) | 240 |
+| 24 | :x: |  [pstETHCRV](https://etherscan.io/address/0x77C8A58D940a322Aea02dBc8EE4A30350D4239AD) | 0 |
 | 25 | :x: |  [pSLPMIS](https://etherscan.io/address/0x0faa189afe8ae97de1d2f01e471297678842146d) | 0 |
-| 26 | :x: |  [pSLPYVECRV](https://etherscan.io/address/0x5eff6d166d66bacbc1bf52e2c54dd391ae6b1f48) | 240 |
-| 27 | :x: |  [pUNIBASV2DAI](https://etherscan.io/address/0xcF45563514a24b10563aC0c9fECCd3476b00DF45) | 120 |
-| 28 | :x: |  [pUNIMIRUST](https://etherscan.io/address/0x3bcd97dca7b1ced292687c97702725f37af01cac) | 200 |
+| 26 | :x: |  [pSLPYVECRV](https://etherscan.io/address/0x5eff6d166d66bacbc1bf52e2c54dd391ae6b1f48) | 0 |
+| 27 | :x: |  [pUNIBASV2DAI](https://etherscan.io/address/0xcF45563514a24b10563aC0c9fECCd3476b00DF45) | 0 |
+| 28 | :x: |  [pUNIMIRUST](https://etherscan.io/address/0x3bcd97dca7b1ced292687c97702725f37af01cac) | 0 |
 | 29 | :x: |  [mDILL](https://etherscan.io/address/0x45f7fa97bd0e0c212a844baea35876c7560f465b) | 0 |
-| 30 | :x: |  [pUNImTSLAUST](https://etherscan.io/address/0xaFB2FE266c215B5aAe9c4a9DaDC325cC7a497230) | 40 |
-| 31 | :x: |  [pUNImAAPLUST](https://etherscan.io/address/0xF303B35D5bCb4d9ED20fB122F5E268211dEc0EBd) | 40 |
-| 32 | :x: |  [pUNImQQQUST](https://etherscan.io/address/0x7C8de3eE2244207A54b57f45286c9eE1465fee9f) | 40 |
-| 33 | :x: |  [pUNImSLVUST](https://etherscan.io/address/0x1ed1fD33b62bEa268e527A622108fe0eE0104C07) | 40 |
-| 34 | :x: |  [pUNImBABAUST](https://etherscan.io/address/0x1CF137F651D8f0A4009deD168B442ea2E870323A) | 40 |
-| 35 | :x: |  [pSUSHIETH](https://etherscan.io/address/0xECb520217DccC712448338B0BB9b08Ce75AD61AE) | 40 |
-| 36 | :x: |  [pUNIFEITRIBE](https://etherscan.io/address/0xC1513C1b0B359Bc5aCF7b772100061217838768B) | 200 |
-| 37 | :x: |  [mDILLv2](https://etherscan.io/address/0x45F7fa97BD0e0C212A844BAea35876C7560F465B) | 10 |
-| 38 | :x: |  [pyvBOOSTETH](https://etherscan.io/address/0xCeD67a187b923F0E5ebcc77C7f2F7da20099e378) | 5 |
+| 30 | :x: |  [pUNImTSLAUST](https://etherscan.io/address/0xaFB2FE266c215B5aAe9c4a9DaDC325cC7a497230) | 0 |
+| 31 | :x: |  [pUNImAAPLUST](https://etherscan.io/address/0xF303B35D5bCb4d9ED20fB122F5E268211dEc0EBd) | 0 |
+| 32 | :x: |  [pUNImQQQUST](https://etherscan.io/address/0x7C8de3eE2244207A54b57f45286c9eE1465fee9f) | 0 |
+| 33 | :x: |  [pUNImSLVUST](https://etherscan.io/address/0x1ed1fD33b62bEa268e527A622108fe0eE0104C07) | 0 |
+| 34 | :x: |  [pUNImBABAUST](https://etherscan.io/address/0x1CF137F651D8f0A4009deD168B442ea2E870323A) | 0 |
+| 35 | :x: |  [pSUSHIETH](https://etherscan.io/address/0xECb520217DccC712448338B0BB9b08Ce75AD61AE) | 0 |
+| 36 | :x: |  [pUNIFEITRIBE](https://etherscan.io/address/0xC1513C1b0B359Bc5aCF7b772100061217838768B) | 0 |
+| 37 | :heavy_check_mark: |  [mDILLv2](https://etherscan.io/address/0x45F7fa97BD0e0C212A844BAea35876C7560F465B) | 4000 |
+| 38 | :x: |  [pyvBOOSTETH](https://etherscan.io/address/0xCeD67a187b923F0E5ebcc77C7f2F7da20099e378) | 0 |
 
 ---
 
