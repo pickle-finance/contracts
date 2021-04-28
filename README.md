@@ -53,7 +53,7 @@ FeeDistributor: [0x74C6CadE3eF61d64dcc9b97490d9FbB231e4BdCc](https://etherscan.i
 | [pUNIFEITRIBE](https://etherscan.io/address/0xC1513C1b0B359Bc5aCF7b772100061217838768B) | 0xeA5b46877E2d131405DB7e5155CC15B8e55fbD27 |
 | [pSUSHIYVBOOST](https://etherscan.io/address/0xCeD67a187b923F0E5ebcc77C7f2F7da20099e378) | 0xDA481b277dCe305B97F4091bD66595d57CF31634 |
 | [pUNILUSDETH](https://etherscan.io/address/0x927e3bCBD329e89A8765B52950861482f0B227c4) | 0xbc9d68f38881a9c161da18881e21b2ac9df87b55 |
-| [pSUSHIALCX](https://etherscan.io/address/0x9eb0aAd5Bb943D3b2F7603Deb772faa35f60aDF9) | 0x9eb0aad5bb943d3b2f7603deb772faa35f60adf9 |
+| [pSUSHIALCX](https://etherscan.io/address/0x9eb0aAd5Bb943D3b2F7603Deb772faa35f60aDF9) | 0xE9bEAd1d3e3A25E8AF7a6B40e48de469a9613EDe |
 
 ---
 
