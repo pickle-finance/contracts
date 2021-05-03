@@ -128,8 +128,7 @@ Timelock (12 hours): [0xD92c7fAa0Ca0e6AE4918f3a83d9832d9CAEAA0d3](https://ethers
 | pJar 0.99s    | [yvBOOST-ETH_SLP](https://etherscan.io/address/0x9461173740D27311b176476FA27e94C681b1Ea6b) | [pyvBOOSTETH](https://etherscan.io/address/0xCeD67a187b923F0E5ebcc77C7f2F7da20099e378 )      | [StrategyYvboostEthLp](https://etherscan.io/address/0x9e7f57f3c3b147d234d38f9071b7d53b08c7fd85 ) |
 | pJar 0.99u    | [UNIv2-LUSD-ETH LP](https://etherscan.io/address/0xF20EF17b889b437C151eB5bA15A47bFc62bfF469) | [pUNILUSDETH](https://etherscan.io/address/0x927e3bCBD329e89A8765B52950861482f0B227c4 )      | [StrategyLusdEthLp](https://etherscan.io/address/0x6716836647074B1a6b4A7e0566af3e6A4e9e891F ) |
 | pJar 0.99x    | [SUSHI-ALCX-ETH](https://etherscan.io/address/0xC3f279090a47e80990Fe3a9c30d24Cb117EF91a8) | [pSUSHIALCX](https://etherscan.io/address/0x9eb0aAd5Bb943D3b2F7603Deb772faa35f60aDF9 )      | [StrategyAlcxEthLp](https://etherscan.io/address/0x4D787C7d124721cD22A5F124BBB06d965fdE04ef) |
-| pJar 0.99y    | [SUSHI-YVBOOST-ETH](https://etherscan.io/address/0x9461173740D27311b176476FA27e94C681b1Ea6b) | [pSUSHIYVBOOST](https://etherscan.io/address/0xCeD67a187b923F0E5ebcc77C7f2F7da20099e378 )      | [	
-StrategySushiEthYvBoostLp](https://etherscan.io/address/0x9e7f57f3c3b147d234d38f9071b7d53b08c7fd85) |
+| pJar 0.99y    | [SUSHI-YVBOOST-ETH](https://etherscan.io/address/0x9461173740D27311b176476FA27e94C681b1Ea6b) | [pSUSHIYVBOOST](https://etherscan.io/address/0xCeD67a187b923F0E5ebcc77C7f2F7da20099e378 )      | [StrategySushiEthYvBoostLp](https://etherscan.io/address/0x9e7f57f3c3b147d234d38f9071b7d53b08c7fd85) |
 
 ---
 
