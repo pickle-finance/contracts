@@ -208,13 +208,13 @@ UniCurveConverter: [0x8EfAFBD731d779390e4F2392315eea42c14E2B69](https://ethersca
 
 ## Pickle.Finance Contracts (Polygon)
 
-PickleProxyToken: [0x6c551cAF1099b08993fFDB5247BE74bE39741B82](https://etherscan.io/address/0x6c551cAF1099b08993fFDB5247BE74bE39741B82)
+PickleProxyToken: [0x6c551cAF1099b08993fFDB5247BE74bE39741B82](https://explorer-mainnet.maticvigil.com/address/0x6c551cAF1099b08993fFDB5247BE74bE39741B82/transactions)
 
-MasterChef: [0xCD276D529a2EE01a8299D4BF076F13D09d40dEa0](https://etherscan.io/address/0xCD276D529a2EE01a8299D4BF076F13D09d40dEa0)
+MasterChef: [0xCD276D529a2EE01a8299D4BF076F13D09d40dEa0](https://explorer-mainnet.maticvigil.com/address/0xCD276D529a2EE01a8299D4BF076F13D09d40dEa0/transactions)
 
-Timelock: [0x63A991b9c34D2590A411584799B030414C9b0D6F](https://etherscan.io/address/0x63A991b9c34D2590A411584799B030414C9b0D6F)
+Timelock: [0x63A991b9c34D2590A411584799B030414C9b0D6F](https://explorer-mainnet.maticvigil.com/address/0x63A991b9c34D2590A411584799B030414C9b0D6F/transactions)
 
-Controller: [0x83074F0aB8EDD2c1508D3F657CeB5F27f6092d09](https://etherscan.io/address/0x83074F0aB8EDD2c1508D3F657CeB5F27f6092d09)
+Controller: [0x83074F0aB8EDD2c1508D3F657CeB5F27f6092d09](https://explorer-mainnet.maticvigil.com/address/0x83074F0aB8EDD2c1508D3F657CeB5F27f6092d09/transactions)
 
 ---
 
@@ -222,8 +222,8 @@ Controller: [0x83074F0aB8EDD2c1508D3F657CeB5F27f6092d09](https://etherscan.io/ad
 
 | Name | Want | PickleJar | Strategy |
 | ---  | --- | --- | --- |
-| polyJar 01 | [AaveDai](https://etherscan.io/address/0x8f3Cf7ad23Cd3CaDbD9735AFf958023239c6A063) | [pAaveDai](https://etherscan.io/address/0x0519848e57Ba0469AA5275283ec0712c91e20D8E) | [StrategyAaveDai](https://etherscan.io/address/0x0b198b5EE64aB29c98A094380c867079d5a1682e) |
-| polyJar 02 | [ComethWethUSDC](https://etherscan.io/address/0x1Edb2D8f791D2a51D56979bf3A25673D6E783232) | [pComethWethUSDC](https://etherscan.io/address/0x9eD7e3590F2fB9EEE382dfC55c71F9d3DF12556c) | [StrategyComethUSDC](https://etherscan.io/address/0x51cF19A126E642948B5c5747471fd722B2EdCa25) |
-| polyJar 03 | [CrvAave](https://etherscan.io/address/0xE7a24EF0C5e95Ffb0f6684b813A78F2a3AD7D171) | [pCrvAave](https://etherscan.io/address/0x1A602E5f4403ea0A5C06d3DbD22B75d3a2D299D5) | [StrategyCrvAave](https://etherscan.io/address/0x32B56573Fa580f0c17f8A420f12Bbe876B72CFe4) |
+| polyJar 01 | [AaveDai](https://explorer-mainnet.maticvigil.com/address/0x8f3Cf7ad23Cd3CaDbD9735AFf958023239c6A063/transactions) | [pAaveDai](https://explorer-mainnet.maticvigil.com/address/0x0519848e57Ba0469AA5275283ec0712c91e20D8E/transactions) | [StrategyAaveDai](https://explorer-mainnet.maticvigil.com/address/0x0b198b5EE64aB29c98A094380c867079d5a1682e/transactions) |
+| polyJar 02 | [ComethWethUSDC](https://explorer-mainnet.maticvigil.com/address/0x1Edb2D8f791D2a51D56979bf3A25673D6E783232/transactions) | [pComethWethUSDC](https://explorer-mainnet.maticvigil.com/address/0x9eD7e3590F2fB9EEE382dfC55c71F9d3DF12556c/transactions) | [StrategyComethUSDC](https://explorer-mainnet.maticvigil.com/address/0x51cF19A126E642948B5c5747471fd722B2EdCa25/transactions) |
+| polyJar 03 | [CrvAave](https://explorer-mainnet.maticvigil.com/address/0xE7a24EF0C5e95Ffb0f6684b813A78F2a3AD7D171/transactions) | [pCrvAave](https://explorer-mainnet.maticvigil.com/address/0x1A602E5f4403ea0A5C06d3DbD22B75d3a2D299D5/transactions) | [StrategyCrvAave](https://explorer-mainnet.maticvigil.com/address/0x32B56573Fa580f0c17f8A420f12Bbe876B72CFe4/transactions) |
 
 ---
