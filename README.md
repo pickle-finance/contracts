@@ -133,6 +133,7 @@ Timelock (12 hours): [0xD92c7fAa0Ca0e6AE4918f3a83d9832d9CAEAA0d3](https://ethers
 | pJar 0.99y    | [SUSHI-YVBOOST-ETH](https://etherscan.io/address/0x9461173740D27311b176476FA27e94C681b1Ea6b) | [pSUSHIYVBOOST](https://etherscan.io/address/0xCeD67a187b923F0E5ebcc77C7f2F7da20099e378 )      | [StrategySushiEthYvBoostLp](https://etherscan.io/address/0x9e7f57f3c3b147d234d38f9071b7d53b08c7fd85) |
 | pJar Y-1    | [USDC](https://etherscan.io/address/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48) | [pYEARNUSDCV2](https://etherscan.io/address/0xEB801AB73E9A2A482aA48CaCA13B1954028F4c94 )      | [StrategyYearnUsdcV2](https://etherscan.io/address/0xEecEE2637c7328300846622c802B2a29e65f3919) |
 | pJar Y-2    | [lusdCRV](https://etherscan.io/address/0xEd279fDD11cA84bEef15AF5D39BB4d4bEE23F0cA) | [pYEARNCRVLUSD](https://etherscan.io/address/0x4fFe73Cf2EEf5E8C8E0E10160bCe440a029166D2 )      | [StrategyYearnCrvLusd](https://etherscan.io/address/0x699cF8fE0C1A6948527cD4737454824c6E3828f1) |
+| pJar Y-3    | [crvEURS](https://etherscan.io/address/0x194eBd173F6cDacE046C53eACcE9B953F28411d1) | [pYEARNCRVEURS](https://etherscan.io/address/0x822Ba8e3b95A26264Cd726828Af47Ee150729afd )      | [StrategyYearnCrvEurs](https://etherscan.io/address/0x88680F1c56AbcAf3D351e8CFEc7244ca458B64E3) |
 
 ---
 
