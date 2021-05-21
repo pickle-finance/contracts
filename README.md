@@ -218,6 +218,7 @@ Timelock: [0x63A991b9c34D2590A411584799B030414C9b0D6F](https://explorer-mainnet.
 Controller: [0x83074F0aB8EDD2c1508D3F657CeB5F27f6092d09](https://explorer-mainnet.maticvigil.com/address/0x83074F0aB8EDD2c1508D3F657CeB5F27f6092d09/transactions)
 
 Strategist: [0xacfe4511ce883c14c4ea40563f176c3c09b4c47c](https://explorer-mainnet.maticvigil.com/address/0xacfe4511ce883c14c4ea40563f176c3c09b4c47c)
+
 ---
 
 ## Pickle Jars (pJars - Polygon)
