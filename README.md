@@ -8,6 +8,8 @@ Timelock (24 hours): [0x0040E05CE9A5fc9C0aBF89889f7b60c2fC278416](https://ethers
 
 Masterchef: [0xbD17B1ce622d73bD438b9E658acA5996dc394b0d](https://etherscan.io/address/0xbD17B1ce622d73bD438b9E658acA5996dc394b0d)
 
+Masterchef v2: [0xEF0881eC094552b2e128Cf945EF17a6752B4Ec5d](https://etherscan.io/address/0xef0881ec094552b2e128cf945ef17a6752b4ec5d)
+
 Governance-DAO (multi-sig): [0x9d074E37d408542FD38be78848e8814AFB38db17](https://etherscan.io/address/0x9d074E37d408542FD38be78848e8814AFB38db17)
 
 Dev Wallet (multi-sig): [0x2fee17F575fa65C06F10eA2e63DBBc50730F145D](https://etherscan.io/address/0x2fee17F575fa65C06F10eA2e63DBBc50730F145D)
