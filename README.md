@@ -213,7 +213,7 @@ UniCurveConverter: [0x8EfAFBD731d779390e4F2392315eea42c14E2B69](https://ethersca
 
 PickleProxyToken: [0x6c551cAF1099b08993fFDB5247BE74bE39741B82](https://explorer-mainnet.maticvigil.com/address/0x6c551cAF1099b08993fFDB5247BE74bE39741B82/transactions)
 
-MasterChef: [0xCD276D529a2EE01a8299D4BF076F13D09d40dEa0](https://explorer-mainnet.maticvigil.com/address/0xCD276D529a2EE01a8299D4BF076F13D09d40dEa0/transactions)
+MasterChef: [0xAc7C044e1197dF73aE5F8ec2c1775419b0A248C5](https://explorer-mainnet.maticvigil.com/address/0xAc7C044e1197dF73aE5F8ec2c1775419b0A248C5/transactions)
 
 Timelock: [0x63A991b9c34D2590A411584799B030414C9b0D6F](https://explorer-mainnet.maticvigil.com/address/0x63A991b9c34D2590A411584799B030414C9b0D6F/transactions)
 
