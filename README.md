@@ -217,7 +217,9 @@ UniCurveConverter: [0x8EfAFBD731d779390e4F2392315eea42c14E2B69](https://ethersca
 
 ## Pickle.Finance Contracts (Polygon)
 
-PickleProxyToken: [0x6c551cAF1099b08993fFDB5247BE74bE39741B82](https://explorer-mainnet.maticvigil.com/address/0x6c551cAF1099b08993fFDB5247BE74bE39741B82/transactions)
+Pickle Token (POS): [0x2b88ad57897a8b496595925f43048301c37615da](https://explorer-mainnet.maticvigil.com/address/0x2b88ad57897a8b496595925f43048301c37615da/transactions)
+
+Pickle Child Proxy: [0x6c551cAF1099b08993fFDB5247BE74bE39741B82](https://explorer-mainnet.maticvigil.com/address/0x6c551cAF1099b08993fFDB5247BE74bE39741B82/transactions)
 
 MasterChef: [0xAc7C044e1197dF73aE5F8ec2c1775419b0A248C5](https://explorer-mainnet.maticvigil.com/address/0xAc7C044e1197dF73aE5F8ec2c1775419b0A248C5/transactions)
 
