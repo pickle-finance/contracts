@@ -58,6 +58,12 @@ FeeDistributor: [0x74C6CadE3eF61d64dcc9b97490d9FbB231e4BdCc](https://etherscan.i
 | [pSUSHIALCX](https://etherscan.io/address/0x9eb0aAd5Bb943D3b2F7603Deb772faa35f60aDF9) | 0xE9bEAd1d3e3A25E8AF7a6B40e48de469a9613EDe |
 | [pYEARNUSDCV2](https://etherscan.io/address/0xEB801AB73E9A2A482aA48CaCA13B1954028F4c94) | 0x9e1126c51c319A1d31d928DC498c9988C094e793 |
 | [pYEARNCRVLUSD](https://etherscan.io/address/0x4fFe73Cf2EEf5E8C8E0E10160bCe440a029166D2) | 0x2040c856d53d5CbB111c81D5A85ccc10829c5783 |
+| [pThreeCrv](https://explorer-mainnet.maticvigil.com/address/0xe381C25de995d62b453aF8B931aAc84fcCaa7A62/transactions) | 0xe381C25de995d62b453aF8B931aAc84fcCaa7A62 |
+| [pComethMaticMust](https://explorer-mainnet.maticvigil.com/address/0x80676b414a905De269D0ac593322Af821b683B92/transactions2) | 0x80676b414a905De269D0ac593322Af821b683B92 |
+| [pComethPickleMust](https://explorer-mainnet.maticvigil.com/address/0xb0b5E3Bd18eb1E316bcD0bBa876570b3c1779C55/transactions) | 0xb0b5E3Bd18eb1E316bcD0bBa876570b3c1779C55 |
+| [pComethUsdcEth](https://explorer-mainnet.maticvigil.com/address/0x1Edb2D8f791D2a51D56979bf3A25673D6E783232/transactions) | 0x1Edb2D8f791D2a51D56979bf3A25673D6E783232 |
+| [pSlpMaticEth](https://explorer-mainnet.maticvigil.com/address/0xc4e595acDD7d12feC385E5dA5D43160e8A0bAC0E/transactions) | 0xc4e595acDD7d12feC385E5dA5D43160e8A0bAC0E |
+| [pSlpUsdtEth](https://explorer-mainnet.maticvigil.com/address/0xc2755915a85C6f6c1C0F3a86ac8C058F11Caa9C9/transactions) | 0xc2755915a85C6f6c1C0F3a86ac8C058F11Caa9C9 |
 
 ---
 
