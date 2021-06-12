@@ -168,6 +168,8 @@ PickleMigrator: [0xC0CF2CbD0c6bB1da4c671FBb07D40E88676DBe82](https://etherscan.i
 
 UniCurveConverter: [0x8EfAFBD731d779390e4F2392315eea42c14E2B69](https://etherscan.io/address/0x8EfAFBD731d779390e4F2392315eea42c14E2B69)
 
+Harvester Bot: [0x0f571d2625b503bb7c1d2b5655b483a2fa696fef](https://etherscan.io/address/0x0f571d2625b503bb7c1d2b5655b483a2fa696fef)
+
 ---
 
 ## Pools
