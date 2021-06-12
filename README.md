@@ -94,6 +94,8 @@ Rewards Token (SCRV): [0xC25a3A3b969415c80451098fa907EC722572917F](https://ether
 
 Controller v4: [0x6847259b2B3A4c17e7c43C54409810aF48bA5210](https://etherscan.io/address/0x6847259b2B3A4c17e7c43C54409810aF48bA5210)
 
+Upgradeable Controller: [0x7B5916C61bCEeaa2646cf49D9541ac6F5DCe3637](https://etherscan.io/address/0x7B5916C61bCEeaa2646cf49D9541ac6F5DCe3637)
+
 Strategist: [0xacfe4511ce883c14c4ea40563f176c3c09b4c47c](https://etherscan.io/address/0xacfe4511ce883c14c4ea40563f176c3c09b4c47c)
 
 Governance: [0xD92c7fAa0Ca0e6AE4918f3a83d9832d9CAEAA0d3](https://etherscan.io/address/0xD92c7fAa0Ca0e6AE4918f3a83d9832d9CAEAA0d3)
