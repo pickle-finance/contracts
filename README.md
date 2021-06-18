@@ -219,9 +219,9 @@ Harvester Bot: [0x0f571d2625b503bb7c1d2b5655b483a2fa696fef](https://etherscan.io
 
 Pickle Token (POS): [0x2b88ad57897a8b496595925f43048301c37615da](https://polygonscan.com/address/0x2b88ad57897a8b496595925f43048301c37615da)
 
-Pickle Child Proxy: [0x6c551cAF1099b08993fFDB5247BE74bE39741B82](https://polygonscan.com/address/0x6c551cAF1099b08993fFDB5247BE74bE39741B82)
+MiniChefV2: [0x20b2a3fc7b13ca0ccf7af81a68a14cb3116e8749](https://polygonscan.com/address/0x20b2a3fc7b13ca0ccf7af81a68a14cb3116e8749)
 
-MasterChef: [0x0F7c6B863E9EDfc100aD71Db557D39d0c30808E0](https://polygonscan.com/address/0x0F7c6B863E9EDfc100aD71Db557D39d0c30808E0)
+Rewarder: [0xE28287544005094be096301E5eE6E2A6E6Ef5749](https://polygonscan.com/address/0xE28287544005094be096301E5eE6E2A6E6Ef5749)
 
 Timelock: [0x63A991b9c34D2590A411584799B030414C9b0D6F](https://polygonscan.com/address/0x63A991b9c34D2590A411584799B030414C9b0D6F)
 
