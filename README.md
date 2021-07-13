@@ -247,5 +247,6 @@ Strategist: [0xacfe4511ce883c14c4ea40563f176c3c09b4c47c](https://polygonscan.com
 | 6 | polyJar 4b | [SushiMaticEth](https://polygonscan.com/address/0xc4e595acDD7d12feC385E5dA5D43160e8A0bAC0E) | [pSLPMaticEth](https://polygonscan.com/address/0xd438Ba7217240a378238AcE3f44EFaaaF8aaC75A) | [StrategySushiMaticEth](https://polygonscan.com/address/0x402EB598361fEf397DcF8594B3B88732eEe1661e) |
 | 9 | polyJar 5a | [QuickMimaticUsdc](https://polygonscan.com/address/0x160532d2536175d65c03b97b0630a9802c274dad) | [pQuickMimaticUsdc](https://polygonscan.com/address/0x74dC9cdCa9a96Fd0B7900e6eb953d1EA8567c3Ce) | [StrategyQuickMimaticUsdc](https://polygonscan.com/address/0xb35C8E85b4866422a135bFfaA46A6AAaB436CF05) |
 | 10 | polyJar 5b | [QuickQiMimatic](https://polygonscan.com/address/0x7AfcF11F3e2f01e71B7Cc6b8B5e707E42e6Ea397) | [pQuickQiMimatic](https://polygonscan.com/address/0xd06a56c864C80e4cC76A2eF778183104BF0c848d) | [StrategyQuickQiMimatic](https://polygonscan.com/address/0x633351c669855bae0ac6208a942f5ab16e4668df) |
+| 11 | polyJar 6a | [Iron3USD](https://polygonscan.com/address/0xb4d09ff3dA7f9e9A2BA029cb0A81A989fd7B8f17) | [pIron3USD](https://polygonscan.com/address/0xE484Ed97E19F6B649E78db0F37D173C392F7A1D9) | [StrategyIron3USD](https://polygonscan.com/address/0x518136Fa0eE88B2F0b1166df7662e274B3d85e7c) |
 
 ---
