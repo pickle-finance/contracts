@@ -60,6 +60,8 @@ FeeDistributor: [0x74C6CadE3eF61d64dcc9b97490d9FbB231e4BdCc](https://etherscan.i
 | [pYEARNCRVLUSD](https://etherscan.io/address/0x4fFe73Cf2EEf5E8C8E0E10160bCe440a029166D2) | 0x2040c856d53d5CbB111c81D5A85ccc10829c5783 |
 | [pSlpCvxEth](https://etherscan.io/address/0xDCfAE44244B3fABb5b351b01Dc9f050E589cF24F) | 0x62e558cda4619e31af8c84cd8f345fa474afe1b9 |
 | [pLQTY](https://etherscan.io/address/0x65B2532474f717D5A8ba38078B78106D56118bbb) | 0xA7BC844a76e727Ec5250f3849148c21F4b43CeEA |
+| [pSADDLED4](https://etherscan.io/address/0xe6487033F5C8e2b4726AF54CA1449FEC18Bd1484) | 0x08cb0a0ba8e4f143e4e6f7bed65e02b6dfb9a16c |
+| [pSADDLEALETH](https://etherscan.io/address/0xCbA1FE4Fdbd90531EFD929F1A1831F38e91cff1e) | 0x042650a573f3d62d91C36E08045d7d0fd9E63759 |
 ---
 
 ## Staking Rewards (WETH, Deprecated)
