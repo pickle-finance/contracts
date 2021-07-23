@@ -10,6 +10,8 @@ Masterchef: [0xbD17B1ce622d73bD438b9E658acA5996dc394b0d](https://etherscan.io/ad
 
 Masterchef v2: [0xEF0881eC094552b2e128Cf945EF17a6752B4Ec5d](https://etherscan.io/address/0xef0881ec094552b2e128cf945ef17a6752b4ec5d)
 
+PickleRewarder (For MCv2): [0x7512105dbb4c0e0432844070a45b7ea0d83a23fd](https://etherscan.io/address/0x7512105dbb4c0e0432844070a45b7ea0d83a23fd)
+
 Governance-DAO (multi-sig): [0x9d074E37d408542FD38be78848e8814AFB38db17](https://etherscan.io/address/0x9d074E37d408542FD38be78848e8814AFB38db17)
 
 Dev Wallet (multi-sig): [0x2fee17F575fa65C06F10eA2e63DBBc50730F145D](https://etherscan.io/address/0x2fee17F575fa65C06F10eA2e63DBBc50730F145D)
@@ -62,29 +64,6 @@ FeeDistributor: [0x74C6CadE3eF61d64dcc9b97490d9FbB231e4BdCc](https://etherscan.i
 | [pLQTY](https://etherscan.io/address/0x65B2532474f717D5A8ba38078B78106D56118bbb) | 0xA7BC844a76e727Ec5250f3849148c21F4b43CeEA |
 | [pSADDLED4](https://etherscan.io/address/0xe6487033F5C8e2b4726AF54CA1449FEC18Bd1484) | 0x08cb0a0ba8e4f143e4e6f7bed65e02b6dfb9a16c |
 | [pSADDLEALETH](https://etherscan.io/address/0xCbA1FE4Fdbd90531EFD929F1A1831F38e91cff1e) | 0x042650a573f3d62d91C36E08045d7d0fd9E63759 |
----
-
-## Staking Rewards (WETH, Deprecated)
-
-PICKLE Staking Rewards: [0xa17a8883dA1aBd57c690DF9Ebf58fC194eDAb66F](https://etherscan.io/address/0xa17a8883dA1aBd57c690DF9Ebf58fC194eDAb66F)
-
-Owner (Treasury): [0x066419EaEf5DE53cc5da0d8702b990c5bc7D1AB3](https://etherscan.io/address/0x066419EaEf5DE53cc5da0d8702b990c5bc7D1AB3)
-
-Staking Token (PICKLE): [0x429881672B9AE42b8EbA0E26cD9C73711b891Ca5](https://etherscan.io/address/0x429881672B9AE42b8EbA0E26cD9C73711b891Ca5)
-
-Rewards Token (WETH): [0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2](https://etherscan.io/address/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2)
-
-
-## Staking Rewards (sCRV, Deprecated)
-
-PICKLE Staking Rewards: [0xD86F33388BF0bfDF0cCb1ECB4A48a1579504DC0a](https://etherscan.io/address/0xd86f33388bf0bfdf0ccb1ecb4a48a1579504dc0a)
-
-Owner (Treasury): [0x066419EaEf5DE53cc5da0d8702b990c5bc7D1AB3](https://etherscan.io/address/0x066419EaEf5DE53cc5da0d8702b990c5bc7D1AB3)
-
-Staking Token (PICKLE): [0x429881672B9AE42b8EbA0E26cD9C73711b891Ca5](https://etherscan.io/address/0x429881672B9AE42b8EbA0E26cD9C73711b891Ca5)
-
-Rewards Token (SCRV): [0xC25a3A3b969415c80451098fa907EC722572917F](https://etherscan.io/address/0xC25a3A3b969415c80451098fa907EC722572917F)
-
 ---
 
 ## Pickle Jars (pJars)
@@ -146,20 +125,6 @@ Timelock (12 hours): [0xD92c7fAa0Ca0e6AE4918f3a83d9832d9CAEAA0d3](https://ethers
 | pJar Y-2    | [lusdCRV](https://etherscan.io/address/0xEd279fDD11cA84bEef15AF5D39BB4d4bEE23F0cA) | [pYEARNCRVLUSD](https://etherscan.io/address/0x4fFe73Cf2EEf5E8C8E0E10160bCe440a029166D2 )      | [StrategyYearnCrvLusd](https://etherscan.io/address/0x699cF8fE0C1A6948527cD4737454824c6E3828f1) |
 | pJar Y-3 (Inactive)   | [crvEURS](https://etherscan.io/address/0x194eBd173F6cDacE046C53eACcE9B953F28411d1) | [pYEARNCRVEURS](https://etherscan.io/address/0x822Ba8e3b95A26264Cd726828Af47Ee150729afd )      | [StrategyYearnCrvEurs](https://etherscan.io/address/0x88680F1c56AbcAf3D351e8CFEc7244ca458B64E3) |
 | pJar Y-3    | [crvFRAX](https://etherscan.io/address/0xd632f22692FaC7611d2AA1C0D552930D43CAEd3B) | [pYEARNCRVFRAX](https://etherscan.io/address/0x729C6248f9B1Ce62B3d5e31D4eE7EE95cAB32dfD )      | [StrategyYearnCrvFrax](https://etherscan.io/address/0x516438F14801131D51D534790e95CF5888261B2B) |
-
----
-
-## Swap Logic
-
-CurveProxyLogic: [0x6186E99D9CFb05E1Fdf1b442178806E81da21dD8](https://etherscan.io/address/0x6186E99D9CFb05E1Fdf1b442178806E81da21dD8)
-
-UniswapV2ProxyLogic: [0x0a536ca30B9E20a3D89c91c22Ef77E1AeBBd6944](https://etherscan.io/address/0x0a536ca30B9E20a3D89c91c22Ef77E1AeBBd6944)
-
----
-
-## Quadratic Voting (snapshot.page)
-
-PICKLEs In The Citadel: [0x47b7b0983bf3b1d8d5b773006809edcb208af191](https://etherscan.io/address/0x47b7b0983bf3b1d8d5b773006809edcb208af191)
 
 ---
 
