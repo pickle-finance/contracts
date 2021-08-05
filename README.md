@@ -18,6 +18,8 @@ Dev Wallet (multi-sig): [0x2fee17F575fa65C06F10eA2e63DBBc50730F145D](https://eth
 
 Treasury-DAO (multi-sig): [0x066419EaEf5DE53cc5da0d8702b990c5bc7D1AB3](https://etherscan.io/address/0x066419EaEf5DE53cc5da0d8702b990c5bc7D1AB3)
 
+Vault Registry: [0xF7C2DCFF5E947a617288792e289984a2721C4671](https://etherscan.io/address/0xF7C2DCFF5E947a617288792e289984a2721C4671)
+
 ---
 
 ## DILL Contracts
@@ -206,6 +208,10 @@ Timelock: [0x63A991b9c34D2590A411584799B030414C9b0D6F](https://polygonscan.com/a
 Controller: [0x83074F0aB8EDD2c1508D3F657CeB5F27f6092d09](https://polygonscan.com/address/0x83074F0aB8EDD2c1508D3F657CeB5F27f6092d09)
 
 Strategist: [0xacfe4511ce883c14c4ea40563f176c3c09b4c47c](https://polygonscan.com/address/0xacfe4511ce883c14c4ea40563f176c3c09b4c47c)
+
+Multi-sig Treasury & Governance: [0xEae55893cC8637c16CF93D43B38aa022d689Fa62](https://polygonscan.com/address/0xEae55893cC8637c16CF93D43B38aa022d689Fa62)
+
+Vault Registry: [0x3419D74F5909e7579C1259f6638F82143bd536B1](https://polygonscan.com/address/0x3419D74F5909e7579C1259f6638F82143bd536B1)
 
 ---
 
