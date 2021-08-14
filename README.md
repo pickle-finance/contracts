@@ -237,3 +237,19 @@ Vault Registry: [0x3419D74F5909e7579C1259f6638F82143bd536B1](https://polygonscan
 | 11 | polyJar 6a | [Iron3USD](https://polygonscan.com/address/0xb4d09ff3dA7f9e9A2BA029cb0A81A989fd7B8f17) | [pIron3USD](https://polygonscan.com/address/0xE484Ed97E19F6B649E78db0F37D173C392F7A1D9) | [StrategyIron3USD](https://polygonscan.com/address/0x518136Fa0eE88B2F0b1166df7662e274B3d85e7c) |
 
 ---
+
+## Pickle.Finance Contracts (OKExChain Mainnet)
+
+ControllerV4: [0xcf05d96b4c6c5a87b73f5f274dce1085bc7fdcc4](https://www.oklink.com/okexchain/address/0xcf05d96b4c6c5a87b73f5f274dce1085bc7fdcc4)
+MiniChef: [0x7446BF003b98B7B0D90CE84810AC12d6b8114B62](https://www.oklink.com/okexchain/address/0x7446BF003b98B7B0D90CE84810AC12d6b8114B62)
+Rewarder: [0x48394297ed0a9e9edcc556faaf4222a932605c56](https://www.oklink.com/okexchain/address/0x48394297ed0a9e9edcc556faaf4222a932605c56)
+
+---
+
+## Pickle Jars (pJars - OKExChain Mainnet)
+
+| Index | Name | Want | PickleJar | Strategy |
+| --- | ---  | --- | --- | --- |
+| 0 | okexJar 1a | [CherryOktChe](https://www.oklink.com/okexchain/address/0x8E68C0216562BCEA5523b27ec6B9B6e1cCcBbf88) | [pCherryOktChe](https://www.oklink.com/okexchain/address/0xC3f393FB40F8Cc499C1fe7FA5781495dc6FAc9E9) | [StrategyCherryOktCheLp](https://www.oklink.com/okexchain/address/0x024f4d62f05368f9b98b7d742cb72490c7fc213e) |
+
+---
