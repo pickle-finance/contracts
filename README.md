@@ -138,6 +138,7 @@ Timelock (12 hours): [0xD92c7fAa0Ca0e6AE4918f3a83d9832d9CAEAA0d3](https://ethers
 | pJar Y-2 | [lusdCRV](https://etherscan.io/address/0xEd279fDD11cA84bEef15AF5D39BB4d4bEE23F0cA) | [pYEARNCRVLUSD](https://etherscan.io/address/0x4fFe73Cf2EEf5E8C8E0E10160bCe440a029166D2) | [StrategyYearnCrvLusd](https://etherscan.io/address/0x699cF8fE0C1A6948527cD4737454824c6E3828f1) |
 | pJar Y-3 (Inactive) | [crvEURS](https://etherscan.io/address/0x194eBd173F6cDacE046C53eACcE9B953F28411d1) | [pYEARNCRVEURS](https://etherscan.io/address/0x822Ba8e3b95A26264Cd726828Af47Ee150729afd) | [StrategyYearnCrvEurs](https://etherscan.io/address/0x88680F1c56AbcAf3D351e8CFEc7244ca458B64E3) |
 | pJar Y-3 | [crvFRAX](https://etherscan.io/address/0xd632f22692FaC7611d2AA1C0D552930D43CAEd3B) | [pYEARNCRVFRAX](https://etherscan.io/address/0x729C6248f9B1Ce62B3d5e31D4eE7EE95cAB32dfD) | [StrategyYearnCrvFrax](https://etherscan.io/address/0x516438F14801131D51D534790e95CF5888261B2B) |
+| pJar Y-4 | [crvIB](https://etherscan.io/address/0x5282a4ef67d9c33135340fb3289cc1711c13638c) | [pYEARNCRVIB](https://etherscan.io/address/0x4E9806345fb39FFebd70A01f177A675805019ba8) | [StrategyYearnCrvIronBank](https://etherscan.io/address/0xC377FF883456d8ce53aEa32426eB6d7aaB3CbB98) |
 
 ---
 
