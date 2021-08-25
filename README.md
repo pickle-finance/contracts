@@ -247,6 +247,8 @@ MiniChef: [0x7446BF003b98B7B0D90CE84810AC12d6b8114B62](https://www.oklink.com/ok
 
 Rewarder: [0x48394297ed0a9e9edcc556faaf4222a932605c56](https://www.oklink.com/okexchain/address/0x48394297ed0a9e9edcc556faaf4222a932605c56)
 
+Strategist/Governance: [0xacfe4511ce883c14c4ea40563f176c3c09b4c47c](https://www.oklink.com/okexchain/address/0xacfe4511ce883c14c4ea40563f176c3c09b4c47c)
+
 ---
 
 ## Pickle Jars (pJars - OKExChain Mainnet)
