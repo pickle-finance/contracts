@@ -256,5 +256,6 @@ Strategist/Governance: [0xacfe4511ce883c14c4ea40563f176c3c09b4c47c](https://www.
 | Index | Name | Want | PickleJar | Strategy |
 | --- | ---  | --- | --- | --- |
 | 0 | okexJar 1a | [CherryOktChe](https://www.oklink.com/okexchain/address/0x8E68C0216562BCEA5523b27ec6B9B6e1cCcBbf88) | [pCherryOktChe](https://www.oklink.com/okexchain/address/0xC3f393FB40F8Cc499C1fe7FA5781495dc6FAc9E9) | [StrategyCherryOktCheLp](https://www.oklink.com/okexchain/address/0x024f4d62f05368f9b98b7d742cb72490c7fc213e) |
+| 1 | okexJar 1b | [CherryCheUsdt](https://www.oklink.com/okexchain/address/0x089dedbFD12F2aD990c55A2F1061b8Ad986bFF88) | [pCherryCheUsdt](https://www.oklink.com/okexchain/address/0xe75c8805f9970c7547255059A22d14001d3D7b94) | [StrategyCherryCheUsdtLp](https://www.oklink.com/okexchain/address/0xe90e58E65b09C046fBB942EAd339610A1199E2F8) |
 
 ---
