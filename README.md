@@ -7,7 +7,7 @@ Timelock (48 hours): [0xc2d82a3e2bae0a50f4aeb438285804354b467bc0](https://ethers
 Timelock (24 hours): [0x0040E05CE9A5fc9C0aBF89889f7b60c2fC278416](https://etherscan.io/address/0x0040E05CE9A5fc9C0aBF89889f7b60c2fC278416)
 
 Masterchef: [0xbD17B1ce622d73bD438b9E658acA5996dc394b0d](https://etherscan.io/address/0xbD17B1ce622d73bD438b9E658acA5996dc394b0d)
-
+BxhEthkBtck
 Masterchef v2: [0xEF0881eC094552b2e128Cf945EF17a6752B4Ec5d](https://etherscan.io/address/0xef0881ec094552b2e128cf945ef17a6752b4ec5d)
 
 PickleRewarder (For MCv2): [0x7512105dbb4c0e0432844070a45b7ea0d83a23fd](https://etherscan.io/address/0x7512105dbb4c0e0432844070a45b7ea0d83a23fd)
@@ -264,5 +264,5 @@ Strategist/Governance: [0xacfe4511ce883c14c4ea40563f176c3c09b4c47c](https://www.
 | ~23~ | ~okexJar 1f~ | ~[CherryUsdcUsdt](https://www.oklink.com/okexchain/address/0xb6fCc8CE3389Aa239B2A5450283aE9ea5df9d1A9)~ | ~[pCherryUsdcUsdt](https://www.oklink.com/okexchain/address/0x80aB65b1525816Ffe4222607EDa73F86D211AC95)~ | ~[StrategyCherryUsdcUsdtLp](https://www.oklink.com/okexchain/address/0xb35C8E85b4866422a135bFfaA46A6AAaB436CF05)~ |
 | 12 | okexJar 2a | [BxhUsdt](https://www.oklink.com/okexchain/address/0x04b2C23Ca7e29B71fd17655eb9Bd79953fA79faF) | [pBxhUsdt](https://www.oklink.com/okexchain/address/0x09c22bdc438b69bcc190efa8f8e3417277e1dd4f) | [StrategyBxhUsdtLp](https://www.oklink.com/okexchain/address/0xd7ede968447ec50a210ec88f9b43b6206c52481d) |
 | ~1~ | ~okexJar 2b~ | ~[Xusdt](https://www.oklink.com/okexchain/address/0x8E017294cB690744eE2021f9ba75Dd1683f496fb)~ | ~[pXusdt](https://www.oklink.com/okexchain/address/0xd60514536195573ce4a4a78ce5706e94e9ee7917)~ | ~[StrategyBxhXusdtStaking](https://www.oklink.com/okexchain/address/0xe8a90fb61bd8b219bf71447d5ece387fe1e81c68)~ |
-| 9 | okexJar 2b | [BxhEthkBtck](https://www.oklink.com/okexchain/address/0x3799Fb39b7fA01E23338C1C3d652FB1AB6E7D5BC) | [pXusdt](https://www.oklink.com/okexchain/address/0x2a956403816445553FdA5Cbfce2ac6c251454f6f) | [StrategyBxhEthkBtck](https://www.oklink.com/okexchain/address/0xb72b5f87266585aa9a7e960ecc0d533fc01db9c3) |
+| 9 | okexJar 2b | [BxhEthkBtck](https://www.oklink.com/okexchain/address/0x3799Fb39b7fA01E23338C1C3d652FB1AB6E7D5BC) | [pBxhEthkBtck](https://www.oklink.com/okexchain/address/0x2a956403816445553FdA5Cbfce2ac6c251454f6f) | [StrategyBxhEthkBtck](https://www.oklink.com/okexchain/address/0xb72b5f87266585aa9a7e960ecc0d533fc01db9c3) |
 ---
