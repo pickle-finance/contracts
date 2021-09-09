@@ -7,7 +7,7 @@ Timelock (48 hours): [0xc2d82a3e2bae0a50f4aeb438285804354b467bc0](https://ethers
 Timelock (24 hours): [0x0040E05CE9A5fc9C0aBF89889f7b60c2fC278416](https://etherscan.io/address/0x0040E05CE9A5fc9C0aBF89889f7b60c2fC278416)
 
 Masterchef: [0xbD17B1ce622d73bD438b9E658acA5996dc394b0d](https://etherscan.io/address/0xbD17B1ce622d73bD438b9E658acA5996dc394b0d)
-BxhEthkBtck
+
 Masterchef v2: [0xEF0881eC094552b2e128Cf945EF17a6752B4Ec5d](https://etherscan.io/address/0xef0881ec094552b2e128cf945ef17a6752b4ec5d)
 
 PickleRewarder (For MCv2): [0x7512105dbb4c0e0432844070a45b7ea0d83a23fd](https://etherscan.io/address/0x7512105dbb4c0e0432844070a45b7ea0d83a23fd)
