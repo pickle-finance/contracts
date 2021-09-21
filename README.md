@@ -276,9 +276,7 @@ Controller: [0x55d5bcef2bfd4921b8790525ff87919c2e26bd03](https://arbiscan.io/add
 
 MiniChef: [0x7ecc7163469f37b777d7b8f45a667314030ace24](https://arbiscan.io/address/0x7ecc7163469f37b777d7b8f45a667314030ace24)
 
-Rewarder: [xxx](xxx)
-
-Strategist/Governance: [xxx](xxx)
+Strategist/Governance: [0xacfe4511ce883c14c4ea40563f176c3c09b4c47c](https://arbiscan.io/address/0xacfe4511ce883c14c4ea40563f176c3c09b4c47c)
 
 ---
 
