@@ -266,4 +266,26 @@ Strategist/Governance: [0xacfe4511ce883c14c4ea40563f176c3c09b4c47c](https://www.
 | 12 | okexJar 2a | [BxhUsdt](https://www.oklink.com/okexchain/address/0x04b2C23Ca7e29B71fd17655eb9Bd79953fA79faF) | [pBxhUsdt](https://www.oklink.com/okexchain/address/0x09c22bdc438b69bcc190efa8f8e3417277e1dd4f) | [StrategyBxhUsdtLp](https://www.oklink.com/okexchain/address/0xd7ede968447ec50a210ec88f9b43b6206c52481d) |
 | ~1~ | ~okexJar 2b~ | ~[Xusdt](https://www.oklink.com/okexchain/address/0x8E017294cB690744eE2021f9ba75Dd1683f496fb)~ | ~[pXusdt](https://www.oklink.com/okexchain/address/0xd60514536195573ce4a4a78ce5706e94e9ee7917)~ | ~[StrategyBxhXusdtStaking](https://www.oklink.com/okexchain/address/0xe8a90fb61bd8b219bf71447d5ece387fe1e81c68)~ |
 | 9 | okexJar 2b | [BxhEthkBtck](https://www.oklink.com/okexchain/address/0x3799Fb39b7fA01E23338C1C3d652FB1AB6E7D5BC) | [pBxhEthkBtck](https://www.oklink.com/okexchain/address/0x2a956403816445553FdA5Cbfce2ac6c251454f6f) | [StrategyBxhEthkBtck](https://www.oklink.com/okexchain/address/0xb72b5f87266585aa9a7e960ecc0d533fc01db9c3) |
+
+---
+
+## Pickle.Finance Contracts (Arbitrum Mainnet)
+
+Controller: [0x55d5bcef2bfd4921b8790525ff87919c2e26bd03](https://arbiscan.io/address/0x55d5bcef2bfd4921b8790525ff87919c2e26bd03)
+
+MiniChef: [0x7ecc7163469f37b777d7b8f45a667314030ace24](https://arbiscan.io/address/0x7ecc7163469f37b777d7b8f45a667314030ace24)
+
+Rewarder: [xxx](xxx)
+
+Strategist/Governance: [xxx](xxx)
+
+---
+
+## Pickle Jars (pJars - Arbitrum Mainnet)
+
+| Index | Name | Want | PickleJar | Strategy |
+| --- | ---  | --- | --- | --- |
+| 1 | Arbi 1a | [SushiMimEth](https://arbiscan.io/address/0xb6DD51D5425861C808Fd60827Ab6CFBfFE604959) | [pSushiMimEth](https://arbiscan.io/address/0x94feade0d3d832e4a05d459ebea9350c6cdd3bca) | [StrategySushiMimEthLp](https://arbiscan.io/address/0xd60514536195573ce4a4a78ce5706e94e9ee7917) |
+| 2 | Arbi 1b | [SushiSpellEth](https://arbiscan.io/address/0x8f93Eaae544e8f5EB077A1e09C1554067d9e2CA8) | [pSushiSpellEth](https://arbiscan.io/address/0x9Cae10143d7316dF417413C43b79Fb5b44Fa85e2) | [StrategySushiSpellEthLp](https://arbiscan.io/address/0x0b4a6fdb7720a70dd360c1531660c20850546304) |
+
 ---
