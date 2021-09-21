@@ -278,7 +278,7 @@ MiniChef: [0x7ecc7163469f37b777d7b8f45a667314030ace24](https://arbiscan.io/addre
 
 Strategist/Governance: [0xacfe4511ce883c14c4ea40563f176c3c09b4c47c](https://arbiscan.io/address/0xacfe4511ce883c14c4ea40563f176c3c09b4c47c)
 
-Pickle Token: [0x965772e0E9c84b6f359c8597C891108DcF1c5B1A](https://arbiscan.io/address/0x965772e0E9c84b6f359c8597C891108DcF1c5B1A)
+Pickle Token: [0x965772e0E9c84b6f359c8597C891108DcF1c5B1A](https://arbiscan.io/token/0x965772e0E9c84b6f359c8597C891108DcF1c5B1A)
 
 ---
 
