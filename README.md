@@ -288,5 +288,6 @@ Pickle Token: [0x965772e0E9c84b6f359c8597C891108DcF1c5B1A](https://arbiscan.io/t
 | --- | ---  | --- | --- | --- |
 | 1 | Arbi 1a | [SushiMimEth](https://arbiscan.io/address/0xb6DD51D5425861C808Fd60827Ab6CFBfFE604959) | [pSushiMimEth](https://arbiscan.io/address/0x94feade0d3d832e4a05d459ebea9350c6cdd3bca) | [StrategySushiMimEthLp](https://arbiscan.io/address/0xd60514536195573ce4a4a78ce5706e94e9ee7917) |
 | 2 | Arbi 1b | [SushiSpellEth](https://arbiscan.io/address/0x8f93Eaae544e8f5EB077A1e09C1554067d9e2CA8) | [pSushiSpellEth](https://arbiscan.io/address/0x9Cae10143d7316dF417413C43b79Fb5b44Fa85e2) | [StrategySushiSpellEthLp](https://arbiscan.io/address/0x0b4a6fdb7720a70dd360c1531660c20850546304) |
+| 3 | Arbi 2a | [CurveMim2Crv](https://arbiscan.io/address/0x30dF229cefa463e991e29D42DB0bae2e122B2AC7) | [pCurveMim2Crv](https://arbiscan.io/address/0x973b669ef8c1459f7cb685bf7d7bcd4150977504) | [StrategyCurveMim2CrvLp](https://arbiscan.io/address/0xc50A7aA0e3c5d9bD83bC5C7c21b2D38e4FEA9756) |
 
 ---
