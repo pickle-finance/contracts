@@ -34,6 +34,8 @@ mDILL: [0x45F7fa97BD0e0C212A844BAea35876C7560F465B](https://etherscan.io/address
 
 FeeDistributor: [0x74C6CadE3eF61d64dcc9b97490d9FbB231e4BdCc](https://etherscan.io/address/0x74c6cade3ef61d64dcc9b97490d9fbb231e4bdcc)
 
+SmartWalletChecker: [0x2ff4f44f86f49d45a1c3626bab9d222e84e9e78f](https://etherscan.io/address/0x2ff4f44f86f49d45a1c3626bab9d222e84e9e78f)
+
 ### Gauges
 
 | Deposit Token | Gauge Address | 
