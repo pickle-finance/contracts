@@ -286,6 +286,8 @@ Strategist/Governance: [0xacfe4511ce883c14c4ea40563f176c3c09b4c47c](https://arbi
 
 Pickle Token: [0x965772e0E9c84b6f359c8597C891108DcF1c5B1A](https://arbiscan.io/token/0x965772e0E9c84b6f359c8597C891108DcF1c5B1A)
 
+Multi-sig Treasury & Governance: [0xf02CeB58d549E4b403e8F85FBBaEe4c5dfA47c01](https://arbiscan.io/token/0xf02CeB58d549E4b403e8F85FBBaEe4c5dfA47c01)
+
 Vault Registry: [0x63292afc5567c19738e2ed6aedc840e5abca910c](https://arbiscan.io/address/0x63292afc5567c19738e2ed6aedc840e5abca910c)
 
 ---
