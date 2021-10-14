@@ -74,7 +74,8 @@ SmartWalletChecker: [0x2ff4f44f86f49d45a1c3626bab9d222e84e9e78f](https://ethersc
 | pSUSHITRUETH | [0x9fec5e5d75274f8cfa4261f8e97138920e142470](https://etherscan.io/address/0x9fec5e5d75274f8cfa4261f8e97138920e142470) |
 | pYEARNCRVIB | [0x87B54048B60689EE81F48F8797e7FCF64fBf081b](https://etherscan.io/address/0x87B54048B60689EE81F48F8797e7FCF64fBf081b) |
 | pUNIRLYETH | [0x1a6e44981B4144261932E460d30C9342e961f5D9](https://etherscan.io/address/0x1a6e44981B4144261932E460d30C9342e961f5D9) |
-| pCONVEXCVXCRV | [0xDAADDdc2Cb94a132A1FC0D6E9999A91639294Aa7](https://etherscan.io/address/0xDAADDdc2Cb94a132A1FC0D6E9999A91639294Aa7) |
+| pCURVECVXCRV | [0xDAADDdc2Cb94a132A1FC0D6E9999A91639294Aa7](https://etherscan.io/address/0xDAADDdc2Cb94a132A1FC0D6E9999A91639294Aa7) |
+| pCvxCrv | [0xd27b644ff94841ea54286a0e93b480c09aaaa1e7](https://etherscan.io/address/0xd27b644ff94841ea54286a0e93b480c09aaaa1e7) |
 
 ---
 
@@ -144,7 +145,8 @@ Timelock (12 hours): [0xD92c7fAa0Ca0e6AE4918f3a83d9832d9CAEAA0d3](https://ethers
 | pJar Y-3 (Inactive) | [crvEURS](https://etherscan.io/address/0x194eBd173F6cDacE046C53eACcE9B953F28411d1) | [pYEARNCRVEURS](https://etherscan.io/address/0x822Ba8e3b95A26264Cd726828Af47Ee150729afd) | [StrategyYearnCrvEurs](https://etherscan.io/address/0x88680F1c56AbcAf3D351e8CFEc7244ca458B64E3) |
 | pJar Y-3 | [crvFRAX](https://etherscan.io/address/0xd632f22692FaC7611d2AA1C0D552930D43CAEd3B) | [pYEARNCRVFRAX](https://etherscan.io/address/0x729C6248f9B1Ce62B3d5e31D4eE7EE95cAB32dfD) | [StrategyYearnCrvFrax](https://etherscan.io/address/0x516438F14801131D51D534790e95CF5888261B2B) |
 | pJar Y-4 | [crvIB](https://etherscan.io/address/0x5282a4ef67d9c33135340fb3289cc1711c13638c) | [pYEARNCRVIB](https://etherscan.io/address/0x4E9806345fb39FFebd70A01f177A675805019ba8) | [StrategyYearnCrvIronBank](https://etherscan.io/address/0xC377FF883456d8ce53aEa32426eB6d7aaB3CbB98) |
-| Eth 1a | [ConvexCvxCrv](https://etherscan.io/address/0x9D0464996170c6B9e75eED71c68B99dDEDf279e8) | [pConvexCvxCrv](https://etherscan.io/address/0xF1478A8387C449c55708a3ec11c143c35daf5E74) | [StrategyConvexCvxCrv](https://etherscan.io/address/0xCbc361AeFBd790609d3011dfF3b0D2Bd6bEE12B8) |
+| pJar 0e | [CurveCvxCrvLp](https://etherscan.io/address/0x9D0464996170c6B9e75eED71c68B99dDEDf279e8) | [pCurveCvxCrvLp](https://etherscan.io/address/0xF1478A8387C449c55708a3ec11c143c35daf5E74) | [StrategyCurveCvxCrvLp](https://etherscan.io/address/0xCbc361AeFBd790609d3011dfF3b0D2Bd6bEE12B8) |
+| pJar 0f | [CvxCrv](https://etherscan.io/address/0x62B9c7356A2Dc64a1969e19C23e4f579F9810Aa7) | [pCvxCrv](https://etherscan.io/address/0xB245280Fd1795f5068DEf8E8f32DB7846b030b2B) | [StrategyCvxCrv](https://etherscan.io/address/0xd61eB791844132Af54032eE086Dc2cb33873419f) |
 
 ---
 
