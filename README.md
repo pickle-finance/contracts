@@ -83,6 +83,8 @@ SmartWalletChecker: [0x2ff4f44f86f49d45a1c3626bab9d222e84e9e78f](https://ethersc
 
 Controller v4: [0x6847259b2B3A4c17e7c43C54409810aF48bA5210](https://etherscan.io/address/0x6847259b2B3A4c17e7c43C54409810aF48bA5210)
 
+Controller v6: [0xD6CA5052Bf7b57f6AEdeE0D259a0E9AA4DCa64c6](https://etherscan.io/address/0xD6CA5052Bf7b57f6AEdeE0D259a0E9AA4DCa64c6)
+
 Upgradeable Controller: [0x7B5916C61bCEeaa2646cf49D9541ac6F5DCe3637](https://etherscan.io/address/0x7B5916C61bCEeaa2646cf49D9541ac6F5DCe3637)
 
 Strategist: [0xacfe4511ce883c14c4ea40563f176c3c09b4c47c](https://etherscan.io/address/0xacfe4511ce883c14c4ea40563f176c3c09b4c47c)
@@ -147,6 +149,7 @@ Timelock (12 hours): [0xD92c7fAa0Ca0e6AE4918f3a83d9832d9CAEAA0d3](https://ethers
 | pJar Y-4 | [crvIB](https://etherscan.io/address/0x5282a4ef67d9c33135340fb3289cc1711c13638c) | [pYEARNCRVIB](https://etherscan.io/address/0x4E9806345fb39FFebd70A01f177A675805019ba8) | [StrategyYearnCrvIronBank](https://etherscan.io/address/0xC377FF883456d8ce53aEa32426eB6d7aaB3CbB98) |
 | pJar 0e | [CurveCvxCrvLp](https://etherscan.io/address/0x9D0464996170c6B9e75eED71c68B99dDEDf279e8) | [pCurveCvxCrvLp](https://etherscan.io/address/0xF1478A8387C449c55708a3ec11c143c35daf5E74) | [StrategyCurveCvxCrvLp](https://etherscan.io/address/0xCbc361AeFBd790609d3011dfF3b0D2Bd6bEE12B8) |
 | pJar 0f | [CvxCrv](https://etherscan.io/address/0x62B9c7356A2Dc64a1969e19C23e4f579F9810Aa7) | [pCvxCrv](https://etherscan.io/address/0xB245280Fd1795f5068DEf8E8f32DB7846b030b2B) | [StrategyCvxCrv](https://etherscan.io/address/0xd61eB791844132Af54032eE086Dc2cb33873419f) |
+| pJar 0g | [UNIv3-RBN-ETH](https://etherscan.io/address/0x94981F69F7483AF3ae218CbfE65233cC3c60d93a) | [pUNIRBNETH](https://etherscan.io/address/0xD38A7E64677d92D3966285fa3aD1dc68A02b7c33) | [StrategyRbnEthLp](https://etherscan.io/address/0x36b57DDbD3521A536Dc027f799d2F626Acf7B882) |
 
 ---
 
