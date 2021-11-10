@@ -335,5 +335,7 @@ Vault Registry: [0x94feade0d3d832e4a05d459ebea9350c6cdd3bca](https://explorer.ha
 | Index | Name | Want | PickleJar | Strategy |
 | --- | ---  | --- | --- | --- |
 | 1 | Harmony 1a | [SushiDaiEth](https://explorer.harmony.one/address/0xc5b8129b411ef5f5be22e74de6fe86c3b69e641d) | [pSushiDaiEth](https://explorer.harmony.one/address/0xce9075ab4158aa05447df12e5bf09d51e21516e9) | [StrategySushiDaiEthLp](https://explorer.harmony.one/address/0x7446bf003b98b7b0d90ce84810ac12d6b8114b62) |
+| 2 | Harmony 1b | [SushiWbtcWeth](https://explorer.harmony.one/address/0x39bE7c95276954a6f7070F9BAa38db2123691Ed0) | [pSushiWbtcWeth](https://explorer.harmony.one/address/0xbe6300c2ffc26f8c6cdd3a468867caf8bb01cfce) | [StrategySushiWbtcWethLp](https://explorer.harmony.one/address/0x48394297ed0a9e9edcc556faaf4222a932605c56) |
+| 3 | Harmony 1c | [SushiWethWone](https://explorer.harmony.one/address/0xeb049F1eD546F8efC3AD57f6c7D22F081CcC7375) | [pSushiWethWone](https://explorer.harmony.one/address/0xab1a9bf446c77a9873023646147e36ea34279c72) | [StrategySushiWethWoneLp](https://explorer.harmony.one/address/0xdad6760bd3fc33b741d46df1e205558bb22d1507) |
 
 ---
