@@ -317,3 +317,23 @@ Vault Registry: [0x63292afc5567c19738e2ed6aedc840e5abca910c](https://arbiscan.io
 | N/A | WIP | [BalancerTricrypto](https://arbiscan.io/address/0x64541216bafffeec8ea535bb71fbc927831d0595) | [pBalancerTricrypto](https://arbiscan.io/address/0x0be790c83648c28eD285fee5E0BD79D1d57AAe69) | [StrategyBalancerTricrypto](https://arbiscan.io/address/0xd7ede968447ec50a210ec88f9b43b6206c52481d) |
 
 ---
+
+## Pickle.Finance Contracts (Harmony Mainnet)
+
+Controller: [0xf4396dca6201e0ca120073acda087b53f7159e24](https://explorer.harmony.one/address/0xf4396dca6201e0ca120073acda087b53f7159e24)
+
+MiniChef: [0xc01a847a222743dd2cf7c421a6bba153c816f74e](https://explorer.harmony.one/address/0xc01a847a222743dd2cf7c421a6bba153c816f74e)
+
+Strategist/Governance: [0xacfe4511ce883c14c4ea40563f176c3c09b4c47c](https://explorer.harmony.one/address/0xacfe4511ce883c14c4ea40563f176c3c09b4c47c)
+
+Vault Registry: [0x94feade0d3d832e4a05d459ebea9350c6cdd3bca](https://explorer.harmony.one/address/0x94feade0d3d832e4a05d459ebea9350c6cdd3bca)
+
+---
+
+## Pickle Jars (pJars - Harmony Mainnet)
+
+| Index | Name | Want | PickleJar | Strategy |
+| --- | ---  | --- | --- | --- |
+| 1 | Harmony 1a | [SushiDaiEth](https://explorer.harmony.one/address/0xc5b8129b411ef5f5be22e74de6fe86c3b69e641d) | [pSushiDaiEth](https://explorer.harmony.one/address/0xce9075ab4158aa05447df12e5bf09d51e21516e9) | [StrategySushiDaiEthLp](https://explorer.harmony.one/address/0x7446bf003b98b7b0d90ce84810ac12d6b8114b62) |
+
+---
