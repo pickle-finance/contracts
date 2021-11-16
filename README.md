@@ -282,7 +282,8 @@ Strategist/Governance: [0xacfe4511ce883c14c4ea40563f176c3c09b4c47c](https://www.
 | 6 | okexJar 2a | [JswapJfUsdt](https://www.oklink.com/okexchain/address/0x8009edebBBdeb4A3BB3003c79877fCd98ec7fB45) | [pJswapJfUsdt](https://www.oklink.com/okexchain/address/0xd120c607911105bc99b510749d102dc63a20bbb4) | [StrategyJswapJfUsdtLp](https://www.oklink.com/okexchain/address/0x81d80fd0ad3478615760E5bEce3f5516BF24e762) |
 | 7 | okexJar 2b | [JswapBtckUsdt](https://www.oklink.com/okexchain/address/0x838a7a7f3e16117763c109d98c79ddcd69f6fd6e) | [pJswapBtckUsdt](https://www.oklink.com/okexchain/address/0x5be52adf0c54598f0fa6f433b398492748ecd588) | [StrategyJswapBtckUsdtLp](https://www.oklink.com/okexchain/address/0x22b80a54d5cb75a414ad3eaed60e644de01c18e7) |
 | 8 | okexJar 2c | [JswapEthkUsdt](https://www.oklink.com/okexchain/address/0xeb02a695126b998e625394e43dfd26ca4a75ce2b) | [pJswapEthkUsdt](https://www.oklink.com/okexchain/address/0x668d30c30ffb182964516f549528e06633b48295) | [StrategyJswapEthkUsdtLp](https://www.oklink.com/okexchain/address/0x496f16a8c39f623f522c99632eaa53036e9bf799) |
-
+| 9 | okexJar 2d | [JswapUsdtDaik](https://www.oklink.com/okexchain/address/0xE9313b7dea9cbaBd2df710C25bef44A748Ab38a9) | [pJswapUsdtDaik](https://www.oklink.com/okexchain/address/0xb697e2cb609f19ccd3594964cea1a7e03cef47f2) | [StrategyJswapUsdtDaikLp](https://www.oklink.com/okexchain/address/0x45a4763dee2d704462317556e5837d3c96e1dee2) |
+| 10 | okexJar 2e | [JswapUsdcDaik](https://www.oklink.com/okexchain/address/0xa25E1C05c58EDE088159cc3cD24f49445d0BE4b2) | [pJswapUsdcDaik](https://www.oklink.com/okexchain/address/0x2e148f4848f79105a68444c49d078c6a6edcb26d) | [StrategyJswapUsdcDaikLp](https://www.oklink.com/okexchain/address/0x1ebe584c8e30914a5c819b093a1086d088b69433) |
 
 ---
 
