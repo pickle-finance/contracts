@@ -340,3 +340,19 @@ Vault Registry: [0x94feade0d3d832e4a05d459ebea9350c6cdd3bca](https://explorer.ha
 | 3 | Harmony 1c | [SushiWethWone](https://explorer.harmony.one/address/0xeb049F1eD546F8efC3AD57f6c7D22F081CcC7375) | [pSushiWethWone](https://explorer.harmony.one/address/0xab1a9bf446c77a9873023646147e36ea34279c72) | [StrategySushiWethWoneLp](https://explorer.harmony.one/address/0xdad6760bd3fc33b741d46df1e205558bb22d1507) |
 
 ---
+
+## Pickle.Finance Contracts (Moonriver Mainnet)
+
+Controller: [0xc3f393fb40f8cc499c1fe7fa5781495dc6fac9e9](https://moonriver.moonscan.io/address/0xc3f393fb40f8cc499c1fe7fa5781495dc6fac9e9)
+
+Strategist/Governance: [0xacfe4511ce883c14c4ea40563f176c3c09b4c47c](https://moonriver.moonscan.io/address/0xacfe4511ce883c14c4ea40563f176c3c09b4c47c)
+
+---
+
+## Pickle Jars (pJars - Moonriver Mainnet)
+
+| Index | Name | Want | PickleJar | Strategy |
+| --- | ---  | --- | --- | --- |
+| 1 | Moonriver 1a | [SolarMovr](https://moonriver.moonscan.io/address/0x7eDA899b3522683636746a2f3a7814e6fFca75e1) | [pSolarMovr](https://moonriver.moonscan.io/address/0x55D5BCEf2BFD4921B8790525FF87919c2E26bD03) | [StrategySolarMovrLp](https://moonriver.moonscan.io/address/0xf4396dca6201e0ca120073acda087b53f7159e24) |
+
+---
