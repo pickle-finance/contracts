@@ -353,6 +353,8 @@ Strategist/Governance: [0xacfe4511ce883c14c4ea40563f176c3c09b4c47c](https://moon
 
 | Index | Name | Want | PickleJar | Strategy |
 | --- | ---  | --- | --- | --- |
-| 1 | Moonriver 1a | [SolarMovr](https://moonriver.moonscan.io/address/0x7eDA899b3522683636746a2f3a7814e6fFca75e1) | [pSolarMovr](https://moonriver.moonscan.io/address/0x55D5BCEf2BFD4921B8790525FF87919c2E26bD03) | [StrategySolarMovrLp](https://moonriver.moonscan.io/address/0xf4396dca6201e0ca120073acda087b53f7159e24) |
+| 1 | Moonriver 1a | [SolarSolarMovr](https://moonriver.moonscan.io/address/0x7eDA899b3522683636746a2f3a7814e6fFca75e1) | [pSolarSolarMovr](https://moonriver.moonscan.io/address/0x55D5BCEf2BFD4921B8790525FF87919c2E26bD03) | [StrategySolarSolarMovrLp](https://moonriver.moonscan.io/address/0xf4396dca6201e0ca120073acda087b53f7159e24) |
+| 2 | Moonriver 1b | [SolarMovrUsdc](https://moonriver.moonscan.io/address/0xe537f70a8b62204832b8ba91940b77d3f79aeb81) | [pSolarMovrUsdc](https://moonriver.moonscan.io/address/0x8f32bd87ba00954b9f89296db90ff66183a5dbb1) | [StrategySolarMovrUsdcLp](https://moonriver.moonscan.io/address/0x8FcBBC84AF8408c962bc5C9f4ec3c9d8b532999b) |
+| 3 | Moonriver 1c | [SolarSolarUsdc](https://moonriver.moonscan.io/address/0xdb66BE1005f5Fe1d2f486E75cE3C50B52535F886) | [pSolarSolarUsdc](https://moonriver.moonscan.io/address/0x746fd0fcB62dd739ED5e65b37953D5fab8cB3df6) | [StrategySolarSolarUsdcLp](https://moonriver.moonscan.io/address/0x7e8E5f5f37f6e7a5C0f0020A7D7128a8560B0302) |
 
 ---
