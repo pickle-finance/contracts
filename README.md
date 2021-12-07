@@ -150,7 +150,7 @@ Timelock (12 hours): [0xD92c7fAa0Ca0e6AE4918f3a83d9832d9CAEAA0d3](https://ethers
 | pJar Y-4 | [crvIB](https://etherscan.io/address/0x5282a4ef67d9c33135340fb3289cc1711c13638c) | [pYEARNCRVIB](https://etherscan.io/address/0x4E9806345fb39FFebd70A01f177A675805019ba8) | [StrategyYearnCrvIronBank](https://etherscan.io/address/0xC377FF883456d8ce53aEa32426eB6d7aaB3CbB98) |
 | pJar 0e | [CurveCvxCrvLp](https://etherscan.io/address/0x9D0464996170c6B9e75eED71c68B99dDEDf279e8) | [pCurveCvxCrvLp](https://etherscan.io/address/0xF1478A8387C449c55708a3ec11c143c35daf5E74) | [StrategyCurveCvxCrvLp](https://etherscan.io/address/0xCbc361AeFBd790609d3011dfF3b0D2Bd6bEE12B8) |
 | pJar 0f | [CvxCrv](https://etherscan.io/address/0x62B9c7356A2Dc64a1969e19C23e4f579F9810Aa7) | [pCvxCrv](https://etherscan.io/address/0xB245280Fd1795f5068DEf8E8f32DB7846b030b2B) | [StrategyCvxCrv](https://etherscan.io/address/0xd61eB791844132Af54032eE086Dc2cb33873419f) |
-| pJar 0g | [UNIv3-RBN-ETH](https://etherscan.io/address/0x94981F69F7483AF3ae218CbfE65233cC3c60d93a) | [pUNIRBNETH](https://etherscan.io/address/0x506748d736b77f51c5b490e4aC6c26B8c3975b14) | [StrategyRbnEthLp](https://etherscan.io/address/0x36b57DDbD3521A536Dc027f799d2F626Acf7B882) |
+| pJar 0g | [CvxCrvEth](https://etherscan.io/address/0xEd4064f376cB8d68F770FB1Ff088a3d0F3FF5c4d) | [pCvxCrvEth](https://etherscan.io/address/0x1c5Dbb5d9864738e84c126782460C18828859648) | [StrategyCvxCrvEthLp](https://etherscan.io/address/0x8F14Fd9d3F51412036ef0460b4F5CD46d4AE7455) |
 
 ---
 
