@@ -375,3 +375,22 @@ Strategist/Governance: [0xacfe4511ce883c14c4ea40563f176c3c09b4c47c](https://moon
 | 21 | Moonriver 1u | [SolarEthMovr](https://moonriver.moonscan.io/address/0x0d171b55fC8d3BDDF17E376FdB2d90485f900888) | [pSolarEthMovr](https://moonriver.moonscan.io/address/0x986080e8e9968E1dA5AB14473b1884b5A7342EC2) | [StrategySolarEthMovrLp](https://moonriver.moonscan.io/address/0xb46d5e9dc18c2569094419a21ee0cc4f1a3e59a9) |
 
 ---
+
+## Pickle.Finance Contracts (Cronos Mainnet)
+
+Controller: [0xFa3Ad976c0bdeAdDe81482F5Fa8191aE1e7d84C0](https://cronos.crypto.org/explorer/address/0xFa3Ad976c0bdeAdDe81482F5Fa8191aE1e7d84C0)
+
+Governance/Treasury: [0xaCfE4511CE883C14c4eA40563F176C3C09b4c47C](https://cronos.crypto.org/explorer/address/0xaCfE4511CE883C14c4eA40563F176C3C09b4c47C)
+
+---
+
+## Pickle Jars (pJars - Cronos Mainnet)
+
+| Index | Name | Want | PickleJar | Strategy |
+| --- | ---  | --- | --- | --- |
+| 1 | Cronos 1a | [VvsCroEth](https://cronos.crypto.org/explorer/address/0xA111C17f8B8303280d3EB01BBcd61000AA7F39F9) | [pVvsCroEth](https://cronos.crypto.org/explorer/address/0x55D5BCEf2BFD4921B8790525FF87919c2E26bD03) | [StrategyVvsCroEthLp](https://cronos.crypto.org/explorer/address/0x9Ab713b3ed31BC2502A7a2FB68eba7CF5211D5dd) |
+| 2 | Cronos 1b | [VvsCroBifi](https://cronos.crypto.org/explorer/address/0x1803E360393A472beC6E1A688BDF7048d3076b1A) | [pVvsCroBifi](https://cronos.crypto.org/explorer/address/0xF125357f05c75F9beEA0Cc721D7a2A0eA03aaa63) | [StrategyVvsCroBifiLp](https://cronos.crypto.org/explorer/address/0xeA460D7e794e49D395eF01A523F3Fd262dd49279) |
+| 3 | Cronos 1c | [VvsCroBtc](https://cronos.crypto.org/explorer/address/0x8F09fFf247B8fDB80461E5Cf5E82dD1aE2EBd6d7) | [pVvsCroBtc](https://cronos.crypto.org/explorer/address/0xb289Bedd68F6b3cFd221C63C0f56BC0cc9430473) | [StrategyVvsCroBtcLp](https://cronos.crypto.org/explorer/address/0xfCCD91017E0E9BD998B5A9B8ADfC3118950B895B) |
+| 4 | Cronos 1d | [VvsCroDai](https://cronos.crypto.org/explorer/address/0x3Eb9FF92e19b73235A393000C176c8bb150F1B20) | [pVvsCroDai](https://cronos.crypto.org/explorer/address/0x5a10B857Fb05Ce8E71440CA063AEb504AeDE5535) | [StrategyVvsCroDaiLp](https://cronos.crypto.org/explorer/address/0xAc6b829E1B22F2d1b607e1644D306d98321bA5D5) |
+
+---
