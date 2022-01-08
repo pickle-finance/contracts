@@ -428,6 +428,8 @@ Controller: [0xdc954e7399e9ADA2661cdddb8D4C19c19E070A8E](https://browser.aurorac
 
 Governance/Treasury: [0xacfe4511ce883c14c4ea40563f176c3c09b4c47c](https://browser.aurorachain.io/block.html#/searchResult?fromAddress=0xacfe4511ce883c14c4ea40563f176c3c09b4c47c)
 
+Minichef: [0x13cc0A2644f4f727db23f5B9dB3eBd72134085b7](https://explorer.mainnet.aurora.dev/address/0x13cc0A2644f4f727db23f5B9dB3eBd72134085b7/read-contract)
+
 ---
 
 ## Pickle Jars (pJars - Aurora Mainnet)
