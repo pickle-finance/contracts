@@ -153,6 +153,7 @@ Timelock (12 hours): [0xD92c7fAa0Ca0e6AE4918f3a83d9832d9CAEAA0d3](https://ethers
 | pJar 0f | [CvxCrv](https://etherscan.io/address/0x62B9c7356A2Dc64a1969e19C23e4f579F9810Aa7) | [pCvxCrv](https://etherscan.io/address/0xB245280Fd1795f5068DEf8E8f32DB7846b030b2B) | [StrategyCvxCrv](https://etherscan.io/address/0xd61eB791844132Af54032eE086Dc2cb33873419f) |
 | pJar 0g | [CvxCrvEth](https://etherscan.io/address/0xEd4064f376cB8d68F770FB1Ff088a3d0F3FF5c4d) | [pCvxCrvEth](https://etherscan.io/address/0x1c5Dbb5d9864738e84c126782460C18828859648) | [StrategyCvxCrvEthLp](https://etherscan.io/address/0x8F14Fd9d3F51412036ef0460b4F5CD46d4AE7455) |
 | pJar 0h | [CvxCvxEth](https://etherscan.io/address/0x3A283D9c08E8b55966afb64C515f5143cf907611) | [pCvxCvxEth](https://etherscan.io/address/0xc97f3fd224d90609831a2B74b46642aC43afE5ee) | [StrategyCvxCvxEthLp](https://etherscan.io/address/0x66a13EDeC848D8F68517f7dFb16891Cc99f3F8Cd) |
+| pJar 0i | [SushiNewoUsdc](https://etherscan.io/address/0xB264dC9D22ece51aAa6028C5CBf2738B684560D6) | [pSushiNewoUsdc](https://etherscan.io/address/0xBc57294Fc20bD23983dB598fa6B3f306aA1a414f) | [StrategySushiNewoUsdcLp](https://etherscan.io/address/0x5F6219B7171b50cF95b0538DAe79153a49f9D523) |
 
 ---
 
