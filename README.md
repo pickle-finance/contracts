@@ -78,6 +78,7 @@ SmartWalletChecker: [0x2ff4f44f86f49d45a1c3626bab9d222e84e9e78f](https://ethersc
 | pCvxCrv | [0xd27b644ff94841ea54286a0e93b480c09aaaa1e7](https://etherscan.io/address/0xd27b644ff94841ea54286a0e93b480c09aaaa1e7) |
 | pUNIRBNETH | [0x76706d8b7afD5984c57524C873d6e8d1564D2d82](https://etherscan.io/address/0x76706d8b7afD5984c57524C873d6e8d1564D2d82) |
 | pCvxCvxEth | [0x941c42350239B463B80795Fb78Be7817659B8bd0](https://etherscan.io/address/0x941c42350239B463B80795Fb78Be7817659B8bd0) |
+| pUniLooksEth | [0xb5fe3204aabe02475d5b9d3c52820f2169002124](https://etherscan.io/address/0xb5fe3204aabe02475d5b9d3c52820f2169002124) |
 
 ---
 
@@ -112,6 +113,7 @@ Timelock (12 hours): [0xD92c7fAa0Ca0e6AE4918f3a83d9832d9CAEAA0d3](https://ethers
 | pJar 0.69c v2 (Inactive) | [UNIv2-ETH-USDT LP](https://etherscan.io/address/0x0d4a11d5EEaaC28EC3F61d100daF4d40471f1852) | [pUNIUSDT-v2](https://etherscan.io/address/0x09FC573c502037B149ba87782ACC81cF093EC6ef) | [StrategyUniEthUsdtLpV4](https://etherscan.io/address/0x3577797668c6Fe415B21bf85Ba44DF34318dD80D) |
 | pJar 0.69d (Inactive) | [UNIv2-ETH-WBTC LP](https://etherscan.io/address/0xBb2b8038a1640196FbE3e38816F3e67Cba72D940) | [pUNIWBTC](https://etherscan.io/address/0xc80090AA05374d336875907372EE4ee636CBC562) | [StrategyUniEthWBtcLpV4](https://etherscan.io/address/0xD8dE542D2140eeCc49FfDf056e51aa9261f974d6) |
 | pJar 0.88a  (Inactive) | [DAI](https://etherscan.io/address/0x6b175474e89094c44da98b954eedeac495271d0f) | [pDAI](https://etherscan.io/address/0x6949Bb624E8e8A90F87cD2058139fcd77D2F3F87) | [StrategyCmpdDaiV2](https://etherscan.io/address/0xCd892a97951d46615484359355e3Ed88131f829D) |
+| pJar 0.98a | [UNIv2-LOOKS-ETH](https://etherscan.io/address/0xDC00bA87Cc2D99468f7f34BC04CBf72E111A32f7) | [pUNILOOKSETH](https://etherscan.io/address/0x69CC22B240bdcDf4A33c7B3D04a660D4cF714370 ) | [StrategyUniLooksEth](https://etherscan.io/address/0x959da2ff3a72BA164DE03828C6a84639e4ef5dbD) |
 | pJar 0.98s | [SADDLE-ETH-alETH](https://etherscan.io/address/0xc9da65931ABf0Ed1b74Ce5ad8c041C4220940368) | [pSADDLEALETH](https://etherscan.io/address/0xcf40e2d98b5fa0c666a6565558ad20b3f6742d46 ) | [StrategySaddleEthAleth](https://etherscan.io/address/0x0185ee1A1101F9c43c6a33a48Faa7Edb102f1e30) |
 | pJar 0.98l | [LQTY](https://etherscan.io/address/0x6dea81c8171d0ba574754ef6f8b412f2ed88c54d) | [pLQTY](https://etherscan.io/address/0x65B2532474f717D5A8ba38078B78106D56118bbb ) | [StrategyLqty](https://etherscan.io/address/0x28a21d4f9c6c2c63d838ddb5dc9776413b0c2376) |
 | pJar 0.99a | [SUSHI-ETH-DAI LP](https://etherscan.io/address/0xC3D03e4F041Fd4cD388c549Ee2A29a9E5075882f) | [pSUSHIDAI](https://etherscan.io/address/0x55282dA27a3a02ffe599f6D11314D239dAC89135) | [StrategySushiEthDaiLp](https://etherscan.io/address/0x8E4e4cfCa2fF1DB24708dfAE8c97385CC63149e1) |
