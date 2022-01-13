@@ -14,8 +14,6 @@ PickleRewarder (For MCv2): [0x7512105dbb4c0e0432844070a45b7ea0d83a23fd](https://
 
 Governance-DAO (multi-sig): [0x9d074E37d408542FD38be78848e8814AFB38db17](https://etherscan.io/address/0x9d074E37d408542FD38be78848e8814AFB38db17)
 
-Dev Wallet (multi-sig): [0x2fee17F575fa65C06F10eA2e63DBBc50730F145D](https://etherscan.io/address/0x2fee17F575fa65C06F10eA2e63DBBc50730F145D)
-
 Treasury-DAO (multi-sig): [0x066419EaEf5DE53cc5da0d8702b990c5bc7D1AB3](https://etherscan.io/address/0x066419EaEf5DE53cc5da0d8702b990c5bc7D1AB3)
 
 Vault Registry: [0xF7C2DCFF5E947a617288792e289984a2721C4671](https://etherscan.io/address/0xF7C2DCFF5E947a617288792e289984a2721C4671)
