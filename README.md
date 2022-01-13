@@ -474,3 +474,33 @@ PickleToken: [0x291C8FCeAcA3342B29CC36171DEB98106f712C66](https://explorer.mainn
 |  | Aurora 4d | [RoseUstThreePool](https://explorer.mainnet.aurora.dev/address/0x94A7644E4D9CA0e685226254f88eAdc957D3c263/transactions) | [pRoseUstThreePool](https://explorer.mainnet.aurora.dev/address/0xDB9fD6C1711b9a418b293A29970Fce889EEeb2e8/transactions) | [StrategyRoseUstThreePoolLp](https://explorer.mainnet.aurora.dev/address/0xd3B37e52Fe5c3193532d4bc8260aeF73dBe3310F/transactions) |
 
 ---
+
+## Pickle.Finance Contracts (Metis Mainnet)
+
+Controller: [0xD556018E7b37e66f618A65737144A2ae2B98127f](https://andromeda-explorer.metis.io/address/0xD556018E7b37e66f618A65737144A2ae2B98127f/transactions)
+
+Governance/Treasury: [0xacfe4511ce883c14c4ea40563f176c3c09b4c47c](https://andromeda-explorer.metis.io/address/0xaCfE4511CE883C14c4eA40563F176C3C09b4c47C/transactions)
+
+---
+
+## Pickle Jars (pJars - Metis Mainnet)
+
+| Index | Name | Want | PickleJar | Strategy |
+| --- | ---  | --- | --- | --- |
+|  | metJar 1a  | [NetNettMetis](https://andromeda-explorer.metis.io/address/0x60312d4EbBF3617d3D33841906b5868A86931Cbd/transactions) | [pNetNettMetis](https://andromeda-explorer.metis.io/address/0xaDd50d6396B53876ac58752E153E3431C1E9bA93/transactions) | [StrategyNetNettMetisLp](https://andromeda-explorer.metis.io/address/0x6A0F350715BAAdcC91F29b7e5915f34fc584f53c/transactions) |
+|  | metJar 1b  | [NetBnbNett](https://andromeda-explorer.metis.io/address/0x3bF77b9192579826f260Bc48F2214Dfba840fcE5/transactions) | [pNetBnbNett](https://andromeda-explorer.metis.io/address/0x9c461DA93004A494fb6E92Ed998A398c0e389533/transactions) | [StrategyNetBnbNettLp](https://andromeda-explorer.metis.io/address/0x26839349247324376A8F52f0B6C8155345C5daA8/transactions) |
+|  | metJar 1c  | [NetEthMetis](https://andromeda-explorer.metis.io/address/0x59051b5f5172b69e66869048dc69d35db0b3610d/transactions) | [pNetEthMetis](https://andromeda-explorer.metis.io/address/0x8dF965E1791f3948158BA0C0A05702EA67861489/transactions) | [StrategyNetEthMetisLp](https://andromeda-explorer.metis.io/address/0x863b32B1443C6719663ffbc88a09BB681d45ed41/transactions) |
+|  | metJar 1d  | [NetEthNett](https://andromeda-explorer.metis.io/address/0xC8aE82A0ab6AdA2062B812827E1556c0fa448dd0/transactions) | [pNetEthNett](https://andromeda-explorer.metis.io/address/0x739267bF641756315434f6C1deC6f7eA137B561A/transactions) | [StrategyNetEthNettLp](https://andromeda-explorer.metis.io/address/0xEB67eA91aAbC4B2efe8cCDBdc85396dC9481b6be/transactions) |
+|  | metJar 1e  | [NetEthUsdc](https://andromeda-explorer.metis.io/address/0xF5988809ac97C65121e2c34f5D49558e3D12C253/transactions) | [pNetEthUsdc](https://andromeda-explorer.metis.io/address/0x69dd7bc7712596a93F09b556Eb8668D36f336885/transactions) | [StrategyNetEthUsdcLp](https://andromeda-explorer.metis.io/address/0x964fD1153058B07453386061325391D2F84Af907/transactions) |
+|  | metJar 1f  | [NetEthUsdt](https://andromeda-explorer.metis.io/address/0x4Db4CE7f5b43A6B455D3c3057b63A083b09b8376/transactions) | [pNetEthUsdt](https://andromeda-explorer.metis.io/address/0x073068b3d575d6B1dF109a6E580db6A739c47158/transactions) | [StrategyNetEthUsdtLp](https://andromeda-explorer.metis.io/address/0xc2F1Fe87118dC4D35ABEafB55204bb900Ad93ed0/transactions) |
+|  | metJar 1f  | [NetMetisUsdc](https://andromeda-explorer.metis.io/address/0x5Ae3ee7fBB3Cb28C17e7ADc3a6Ae605ae2465091/transactions) | [pNetMetisUsdc](https://andromeda-explorer.metis.io/address/0x255832c3d5Ba7583bE132B2dacdD3d081cb44079/transactions) | [StrategyNetMetisUsdcLp](https://andromeda-explorer.metis.io/address/0xdFC22a3F2B76D2039c8C8883653C50BbBc7b12b4/transactions) |
+|  | metJar 1g  | [NetNettUsdc](https://andromeda-explorer.metis.io/address/0x0724d37522585E87d27C802728E824862Dc72861/transactions) | [pNetNettUsdc](https://andromeda-explorer.metis.io/address/0xA4A94C04b8fF7B38314dEdD0bcF4Da3C48A463c0/transactions) | [StrategyNetNettUsdcLp](https://andromeda-explorer.metis.io/address/0x826a9cD66A20Ff4c2dC7AAcfa3e413dfee6a71E4/transactions) |
+|  | metJar 1h  | [NetNettUsdt](https://andromeda-explorer.metis.io/address/0x7D02ab940d7dD2B771e59633bBC1ed6EC2b99Af1/transactions) | [pNetNettUsdt](https://andromeda-explorer.metis.io/address/0x57fFD8164E3332B95a042CC876023B1BfE8f81AA/transactions) | [StrategyNetNettUsdtLp](https://andromeda-explorer.metis.io/address/0x7C29dcC491C0A978B31fbdFac453E1Fc9b651a42/transactions) |
+|  | metJar 1g  | [NetUsdtMetis](https://andromeda-explorer.metis.io/address/0x3D60aFEcf67e6ba950b499137A72478B2CA7c5A1/transactions) | [pNetUsdtMetis](https://andromeda-explorer.metis.io/address/0x3e4cc5307312fD0857E207880e731F4c71fDE1c7/transactions) | [StrategyNetUsdtMetisLp](https://andromeda-explorer.metis.io/address/0xFdB584F0A0aB9bfA06Ee534a9081FcfBE4De12CB/transactions) |
+|  | metJar 1h  | [NetUsdtUsdc](https://andromeda-explorer.metis.io/address/0x1caD5f8f5D4C0AD49646B2565CC0cA725E4280EA/transactions) | [pNetUsdtUsdc](https://andromeda-explorer.metis.io/address/0x5b64b5382d68a934004578d6bE3e482b455EDfa2/transactions) | [StrategyNetUsdtUsdcLp](https://andromeda-explorer.metis.io/address/0x7b8139Fb52C12e28831aDacCC205a6fA1a5A1afb/transactions) |
+|  | metJar 2a | [TetTetMetis](https://andromeda-explorer.metis.io/address/0xc9b290FF37fA53272e9D71A0B13a444010aF4497/transactions) | [pTetTetMetis](https://andromeda-explorer.metis.io/address/0xC3f393FB40F8Cc499C1fe7FA5781495dc6FAc9E9/transactions) | [StrategyTetTetMetisLp](https://andromeda-explorer.metis.io/address/0x627c32F07C4C789c0FB2A7853aF7085aF653D8b3/transactions) |
+|  | metJar 2b | [TetEthMetis](https://andromeda-explorer.metis.io/address/0xEE5adB5b0DfC51029Aca5Ad4Bc684Ad676b307F7/transactions) | [pTetEthMetis](https://andromeda-explorer.metis.io/address/0xC33d6596328935FA558A8d501f8fb15eD56ff879/transactions) | [StrategyTetEthMetisLp](https://andromeda-explorer.metis.io/address/0x406D931162ccCA5feACE185Df198E85BD2906040/transactions) |
+|  | metJar 2c | [TetMetisUsdc](https://andromeda-explorer.metis.io/address/0xDd7dF3522a49e6e1127bf1A1d3bAEa3bc100583B/transactions) | [pTetMetisUsdc](https://andromeda-explorer.metis.io/address/0x12334d225c8Efc3eFFe56A5CeF5aEDFEf3f6ca7F/transactions) | [StrategyTetMetisUsdcLp](https://andromeda-explorer.metis.io/address/0x2f1e21Ea0DD575567476599f5f6510DC624Bda3d/transactions) |
+|  | metJar 2d | [TetUsdtMetis](https://andromeda-explorer.metis.io/address/0x8121113eB9952086deC3113690Af0538BB5506fd/transactions) | [pTetUsdtMetis](https://andromeda-explorer.metis.io/address/0x0289035c5a5836597061C4A25A72DDa02F597E10/transactions) | [StrategyTetUsdtMetisLp](https://andromeda-explorer.metis.io/address/0x964075a7eb21C099DC1D9F987eDDF02CE2401F69/transactions) |
+
+---
