@@ -528,3 +528,20 @@ Governance/Treasury: [0xacfe4511ce883c14c4ea40563f176c3c09b4c47c](https://androm
 |  | metJar 2d | [TetUsdtMetis](https://andromeda-explorer.metis.io/address/0x8121113eB9952086deC3113690Af0538BB5506fd/transactions) | [pTetUsdtMetis](https://andromeda-explorer.metis.io/address/0x0289035c5a5836597061C4A25A72DDa02F597E10/transactions) | [StrategyTetUsdtMetisLp](https://andromeda-explorer.metis.io/address/0x964075a7eb21C099DC1D9F987eDDF02CE2401F69/transactions) |
 
 ---
+
+## Pickle.Finance Contracts (Optimism Mainnet)
+
+Controller: [0xa1d43d97fc5f1026597c67805aa02aae558e0fef](https://optimistic.etherscan.io/address/0xa1d43d97fc5f1026597c67805aa02aae558e0fef)
+
+---
+
+## Pickle Jars (pJars - Optimism Mainnet)
+
+| Index | Name | Want | PickleJar | Strategy |
+| --- | ---  | --- | --- | --- |
+| 1 | opJar 1a  | [ZipEthUsdc](https://optimistic.etherscan.io/address/0x1A981dAa7967C66C3356Ad044979BC82E4a478b9) | [pZipEthUsdc](https://optimistic.etherscan.io/address/0x7446bf003b98b7b0d90ce84810ac12d6b8114b62) | [StrategyZipEthUsdcLp](https://optimistic.etherscan.io/address/0x48394297ed0a9e9edcc556faaf4222a932605c56) |
+| 2 | opJar 1b  | [ZipEthBtc](https://optimistic.etherscan.io/address/0x251de0f0368c472Bba2E1C8f5Db5aC7582B5f847) | [pZipEthBtc](https://optimistic.etherscan.io/address/0x15Bfcf85551c3DdBbB94ED08B9bA194D301E690A) | [StrategyZipEthBtcLp](https://optimistic.etherscan.io/address/0x35f00e2A2786654Ab70E71b37f1909187a0DfDe9) |
+| 3 | opJar 1c  | [ZipEthDai](https://optimistic.etherscan.io/address/0x53790B6C7023786659D11ed82eE03079F3bD6976) | [pZipEthDai](https://optimistic.etherscan.io/address/0xe43c173F7dA43c2D5800aD915426b312Ea003Bff) | [StrategyZipEthDaiLp](https://optimistic.etherscan.io/address/0xE29C6d11D4153ac0d25e463919401EF02558627B) |
+| 4 | opJar 1d  | [ZipEthZip](https://optimistic.etherscan.io/address/0xD7F6ECF4371eddBd60C1080BfAEc3d1d60D415d0) | [pZipEthZip](https://optimistic.etherscan.io/address/0x25C10d8713172782f83B340cbE1446be171720d7) | [StrategyZipEthZipLp](https://optimistic.etherscan.io/address/0xDF9d3527A38E6bc1589dB49cFDcEfd13C42c85FC) |
+
+---
