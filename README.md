@@ -545,3 +545,32 @@ Controller: [0xa1d43d97fc5f1026597c67805aa02aae558e0fef](https://optimistic.ethe
 | 4 | opJar 1d  | [ZipEthZip](https://optimistic.etherscan.io/address/0xD7F6ECF4371eddBd60C1080BfAEc3d1d60D415d0) | [pZipEthZip](https://optimistic.etherscan.io/address/0x25C10d8713172782f83B340cbE1446be171720d7) | [StrategyZipEthZipLp](https://optimistic.etherscan.io/address/0xDF9d3527A38E6bc1589dB49cFDcEfd13C42c85FC) |
 
 ---
+
+## Pickle.Finance Contracts (Moonbeam Mainnet)
+
+Controller: [0x95ca4584eA2007D578fa2693CCC76D930a96d165](https://blockscout.moonbeam.network/address/0x95ca4584eA2007D578fa2693CCC76D930a96d165/transactions)
+Governanace/Treasury: [0xacfe4511ce883c14c4ea40563f176c3c09b4c47c](https://blockscout.moonbeam.network/address/0xacfe4511ce883c14c4ea40563f176c3c09b4c47c/transactions)
+
+---
+
+## Pickle Jars (pJars - Moonbeam Mainnet)
+
+| Index | Name | Want | PickleJar | Strategy |
+| --- | ---  | --- | --- | --- |
+| 1 | beamJar 1a  | [StellaStellaGlmr](https://blockscout.moonbeam.network/address/0x7F5Ac0FC127bcf1eAf54E3cd01b00300a0861a62/transactions) | [pStellaStellaGlmr](https://blockscout.moonbeam.network/address/0xa9e5E86BA4e8E175e7eF7Ddd4ee30a28f90186e2/transactions) | [StrategyStellaStellaGlmrLp](https://blockscout.moonbeam.network/address/0xaDd50d6396B53876ac58752E153E3431C1E9bA93/transactions) |
+| 2 | beamJar 1b  | [StellaUsdcBnb](https://blockscout.moonbeam.network/address/0xAc2657ba28768FE5F09052f07A9B7ea867A4608f/transactions) | [pStellaUsdcBnb](https://blockscout.moonbeam.network/address/0x1b33D8A89aE9F5Bf62D35D5f31aEC24cfd0aec7b/transactions) | [StrategyStellaUsdcBnbLp](https://blockscout.moonbeam.network/address/0x121789C2f48269725578706E1CAe60323878940C/transactions) |
+| 3 | beamJar 1c  | [StellaBusdGlmr](https://blockscout.moonbeam.network/address/0x367c36dAE9ba198A4FEe295c22bC98cB72f77Fe1/transactions) | [pStellaBusdGlmr](https://blockscout.moonbeam.network/address/0xF9E25233293c8DA2f9b929F31454e0388fDD5094/transactions) | [StrategyStellaBusdGlmrLp](https://blockscout.moonbeam.network/address/0x12293E92BEc6A0Cf904ddD6644D5e4f113FA5963/transactions) |
+| 4 | beamJar 1d  | [StellaUsdcDai](https://blockscout.moonbeam.network/address/0x5Ced2f8DD70dc25cbA10ad18c7543Ad9ad5AEeDD/transactions) | [pStellaUsdcDai](https://blockscout.moonbeam.network/address/0x49Aa0dEceA6fb02366253aDe93eE12962840CfeA/transactions) | [StrategyStellaUsdcDaiLp](https://blockscout.moonbeam.network/address/0x435499749a335cf41c1dc6F712E72DBbd9387554/transactions) |
+| 5 | beamJar 1e  | [StellaEthGlmr](https://blockscout.moonbeam.network/address/0x49a1cC58dCf28D0139dAEa9c18A3ca23108E78B3/transactions) | [pStellaEthGlmr](https://blockscout.moonbeam.network/address/0xF125357f05c75F9beEA0Cc721D7a2A0eA03aaa63/transactions) | [StrategyStellaEthGlmrLp](https://blockscout.moonbeam.network/address/0xf5d72E16dc90E9e933B09f4167D164a8421280D0/transactions) |
+| 6 | beamJar 1f  | [StellaUsdcGlmr](https://blockscout.moonbeam.network/address/0x555B74dAFC4Ef3A5A1640041e3244460Dc7610d1/transactions) | [pStellaUsdcGlmr](https://blockscout.moonbeam.network/address/0x32F601e12629FDa9ac981601593Cf1daBaA67871/transactions) | [StrategyStellaUsdcGlmrGlmrLp](https://blockscout.moonbeam.network/address/0x9c461DA93004A494fb6E92Ed998A398c0e389533/transactions) |
+| 7 | beamJar 2a  | [BeamBnbBusd](https://blockscout.moonbeam.network/address/0x34A1F4AB3548A92C6B32cd778Eed310FcD9A340D/transactions) | [pBeamBnbBusd](https://blockscout.moonbeam.network/address/0xF1f61233a02BEe9D2867Daa3c3f9ea2327414941/transactions) | [StrategyBeamBnbBusdLp](https://blockscout.moonbeam.network/address/0xeEEB9658d791C933d93b8d6E87Fcf455f0C8ed8a/transactions) |
+| 8 | beamJar 2b  | [BeamBusdGlmr](https://blockscout.moonbeam.network/address/0xfC422EB0A2C7a99bAd330377497FD9798c9B1001/transactions) | [pBeamBusdGlmr](https://blockscout.moonbeam.network/address/0xbF04440582F8a59870f9845005AAc652B9c37733/transactions) | [StrategyBeamBusdGlmrLp](https://blockscout.moonbeam.network/address/0xfc258cF7f1bf3739A04992D1c790aF20d60f44E9/transactions) |
+| 9 | beamJar 2c  | [BeamBusdUsdc](https://blockscout.moonbeam.network/address/0xa0799832FB2b9F18Acf44B92FbbEDCfD6442DD5e/transactions) | [pBeamBusdUsdc](https://blockscout.moonbeam.network/address/0x4f9cAD3450a2B8ba538207082D84B1b49666984e/transactions) | [StrategyBeamBusdUsdcLp](https://blockscout.moonbeam.network/address/0xC90449Bf4989421db636a568b55092a4e8AA3132/transactions) |
+| 10 | beamJar 2d  | [BeamEthUsdc](https://blockscout.moonbeam.network/address/0x6BA3071760d46040FB4dc7B627C9f68efAca3000/transactions) | [pBeamEthUsdc](https://blockscout.moonbeam.network/address/0x6f40CB33a3FD953A9254356f40a59C3F4e1377D0/transactions) | [StrategyBeamEthUsdcLp](https://blockscout.moonbeam.network/address/0x8B65620Be46eB20D0a8635C50CC94494fea08Ba8/transactions) |
+| 11 | beamJar 2e  | [BeamGlmrGlint](https://blockscout.moonbeam.network/address/0x99588867e817023162F4d4829995299054a5fC57/transactions) | [pBeamGlmrGlint](https://blockscout.moonbeam.network/address/0xEE4587694b553aE065337ea4BCdb0C43e83bB3f2/transactions) | [StrategyBeamGlmrGlintLp](https://blockscout.moonbeam.network/address/0x0b4a6fdb7720a70dd360c1531660c20850546304/transactions) |
+| 12 | beamJar 2f  | [BeamGlmrUsdc](https://blockscout.moonbeam.network/address/0xb929914B89584b4081C7966AC6287636F7EfD053/transactions) | [pBeamGlmrUsdc](https://blockscout.moonbeam.network/address/0xA075d810fD05c1AB5769b08Dfd34693Ddfa190F3/transactions) | [StrategyBeamGlmrUsdcLp](https://blockscout.moonbeam.network/address/0x49547008F265620B4629D98951A963b1fcaBf162/transactions) |
+| 13 | beamJar 2g  | [BeamUsdcUsdt](https://blockscout.moonbeam.network/address/0xA35B2c07Cb123EA5E1B9c7530d0812e7e03eC3c1/transactions) | [pBeamUsdcUsdt](https://blockscout.moonbeam.network/address/0xE6e02865d8E6DF9b529691204FBC630159e7a9de/transactions) | [StrategyBeamUsdcUsdtLp](https://blockscout.moonbeam.network/address/0x148E7Ddadf7913b7B6a901Fb3A13E83f8E22a8a6/transactions) |
+
+
+---
+
