@@ -230,6 +230,8 @@ Timelock: [0x63A991b9c34D2590A411584799B030414C9b0D6F](https://polygonscan.com/a
 
 Controller: [0x83074F0aB8EDD2c1508D3F657CeB5F27f6092d09](https://polygonscan.com/address/0x83074F0aB8EDD2c1508D3F657CeB5F27f6092d09)
 
+Controller (Uni V3): [0x90Ee5481A78A23a24a4290EEc42E8Ad0FD3B4AC3](https://polygonscan.com/address/0x90Ee5481A78A23a24a4290EEc42E8Ad0FD3B4AC3#code)
+
 Strategist: [0xacfe4511ce883c14c4ea40563f176c3c09b4c47c](https://polygonscan.com/address/0xacfe4511ce883c14c4ea40563f176c3c09b4c47c)
 
 Multi-sig Treasury & Governance: [0xEae55893cC8637c16CF93D43B38aa022d689Fa62](https://polygonscan.com/address/0xEae55893cC8637c16CF93D43B38aa022d689Fa62)
