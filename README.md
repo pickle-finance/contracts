@@ -238,6 +238,10 @@ Multi-sig Treasury & Governance: [0xEae55893cC8637c16CF93D43B38aa022d689Fa62](ht
 
 Vault Registry: [0x3419D74F5909e7579C1259f6638F82143bd536B1](https://polygonscan.com/address/0x3419D74F5909e7579C1259f6638F82143bd536B1)
 
+Keeper Contract: [0xCd2e473DD506DfaDeeA81371053c307a24C05e6D](https://polygonscan.com/address/0xCd2e473DD506DfaDeeA81371053c307a24C05e6D)
+
+Keeper Registry: [0x7b3EC232b08BD7b4b3305BE0C044D907B2DF960B](https://polygonscan.com/address/0x7b3EC232b08BD7b4b3305BE0C044D907B2DF960B)
+
 ---
 
 ## Pickle Jars (pJars - Polygon)
@@ -263,6 +267,11 @@ Vault Registry: [0x3419D74F5909e7579C1259f6638F82143bd536B1](https://polygonscan
 | 12 | polyJar 7a | [SushiDinoUsdc](https://polygonscan.com/address/0x3324af8417844e70b81555A6D1568d78f4D4Bf1f) | [pSLPDinoUsdc](https://polygonscan.com/address/0xC8450922d18793AD97C401D65BaE8A83aE5353a8) | [StrategySushiDinoUsdc](https://polygonscan.com/address/0x95a1fBB2319723CBeAa8e13436ebd1BF6Bf08589) |
 | 13 | polyJar 7b | [SushiDinoEth](https://polygonscan.com/address/0x9f03309A588e33A239Bf49ed8D68b2D45C7A1F11) | [pSLPDinoEth](https://polygonscan.com/address/0x1cCDB8152Bb12aa34e5E7F6C9c7870cd6C45E37F) | [StrategySushiDinoEth](https://polygonscan.com/address/0x72A8e9AF512F7857C43A8Bc7712C981Eab5C9FE6) |
 | 16 | polyJar 7c | [SushiUsdcWork](https://polygonscan.com/address/0xAb0454B98dAf4A02EA29292E6A8882FB2C787DD4) | [pSLPUsdcWork](https://polygonscan.com/address/0xd170f0a8629a6f7a1e330d5fc455d96e54c09675) | [StrategySushiUsdcWork](https://polygonscan.com/address/0xc24f7e1c15975eb95f9da7c08380c7ba9bbac0dd) |
+| 22 | polyJar U3a | [Univ3UsdcEth](https://polygonscan.com/address/0x45dDa9cb7c25131DF268515131f647d726f50608) | [pUniv3UsdcEth](https://polygonscan.com/address/0x75415BF29f054Ab9047D26501Ad5ef93B5364eb0) | [StrategyUniv3UsdcEth](https://polygonscan.com/address/0xcDF83A6878C50AD403dF0D68F229696a70972bEf) |
+| 29 | polyJar U3b | [Univ3MaticEth](https://polygonscan.com/address/0x167384319B41F7094e62f7506409Eb38079AbfF8) | [pUniv3MaticEth](https://polygonscan.com/address/0x925b6f866AeB88131d159Fc790b9FC8203621B3C) | [StrategyUniv3MaticEth](https://polygonscan.com/address/0x1C170D888D71aC85732609Bd8470D3BBe8e632A7) |
+| 30 | polyJar U3c | [Univ3MaticUsdc](https://polygonscan.com/address/0x88f3C15523544835fF6c738DDb30995339AD57d6) | [pUniv3MatcUsdc](https://polygonscan.com/address/0x09e4E5fc62d8ae06fD44b3527235693f29fda852) | [StrategyUniv3MatcUsdc](https://polygonscan.com/address/0xf7Cd34FB978277D220E22570A1F208294f98AF92) |
+| 25 | polyJar U3d | [Univ3UsdcUsdt](https://polygonscan.com/address/0x3F5228d0e7D75467366be7De2c31D0d098bA2C23) | [pUniv3UsdcUsdt](https://polygonscan.com/address/0x6ddCE484E929b2667C604f6867A4a7b3d344A917) | [StrategyUniv3UsdcUsdt](https://polygonscan.com/address/0x5BEF03597A205F54DB1769424008aEC11e8b0dCB) |
+| 26 | polyJar U3e | [Univ3WbtcEth](https://polygonscan.com/address/0x50eaEDB835021E4A108B7290636d62E9765cc6d7) | [pUniv3WbtcEth](https://polygonscan.com/address/0xf4b1635f6B71D7859B4184EbDB5cf7321e828055) | [StrategyUniv3WbtcEth](https://polygonscan.com/address/0x3Bae730889B69D049e375431F80c61EF7A198296) |
 
 ---
 
