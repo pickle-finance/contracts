@@ -339,6 +339,7 @@ Vault Registry: [0x63292afc5567c19738e2ed6aedc840e5abca910c](https://arbiscan.io
 | 7 | Arbi 4a | [BalancerTricrypto](https://arbiscan.io/address/0x64541216bafffeec8ea535bb71fbc927831d0595) | [pBalancerTricrypto](https://arbiscan.io/address/0x0be790c83648c28eD285fee5E0BD79D1d57AAe69) | [StrategyBalancerTricrypto](https://arbiscan.io/address/0xd7ede968447ec50a210ec88f9b43b6206c52481d) |
 | 10 | Arbi 4b | [BalancerPickleEth](https://arbiscan.io/address/0xc2F082d33b5B8eF3A7E3de30da54EFd3114512aC) | [pBalancerPickleEth](https://arbiscan.io/address/0x979Cb85f2fe4B6036c089c554c91fdfB7158bB28) | [StrategyBalancerPickleEth](https://arbiscan.io/address/0xc8E41bf27B401BB1585362cfB20106361FCeC67a) |
 | 11 | Arbi 4c | [BalancerBalancerEth](https://arbiscan.io/address/0xcC65A812ce382aB909a11E434dbf75B34f1cc59D) | [pBalancerBalancerEth](https://arbiscan.io/address/0x46573375eEDA7979e19fAEEdd7eF2843047D9E0d) | [StrategyBalancerBalancerEth](https://arbiscan.io/address/0x86D36e2c6c3d7EB7a740CF136D37a9a0EdB4fA8D) |
+| 12 | Arbi 5a | [BalancerVestaEth](https://arbiscan.io/address/0xC61ff48f94D801c1ceFaCE0289085197B5ec44F0) | [pBalancerVestaEth](https://arbiscan.io/address/0x0c02883103e64b62c4b52ABe7E743Cc50EB2D4C7) | [StrategyBalancerVestaEth](https://arbiscan.io/address/0x2752513320580D76AC2244e9b73fc981A5fFB3f9) |
 
 ---
 
