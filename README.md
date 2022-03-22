@@ -88,6 +88,8 @@ SmartWalletChecker: [0x2ff4f44f86f49d45a1c3626bab9d222e84e9e78f](https://ethersc
 | pUNIv3 LOOKS/ETH | [0xcfcc3f6fd9f627d5ebbbd9e9b639b35f35a62ecf](https://etherscan.io/address/0xcfcc3f6fd9f627d5ebbbd9e9b639b35f35a62ecf) |
 | pUNIv3 USDC/USDT | [0xfe7a1dad74f1cbee137353d52b4a42936c54e28c](https://etherscan.io/address/0xfe7a1dad74f1cbee137353d52b4a42936c54e28c) |
 | pUNIv3 WBTC/ETH | [0xcb405e52b8cb9276d5cd01d6b5f7135f53c5535d](https://etherscan.io/address/0xcb405e52b8cb9276d5cd01d6b5f7135f53c5535d) |
+| pUNIv3 PICKLE/ETH | [0xc0a78102caA4Ed3b64bB39DFC935D744E940d67A](https://etherscan.io/address/0xc0a78102caA4Ed3b64bB39DFC935D744E940d67A) |
+| pUNIv3 FRAX/USDC | [0x6092cdE5762FA9F5c8D081fb0c5eD23601f0F400](https://etherscan.io/address/0x6092cdE5762FA9F5c8D081fb0c5eD23601f0F400) |
 
 
 ---
@@ -106,6 +108,8 @@ dill: [0xbBCf169eE191A1Ba7371F30A1C344bFC498b29Cf](https://etherscan.io/address/
 feeDistributor: [0x74C6CadE3eF61d64dcc9b97490d9FbB231e4BdCc](https://etherscan.io/address/0x74C6CadE3eF61d64dcc9b97490d9FbB231e4BdCc)
 
 gaugeProxy: [0x2e57627ACf6c1812F99e274d0ac61B786c19E74f](https://etherscan.io/address/0x2e57627ACf6c1812F99e274d0ac61B786c19E74f)
+
+treasury: [0x066419eaef5de53cc5da0d8702b990c5bc7d1ab3](https://etherscan.io/address/0x066419eaef5de53cc5da0d8702b990c5bc7d1ab3)
 
 ---
 
@@ -172,6 +176,8 @@ gaugeProxy: [0x2e57627ACf6c1812F99e274d0ac61B786c19E74f](https://etherscan.io/ad
 | pJar U3e | [UniV3 LOOKS/ETH 0.3%](https://etherscan.io/address/0x4b5Ab61593A2401B1075b90c04cBCDD3F87CE011) | [pUniV3 LOOKS/ETH 0.3%](https://etherscan.io/address/0x0A3a5764945E29E38408637bC659981f0172b961) | [StrategyEthLooksUniV3](https://etherscan.io/address/0x3f32d74f0242E9C7D3A03F13fF6C4F27e80AE13D) |
 | pJar U3f | [UniV3 USDC/USDT 0.01%](https://etherscan.io/address/0x3416cF6C708Da44DB2624D63ea0AAef7113527C6) | [pUniV3 USDC/USDT 0.01%](https://etherscan.io/address/0x563c77b40c7f08bA735426393Cf5f0e527D16C10) | [StrategyUsdcUsdtUniV3](https://etherscan.io/address/0x5970Aa9eB86b26Db7b5961726Dd0e25F8a91332D) |
 | pJar U3g | [UniV3 WBTC/ETH 0.05%](https://etherscan.io/address/0x4585FE77225b41b697C938B018E2Ac67Ac5a20c0) | [pUniV3 WBTC/ETH 0.05%](https://etherscan.io/address/0xAaCDaAad9a9425bE2d666d08F741bE4F081C7ab1) | [StrategyWbtcEthUniV3](https://etherscan.io/address/0xae2e6daA0FD5c098C8cE87Df573E32C9d6493384) |
+| pJar U3h | [UniV3 PICKLE/ETH 1%](https://etherscan.io/address/0x11c4D3b9cd07807F455371d56B3899bBaE662788) | [pUniV3 PICKLE/ETH 1%](https://etherscan.io/address/0x575a9E386c33732880DEF8BE1BAD9dbc5dDDf7D7) | [StrategyEthPickleUniV3](https://etherscan.io/address/0x2a7D0dAECabb986050045fA640FE9a617E550F4c) |
+| pJar U3i | [UniV3 FRAX/USDC](https://etherscan.io/address/0xc63B0708E2F7e69CB8A1df0e1389A98C35A76D52) | [pUniV3 FRAX/USDC](https://etherscan.io/address/0x7f3514CBC6825410Ca3fA4deA41d46964a953Afb) | [StrategyFraxUsdcUniV3](https://etherscan.io/address/0x68d467443529f4cC24055ff244826F624dbEff19) |
 
 ---
 
@@ -206,6 +212,8 @@ masterChef: [0x20B2a3fc7B13cA0cCf7AF81A68a14CB3116E8749](https://polygonscan.com
 controller: [0x83074F0aB8EDD2c1508D3F657CeB5F27f6092d09](https://polygonscan.com/address/0x83074F0aB8EDD2c1508D3F657CeB5F27f6092d09)
 
 minichef: [0x20B2a3fc7B13cA0cCf7AF81A68a14CB3116E8749](https://polygonscan.com/address/0x20B2a3fc7B13cA0cCf7AF81A68a14CB3116E8749)
+
+treasury: [0xeae55893cc8637c16cf93d43b38aa022d689fa62](https://polygonscan.com/address/0xeae55893cc8637c16cf93d43b38aa022d689fa62)
 
 ---
 
@@ -253,6 +261,8 @@ controller: [0xcf05d96b4c6c5a87b73f5f274dce1085bc7fdcc4](https://www.oklink.com/
 
 minichef: [0x0000000000000000000000000000000000000000](https://www.oklink.com/en/oec/address/0x0000000000000000000000000000000000000000)
 
+treasury: [0xaCfE4511CE883C14c4eA40563F176C3C09b4c47C](https://www.oklink.com/en/oec/address/0xaCfE4511CE883C14c4eA40563F176C3C09b4c47C)
+
 ---
 
 ## Pickle Jars (pJars - OKEx)
@@ -284,6 +294,8 @@ masterChef: [0x7ecc7163469f37b777d7b8f45a667314030ace24](https://arbiscan.io/add
 controller: [0x55d5bcef2bfd4921b8790525ff87919c2e26bd03](https://arbiscan.io/address/0x55d5bcef2bfd4921b8790525ff87919c2e26bd03)
 
 minichef: [0x7ecc7163469f37b777d7b8f45a667314030ace24](https://arbiscan.io/address/0x7ecc7163469f37b777d7b8f45a667314030ace24)
+
+treasury: [0xf02ceb58d549e4b403e8f85fbbaee4c5dfa47c01](https://arbiscan.io/address/0xf02ceb58d549e4b403e8f85fbbaee4c5dfa47c01)
 
 ---
 
@@ -342,6 +354,8 @@ controller: [0xc3f393fb40f8cc499c1fe7fa5781495dc6fac9e9](https://moonriver.moons
 
 minichef: [0x0000000000000000000000000000000000000000](https://moonriver.moonscan.io/address/0x0000000000000000000000000000000000000000)
 
+treasury: [0xaCfE4511CE883C14c4eA40563F176C3C09b4c47C](https://moonriver.moonscan.io/address/0xaCfE4511CE883C14c4eA40563F176C3C09b4c47C)
+
 ---
 
 ## Pickle Jars (pJars - Moonriver)
@@ -397,6 +411,7 @@ minichef: [0x0000000000000000000000000000000000000000](https://cronos.crypto.org
 | --- | ---  | --- | --- | --- |
 | - | croJar 1a | [VVS CRO/BIFI](https://cronos.crypto.org/explorer/address/0x1803E360393A472beC6E1A688BDF7048d3076b1A) | [pVVS CRO/BIFI](https://cronos.crypto.org/explorer/address/0xF125357f05c75F9beEA0Cc721D7a2A0eA03aaa63) | [StrategyCroBifiLp](https://cronos.crypto.org/explorer/address/0xeA460D7e794e49D395eF01A523F3Fd262dd49279) |
 | - | croJar 1b | [VVS CRO/DAI](https://cronos.crypto.org/explorer/address/0x3Eb9FF92e19b73235A393000C176c8bb150F1B20) | [pVVS CRO/DAI](https://cronos.crypto.org/explorer/address/0x4Dc96fe980B2D14C7A74FCCf5E83DC6943dF8380) | [StrategyCroDaiLp](https://cronos.crypto.org/explorer/address/0x069391c5EB635a7491D5FA96860E576Da6A0C5F9) |
+| - | croJar 1c | [VVS CRO/ETH](https://cronos.crypto.org/explorer/address/0xA111C17f8B8303280d3EB01BBcd61000AA7F39F9) | [pVVS CRO/ETH](https://cronos.crypto.org/explorer/address/0x55D5BCEf2BFD4921B8790525FF87919c2E26bD03) | [StrategyCroEthLp](https://cronos.crypto.org/explorer/address/0x9Ab713b3ed31BC2502A7a2FB68eba7CF5211D5dd) |
 | - | croJar 1d | [VVS CRO/SHIB](https://cronos.crypto.org/explorer/address/0xc9eA98736dbC94FAA91AbF9F4aD1eb41e7fb40f4) | [pVVS CRO/SHIB](https://cronos.crypto.org/explorer/address/0x5a10B857Fb05Ce8E71440CA063AEb504AeDE5535) | [StrategyCroShibLp](https://cronos.crypto.org/explorer/address/0xAc6b829E1B22F2d1b607e1644D306d98321bA5D5) |
 | - | croJar 1e | [VVS CRO/USDC](https://cronos.crypto.org/explorer/address/0xe61Db569E231B3f5530168Aa2C9D50246525b6d6) | [pVVS CRO/USDC](https://cronos.crypto.org/explorer/address/0x795f9EE745Ed4a3d3597304C494b95B31894849F) | [StrategyCroUsdcLp](https://cronos.crypto.org/explorer/address/0xd0B509D538Dd580786D2beD1070DB4c12b5639C5) |
 | - | croJar 1f | [VVS CRO/USDT](https://cronos.crypto.org/explorer/address/0x3d2180DB9E1B909f35C398BC39EF36108C0FC8c3) | [pVVS CRO/USDT](https://cronos.crypto.org/explorer/address/0x4349b140F40e857ffC9981536e627Bca54976e56) | [StrategyCroUsdtLp](https://cronos.crypto.org/explorer/address/0x8c8Bc462235d35A76b6Aea7f162aC8D389224a86) |
@@ -404,8 +419,13 @@ minichef: [0x0000000000000000000000000000000000000000](https://cronos.crypto.org
 | - | croJar 1h | [VVS VVS/USDT](https://cronos.crypto.org/explorer/address/0x280aCAD550B2d3Ba63C8cbff51b503Ea41a1c61B) | [pVVS VVS/USDT](https://cronos.crypto.org/explorer/address/0x32645B27007167E6089ACD2d7D5d6484797b4B68) | [StrategyVVSUsdtLp](https://cronos.crypto.org/explorer/address/0x5c41e2Ba7f9A368e9ff83b849589699322Bb6a04) |
 | - | croJar 1i | [VVS CRO/VVS](https://cronos.crypto.org/explorer/address/0xbf62c67eA509E86F07c8c69d0286C0636C50270b) | [pVVS CRO/VVS](https://cronos.crypto.org/explorer/address/0x5F5572fa2EFd7d9a2eccfC6bA4a1b4b8942bDd77) | [StrategyCroVVSLp](https://cronos.crypto.org/explorer/address/0x2189F95cff292889B5d1697ef964Ea47d988AB1f) |
 | - | croJar 1j | [VVS CRO/BTC](https://cronos.crypto.org/explorer/address/0x8F09fFf247B8fDB80461E5Cf5E82dD1aE2EBd6d7) | [pVVS CRO/BTC](https://cronos.crypto.org/explorer/address/0xb289Bedd68F6b3cFd221C63C0f56BC0cc9430473) | [StrategyCroBtcLp](https://cronos.crypto.org/explorer/address/0xfCCD91017E0E9BD998B5A9B8ADfC3118950B895B) |
-| - | croJar 1k | [VVS CRO/VVS](https://cronos.crypto.org/explorer/address/0x39cC0E14795A8e6e9D02A21091b81FE0d61D82f9) | [pVVS CRO/VVS](https://cronos.crypto.org/explorer/address/0x40F80625feA504Fb32eD0e6e7450A77fFF114585) | [StrategyUsdcUsdtLp](https://cronos.crypto.org/explorer/address/0xaA459A8B2ce9EF01cC76D2feeF78d4Aa2720969c) |
-| - | croJar 1c | [VVS CRO/ETH](https://cronos.crypto.org/explorer/address/0xA111C17f8B8303280d3EB01BBcd61000AA7F39F9) | [pVVS CRO/ETH](https://cronos.crypto.org/explorer/address/0x55D5BCEf2BFD4921B8790525FF87919c2E26bD03) | [StrategyCroEthLp](https://cronos.crypto.org/explorer/address/0x9Ab713b3ed31BC2502A7a2FB68eba7CF5211D5dd) |
+| - | croJar 1k | [VVS USDC/USDT](https://cronos.crypto.org/explorer/address/0x39cC0E14795A8e6e9D02A21091b81FE0d61D82f9) | [pVVS USDC/USDT](https://cronos.crypto.org/explorer/address/0x40F80625feA504Fb32eD0e6e7450A77fFF114585) | [StrategyUsdcUsdtLp](https://cronos.crypto.org/explorer/address/0xaA459A8B2ce9EF01cC76D2feeF78d4Aa2720969c) |
+| - | croJar 1l | [VVS CRO/DOGE](https://cronos.crypto.org/explorer/address/0x2A560f2312CB56327AD5D65a03F1bfEC10b62075) | [pVVS CRO/DOGE](https://cronos.crypto.org/explorer/address/0x17ad0E59D16aA8c70E703fd83D7D05d7952da50f) | [StrategyVvsCroDogeLp](https://cronos.crypto.org/explorer/address/0x6c824be727b5B89FAD4Eeb3c32740AF5948bEAEA) |
+| - | croJar 1m | [VVS CRO/ATOM](https://cronos.crypto.org/explorer/address/0x9e5bd780dff875Dd85848a65549791445AE25De0) | [pVVS CRO/ATOM](https://cronos.crypto.org/explorer/address/0x9365AfC6522ADF40AfEB83bad8EaeA0aB56e6264) | [StrategyVvsCroAtomLp](https://cronos.crypto.org/explorer/address/0x9562dc2101Ec9985BB684E9407df88c63E9f751a) |
+| - | croJar 1n | [VVS CRO/TONIC](https://cronos.crypto.org/explorer/address/0x4B377121d968Bf7a62D51B96523d59506e7c2BF0) | [pVVS CRO/TONIC](https://cronos.crypto.org/explorer/address/0x60Ad579Fb20c8896b7b98E800cBA9e196E6eaA44) | [StrategyVvsCroTonicLp](https://cronos.crypto.org/explorer/address/0xa6CF0D228A421e5083b1eF010e6C0A15641E8Cb7) |
+| - | croJar 1o | [VVS VVS/SINGLE](https://cronos.crypto.org/explorer/address/0x6f72a3f6dB6F486B50217f6e721f4388994B1FBe) | [pVVS VVS/SINGLE](https://cronos.crypto.org/explorer/address/0xb1bcBC1B4F7E2B8288134a12b6F2d0193E9ac100) | [StrategyVvsSingleLp](https://cronos.crypto.org/explorer/address/0xeD3A64180ab7bc89b1343D3CfE838D35fA26FfF9) |
+| - | croJar 1p | [VVS USDC/SINGLE](https://cronos.crypto.org/explorer/address/0x0fBAB8A90CAC61b481530AAd3a64fE17B322C25d) | [pVVS USDC/SINGLE](https://cronos.crypto.org/explorer/address/0xb96cc3948d32f28AA48bf66E800027a224785868) | [StrategyVvsSingleUsdcLp](https://cronos.crypto.org/explorer/address/0x8514346F8E07d57beA5401c557f57cDb93B98f3E) |
+| - | croJar 1q | [VVS VVS/TONIC](https://cronos.crypto.org/explorer/address/0xA922530960A1F94828A7E132EC1BA95717ED1eab) | [pVVS VVS/TONIC](https://cronos.crypto.org/explorer/address/0xBC1Ad38ef7261A15F519b73F868E0b852c6465B7) | [StrategyVvsTonicLp](https://cronos.crypto.org/explorer/address/0x28D06a7b4122855CDf5eD7C2daa048bFefE02455) |
 
 ---
 
@@ -420,6 +440,8 @@ masterChef: [0x13cc0A2644f4f727db23f5B9dB3eBd72134085b7](https://explorer.mainne
 controller: [0xdc954e7399e9ADA2661cdddb8D4C19c19E070A8E](https://explorer.mainnet.aurora.dev/address/0xdc954e7399e9ADA2661cdddb8D4C19c19E070A8E)
 
 minichef: [0x13cc0A2644f4f727db23f5B9dB3eBd72134085b7](https://explorer.mainnet.aurora.dev/address/0x13cc0A2644f4f727db23f5B9dB3eBd72134085b7)
+
+treasury: [0xaCfE4511CE883C14c4eA40563F176C3C09b4c47C](https://explorer.mainnet.aurora.dev/address/0xaCfE4511CE883C14c4eA40563F176C3C09b4c47C)
 
 ---
 
@@ -494,6 +516,8 @@ minichef: [0x22cE2F89d2efd9d4eFba4E0E51d73720Fa81A150](https://andromeda-explore
 
 rewarder: [0x57A319FBE114DC8bb0F1BaAaFB37FA6F308C639F](https://andromeda-explorer.metis.io/address/0x57A319FBE114DC8bb0F1BaAaFB37FA6F308C639F)
 
+treasury: [0xaCfE4511CE883C14c4eA40563F176C3C09b4c47C](https://andromeda-explorer.metis.io/address/0xaCfE4511CE883C14c4eA40563F176C3C09b4c47C)
+
 ---
 
 ## Pickle Jars (pJars - Metis)
@@ -513,7 +537,8 @@ rewarder: [0x57A319FBE114DC8bb0F1BaAaFB37FA6F308C639F](https://andromeda-explore
 | - | metJar 1j | [NET USDT/USDC](https://andromeda-explorer.metis.io/address/0x1caD5f8f5D4C0AD49646B2565CC0cA725E4280EA) | [pNET USDT/USDC](https://andromeda-explorer.metis.io/address/0x5b64b5382d68a934004578d6bE3e482b455EDfa2) | [StrategyNettUsdtUsdcLp](https://andromeda-explorer.metis.io/address/0x7b8139Fb52C12e28831aDacCC205a6fA1a5A1afb) |
 | - | metJar 1l | [NET WBTC/METIS](https://andromeda-explorer.metis.io/address/0xE0cc462fe369146BAef2306EC6B4BF26704eE84e) | [pNET WBTC/METIS](https://andromeda-explorer.metis.io/address/0x56A4ef91C841054B03a963b644F31F51F4Dcb1A5) | [StrategyNettWbtcMetisLp](https://andromeda-explorer.metis.io/address/0xEBBd2235C8458d66EEB310cB3de9715066a571AB) |
 | - | metJar 1m | [NET WBTC/USDT](https://andromeda-explorer.metis.io/address/0xAd9b903451dfdc3D79d2021289F9d864fd8c8119) | [pNET WBTC/USDT](https://andromeda-explorer.metis.io/address/0xC717887F87E9Eda909F85aD78682bc020f5232F1) | [StrategyNettWbtcUsdtLp](https://andromeda-explorer.metis.io/address/0xb0C5E2b159735c164344D274E55f9EDaBD57661b) |
-| - | metJar 1n | [NET METIS/RELAY](https://andromeda-explorer.metis.io/address/0xA58bd557BFBC12f8cEaCcc6E1668F5FBFB2118BB) | [pNET METIS/RELAY](https://andromeda-explorer.metis.io/address/0xF2EB2FFCF204100ECB63069e67D767e7E8d4A972) | [Strategy-NET METIS/RELAY](undefined) |
+| - | metJar 1o | [NET BYTE/USDC](https://andromeda-explorer.metis.io/address/0x3Ab6be89ED5A0d4FDD412c246F5e6DdD250Dd45c) | [pNET BYTE/USDC](https://andromeda-explorer.metis.io/address/0xC92914c1f1dF2284D9A3C5BB480089311Ed49358) | [StrategyNettBinaryDAOUsdcLp](https://andromeda-explorer.metis.io/address/0xf88d3EB1aa586c2F2213C6c681f6223f679184F1) |
+| - | metJar 1p | [NET BUSD/USDC](https://andromeda-explorer.metis.io/address/0x8014c801F6cF32445D503f7BaC30976B3161eE52) | [pNET BUSD/USDC](https://andromeda-explorer.metis.io/address/0xFEfBB3CeacAB3a682C34E25A1b4A330771D46b0D) | [StrategyNettBusdUsdcLp](https://andromeda-explorer.metis.io/address/0xA947B4387B4110000Bd1Ca4C5f62C3B3152c1662) |
 | - | metJar 2a | [TETHYS TETHYS/METIS](https://andromeda-explorer.metis.io/address/0xc9b290FF37fA53272e9D71A0B13a444010aF4497) | [pTETHYS TETHYS/METIS](https://andromeda-explorer.metis.io/address/0xC3f393FB40F8Cc499C1fe7FA5781495dc6FAc9E9) | [StrategyTethysMetisLp](https://andromeda-explorer.metis.io/address/0x627c32F07C4C789c0FB2A7853aF7085aF653D8b3) |
 | - | metJar 2b | [TETHYS ETH/METIS](https://andromeda-explorer.metis.io/address/0xEE5adB5b0DfC51029Aca5Ad4Bc684Ad676b307F7) | [pTETHYS ETH/METIS](https://andromeda-explorer.metis.io/address/0xC33d6596328935FA558A8d501f8fb15eD56ff879) | [StrategyTethysEthMetisLp](https://andromeda-explorer.metis.io/address/0x406D931162ccCA5feACE185Df198E85BD2906040) |
 | - | metJar 2c | [TETHYS METIS/USDC](https://andromeda-explorer.metis.io/address/0xDd7dF3522a49e6e1127bf1A1d3bAEa3bc100583B) | [pTETHYS METIS/USDC](https://andromeda-explorer.metis.io/address/0x12334d225c8Efc3eFFe56A5CeF5aEDFEf3f6ca7F) | [StrategyTethysMetisUsdcLp](https://andromeda-explorer.metis.io/address/0x2f1e21Ea0DD575567476599f5f6510DC624Bda3d) |
@@ -536,6 +561,8 @@ controller: [0x95ca4584eA2007D578fa2693CCC76D930a96d165](https://moonbeam.moonsc
 
 minichef: [0x0000000000000000000000000000000000000000](https://moonbeam.moonscan.io/address/0x0000000000000000000000000000000000000000)
 
+treasury: [0xaCfE4511CE883C14c4eA40563F176C3C09b4c47C](https://moonbeam.moonscan.io/address/0xaCfE4511CE883C14c4eA40563F176C3C09b4c47C)
+
 ---
 
 ## Pickle Jars (pJars - Moonbeam)
@@ -557,11 +584,11 @@ minichef: [0x0000000000000000000000000000000000000000](https://moonbeam.moonscan
 | - | beamJar 2e | [BEAM GLMR/GLINT](https://moonbeam.moonscan.io/address/0x99588867e817023162F4d4829995299054a5fC57) | [pBEAM GLMR/GLINT](https://moonbeam.moonscan.io/address/0xEE4587694b553aE065337ea4BCdb0C43e83bB3f2) | [StrategyGlintGlmrLp](https://moonbeam.moonscan.io/address/0x0b4a6FDB7720a70DD360c1531660C20850546304) |
 | - | beamJar 2f | [BEAM GLMR/USDC](https://moonbeam.moonscan.io/address/0xb929914B89584b4081C7966AC6287636F7EfD053) | [pBEAM GLMR/USDC](https://moonbeam.moonscan.io/address/0xA075d810fD05c1AB5769b08Dfd34693Ddfa190F3) | [StrategyGlintUsdcGlmrLp](https://moonbeam.moonscan.io/address/0x49547008F265620B4629D98951A963b1fcaBf162) |
 | - | beamJar 2g | [BEAM USDC/USDT](https://moonbeam.moonscan.io/address/0xA35B2c07Cb123EA5E1B9c7530d0812e7e03eC3c1) | [pBEAM USDC/USDT](https://moonbeam.moonscan.io/address/0xE6e02865d8E6DF9b529691204FBC630159e7a9de) | [StrategyGlintUsdcUsdtLp](https://moonbeam.moonscan.io/address/0x148E7Ddadf7913b7B6a901Fb3A13E83f8E22a8a6) |
-| - | beamJar 3a | [FLARE FLARE/GLMR](https://moonbeam.moonscan.io/address/0x26A2abD79583155EA5d34443b62399879D42748A) | [pFLARE FLARE/GLMR](https://moonbeam.moonscan.io/address/0xD07796f2C91AB65ebBA43e3A93F36f800946d2BB) | [StrategyFlareFlareGlmrLp](https://moonbeam.moonscan.io/address/0xC7b58Fa7Bb3aC9Cf68163D0E6e0d533F441cb921) |
+| - | beamJar 3a | [FLARE FLARE/GLMR](https://moonbeam.moonscan.io/address/0x26A2abD79583155EA5d34443b62399879D42748A) | [pFLARE FLARE/GLMR](https://moonbeam.moonscan.io/address/0xD07796f2C91AB65ebBA43e3A93F36f800946d2BB) | [StrategyFlareFlareGlmrLp](https://moonbeam.moonscan.io/address/0xb1bcBC1B4F7E2B8288134a12b6F2d0193E9ac100) |
 | - | beamJar 3b | [FLARE FLARE/USDC](https://moonbeam.moonscan.io/address/0x976888647affb4b2d7Ac1952cB12ca048cD67762) | [pFLARE FLARE/USDC](https://moonbeam.moonscan.io/address/0x751a2f3b93b9c1af88e34d123ebc4d5541f6c2e4) | [StrategyFlareFlareUsdcLp](https://moonbeam.moonscan.io/address/0xFc1C6ccd6775c533a1c8BA32910e7F2fCD75F6E3) |
 | - | beamJar 3c | [FLARE GLMR/MOVR](https://moonbeam.moonscan.io/address/0xa65949fa1053903fcc019ac21b0335aa4b4b1bfa) | [pFLARE GLMR/MOVR](https://moonbeam.moonscan.io/address/0x3657dE6D8F500a4e91370Fb8c738D33C5010541f) | [StrategyFlareGlmrMovrLp](https://moonbeam.moonscan.io/address/0x3b1F3D4D3f7Fe49D7EC241D554FBA69Dc3D3631E) |
 | - | beamJar 3d | [FLARE GLMR/USDC](https://moonbeam.moonscan.io/address/0xAb89eD43D10c7CE0f4D6F21616556AeCb71b9c5f) | [pFLARE GLMR/USDC](https://moonbeam.moonscan.io/address/0x9d2F70c5aABc067beaF0Af2367007DF8cB7C497F) | [StrategyFlareGlmrUsdcLp](https://moonbeam.moonscan.io/address/0x3925cF1f0110f98572b78f7f0C95b4B50a033B4a) |
-| - | beamJar 3e | [FLARE GLMR/ETH](https://moonbeam.moonscan.io/address/0xb521C0aCf67390C1364f1e940e44dB25828E5Ef9) | [pFLARE GLMR/ETH](https://moonbeam.moonscan.io/address/0xbD59171dA1c3a2624D60421bcb6c3c3270111656) | [StrategyFlareGlmrEthLp](https://moonbeam.moonscan.io/address/0x5be52aDF0C54598F0fA6f433B398492748Ecd588) |
+| - | beamJar 3e | [FLARE GLMR/ETH](https://moonbeam.moonscan.io/address/0xb521C0aCf67390C1364f1e940e44dB25828E5Ef9) | [pFLARE GLMR/ETH](https://moonbeam.moonscan.io/address/0xbD59171dA1c3a2624D60421bcb6c3c3270111656) | [StrategyFlareGlmrEthLp](https://moonbeam.moonscan.io/address/0x1925C5d72e4654E22445f955f42f6808a8470108) |
 | - | beamJar 3f | [FLARE GLMR/WBTC](https://moonbeam.moonscan.io/address/0xDF74D67a4Fe29d9D5e0bfAaB3516c65b21a5d7cf) | [pFLARE GLMR/WBTC](https://moonbeam.moonscan.io/address/0x45d287c9761E14D07f3fF45a733B9f8B0aFF1045) | [StrategyFlareGlmrWbtc](https://moonbeam.moonscan.io/address/0x60cE585Ae7c19F60053Cc085fa70eDc3e1535e3A) |
 
 ---
@@ -577,6 +604,8 @@ masterChef: [0x0000000000000000000000000000000000000000](https://explorer.optimi
 controller: [0xa1d43d97fc5f1026597c67805aa02aae558e0fef](https://explorer.optimism.io/address/0xa1d43d97fc5f1026597c67805aa02aae558e0fef)
 
 minichef: [0x0000000000000000000000000000000000000000](https://explorer.optimism.io/address/0x0000000000000000000000000000000000000000)
+
+treasury: [0x7A79e2e867d36a91Bb47e0929787305c95E793C5](https://explorer.optimism.io/address/0x7A79e2e867d36a91Bb47e0929787305c95E793C5)
 
 ---
 
@@ -602,6 +631,8 @@ masterChef: [0x0000000000000000000000000000000000000000](https://ftmscan.com/add
 controller: [0xc335740c951F45200b38C5Ca84F0A9663b51AEC6](https://ftmscan.com/address/0xc335740c951F45200b38C5Ca84F0A9663b51AEC6)
 
 minichef: [0x0000000000000000000000000000000000000000](https://ftmscan.com/address/0x0000000000000000000000000000000000000000)
+
+treasury: [0xe4ee7edddbebda077975505d11decb16498264fb](https://ftmscan.com/address/0xe4ee7edddbebda077975505d11decb16498264fb)
 
 ---
 
@@ -662,7 +693,7 @@ minichef: [0x0000000000000000000000000000000000000000](https://ftmscan.com/addre
 | - | fanJar 4g | [BEETX USDC/FTM/BTC/ETH](https://ftmscan.com/address/0xf3A602d30dcB723A74a0198313a7551FEacA7DAc) | [pBEETX USDC/FTM/BTC/ETH](https://ftmscan.com/address/0x179F487f5d735A1353E13A718e6C1030DC01E011) | [StrategyBeethovenUsdcFtmBtcEthLp](https://ftmscan.com/address/0x7d0B8f00601ABb5B6D1541213D913aDeECA7f75F) |
 | - | fanJar 5a | [SOLID vFTM/SEX](https://ftmscan.com/address/0xFCEC86aF8774d69e2e4412B8De3f4aBf1f671ecC) | [pSOLID vFTM/SEX](https://ftmscan.com/address/0xFc3c538931f97458c0F44E6852768A74175DB5C2) | [StrategySolidexSexWftmLp](https://ftmscan.com/address/0x934737e3bE86ad9581DCBC776D61414Bb41ba7f8) |
 | - | fanJar 5c | [SOLID sBTC/RENBTC](https://ftmscan.com/address/0x6058345A4D8B89Ddac7042Be08091F91a404B80b) | [pSOLID sBTC/RENBTC](https://ftmscan.com/address/0xC58902B6573082D4be4D1CA0D2Ea8b4Ed596870f) | [StrategySolidexStableWbtcRenbtcLp](https://ftmscan.com/address/0x53A96c7858f218a4218285ec7fd301fD1572B09B) |
-| - | fanJar 5d | [SOLID sUSDC/MIM](https://ftmscan.com/address/0xbcab7d083Cf6a01e0DdA9ed7F8a02b47d125e682) | [pSOLID sUSDC/MIM](https://ftmscan.com/address/0x6Bf1768482808C43853Dd5D864C3812BAbE7A939) | [StrategySolidexUsdcMimLp](https://ftmscan.com/address/0x2d5A18a747825971bEBE064168D339D6Efe6Fb9b) |
+| - | fanJar 5d | [SOLID sUSDC/MIM](https://ftmscan.com/address/0xbcab7d083Cf6a01e0DdA9ed7F8a02b47d125e682) | [pSOLID sUSDC/MIM](https://ftmscan.com/address/0x6Bf1768482808C43853Dd5D864C3812BAbE7A939) | [StrategySolidexStableUsdcMimLp](https://ftmscan.com/address/0x5EAa46Ac7C3Ca6876474C6E3F665f932d75E5e3a) |
 | - | fanJar 5e | [SOLID vFTM/TOMB](https://ftmscan.com/address/0x60a861Cd30778678E3d613db96139440Bd333143) | [pSOLID vFTM/TOMB](https://ftmscan.com/address/0x7aC8eB8158B1d50475FAC83bB77f24c0F6Df06f7) | [StrategySolidexVolatileWftmTombLp](https://ftmscan.com/address/0xC751289024AB01e426777Fb8Bae08484665fCDa3) |
 | - | fanJar 5f | [SOLID vFTM/CRV](https://ftmscan.com/address/0xED7Fd242ce91a541ABcaE52f3d617dacA7fe6e34) | [pSOLID vFTM/CRV](https://ftmscan.com/address/0xaa4191091973FA3FaB3fdEAE7a65062B46972581) | [StrategySolidexVolatileCrvWftmLp](https://ftmscan.com/address/0xBa427BE76bcCc43961d0Da7377c569C07C7B5Fe4) |
 | - | fanJar 5g | [SOLID vFXS/FRAX](https://ftmscan.com/address/0x4bBd8467ccd49D5360648CE14830f43a7fEB6e45) | [pSOLID vFXS/FRAX](https://ftmscan.com/address/0xC888126f9805975cCCE9A5eae5cbEdF163e2761d) | [StrategySolidexVolatileFxsFraxLp](https://ftmscan.com/address/0x3bAb294aD475005C6c35EF33AB37502102F2f527) |
@@ -683,7 +714,7 @@ minichef: [0x0000000000000000000000000000000000000000](https://ftmscan.com/addre
 | - | fanJar 5w | [SOLID vFTM/SOLIDSEX](https://ftmscan.com/address/0xa66901D1965F5410dEeB4d0Bb43f7c1B628Cb20b) | [pSOLID vFTM/SOLIDSEX](https://ftmscan.com/address/0x71D36Ee3D59413E9e5FD8FDF349D2f200fF9495f) | [StrategySolidexVolatileWftmSolidsexLp](https://ftmscan.com/address/0xCd573711686d8BEb4C39Ff46B8898C9B0330e6f3) |
 | - | fanJar 5x | [SOLID sUSDC/DAI](https://ftmscan.com/address/0xC0240Ee4405f11EFb87A00B432A8be7b7Afc97CC) | [pSOLID sUSDC/DAI](https://ftmscan.com/address/0x805A28E9F02C7CaB064E4c450904F8B336bD3E0b) | [StrategySolidexStableUsdcDaiLp](https://ftmscan.com/address/0xFaC84ad964c1Fc624c3760A185aBA6005B80f53B) |
 | - | fanJar 5y | [SOLID vFTM/SYN](https://ftmscan.com/address/0x8aa410d8B0Cc3dE48AAC8eB5d928646A00e6ff04) | [pSOLID vFTM/SYN](https://ftmscan.com/address/0xa6e8D4a3bE37b7bA214D55BDC9FeC5923766E7AE) | [StrategySolidexVolatileWftmSynLp](https://ftmscan.com/address/0xB4cB07AD2981861a3e7194E2B03548862B38A750) |
-| - | fanJar 5z | [SOLID vTAROT/XTAROT](https://ftmscan.com/address/0x4FE782133af0f7604B9B89Bf95893ADDE265FEFD) | [pSOLID vTAROT/XTAROT](https://ftmscan.com/address/0xE785318c44F7F013FdBa2E0DEf2a0381b5622e1D) | [StrategySolidexVolatileWftmTarotLp](https://ftmscan.com/address/0x1f40be6Be3Ca5c9CDeDA3de919Bdfda34E92aeE2) |
+| - | fanJar 5z | [SOLID vTAROT/XTAROT](https://ftmscan.com/address/0x4FE782133af0f7604B9B89Bf95893ADDE265FEFD) | [pSOLID vTAROT/XTAROT](https://ftmscan.com/address/0xE785318c44F7F013FdBa2E0DEf2a0381b5622e1D) | [StrategySolidexVolatileTarotXtarotLp](https://ftmscan.com/address/0x81267D1F8e6df8d7A7c86afCAB9b01657Cb2110A) |
 | - | fanJar 5aa | [SOLID sUSDC/DEI](https://ftmscan.com/address/0x5821573d8F04947952e76d94f3ABC6d7b43bF8d0) | [pSOLID sUSDC/DEI](https://ftmscan.com/address/0xe5F0A614d4C63f535D36a5871bf6dC3CA01C5d0c) | [StrategySolidexStableUsdcDeiLp](https://ftmscan.com/address/0xCAeD115C7973B33dAd8Cc032e3Ab670D87DC5C99) |
 | - | fanJar 5ab | [SOLID vFTM/RDL](https://ftmscan.com/address/0x5ef8f0bd4F071B0199603a28ec9343F3651999c0) | [pSOLID vFTM/RDL](https://ftmscan.com/address/0xac1201bd98E20F7231d22c82E3c5fA9d98EC30c7) | [StrategySolidexVolatileWftmRdlLp](https://ftmscan.com/address/0x7045D996Ec5bD40377831fFF26CF1B31969055BF) |
 | - | fanJar 5ac | [SOLID vGEIST/G3CRV](https://ftmscan.com/address/0x6c90B69aF6DBD929458497a8D1013Aa255ac71F1) | [pSOLID vGEIST/G3CRV](https://ftmscan.com/address/0xB155DbD56bBE5Fec5Ca6414e0e9Ef0b8691574e2) | [StrategySolidexVolatileG3crvGeistLp](https://ftmscan.com/address/0x067e35799315e58B5D25F9CF1Ce4E960FE60cb30) |
