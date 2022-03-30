@@ -90,6 +90,7 @@ SmartWalletChecker: [0x2ff4f44f86f49d45a1c3626bab9d222e84e9e78f](https://ethersc
 | pUNIv3 WBTC/ETH | [0xcb405e52b8cb9276d5cd01d6b5f7135f53c5535d](https://etherscan.io/address/0xcb405e52b8cb9276d5cd01d6b5f7135f53c5535d) |
 | pUNIv3 PICKLE/ETH | [0xc0a78102caA4Ed3b64bB39DFC935D744E940d67A](https://etherscan.io/address/0xc0a78102caA4Ed3b64bB39DFC935D744E940d67A) |
 | pUNIv3 FRAX/USDC | [0x6092cdE5762FA9F5c8D081fb0c5eD23601f0F400](https://etherscan.io/address/0x6092cdE5762FA9F5c8D081fb0c5eD23601f0F400) |
+| pUNIv3 COW/ETH | [0xbb813d44f8b5a4e033bdc126a9ff2800b7037230](https://etherscan.io/address/0xbb813d44f8b5a4e033bdc126a9ff2800b7037230) |
 
 
 ---
@@ -178,6 +179,7 @@ treasury: [0x066419eaef5de53cc5da0d8702b990c5bc7d1ab3](https://etherscan.io/addr
 | pJar U3g | [UniV3 WBTC/ETH 0.05%](https://etherscan.io/address/0x4585FE77225b41b697C938B018E2Ac67Ac5a20c0) | [pUniV3 WBTC/ETH 0.05%](https://etherscan.io/address/0xAaCDaAad9a9425bE2d666d08F741bE4F081C7ab1) | [StrategyWbtcEthUniV3](https://etherscan.io/address/0xae2e6daA0FD5c098C8cE87Df573E32C9d6493384) |
 | pJar U3h | [UniV3 PICKLE/ETH 1%](https://etherscan.io/address/0x11c4D3b9cd07807F455371d56B3899bBaE662788) | [pUniV3 PICKLE/ETH 1%](https://etherscan.io/address/0x575a9E386c33732880DEF8BE1BAD9dbc5dDDf7D7) | [StrategyEthPickleUniV3](https://etherscan.io/address/0x2a7D0dAECabb986050045fA640FE9a617E550F4c) |
 | pJar U3i | [UniV3 FRAX/USDC](https://etherscan.io/address/0xc63B0708E2F7e69CB8A1df0e1389A98C35A76D52) | [pUniV3 FRAX/USDC](https://etherscan.io/address/0x7f3514CBC6825410Ca3fA4deA41d46964a953Afb) | [StrategyFraxUsdcUniV3](https://etherscan.io/address/0x68d467443529f4cC24055ff244826F624dbEff19) |
+| pJar U3j | [UniV3 COW/ETH 1%](https://etherscan.io/address/0xFCfDFC98062d13a11cec48c44E4613eB26a34293) | [pUniV3 COW/ETH 1%](https://etherscan.io/address/0xf0Fb82757B9f8A3A3AE3524e385E2E9039633948) | [StrategyEthCowUniV3](https://etherscan.io/address/0xf87F9e06b46Eda441739180F5FfcfB6F5F82d910) |
 
 ---
 
