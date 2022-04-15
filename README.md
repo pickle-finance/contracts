@@ -92,7 +92,6 @@ SmartWalletChecker: [0x2ff4f44f86f49d45a1c3626bab9d222e84e9e78f](https://ethersc
 | pUNIv3 PICKLE/ETH | [0xc0a78102caA4Ed3b64bB39DFC935D744E940d67A](https://etherscan.io/address/0xc0a78102caA4Ed3b64bB39DFC935D744E940d67A) |
 | pUNIv3 FRAX/USDC | [0x6092cdE5762FA9F5c8D081fb0c5eD23601f0F400](https://etherscan.io/address/0x6092cdE5762FA9F5c8D081fb0c5eD23601f0F400) |
 | pUNIv3 COW/ETH | [0xbb813d44f8b5a4e033bdc126a9ff2800b7037230](https://etherscan.io/address/0xbb813d44f8b5a4e033bdc126a9ff2800b7037230) |
-| pUNIv3 APE/ETH | [0xefd78d7f70b776f47bf6da04bac838917fe10f71](https://etherscan.io/address/0xefd78d7f70b776f47bf6da04bac838917fe10f71) |
 | pSTG USDC | [0xa0dcf3c3b199dfc9d2774ec6a43d984e9bf0746a](https://etherscan.io/address/0xa0dcf3c3b199dfc9d2774ec6a43d984e9bf0746a) |
 | pSTG USDT | [0x59d6d2a944d6f4224a9f529560db6c8408cf577c](https://etherscan.io/address/0x59d6d2a944d6f4224a9f529560db6c8408cf577c) |
 
@@ -185,7 +184,6 @@ treasury: [0x066419eaef5de53cc5da0d8702b990c5bc7d1ab3](https://etherscan.io/addr
 | pJar U3h | [UniV3 PICKLE/ETH 1%](https://etherscan.io/address/0x11c4D3b9cd07807F455371d56B3899bBaE662788) | [pUniV3 PICKLE/ETH 1%](https://etherscan.io/address/0x575a9E386c33732880DEF8BE1BAD9dbc5dDDf7D7) | [StrategyEthPickleUniV3](https://etherscan.io/address/0x2a7D0dAECabb986050045fA640FE9a617E550F4c) |
 | pJar U3i | [UniV3 FRAX/USDC](https://etherscan.io/address/0xc63B0708E2F7e69CB8A1df0e1389A98C35A76D52) | [pUniV3 FRAX/USDC](https://etherscan.io/address/0x7f3514CBC6825410Ca3fA4deA41d46964a953Afb) | [StrategyFraxUsdcUniV3](https://etherscan.io/address/0x68d467443529f4cC24055ff244826F624dbEff19) |
 | pJar U3j | [UniV3 COW/ETH 1%](https://etherscan.io/address/0xFCfDFC98062d13a11cec48c44E4613eB26a34293) | [pUniV3 COW/ETH 1%](https://etherscan.io/address/0xf0Fb82757B9f8A3A3AE3524e385E2E9039633948) | [StrategyEthCowUniV3](https://etherscan.io/address/0xf87F9e06b46Eda441739180F5FfcfB6F5F82d910) |
-| pJar U3k | [UniV3 APE/ETH 0.3%](https://etherscan.io/address/0xAc4b3DacB91461209Ae9d41EC517c2B9Cb1B7DAF) | [pUniV3 APE/ETH 0.3%](https://etherscan.io/address/0x49ED0e6B438430CEEdDa8C6d06B6A2797aFA81cA) | [StrategyEthApeUniV3](https://etherscan.io/address/0x22931153614F5613d1bd9c232A646ade27A007aF) |
 | pJar 1a | [STARGATE USDC](https://etherscan.io/address/0xdf0770dF86a8034b3EFEf0A1Bb3c889B8332FF56) | [pSTARGATE USDC](https://etherscan.io/address/0x81740AAc02ae2F3c61D5a0c012b3e18f9dc02b5c) | [StrategyEthStargateUsdc](https://etherscan.io/address/0x0B1e94EF8e2aE93997C6375935286BF7A25Cc3C2) |
 | pJar 1b | [STARGATE USDT](https://etherscan.io/address/0x38EA452219524Bb87e18dE1C24D3bB59510BD783) | [pSTARGATE USDT](https://etherscan.io/address/0x363e7CD14AEcf4f7d0e66Ae1DEff830343D760a7) | [StrategyEthStargateUsdt](https://etherscan.io/address/0x822152d23FDfeA5968A0f7180444A642E4a9c2A4) |
 
