@@ -212,6 +212,20 @@ Harvester Bot: [0x0f571d2625b503bb7c1d2b5655b483a2fa696fef](https://etherscan.io
 ---
 
 
+## Brineries
+
+### veFXS Brinery 
+
+Brinery: [0x62826760CC53AE076a7523Fd9dCF4f8Dbb1dA140](https://etherscan.io/address/0x62826760CC53AE076a7523Fd9dCF4f8Dbb1dA140)
+
+Strategy: [0x552D92Ad2bb3Aba00872491ea2DC5d6EC3B8A31D](https://etherscan.io/address/0x552D92Ad2bb3Aba00872491ea2DC5d6EC3B8A31D)
+
+Locker: [0xd639C2eA4eEFfAD39b599410d00252E6c80008DF](https://etherscan.io/address/0xd639C2eA4eEFfAD39b599410d00252E6c80008DF)
+
+veAddress: [0xc8418aF6358FFddA74e09Ca9CC3Fe03Ca6aDC5b0](https://etherscan.io/address/0xc8418aF6358FFddA74e09Ca9CC3Fe03Ca6aDC5b0)
+
+---
+
 
 ## Pickle Jars Contracts (Polygon)
 
