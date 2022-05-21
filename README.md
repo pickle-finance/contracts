@@ -96,6 +96,7 @@ SmartWalletChecker: [0x2ff4f44f86f49d45a1c3626bab9d222e84e9e78f](https://ethersc
 | pUNIv3 APE/ETH | [0xefd78d7f70b776f47bf6da04bac838917fe10f71](https://etherscan.io/address/0xefd78d7f70b776f47bf6da04bac838917fe10f71) |
 | pSTG USDC | [0xa0dcf3c3b199dfc9d2774ec6a43d984e9bf0746a](https://etherscan.io/address/0xa0dcf3c3b199dfc9d2774ec6a43d984e9bf0746a) |
 | pSTG USDT | [0x59d6d2a944d6f4224a9f529560db6c8408cf577c](https://etherscan.io/address/0x59d6d2a944d6f4224a9f529560db6c8408cf577c) |
+| pUNIv2 FRAX/TEMPLE | [0xb7a632f93e3cbcc9444114bcd162b704e07355a9](https://etherscan.io/address/0xb7a632f93e3cbcc9444114bcd162b704e07355a9) |
 
 
 ---
@@ -112,6 +113,8 @@ controller: [0x6847259b2B3A4c17e7c43C54409810aF48bA5210](https://etherscan.io/ad
 dill: [0xbBCf169eE191A1Ba7371F30A1C344bFC498b29Cf](https://etherscan.io/address/0xbBCf169eE191A1Ba7371F30A1C344bFC498b29Cf)
 
 feeDistributor: [0x74C6CadE3eF61d64dcc9b97490d9FbB231e4BdCc](https://etherscan.io/address/0x74C6CadE3eF61d64dcc9b97490d9FbB231e4BdCc)
+
+feeDistributorV2: [0x2c6C87E7E6195ab7A4f19d3CF31D867580Bb2a1b](https://etherscan.io/address/0x2c6C87E7E6195ab7A4f19d3CF31D867580Bb2a1b)
 
 gaugeProxy: [0x2e57627ACf6c1812F99e274d0ac61B786c19E74f](https://etherscan.io/address/0x2e57627ACf6c1812F99e274d0ac61B786c19E74f)
 
@@ -190,6 +193,7 @@ treasury: [0x066419eaef5de53cc5da0d8702b990c5bc7d1ab3](https://etherscan.io/addr
 | pJar U3k | [UniV3 APE/ETH 0.3%](https://etherscan.io/address/0xAc4b3DacB91461209Ae9d41EC517c2B9Cb1B7DAF) | [pUniV3 APE/ETH 0.3%](https://etherscan.io/address/0x49ED0e6B438430CEEdDa8C6d06B6A2797aFA81cA) | [StrategyEthApeUniV3](https://etherscan.io/address/0x22931153614F5613d1bd9c232A646ade27A007aF) |
 | pJar 1a | [STARGATE USDC](https://etherscan.io/address/0xdf0770dF86a8034b3EFEf0A1Bb3c889B8332FF56) | [pSTARGATE USDC](https://etherscan.io/address/0x81740AAc02ae2F3c61D5a0c012b3e18f9dc02b5c) | [StrategyEthStargateUsdc](https://etherscan.io/address/0x0B1e94EF8e2aE93997C6375935286BF7A25Cc3C2) |
 | pJar 1b | [STARGATE USDT](https://etherscan.io/address/0x38EA452219524Bb87e18dE1C24D3bB59510BD783) | [pSTARGATE USDT](https://etherscan.io/address/0x363e7CD14AEcf4f7d0e66Ae1DEff830343D760a7) | [StrategyEthStargateUsdt](https://etherscan.io/address/0x822152d23FDfeA5968A0f7180444A642E4a9c2A4) |
+| pJar 2a | [UniV2 FRAX/TEMPLE](https://etherscan.io/address/0x6021444f1706f15465bEe85463BCc7d7cC17Fc03) | [pUniV2 FRAX/TEMPLE](https://etherscan.io/address/0x4eB6e19c043513db1451eEe57F0d58ebea2C6150) | [StrategyFraxTempleUniV2](https://etherscan.io/address/0x61aEDD30C63800A4C4791201A4f63fCfa42cC45d) |
 
 ---
 
