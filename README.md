@@ -214,7 +214,7 @@ Harvester Bot: [0x0f571d2625b503bb7c1d2b5655b483a2fa696fef](https://etherscan.io
 | Chain | Token | AllocPoint | % |
 | --- | --- | --- | --- |
 | Ethereum |  [mDILL](https://etherscan.io/address/0x45F7fa97BD0e0C212A844BAea35876C7560F465B) | 2268 | 56.7% |
-| Polygon+OKEx+Arbitrum+Harmony+Moonriver+Cronos+Aurora+Metis+Moonbeam+Optimism+Fantom |  [MASTERCHEFP2](https://etherscan.io/address/0xD2EFfFDd1b55aaC34F6dd3707cBb7171EabeE51A) | 1732 | 43.3% |
+| Polygon+OKEx+Arbitrum+Harmony+Moonriver+Cronos+Aurora+Metis+Moonbeam+Optimism+Fantom+Gnosis |  [MASTERCHEFP2](https://etherscan.io/address/0xD2EFfFDd1b55aaC34F6dd3707cBb7171EabeE51A) | 1732 | 43.3% |
 ---
 
 
@@ -836,6 +836,45 @@ treasury: [0xe4ee7edddbebda077975505d11decb16498264fb](https://ftmscan.com/addre
 | - | fantomJar 8ai | [OxdSolidlyLP BIFI/MAI](https://ftmscan.com/address/0x8aeB0503E13F7bea02F80986a8FDb2AccE5C6b6C) | [pOxdSolidlyLP BIFI/MAI](https://ftmscan.com/address/0xB82729385F24149Be59ed9D45b1c7c2e476d45c8) | [StrategyOxdVolatileBifiMaiLp](https://ftmscan.com/address/0xcC6c322078c2e294047938DdD13103DF9cA5dA40) |
 | - | fantomJar 8aj | [OxdSolidlyLP WFTM/SCREAM](https://ftmscan.com/address/0x86dD79265814756713e631Dde7E162bdD538b7B1) | [pOxdSolidlyLP WFTM/SCREAM](https://ftmscan.com/address/0x93f6C9262Fb98299D54EA67180B56fbDe57a9044) | [StrategyOxdVolatileWftmScreamLp](https://ftmscan.com/address/0x92A84aD623932F22D2FAd65401922b7A2B9c820F) |
 | - | fantomJar 8ak | [OxdSolidlyLP BEETS/FBEETS](https://ftmscan.com/address/0x5A3AA3284EE642152D4a2B55BE1160051c5eB932) | [pOxdSolidlyLP BEETS/FBEETS](https://ftmscan.com/address/0xcB2Fd1F031183142B8086431e8b4a162b8b36A2f) | [StrategyOxdVolatileBeetsFbeetsLp](https://ftmscan.com/address/0x4e56FE05F81e9fA35c2DC170F2f5EFef27C6E66C) |
+
+---
+
+
+
+## Pickle Jars Contracts (Gnosis)
+
+pickle: [0x0000000000000000000000000000000000000000](https://blockscout.com/xdai/mainnet/address/0x0000000000000000000000000000000000000000)
+
+masterChef: [0x0000000000000000000000000000000000000000](https://blockscout.com/xdai/mainnet/address/0x0000000000000000000000000000000000000000)
+
+controller: [0xe5E231De20C68AabB8D669f87971aE57E2AbF680](https://blockscout.com/xdai/mainnet/address/0xe5E231De20C68AabB8D669f87971aE57E2AbF680)
+
+minichef: [0x0000000000000000000000000000000000000000](https://blockscout.com/xdai/mainnet/address/0x0000000000000000000000000000000000000000)
+
+treasury: [0xaCfE4511CE883C14c4eA40563F176C3C09b4c47C](https://blockscout.com/xdai/mainnet/address/0xaCfE4511CE883C14c4eA40563F176C3C09b4c47C)
+
+---
+
+## Pickle Jars (pJars - Gnosis)
+
+| Index | Name | Want | PickleJar | Strategy |
+| --- | ---  | --- | --- | --- |
+| - | gnosisJar 1a | [Sushi XDAI/GNO](https://blockscout.com/xdai/mainnet/address/0x0f9D54D9eE044220A3925f9b97509811924fD269) | [pSushi XDAI/GNO](https://blockscout.com/xdai/mainnet/address/0x64574f47A59722862aF13be8375E4D0008c407dD) | [StrategySushiXdaiGnoLp](https://blockscout.com/xdai/mainnet/address/0xaD9eB177d9d0c189c10feb655b7f8B91D9f84648) |
+| - | gnosisJar 1b | [Sushi LINK/XDAI](https://blockscout.com/xdai/mainnet/address/0xB320609F2Bf3ca98754c14Db717307c6d6794d8b) | [pSushi LINK/XDAI](https://blockscout.com/xdai/mainnet/address/0xfA09E6CE60c02eB0D6F333Fc6aA6A3595A4Acc2a) | [StrategySushiLinkXdaiLp](https://blockscout.com/xdai/mainnet/address/0xC92914c1f1dF2284D9A3C5BB480089311Ed49358) |
+| - | gnosisJar 1c | [Sushi SUSHI/GNO](https://blockscout.com/xdai/mainnet/address/0xF38c5b39F29600765849cA38712F302b1522C9B8) | [pSushi SUSHI/GNO](https://blockscout.com/xdai/mainnet/address/0xcD59f36bfeFFC5B38FeE585e20E2E32052b679d9) | [StrategySushiSushiGnoLp](https://blockscout.com/xdai/mainnet/address/0x44dC538a9d24196823ac8D0Fbc7bfc52621e7C9d) |
+| - | gnosisJar 1d | [Sushi USDC/XDAI](https://blockscout.com/xdai/mainnet/address/0xA227c72a4055A9DC949cAE24f54535fe890d3663) | [pSushi USDC/XDAI](https://blockscout.com/xdai/mainnet/address/0x59A04fB987a55Ef6a4d95B3C369eBb6dC91dcdC0) | [StrategySushiUsdcXdaiLp](https://blockscout.com/xdai/mainnet/address/0x5D0feBC884a0AaD7Bd272eC10a5d4C09AAF4279D) |
+| - | gnosisJar 1e | [Sushi USDC/USDT](https://blockscout.com/xdai/mainnet/address/0x74c2EFA722010Ad7C142476F525A051084dA2C42) | [pSushi USDC/USDT](https://blockscout.com/xdai/mainnet/address/0xB4dE8612Ee2AaC8646a6FeaB8CEaB04BF8a908aB) | [StrategySushiUsdtUsdcLp](https://blockscout.com/xdai/mainnet/address/0xe496Abc3E97b4D4D9DA655feCe1c6caBa2f0D2B6) |
+| - | gnosisJar 1f | [Sushi XDAI/USDT](https://blockscout.com/xdai/mainnet/address/0x6685C047EAB042297e659bFAa7423E94b4A14b9E) | [pSushi XDAI/USDT](https://blockscout.com/xdai/mainnet/address/0xF81eDA759b0F07A88B5D3E497090C4272C194166) | [StrategySushiUsdtXdaiLp](https://blockscout.com/xdai/mainnet/address/0xA459eb1185CC1451ee3680b07A67b44605C3748A) |
+| - | gnosisJar 1g | [Sushi WETH/GNO](https://blockscout.com/xdai/mainnet/address/0x15f9EEdeEBD121FBb238a8A0caE38f4b4A07A585) | [pSushi WETH/GNO](https://blockscout.com/xdai/mainnet/address/0xBC84dfF55e6847Ca4e6C2D2519aeA1539839E284) | [StrategySushiWethGnoLp](https://blockscout.com/xdai/mainnet/address/0x218A09f1f2cbbe5452cBeB43E9d434A3124d43a0) |
+| - | gnosisJar 1h | [Sushi WETH/WBTC](https://blockscout.com/xdai/mainnet/address/0xe21F631f47bFB2bC53ED134E83B8cff00e0EC054) | [pSushi WETH/WBTC](https://blockscout.com/xdai/mainnet/address/0x0f11806f2D186D4a88002F89ee3Cb5aD58E383B3) | [StrategySushiWethWbtcLp](https://blockscout.com/xdai/mainnet/address/0xbC6401a69B5439eF780570222f2287aA1fa08B42) |
+| - | gnosisJar 1i | [Sushi WETH/XDAI](https://blockscout.com/xdai/mainnet/address/0x8C0C36c85192204c8d782F763fF5a30f5bA0192F) | [pSushi WETH/XDAI](https://blockscout.com/xdai/mainnet/address/0x648159Fd32340108762F256bB5c739Ec4E12F797) | [StrategySushiWethXdaiLp](https://blockscout.com/xdai/mainnet/address/0x76B9c713B3dE80214904FC2e303dbe5c553a8eDb) |
+| - | gnosisJar 2a | [Swapr GNO/XDAI](https://blockscout.com/xdai/mainnet/address/0xD7b118271B1B7d26C9e044Fc927CA31DccB22a5a) | [pSwapr GNO/XDAI](https://blockscout.com/xdai/mainnet/address/0x1aAb05ea242B3d34ACEf4F844f4EE035D781aE6f) | [StrategySwaprGnoXdaiLp](https://blockscout.com/xdai/mainnet/address/0x87Eac29bcc129c39AFB213C2ACcfE72709f0194A) |
+| - | gnosisJar 2b | [Swapr WBTC/WETH](https://blockscout.com/xdai/mainnet/address/0xf6Be7AD58F4BAA454666b0027839a01BcD721Ac3) | [pSwapr WBTC/WETH](https://blockscout.com/xdai/mainnet/address/0x77e2bd7Efc5CdC96D808EB89A8af71669F5B67E2) | [StrategySwaprWethWbtcLp](https://blockscout.com/xdai/mainnet/address/0x5D1DD14a756171349Cd4c666DE96d496Fd5241c8) |
+| - | gnosisJar 2c | [Swapr COW/WETH](https://blockscout.com/xdai/mainnet/address/0x8028457E452D7221dB69B1e0563AA600A059fab1) | [pSwapr COW/WETH](https://blockscout.com/xdai/mainnet/address/0x7B446c0c5574e58488e015760B4e0ABA282C3591) | [StrategySwaprCowWethLp](https://blockscout.com/xdai/mainnet/address/0x2b8E00AB8EcEb64739154EE2c74A6a4882E8fe70) |
+| - | gnosisJar 2d | [Swapr GNO/WETH](https://blockscout.com/xdai/mainnet/address/0x5fCA4cBdC182e40aeFBCb91AFBDE7AD8d3Dc18a8) | [pSwapr GNO/WETH](https://blockscout.com/xdai/mainnet/address/0x01955A0b5eF0Ac5b87D086e3A62fC1777D45fA79) | [StrategySwaprGnoWethLp](https://blockscout.com/xdai/mainnet/address/0x5F92C6bB0099C570987FCfecB246870184311D97) |
+| - | gnosisJar 2e | [Swapr DXD/GNO](https://blockscout.com/xdai/mainnet/address/0x558d777B24366f011E35A9f59114D1b45110d67B) | [pSwapr DXD/GNO](https://blockscout.com/xdai/mainnet/address/0x13d59A941b8753Aea44c98b2f46fd92Db2aEc938) | [StrategySwaprDxdGnoLp](https://blockscout.com/xdai/mainnet/address/0x7d85Ca55e224d560943A0037B4946795fea071E1) |
+| - | gnosisJar 2f | [Swapr XDAI/WETH](https://blockscout.com/xdai/mainnet/address/0x1865d5445010E0baf8Be2eB410d3Eae4A68683c2) | [pSwapr XDAI/WETH](https://blockscout.com/xdai/mainnet/address/0x9aae1e32d2b8A8F872c8a0593597D31bb27eAe48) | [StrategySwaprWethXdaiLp](https://blockscout.com/xdai/mainnet/address/0x1f84E30b463fE22FC26D1806149bE1e3E848Cfd9) |
+| - | gnosisJar 2g | [Swapr COW/GNO](https://blockscout.com/xdai/mainnet/address/0xDBF14bce36F661B29F6c8318a1D8944650c73F38) | [pSwapr COW/GNO](https://blockscout.com/xdai/mainnet/address/0x0ba5150815bC9F97BB33FD176Fd3deeB31Db563a) | [StrategySwaprCowGnoLp](https://blockscout.com/xdai/mainnet/address/0x30bf0d46D787364b41cb85F8633F0EE51b711f05) |
 
 ---
 
