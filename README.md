@@ -214,7 +214,7 @@ Harvester Bot: [0x0f571d2625b503bb7c1d2b5655b483a2fa696fef](https://etherscan.io
 | Chain | Token | AllocPoint | % |
 | --- | --- | --- | --- |
 | Ethereum |  [mDILL](https://etherscan.io/address/0x45F7fa97BD0e0C212A844BAea35876C7560F465B) | 2268 | 56.7% |
-| Polygon+OKEx+Arbitrum+Harmony+Moonriver+Cronos+Aurora+Metis+Moonbeam+Optimism+Fantom+Gnosis |  [MASTERCHEFP2](https://etherscan.io/address/0xD2EFfFDd1b55aaC34F6dd3707cBb7171EabeE51A) | 1732 | 43.3% |
+| Polygon+OKEx+Arbitrum+Moonriver+Cronos+Aurora+Metis+Moonbeam+Optimism+Fantom+Gnosis |  [MASTERCHEFP2](https://etherscan.io/address/0xD2EFfFDd1b55aaC34F6dd3707cBb7171EabeE51A) | 1732 | 43.3% |
 ---
 
 
@@ -350,30 +350,6 @@ treasury: [0xf02ceb58d549e4b403e8f85fbbaee4c5dfa47c01](https://arbiscan.io/addre
 | 12 | arbJar 5a | [Balancer VSTA/ETH](https://arbiscan.io/address/0xC61ff48f94D801c1ceFaCE0289085197B5ec44F0) | [pBalancer VSTA/ETH](https://arbiscan.io/address/0x0c02883103e64b62c4b52ABe7E743Cc50EB2D4C7) | [StrategyBalancerVstaEthLp](https://arbiscan.io/address/0x2752513320580D76AC2244e9b73fc981A5fFB3f9) |
 | 13 | arbJar 6a | [STARGATE USDC](https://arbiscan.io/address/0x892785f33CdeE22A30AEF750F285E18c18040c3e) | [pSTARGATE USDC](https://arbiscan.io/address/0x1c498531310C0f81561F4723314EF54049d3a9ef) | [StrategyAribtrumStargateUsdc](https://arbiscan.io/address/0x38f41F346577d1950A6d48b261c31f7C5eB6591D) |
 | 14 | arbJar 6b | [STARGATE USDT](https://arbiscan.io/address/0xb6cfcf89a7b22988bfc96632ac2a9d6dab60d641) | [pSTARGATE USDT](https://arbiscan.io/address/0xa23d9e5094ac9582f9f09aaa017b79deccab5404) | [StrategyAribtrumStargateUsdt](https://arbiscan.io/address/0x7945BD7a77c058E17ff1752Fe257D2187c3ab13B) |
-
----
-
-
-
-## Pickle Jars Contracts (Harmony)
-
-pickle: [0x0000000000000000000000000000000000000000](https://explorer.harmony.one/address/0x0000000000000000000000000000000000000000)
-
-masterChef: [0x0000000000000000000000000000000000000000](https://explorer.harmony.one/address/0x0000000000000000000000000000000000000000)
-
-controller: [0xf4396dca6201e0ca120073acda087b53f7159e24](https://explorer.harmony.one/address/0xf4396dca6201e0ca120073acda087b53f7159e24)
-
-minichef: [0x0000000000000000000000000000000000000000](https://explorer.harmony.one/address/0x0000000000000000000000000000000000000000)
-
----
-
-## Pickle Jars (pJars - Harmony)
-
-| Index | Name | Want | PickleJar | Strategy |
-| --- | ---  | --- | --- | --- |
-| - | oneJar 1a | [SUSHI ETH/DAI](https://explorer.harmony.one/address/0xc5B8129B411EF5f5BE22e74De6fE86C3b69e641d) | [pSUSHI ETH/DAI](https://explorer.harmony.one/address/0xce9075ab4158aa05447df12e5bf09d51e21516e9) | [Strategy-SUSHI ETH/DAI](undefined) |
-| - | oneJar 1b | [SUSHI WBTC/ETH](https://explorer.harmony.one/address/0x39bE7c95276954a6f7070F9BAa38db2123691Ed0) | [pSUSHI WBTC/ETH](https://explorer.harmony.one/address/0xbe6300c2ffc26f8c6cdd3a468867caf8bb01cfce) | [Strategy-SUSHI WBTC/ETH](undefined) |
-| - | oneJar 1c | [SUSHI ETH/ONE](https://explorer.harmony.one/address/0xeb049F1eD546F8efC3AD57f6c7D22F081CcC7375) | [pSUSHI ETH/ONE](https://explorer.harmony.one/address/0xab1a9bf446c77a9873023646147e36ea34279c72) | [Strategy-SUSHI ETH/ONE](undefined) |
 
 ---
 
@@ -533,11 +509,6 @@ treasury: [0xaCfE4511CE883C14c4eA40563F176C3C09b4c47C](https://explorer.mainnet.
 | 22 | nearJar 3d | [PAD PAD/ETH](https://explorer.mainnet.aurora.dev/address/0x63b4a0538CE8D90876B201af1020d13308a8B253) | [pPAD PAD/ETH](https://explorer.mainnet.aurora.dev/address/0x4F83d6ae3401f6859B579D840a5E38862a889282) | [StrategyPadEthPadLp](https://explorer.mainnet.aurora.dev/address/0xe952038ead50fB0803Ae1699CEC75bd2d932B1d4) |
 | 23 | nearJar 3e | [PAD PAD/NEAR](https://explorer.mainnet.aurora.dev/address/0xc374776Cf5C497Adeef6b505588b00cB298531FD) | [pPAD PAD/NEAR](https://explorer.mainnet.aurora.dev/address/0x6401Ded5D808eE824791dBfc23aA8769b585EB37) | [StrategyPadNearPadLp](https://explorer.mainnet.aurora.dev/address/0x3E5C824Bd3E29472570b212959C212Bd54c5892E) |
 | 24 | nearJar 3f | [PAD PAD/FRAX](https://explorer.mainnet.aurora.dev/address/0xB53bC2537e641C37c7B7A8D33aba1B30283CDA2f) | [pPAD PAD/FRAX](https://explorer.mainnet.aurora.dev/address/0xc773eF9aE52fF43031DD2Db439966ef4cb55bd79) | [StrategyPadPadFraxLp](https://explorer.mainnet.aurora.dev/address/0xDF4dB143bBFFb023E4bead29c2c6Eb59ff51Bb62) |
-| - | nearJar 3g | [PAD PAD/MODA](https://explorer.mainnet.aurora.dev/address/0xC8F45738e2900fCaB9B72EA624F48aE2c222e248) | [pPAD PAD/MODA](https://explorer.mainnet.aurora.dev/address/0x03C648B58683b389c336D08d1214041B69135430) | [StrategyPadModaPadLp](https://explorer.mainnet.aurora.dev/address/0x7BC037F25f073EfE17918643E1c5E28458093555) |
-| - | nearJar 3h | [PAD PAD/DAI](https://explorer.mainnet.aurora.dev/address/0xaf3f197Ce82bf524dAb0e9563089d443cB950048) | [pPAD PAD/DAI](https://explorer.mainnet.aurora.dev/address/0x384d0a6Bb447A916a42b664C06D5F1E711e8014f) | [StrategyPadDaiPadLp](https://explorer.mainnet.aurora.dev/address/0xB8E074c9856Dd2E39d076f0A51ed375C081A2825) |
-| - | nearJar 3k | [PAD PAD/DAI](https://explorer.mainnet.aurora.dev/address/0xFE28a27a95e51BB2604aBD65375411A059371616) | [pPAD PAD/DAI](https://explorer.mainnet.aurora.dev/address/0x655552A4c0138dc92a997A16B7a3C10373DfC6a0) | [StrategyPadPadAuroraLp](https://explorer.mainnet.aurora.dev/address/0x200046c377778e1e1bbA247FDB3AF26EDec0797F) |
-| - | nearJar 3i | [PAD NEAR/ETH](https://explorer.mainnet.aurora.dev/address/0x24886811d2d5E362FF69109aed0A6EE3EeEeC00B) | [pPAD NEAR/ETH](https://explorer.mainnet.aurora.dev/address/0x2c8051621f793609aFe5f2B43E8e0b90000Be637) | [StrategyPadNearEthLp](https://explorer.mainnet.aurora.dev/address/0x7e17A7fDC3E5F33f69E6802e572fD7A494f5Ac13) |
-| - | nearJar 3j | [PAD PAD/TRI](https://explorer.mainnet.aurora.dev/address/0x50F63D48a52397C1a469Ccd057905CC8d2609B85) | [pPAD PAD/TRI](https://explorer.mainnet.aurora.dev/address/0x94da4471aa1fc15053E2A1c5991136A895CD66fB) | [StrategyPadPadTriLp](https://explorer.mainnet.aurora.dev/address/0xee6A2f840F30A99759f94536fB0Cd8cb95100A31) |
 | 60 | nearJar 4a | [PAD PAD/ROSE](https://explorer.mainnet.aurora.dev/address/0xC6C3cc84EabD4643C382C988fA2830657fc70a6B) | [pPAD PAD/ROSE](https://explorer.mainnet.aurora.dev/address/0x3F00480fB625Be95abf6c462C84Be1916baF6446) | [StrategyPadRoseLp](https://explorer.mainnet.aurora.dev/address/0xE6Ac2108765D18eB1E81aF9eec47be897b3be0F8) |
 | 61 | nearJar 4b | [PAD FRAX/ROSE](https://explorer.mainnet.aurora.dev/address/0xeD4C231b98b474f7cAeCAdD2736e5ebC642ad707) | [pPAD FRAX/ROSE](https://explorer.mainnet.aurora.dev/address/0x566112Ba8Bf50218Ac5D485DcbE0eBF240707D11) | [StrategyRoseFraxLp](https://explorer.mainnet.aurora.dev/address/0xA56C74D25Cd37facA04ed85468CB00D331FDE8D5) |
 | 62 | nearJar 4c | [RoseLP 3POOL](https://explorer.mainnet.aurora.dev/address/0xfF79D5bff48e1C01b722560D6ffDfCe9FC883587) | [pRoseLP 3POOL](https://explorer.mainnet.aurora.dev/address/0x0FeEc68AFB4716Af45349bcFdc317E872BD50335) | [StrategyRoseThreePool](https://explorer.mainnet.aurora.dev/address/0xC2569fC1F7547C0699205952B2e2436C5cF1034A) |
