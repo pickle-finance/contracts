@@ -676,6 +676,7 @@ treasury: [0x7A79e2e867d36a91Bb47e0929787305c95E793C5](https://explorer.optimism
 | - | opJar 3g | [VELO ETH/USDC](https://explorer.optimism.io/address/0x79c912FEF520be002c2B6e57EC4324e260f38E50) | [pVELO ETH/USDC](https://explorer.optimism.io/address/0x30AD09d5bA07dC9eDD793F71B9d4cF0C91eE9194) | [StrategyVeloEthUsdcVlp](https://explorer.optimism.io/address/0xA58D59A5d96c8411263d891cBAE870546cFE6587) |
 | - | opJar 3h | [VELO ETH/OP](https://explorer.optimism.io/address/0xcdd41009E74bD1AE4F7B2EeCF892e4bC718b9302) | [pVELO ETH/OP](https://explorer.optimism.io/address/0x62b007AAb4075EaC2608F04f6AC9943193A4a7d9) | [StrategyVeloEthOpVlp](https://explorer.optimism.io/address/0x3C7825811A2426491356caDcE143bC67DB071E40) |
 | - | opJar 3i | [VELO ETH/AELIN](https://explorer.optimism.io/address/0x3EEc44e94ee86ce79f34Bb26dc3CdbbEe18d6d17) | [pVELO ETH/AELIN](https://explorer.optimism.io/address/0x1aC33f8EEE3Bd06481Abf286CDbd7BbfDE5681f2) | [StrategyVeloEthAlienVlp](https://explorer.optimism.io/address/0xE40be09CBF2EC3b3b437d902bDc5504788B17d68) |
+| - | opJar 3j | [VELO OP/L2DAO](https://explorer.optimism.io/address/0xfc77e39De40E54F820E313039207DC850E4C9E60) | [pVELO OP/L2DAO](https://explorer.optimism.io/address/0xcDd0816C4E39ca9aBfCb739a9fC3CA267F5AB502) | [StrategyVeloOpL2daoVlp](https://explorer.optimism.io/address/0xA526bB15BE45ce698D04f3B564A5009A69bE34BE) |
 
 ---
 
