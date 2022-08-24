@@ -213,8 +213,8 @@ Harvester Bot: [0x0f571d2625b503bb7c1d2b5655b483a2fa696fef](https://etherscan.io
 
 | Chain | Token | AllocPoint | % |
 | --- | --- | --- | --- |
-| Ethereum |  [mDILL](https://etherscan.io/address/0x45F7fa97BD0e0C212A844BAea35876C7560F465B) | 2268 | 56.7% |
-| Polygon+OKEx+Arbitrum+Moonriver+Cronos+Aurora+Metis+Moonbeam+Optimism+Fantom+Gnosis |  [MASTERCHEFP2](https://etherscan.io/address/0xD2EFfFDd1b55aaC34F6dd3707cBb7171EabeE51A) | 1732 | 43.3% |
+| Ethereum |  [mDILL](https://etherscan.io/address/0x45F7fa97BD0e0C212A844BAea35876C7560F465B) | 2681 | 26.8% |
+| Polygon+OKEx+Arbitrum+Moonriver+Cronos+Aurora+Metis+Moonbeam+Optimism+Fantom+Gnosis |  [MASTERCHEFP2](https://etherscan.io/address/0xD2EFfFDd1b55aaC34F6dd3707cBb7171EabeE51A) | 7319 | 73.2% |
 ---
 
 
@@ -677,6 +677,7 @@ treasury: [0x7A79e2e867d36a91Bb47e0929787305c95E793C5](https://explorer.optimism
 | - | opJar 3h | [VELO ETH/OP](https://explorer.optimism.io/address/0xcdd41009E74bD1AE4F7B2EeCF892e4bC718b9302) | [pVELO ETH/OP](https://explorer.optimism.io/address/0x62b007AAb4075EaC2608F04f6AC9943193A4a7d9) | [StrategyVeloEthOpVlp](https://explorer.optimism.io/address/0x3C7825811A2426491356caDcE143bC67DB071E40) |
 | - | opJar 3i | [VELO ETH/AELIN](https://explorer.optimism.io/address/0x3EEc44e94ee86ce79f34Bb26dc3CdbbEe18d6d17) | [pVELO ETH/AELIN](https://explorer.optimism.io/address/0x1aC33f8EEE3Bd06481Abf286CDbd7BbfDE5681f2) | [StrategyVeloEthAlienVlp](https://explorer.optimism.io/address/0xE40be09CBF2EC3b3b437d902bDc5504788B17d68) |
 | - | opJar 3j | [VELO OP/L2DAO](https://explorer.optimism.io/address/0xfc77e39De40E54F820E313039207DC850E4C9E60) | [pVELO OP/L2DAO](https://explorer.optimism.io/address/0xcDd0816C4E39ca9aBfCb739a9fC3CA267F5AB502) | [StrategyVeloOpL2daoVlp](https://explorer.optimism.io/address/0xA526bB15BE45ce698D04f3B564A5009A69bE34BE) |
+| - | opJar 3k | [VELO USDC/ALUSD](https://explorer.optimism.io/address/0xe75a3f4Bf99882aD9f8aeBAB2115873315425D00) | [pVELO USDC/ALUSD](https://explorer.optimism.io/address/0xAA50bCf5a83609E17DFB4cBe6Ef1893Ba25907f0) | [StrategyVeloUsdcAlusdSlp](https://explorer.optimism.io/address/0x5A34299C61A3eF4a559859fB389198C69C989665) |
 
 ---
 
