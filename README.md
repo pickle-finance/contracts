@@ -180,7 +180,6 @@ treasury: [0x066419eaef5de53cc5da0d8702b990c5bc7d1ab3](https://etherscan.io/addr
 | pjar 0.98b | [LOOKS](https://etherscan.io/address/0xf4d2888d29D722226FafA5d9B24F9164c092421E) | [pLOOKS](https://etherscan.io/address/0xb4EBc2C371182DeEa04B2264B9ff5AC4F0159C69) | [StrategyLooksStaking](https://etherscan.io/address/0xC0F976dB87230F21E2d364431E1818BfA7C572E4) |
 | pjar 0i | [Curve CVXFXS/FXS](https://etherscan.io/address/0xF3A43307DcAFa93275993862Aae628fCB50dC768) | [pCurve CVXFXS/FXS](https://etherscan.io/address/0x5Da34d322a4b29488e711419Fea36dA0d0114d5C) | [StrategyConvexCvxfxsLp](https://etherscan.io/address/0x2f8865B8b5E1a5FA582b70e20919E1e7D5b6bc60) |
 | pjar 0k | [Curve STG/USDC](https://etherscan.io/address/0xdf55670e27bE5cDE7228dD0A6849181891c9ebA1) | [pCurve STG/USDC](https://etherscan.io/address/0x79CF7c02aF26A3BaccFdcaD5933580c76f5F1562) | [StrategyCurveStgUsdc](https://etherscan.io/address/0x461bB2158A4af4Fb181C167934634b81E50Ca28F) |
-| pjar U3a | [UniV3 RBN/ETH](https://etherscan.io/address/0x94981F69F7483AF3ae218CbfE65233cC3c60d93a) | [pUniV3 RBN/ETH](https://etherscan.io/address/0x506748d736b77f51c5b490e4aC6c26B8c3975b14) | [Strategy-UniV3 RBN/ETH](undefined) |
 | pJar U3b | [UniV3 FRAX/DAI](https://etherscan.io/address/0x97e7d56A0408570bA1a7852De36350f7713906ec) | [pUniV3 FRAX/DAI](https://etherscan.io/address/0xe7b69a17B3531d01FCEAd66FaF7d9f7655469267) | [StrategyFraxDaiUniV3](https://etherscan.io/address/0x219747CA16907330FAe76673facB6e67860ED4C9) |
 | pJar U3c | [UniV3 USDC/ETH 0.05%](https://etherscan.io/address/0x88e6A0c2dDD26FEEb64F039a2c41296FcB3f5640) | [pUniV3 USDC/ETH 0.05%](https://etherscan.io/address/0x8CA1D047541FE183aE7b5d80766eC6d5cEeb942A) | [StrategyUsdcEth05UniV3](https://etherscan.io/address/0x184A71185674C789b4177A49BD41a96CE2c421Ef) |
 | pJar U3d | [UniV3 USDC/ETH 0.3%](https://etherscan.io/address/0x8ad599c3A0ff1De082011EFDDc58f1908eb6e6D8) | [pUniV3 USDC/ETH 0.3%](https://etherscan.io/address/0x3b79f29d7979D7DE22A0d09098e898157ea32dD5) | [Strategy-UniV3 USDC/ETH 0.3%](undefined) |
@@ -213,8 +212,8 @@ Harvester Bot: [0x0f571d2625b503bb7c1d2b5655b483a2fa696fef](https://etherscan.io
 
 | Chain | Token | AllocPoint | % |
 | --- | --- | --- | --- |
-| Ethereum |  [mDILL](https://etherscan.io/address/0x45F7fa97BD0e0C212A844BAea35876C7560F465B) | 2710 | 27.1% |
-| Polygon+OKEx+Arbitrum+Moonriver+Cronos+Aurora+Metis+Moonbeam+Optimism+Fantom+Gnosis |  [MASTERCHEFP2](https://etherscan.io/address/0xD2EFfFDd1b55aaC34F6dd3707cBb7171EabeE51A) | 7285 | 72.9% |
+| Ethereum |  [mDILL](https://etherscan.io/address/0x45F7fa97BD0e0C212A844BAea35876C7560F465B) | 2722 | 27.2% |
+| Polygon+OKEx+Arbitrum+Moonriver+Cronos+Aurora+Metis+Moonbeam+Optimism+Fantom+Gnosis |  [MASTERCHEFP2](https://etherscan.io/address/0xD2EFfFDd1b55aaC34F6dd3707cBb7171EabeE51A) | 7273 | 72.8% |
 ---
 
 
@@ -584,9 +583,9 @@ treasury: [0xaCfE4511CE883C14c4eA40563F176C3C09b4c47C](https://andromeda-explore
 | - | metJar 2h | [TETHYS METIS/DAI](https://andromeda-explorer.metis.io/address/0xCc15d8f93be780aD78fD1A016fB0F15F2543b5Dc) | [pTETHYS METIS/DAI](https://andromeda-explorer.metis.io/address/0x4bDA2B3862116d6C26B858354667A981BDCcA047) | [StrategyTethysMetisDaiLp](https://andromeda-explorer.metis.io/address/0x98167f1Cb049cfBdbeE3090e7fBAbCDaea5313B8) |
 | - | metJar 2i | [TETHYS METIS/AVAX](https://andromeda-explorer.metis.io/address/0x3Ca47677e7D8796e6470307Ad15c1fBFd43f0D6F) | [pTETHYS METIS/AVAX](https://andromeda-explorer.metis.io/address/0x97C2df1D75632A5d2D0237B5c46e2fB58185a7fD) | [StrategyTethysMetisAvaxLp](https://andromeda-explorer.metis.io/address/0xf3e9A784832133818ffDbdad2103516606bDBf40) |
 | - | metJar 2j | [TETHYS METIS/FTM](https://andromeda-explorer.metis.io/address/0x74Ca39F7aB9B685B8eA8c4ab19E7Ab6b474Dd22D) | [pTETHYS METIS/FTM](https://andromeda-explorer.metis.io/address/0x909eD0407D21ADa0E8336c24f19C1a177827d156) | [StrategyTethysMetisFtmLp](https://andromeda-explorer.metis.io/address/0x767ef1887A71734A1F5198b2bE6dA9c32293ca5e) |
-| - | metJar 3a | [HUMMUS m.USDT](https://andromeda-explorer.metis.io/address/0x9F51f0D7F500343E969D28010C7Eb0Db1bCaAEf9) | [pHUMMUS m.USDT](https://andromeda-explorer.metis.io/address/0x8cd9E4734a2b6376380AF61db50185D1146fc7d7) | [StrategyHummusUsdt](https://andromeda-explorer.metis.io/address/0xc5da9E714D1Ff893a02A4e6d1e066d9E2CfDBFD5) |
-| - | metJar 3b | [HUMMUS m.USDC](https://andromeda-explorer.metis.io/address/0x9E3F3Be65fEc3731197AFF816489eB1Eb6E6b830) | [pHUMMUS m.USDC](https://andromeda-explorer.metis.io/address/0x6279e6c2A103A6Aa4Baa56De23E9aCfF9613eaB2) | [StrategyHummusUsdc](https://andromeda-explorer.metis.io/address/0xa28c722c2Ea6Da1C15be8Bf6bFCf7C5B07475980) |
-| - | metJar 3c | [HUMMUS m.DAI](https://andromeda-explorer.metis.io/address/0xd5A0760D55ad46B6A1C46D28725e4C117312a7aD) | [pHUMMUS m.DAI](https://andromeda-explorer.metis.io/address/0x4E220e8cdf0398e7e5D1EBf86bc6459567A0CE17) | [StrategyHummusDai](https://andromeda-explorer.metis.io/address/0x4484F79008Cbbc82454C2D358d3c8c22cDE629A0) |
+| - | metJar 3a | [HUMMUS m.USDT](https://andromeda-explorer.metis.io/address/0x9F51f0D7F500343E969D28010C7Eb0Db1bCaAEf9) | [pHUMMUS m.USDT](https://andromeda-explorer.metis.io/address/0x8cd9E4734a2b6376380AF61db50185D1146fc7d7) | [Strategy-HUMMUS m.USDT](undefined) |
+| - | metJar 3b | [HUMMUS m.USDC](https://andromeda-explorer.metis.io/address/0x9E3F3Be65fEc3731197AFF816489eB1Eb6E6b830) | [pHUMMUS m.USDC](https://andromeda-explorer.metis.io/address/0x6279e6c2A103A6Aa4Baa56De23E9aCfF9613eaB2) | [Strategy-HUMMUS m.USDC](undefined) |
+| - | metJar 3c | [HUMMUS m.DAI](https://andromeda-explorer.metis.io/address/0xd5A0760D55ad46B6A1C46D28725e4C117312a7aD) | [pHUMMUS m.DAI](https://andromeda-explorer.metis.io/address/0x4E220e8cdf0398e7e5D1EBf86bc6459567A0CE17) | [Strategy-HUMMUS m.DAI](undefined) |
 
 ---
 
