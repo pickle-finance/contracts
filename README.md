@@ -96,6 +96,8 @@ SmartWalletChecker: [0x2ff4f44f86f49d45a1c3626bab9d222e84e9e78f](https://ethersc
 | pUNIv3 APE/ETH | [0xefd78d7f70b776f47bf6da04bac838917fe10f71](https://etherscan.io/address/0xefd78d7f70b776f47bf6da04bac838917fe10f71) |
 | pSTG USDC | [0xa0dcf3c3b199dfc9d2774ec6a43d984e9bf0746a](https://etherscan.io/address/0xa0dcf3c3b199dfc9d2774ec6a43d984e9bf0746a) |
 | pSTG USDT | [0x59d6d2a944d6f4224a9f529560db6c8408cf577c](https://etherscan.io/address/0x59d6d2a944d6f4224a9f529560db6c8408cf577c) |
+| pUWU FRAX | [0xCE3600D6d5C97b369ba37647A41E14A03aeF33f8](https://etherscan.io/address/0xCE3600D6d5C97b369ba37647A41E14A03aeF33f8) |
+| pUWU WETH | [0x84a812d6F65eC7BAd642AE3Dc39Abc3F7c1a3d8d](https://etherscan.io/address/0x84a812d6F65eC7BAd642AE3Dc39Abc3F7c1a3d8d) |
 | pUNIv2 FRAX/TEMPLE | [0xb7a632f93e3cbcc9444114bcd162b704e07355a9](https://etherscan.io/address/0xb7a632f93e3cbcc9444114bcd162b704e07355a9) |
 
 
@@ -192,6 +194,8 @@ treasury: [0x066419eaef5de53cc5da0d8702b990c5bc7d1ab3](https://etherscan.io/addr
 | pJar U3k | [UniV3 APE/ETH 0.3%](https://etherscan.io/address/0xAc4b3DacB91461209Ae9d41EC517c2B9Cb1B7DAF) | [pUniV3 APE/ETH 0.3%](https://etherscan.io/address/0x49ED0e6B438430CEEdDa8C6d06B6A2797aFA81cA) | [StrategyEthApeUniV3](https://etherscan.io/address/0x22931153614F5613d1bd9c232A646ade27A007aF) |
 | pJar 1a | [STARGATE USDC](https://etherscan.io/address/0xdf0770dF86a8034b3EFEf0A1Bb3c889B8332FF56) | [pSTARGATE USDC](https://etherscan.io/address/0x81740AAc02ae2F3c61D5a0c012b3e18f9dc02b5c) | [StrategyEthStargateUsdc](https://etherscan.io/address/0x0B1e94EF8e2aE93997C6375935286BF7A25Cc3C2) |
 | pJar 1b | [STARGATE USDT](https://etherscan.io/address/0x38EA452219524Bb87e18dE1C24D3bB59510BD783) | [pSTARGATE USDT](https://etherscan.io/address/0x363e7CD14AEcf4f7d0e66Ae1DEff830343D760a7) | [StrategyEthStargateUsdt](https://etherscan.io/address/0x822152d23FDfeA5968A0f7180444A642E4a9c2A4) |
+| pJar u1 | [UwU FRAX](https://etherscan.io/address/0x853d955aCEf822Db058eb8505911ED77F175b99e) | [pUwU FRAX](https://etherscan.io/address/0x6a141468Aa1185e7616B8B35F4AE94A70d77a568) | [StrategyUwuFrax](https://etherscan.io/address/0x466c28f9fBd148c2E010307Ec9DA7EeDcB52FF1e) |
+| pJar u2 | [UwU WETH](https://etherscan.io/address/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2) | [pUwU WETH](https://etherscan.io/address/0xcd7F5f35E023fE9b2bDBa4A5dc6d5F23fD91814f) | [StrategyUwuWeth](https://etherscan.io/address/0x19c5990E1A04ab4567B29d5822F55CDA44d53D4C) |
 | pJar 2a | [UniV2 FRAX/TEMPLE](https://etherscan.io/address/0x6021444f1706f15465bEe85463BCc7d7cC17Fc03) | [pUniV2 FRAX/TEMPLE](https://etherscan.io/address/0x4eB6e19c043513db1451eEe57F0d58ebea2C6150) | [Strategy-UniV2 FRAX/TEMPLE](undefined) |
 
 ---
@@ -686,6 +690,7 @@ treasury: [0x7A79e2e867d36a91Bb47e0929787305c95E793C5](https://explorer.optimism
 | 27 | opJar 3n | [VELO USDC/SNX](https://explorer.optimism.io/address/0x9056EB7Ca982a5Dd65A584189994e6a27318067D) | [pVELO USDC/SNX](https://explorer.optimism.io/address/0xcAde0c1C4C0c25cFDF62c26bb1A0D749d094F58A) | [StrategyVeloUsdcSnxVlp](https://explorer.optimism.io/address/0x082Be61153b0aF71E50f07Ac0be5F176656d5Ba8) |
 | 28 | opJar 3o | [VELO ETH/SETH](https://explorer.optimism.io/address/0xFd7FddFc0A729eCF45fB6B12fA3B71A575E1966F) | [pVELO ETH/SETH](https://explorer.optimism.io/address/0x3BA3F80f0C689f73e7606B2A49806eAe72DFD5f7) | [StrategyVeloEthSethSlp](https://explorer.optimism.io/address/0x90Cf236C4104020D493A8e919c42794671b7ac13) |
 | 29 | opJar 3p | [VELO ETH/ALETH](https://explorer.optimism.io/address/0x6fD5BEe1Ddb4dbBB0b7368B080Ab99b8BA765902) | [pVELO ETH/ALETH](https://explorer.optimism.io/address/0x1D9073254E23D90287110428EF2aCB392a55c303) | [StrategyVeloEthAlethSlp](https://explorer.optimism.io/address/0xEC50bBc4ab56a1A85b279D35b0C4c77b94AF4D94) |
+| 32 | opJar 3q | [VELO USDC/TUSD](https://explorer.optimism.io/address/0xA4549B89A39f76d9D28415474aeD7d06Ec9935fe) | [pVELO USDC/TUSD](https://explorer.optimism.io/address/0x27811A7D034e5eaB0f25e5CEF390418AAe51A0D2) | [StrategyVeloUsdcTusdSlp](https://explorer.optimism.io/address/0x29020d37f1D231afdbbb476ad01b601F16DA6c2C) |
 | 30 | opJar 4a | [BEETX ETH/IB](https://explorer.optimism.io/address/0xeFb0D9F51EFd52d7589A9083A6d0CA4de416c249) | [pBEETX ETH/IB](https://explorer.optimism.io/address/0x4ffe019c104a7F8F6f58014d05cE5d4cB22968b8) | [StrategyBeetxEthIbLp](https://explorer.optimism.io/address/0x59fB62d4a15707BBF55cc1501F2985b0e7C62c40) |
 | 31 | opJar 4b | [BEETX ETH/RETH](https://explorer.optimism.io/address/0x4Fd63966879300caFafBB35D157dC5229278Ed23) | [pBEETX ETH/RETH](https://explorer.optimism.io/address/0x2Dd866132bC31C5bD40b7ae381C67dbf7A74E56B) | [StrategyBeetxEthRethLp](https://explorer.optimism.io/address/0xD5c959fDEca82a38A94e16CB565e54aB8e32c4a9) |
 
