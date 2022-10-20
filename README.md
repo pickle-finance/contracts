@@ -216,8 +216,8 @@ Harvester Bot: [0x0f571d2625b503bb7c1d2b5655b483a2fa696fef](https://etherscan.io
 
 | Chain | Token | AllocPoint | % |
 | --- | --- | --- | --- |
-| Ethereum |  [mDILL](https://etherscan.io/address/0x45F7fa97BD0e0C212A844BAea35876C7560F465B) | 2778 | 27.8% |
-| Polygon+OKEx+Arbitrum+Moonriver+Cronos+Aurora+Metis+Moonbeam+Optimism+Fantom+Gnosis |  [MASTERCHEFP2](https://etherscan.io/address/0xD2EFfFDd1b55aaC34F6dd3707cBb7171EabeE51A) | 7216 | 72.2% |
+| Ethereum |  [mDILL](https://etherscan.io/address/0x45F7fa97BD0e0C212A844BAea35876C7560F465B) | 2795 | 28.0% |
+| Polygon+OKEx+Arbitrum+Moonriver+Cronos+Aurora+Metis+Moonbeam+Optimism+Fantom+Gnosis |  [MASTERCHEFP2](https://etherscan.io/address/0xD2EFfFDd1b55aaC34F6dd3707cBb7171EabeE51A) | 7198 | 72.0% |
 ---
 
 
