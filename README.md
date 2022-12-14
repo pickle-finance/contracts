@@ -157,7 +157,7 @@ treasury: [0x066419eaef5de53cc5da0d8702b990c5bc7d1ab3](https://etherscan.io/addr
 | pJar 0.99p | [UniV2 MBABA/UST](https://etherscan.io/address/0x676Ce85f66aDB8D7b8323AeEfe17087A3b8CB363) | [pUniV2 MBABA/UST](https://etherscan.io/address/0x1CF137F651D8f0A4009deD168B442ea2E870323A) | [Strategy-UniV2 MBABA/UST](undefined) |
 | pJar 0.99q | [Sushi ETH/SUSHI](https://etherscan.io/address/0x795065dCc9f64b5614C407a6EFDC400DA6221FB0) | [pSushi ETH/SUSHI](https://etherscan.io/address/0xECb520217DccC712448338B0BB9b08Ce75AD61AE) | [StrategySushiEthSushiLp](https://etherscan.io/address/0x88289469Ff2B299A2a7585e19a563C02A84172eB) |
 | pJar 0.99r | [UniV2 FEI/TRIBE](https://etherscan.io/address/0x9928e4046d7c6513326cCeA028cD3e7a91c7590A) | [pUniV2 FEI/TRIBE](https://etherscan.io/address/0xC1513C1b0B359Bc5aCF7b772100061217838768B) | [StrategyFeiTribeLpV2](https://etherscan.io/address/0x78837Bc0c9E68BD4500f1869e80ba32e6b80097B) |
-| pJar 0.99s4 | [Saddle D4](https://etherscan.io/address/0xd48cf4d7fb0824cc8bae055df3092584d0a1726a) | [pSaddle D4](https://etherscan.io/address/0xe6487033F5C8e2b4726AF54CA1449FEC18Bd1484) | [StrategySaddleD4](https://etherscan.io/address/0x5d8B44661b085579c8Fb17fc1aeD9Af5ce406f2A) |
+| pJar 0.99s4 | [Saddle D4](https://etherscan.io/address/0xd48cf4d7fb0824cc8bae055df3092584d0a1726a) | [pSaddle D4](https://etherscan.io/address/0xe6487033F5C8e2b4726AF54CA1449FEC18Bd1484) | [StrategySaddleD4v2](https://etherscan.io/address/0x49f67C77df4Dc3d7dAa4A706A19B52a46460D2cd) |
 | pJar 0.99u (inactive) | [UniV2 LUSD/ETH](https://etherscan.io/address/0xF20EF17b889b437C151eB5bA15A47bFc62bfF469) | [pUniV2 LUSD/ETH](https://etherscan.io/address/0x927e3bCBD329e89A8765B52950861482f0B227c4) | [Strategy-UniV2 LUSD/ETH](undefined) |
 | pJar 0.99x | [Sushi ALCX/ETH](https://etherscan.io/address/0xC3f279090a47e80990Fe3a9c30d24Cb117EF91a8) | [pSushi ALCX/ETH](https://etherscan.io/address/0x9eb0aAd5Bb943D3b2F7603Deb772faa35f60aDF9) | [StrategySushiEthAlcxLp](https://etherscan.io/address/0x474E86F136b05c069c59f094bCa3aa46252eB86A) |
 | pJar 0.99y | [Sushi yvBOOST/ETH](https://etherscan.io/address/0x9461173740D27311b176476FA27e94C681b1Ea6b) | [pSushi yvBOOST/ETH](https://etherscan.io/address/0xCeD67a187b923F0E5ebcc77C7f2F7da20099e378) | [StrategySushiEthYvBoostLp](https://etherscan.io/address/0x9e7f57F3C3b147D234d38F9071b7D53b08c7fd85) |
@@ -216,8 +216,8 @@ Harvester Bot: [0x0f571d2625b503bb7c1d2b5655b483a2fa696fef](https://etherscan.io
 
 | Chain | Token | AllocPoint | % |
 | --- | --- | --- | --- |
-| Ethereum |  [mDILL](https://etherscan.io/address/0x45F7fa97BD0e0C212A844BAea35876C7560F465B) | 2824 | 28.3% |
-| Polygon+OKEx+Arbitrum+Moonriver+Cronos+Aurora+Metis+Moonbeam+Optimism+Fantom+Gnosis |  [MASTERCHEFP2](https://etherscan.io/address/0xD2EFfFDd1b55aaC34F6dd3707cBb7171EabeE51A) | 7170 | 71.7% |
+| Ethereum |  [mDILL](https://etherscan.io/address/0x45F7fa97BD0e0C212A844BAea35876C7560F465B) | 2891 | 28.9% |
+| Polygon+OKEx+Arbitrum+Moonriver+Cronos+Aurora+Metis+Moonbeam+Optimism+Fantom+Gnosis+Kava |  [MASTERCHEFP2](https://etherscan.io/address/0xD2EFfFDd1b55aaC34F6dd3707cBb7171EabeE51A) | 7097 | 71.1% |
 ---
 
 
@@ -263,9 +263,9 @@ treasury: [0xeae55893cc8637c16cf93d43b38aa022d689fa62](https://polygonscan.com/a
 | 5 | polyJar 4a | [Sushi USDT/ETH](https://polygonscan.com/address/0xc2755915a85c6f6c1c0f3a86ac8c058f11caa9c9) | [pSushi USDT/ETH](https://polygonscan.com/address/0x80aB65b1525816Ffe4222607EDa73F86D211AC95) | [StrategySushiEthUsdtLp](https://polygonscan.com/address/0x7072B80D4E259F26b82C2C4e53cDBFB71450195e) |
 | 6 | polyJar 4b | [Sushi MATIC/ETH](https://polygonscan.com/address/0xc4e595acdd7d12fec385e5da5d43160e8a0bac0e) | [pSushi MATIC/ETH](https://polygonscan.com/address/0xd438Ba7217240a378238AcE3f44EFaaaF8aaC75A) | [StrategySushiMaticEthLp](https://polygonscan.com/address/0x402EB598361fEf397DcF8594B3B88732eEe1661e) |
 | 7 | polyJar 5a_old (inactive) | [Quick MAI/USDC](https://polygonscan.com/address/0x160532d2536175d65c03b97b0630a9802c274dad) | [pQuick MAI/USDC](https://polygonscan.com/address/0xf12BB9dcD40201b5A110e11E38DcddF4d11E6f83) | [Strategy-Quick MAI/USDC](undefined) |
-| 9 | polyJar 5a | [Quick MAI/USDC](https://polygonscan.com/address/0x160532d2536175d65c03b97b0630a9802c274dad) | [pQuick MAI/USDC](https://polygonscan.com/address/0x74dC9cdCa9a96Fd0B7900e6eb953d1EA8567c3Ce) | [StrategyMaiMiMaticUsdcLp](https://polygonscan.com/address/0x5Fd03E3Fb5859fC1d115fd8D0C23BEedfB7254F1) |
+| 9 | polyJar 5a | [Quick MAI/USDC](https://polygonscan.com/address/0x160532d2536175d65c03b97b0630a9802c274dad) | [pQuick MAI/USDC](https://polygonscan.com/address/0x74dC9cdCa9a96Fd0B7900e6eb953d1EA8567c3Ce) | [StrategyMaiMiMaticUsdcLp](https://polygonscan.com/address/0x770CDc9bE68112c7B24FabDA5a8F2DCFAbe2Fa09) |
 | 10 | polyJar 5b | [Quick QI/MIMATIC](https://polygonscan.com/address/0x7AfcF11F3e2f01e71B7Cc6b8B5e707E42e6Ea397) | [pQuick QI/MIMATIC](https://polygonscan.com/address/0xd06a56c864C80e4cC76A2eF778183104BF0c848d) | [StrategyMaiQiMiMaticLp](https://polygonscan.com/address/0x633351C669855BAE0aC6208a942F5Ab16E4668dF) |
-| 17 | polyJar 5c | [Quick QI/MATIC](https://polygonscan.com/address/0x9a8b2601760814019b7e6ee0052e25f1c623d1e6) | [pQuick QI/MATIC](https://polygonscan.com/address/0xe5bd4954bd6749a8e939043eedce4c62b41cc6d0) | [StrategyMaiQiMaticLp](https://polygonscan.com/address/0x7b779947F12C11cBDf7c6c15b6C3afCABdA9bC69) |
+| 17 | polyJar 5c | [Quick QI/MATIC](https://polygonscan.com/address/0x9a8b2601760814019b7e6ee0052e25f1c623d1e6) | [pQuick QI/MATIC](https://polygonscan.com/address/0xe5bd4954bd6749a8e939043eedce4c62b41cc6d0) | [StrategyMaiQiMaticLp](https://polygonscan.com/address/0xa19D149af55EEA02446934F630AC711bEad12BdB) |
 | 11 | polyJar 6a | [Iron 3USD](https://polygonscan.com/address/0xb4d09ff3dA7f9e9A2BA029cb0A81A989fd7B8f17) | [pIron 3USD](https://polygonscan.com/address/0xE484Ed97E19F6B649E78db0F37D173C392F7A1D9) | [StrategyIronIS3USD](https://polygonscan.com/address/0x518136Fa0eE88B2F0b1166df7662e274B3d85e7c) |
 | 12 | polyJar 7a | [Sushi DINO/USDC](https://polygonscan.com/address/0x3324af8417844e70b81555A6D1568d78f4D4Bf1f) | [pSushi DINO/USDC](https://polygonscan.com/address/0xC8450922d18793AD97C401D65BaE8A83aE5353a8) | [StrategyDinoDinoUsdcLp](https://polygonscan.com/address/0x95a1fBB2319723CBeAa8e13436ebd1BF6Bf08589) |
 | 13 | polyJar 7b | [Quick DINO/ETH](https://polygonscan.com/address/0x9f03309A588e33A239Bf49ed8D68b2D45C7A1F11) | [pQuick DINO/ETH](https://polygonscan.com/address/0x1cCDB8152Bb12aa34e5E7F6C9c7870cd6C45E37F) | [StrategyDinoDinoWethLp](https://polygonscan.com/address/0x72A8e9AF512F7857C43A8Bc7712C981Eab5C9FE6) |
@@ -275,11 +275,11 @@ treasury: [0xeae55893cc8637c16cf93d43b38aa022d689fa62](https://polygonscan.com/a
 | 20 | polyJar 4e | [Sushi RAIDER/WETH](https://polygonscan.com/address/0x426a56F6923c2B8A488407fc1B38007317ECaFB1) | [pSushi RAIDER/WETH](https://polygonscan.com/address/0x2e57627ACf6c1812F99e274d0ac61B786c19E74f) | [StrategyRaiderWethLp](https://polygonscan.com/address/0x9976A2F20f5A29b9ED6C7A916aacD645F7B51Fb2) |
 | 18 | polyJar 4f | [Sushi AURUM/MATIC](https://polygonscan.com/address/0x91670a2A69554c61d814CD7f406D7793387E68Ef) | [pSushi AURUM/MATIC](https://polygonscan.com/address/0x6f8B4D9c4dC3592962C55207Ac945dbf5be54cC4) | [StrategyAurumMaticLp](https://polygonscan.com/address/0xa547FC54c5DE1BFE45bD2314BAC3c420426b07C5) |
 | 21 | polyJar 4g | [Sushi AURUM/USDC](https://polygonscan.com/address/0xaBEE7668a96C49D27886D1a8914a54a5F9805041) | [pSushi AURUM/USDC](https://polygonscan.com/address/0x5E5D7739ea3B6787587E129E4A508FfDAF180923) | [StrategyAurumUsdcLp](https://polygonscan.com/address/0x6d6D66606A7e1A6f25D978cF21b5395619120650) |
-| 22 | polyJar U3a | [UniV3 USDC/ETH](https://polygonscan.com/address/0x45dDa9cb7c25131DF268515131f647d726f50608) | [pUniV3 USDC/ETH](https://polygonscan.com/address/0x75415BF29f054Ab9047D26501Ad5ef93B5364eb0) | [StrategyUsdcEthUniV3Poly](https://polygonscan.com/address/0xcDF83A6878C50AD403dF0D68F229696a70972bEf) |
-| 29 | polyJar U3b | [UniV3 MATIC/ETH](https://polygonscan.com/address/0x167384319B41F7094e62f7506409Eb38079AbfF8) | [pUniV3 MATIC/ETH](https://polygonscan.com/address/0x925b6f866AeB88131d159Fc790b9FC8203621B3C) | [StrategyMaticEthUniV3Poly](https://polygonscan.com/address/0x1C170D888D71aC85732609Bd8470D3BBe8e632A7) |
-| 30 | polyJar U3c | [UniV3 MATIC/USDC](https://polygonscan.com/address/0x88f3C15523544835fF6c738DDb30995339AD57d6) | [pUniV3 MATIC/USDC](https://polygonscan.com/address/0x09e4E5fc62d8ae06fD44b3527235693f29fda852) | [StrategyMaticUsdcUniV3Poly](https://polygonscan.com/address/0xf7Cd34FB978277D220E22570A1F208294f98AF92) |
-| 25 | polyJar U3d | [UniV3 USDC/USDT](https://polygonscan.com/address/0x3F5228d0e7D75467366be7De2c31D0d098bA2C23) | [pUniV3 USDC/USDT](https://polygonscan.com/address/0x6ddCE484E929b2667C604f6867A4a7b3d344A917) | [StrategyUsdcUsdtUniV3Poly](https://polygonscan.com/address/0x5BEF03597A205F54DB1769424008aEC11e8b0dCB) |
-| 26 | polyJar U3e | [UniV3 WBTC/ETH](https://polygonscan.com/address/0x50eaEDB835021E4A108B7290636d62E9765cc6d7) | [pUniV3 WBTC/ETH](https://polygonscan.com/address/0xf4b1635f6B71D7859B4184EbDB5cf7321e828055) | [StrategyWbtcEthUniV3Poly](https://polygonscan.com/address/0x3Bae730889B69D049e375431F80c61EF7A198296) |
+| 22 | polyJar U3a | [UniV3 USDC/ETH](https://polygonscan.com/address/0x45dDa9cb7c25131DF268515131f647d726f50608) | [pUniV3 USDC/ETH](https://polygonscan.com/address/0x75415BF29f054Ab9047D26501Ad5ef93B5364eb0) | [StrategyUsdcEthUniV3Poly](https://polygonscan.com/address/0xD5236f71580E951010E814118075F2Dda90254db) |
+| 29 | polyJar U3b | [UniV3 MATIC/ETH](https://polygonscan.com/address/0x167384319B41F7094e62f7506409Eb38079AbfF8) | [pUniV3 MATIC/ETH](https://polygonscan.com/address/0x925b6f866AeB88131d159Fc790b9FC8203621B3C) | [StrategyMaticEthUniV3Poly](https://polygonscan.com/address/0x11b8c80F452e54ae3AB2E8ce9eF9603B0a0f56D9) |
+| 30 | polyJar U3c | [UniV3 MATIC/USDC](https://polygonscan.com/address/0x88f3C15523544835fF6c738DDb30995339AD57d6) | [pUniV3 MATIC/USDC](https://polygonscan.com/address/0x09e4E5fc62d8ae06fD44b3527235693f29fda852) | [StrategyMaticUsdcUniV3Poly](https://polygonscan.com/address/0x293731CA8Da0cf1d6dfFB5125943F05Fe0B5fF99) |
+| 25 | polyJar U3d | [UniV3 USDC/USDT](https://polygonscan.com/address/0x3F5228d0e7D75467366be7De2c31D0d098bA2C23) | [pUniV3 USDC/USDT](https://polygonscan.com/address/0x6ddCE484E929b2667C604f6867A4a7b3d344A917) | [StrategyUsdcUsdtUniV3Poly](https://polygonscan.com/address/0x846d0ED75c285E6D70A925e37581D0bFf94c7651) |
+| 26 | polyJar U3e | [UniV3 WBTC/ETH](https://polygonscan.com/address/0x50eaEDB835021E4A108B7290636d62E9765cc6d7) | [pUniV3 WBTC/ETH](https://polygonscan.com/address/0xf4b1635f6B71D7859B4184EbDB5cf7321e828055) | [StrategyWbtcEthUniV3Poly](https://polygonscan.com/address/0xbE27C2415497f8ae5E6103044f460991E32636F8) |
 | 32 | polyJar 8a | [STARGATE USDT](https://polygonscan.com/address/0x29e38769f23701A2e4A8Ef0492e19dA4604Be62c) | [pSTARGATE USDT](https://polygonscan.com/address/0x363e7CD14AEcf4f7d0e66Ae1DEff830343D760a7) | [StrategyPolyStargateUsdt](https://polygonscan.com/address/0x822152d23FDfeA5968A0f7180444A642E4a9c2A4) |
 | 31 | polyJar 8b | [STARGATE USDC](https://polygonscan.com/address/0x1205f31718499dBf1fCa446663B532Ef87481fe1) | [pSTARGATE USDC](https://polygonscan.com/address/0x49DA51435329847b369829873b04b537D2DAc302) | [StrategyPolyStargateUsdc](https://polygonscan.com/address/0xE5A53836fF2213526Bf48569ea0BDe69057280E6) |
 
@@ -339,20 +339,20 @@ treasury: [0xf02ceb58d549e4b403e8f85fbbaee4c5dfa47c01](https://arbiscan.io/addre
 
 | Index | Name | Want | PickleJar | Strategy |
 | --- | ---  | --- | --- | --- |
-| 1 | arbJar 1a | [Sushi MIM/ETH](https://arbiscan.io/address/0xb6DD51D5425861C808Fd60827Ab6CFBfFE604959) | [pSushi MIM/ETH](https://arbiscan.io/address/0x94feade0d3d832e4a05d459ebea9350c6cdd3bca) | [StrategySushiEthMimLp](https://arbiscan.io/address/0xd60514536195573Ce4a4A78CE5706e94e9Ee7917) |
-| 2 | arbJar 1b | [Sushi SPELL/ETH](https://arbiscan.io/address/0x8f93Eaae544e8f5EB077A1e09C1554067d9e2CA8) | [pSushi SPELL/ETH](https://arbiscan.io/address/0x9Cae10143d7316dF417413C43b79Fb5b44Fa85e2) | [StrategySushiSpellEthLp](https://arbiscan.io/address/0x0b4a6FDB7720a70DD360c1531660C20850546304) |
-| 3 | arbJar 1c | [Curve MIM/2CRV](https://arbiscan.io/address/0x30dF229cefa463e991e29D42DB0bae2e122B2AC7) | [pCurve MIM/2CRV](https://arbiscan.io/address/0x973b669ef8c1459f7cb685bf7d7bcd4150977504) | [StrategyAbraMim2Crv](https://arbiscan.io/address/0xc50A7aA0e3c5d9bD83bC5C7c21b2D38e4FEA9756) |
-| 8 | arbJar 1d | [Sushi GOHM/ETH](https://arbiscan.io/address/0xaa5bD49f2162ffdC15634c87A77AC67bD51C6a6D) | [pSushi GOHM/ETH](https://arbiscan.io/address/0x6779EB2838f44300CB6025d17DEB9F2E27CC9540) | [StrategySushiEthOhmLp](https://arbiscan.io/address/0x3610a0CC263aEf12d196F26267ae1A9377d4bf4C) |
-| 9 | arbJar 1e | [Sushi MAGIC/ETH](https://arbiscan.io/address/0xB7E50106A5bd3Cf21AF210A755F9C8740890A8c9) | [pSushi MAGIC/ETH](https://arbiscan.io/address/0xEcAf3149fdA215E46e792C65dc0aB7399C2eA78B) | [StrategySushiMagicEthLp](https://arbiscan.io/address/0x2D2f89146543aa1386ddab19FEf67EFd798994Bb) |
-| 5 | arbJar 3a | [Dodo HND/ETH](https://arbiscan.io/address/0x65E17c52128396443d4A9A61EaCf0970F05F8a20) | [pDodo HND/ETH](https://arbiscan.io/address/0x4d622C1f40A83C6FA2c0E441AE393e6dE61E7dD2) | [StrategyDodoHndEthLpV3](https://arbiscan.io/address/0x3145a934038a6Ae7DBD842D3955B701660e3b958) |
-| 6 | arbJar 3b | [Dodo DODO/USDC](https://arbiscan.io/address/0x6a58c68FF5C4e4D90EB6561449CC74A64F818dA5) | [pDodo DODO/USDC](https://arbiscan.io/address/0x0A9eD9B39613850819a5f80857395bFeA434c22A) | [StrategyDodoDodoUsdcLp](https://arbiscan.io/address/0x77105d62Aa61f9000bbC1C308e80626c65b47F6A) |
-| 4 | arbJar 2b | [Curve Tricrypto](https://arbiscan.io/address/0x8e0b8c8bb9db49a46697f3a5bb8a308e744821d2) | [pCurve Tricrypto](https://arbiscan.io/address/0x8e93d85afa9e6a092676912c3eb00f46c533a07c) | [StrategyCurveTricrypto](https://arbiscan.io/address/0x0B1e94EF8e2aE93997C6375935286BF7A25Cc3C2) |
-| 7 | arbJar 4a | [Balancer Tricrypto](https://arbiscan.io/address/0x64541216bafffeec8ea535bb71fbc927831d0595) | [pBalancer Tricrypto](https://arbiscan.io/address/0x0be790c83648c28ed285fee5e0bd79d1d57aae69) | [StrategyBalancerWbtcWethUsdcLp](https://arbiscan.io/address/0xd7EDE968447Ec50a210Ec88F9b43b6206c52481D) |
-| 10 | arbJar 4b | [Balancer PICKLE/ETH](https://arbiscan.io/address/0xc2F082d33b5B8eF3A7E3de30da54EFd3114512aC) | [pBalancer PICKLE/ETH](https://arbiscan.io/address/0x979Cb85f2fe4B6036c089c554c91fdfB7158bB28) | [StrategyBalancerPickleWethLp](https://arbiscan.io/address/0xc8E41bf27B401BB1585362cfB20106361FCeC67a) |
-| 11 | arbJar 4c | [Balancer BAL/ETH](https://arbiscan.io/address/0xcC65A812ce382aB909a11E434dbf75B34f1cc59D) | [pBalancer BAL/ETH](https://arbiscan.io/address/0x46573375eEDA7979e19fAEEdd7eF2843047D9E0d) | [StrategyBalancerBalWethLp](https://arbiscan.io/address/0x86D36e2c6c3d7EB7a740CF136D37a9a0EdB4fA8D) |
-| 12 | arbJar 5a | [Balancer VSTA/ETH](https://arbiscan.io/address/0xC61ff48f94D801c1ceFaCE0289085197B5ec44F0) | [pBalancer VSTA/ETH](https://arbiscan.io/address/0x0c02883103e64b62c4b52ABe7E743Cc50EB2D4C7) | [StrategyBalancerVstaEthLp](https://arbiscan.io/address/0x2752513320580D76AC2244e9b73fc981A5fFB3f9) |
-| 13 | arbJar 6a | [STARGATE USDC](https://arbiscan.io/address/0x892785f33CdeE22A30AEF750F285E18c18040c3e) | [pSTARGATE USDC](https://arbiscan.io/address/0x1c498531310C0f81561F4723314EF54049d3a9ef) | [StrategyAribtrumStargateUsdc](https://arbiscan.io/address/0x38f41F346577d1950A6d48b261c31f7C5eB6591D) |
-| 14 | arbJar 6b | [STARGATE USDT](https://arbiscan.io/address/0xb6cfcf89a7b22988bfc96632ac2a9d6dab60d641) | [pSTARGATE USDT](https://arbiscan.io/address/0xa23d9e5094ac9582f9f09aaa017b79deccab5404) | [StrategyAribtrumStargateUsdt](https://arbiscan.io/address/0x7945BD7a77c058E17ff1752Fe257D2187c3ab13B) |
+| 1 | arbJar 1a | [Sushi MIM/ETH](https://arbiscan.io/address/0xb6DD51D5425861C808Fd60827Ab6CFBfFE604959) | [pSushi MIM/ETH](https://arbiscan.io/address/0x94feade0d3d832e4a05d459ebea9350c6cdd3bca) | [Strategy-Sushi MIM/ETH](undefined) |
+| 2 | arbJar 1b | [Sushi SPELL/ETH](https://arbiscan.io/address/0x8f93Eaae544e8f5EB077A1e09C1554067d9e2CA8) | [pSushi SPELL/ETH](https://arbiscan.io/address/0x9Cae10143d7316dF417413C43b79Fb5b44Fa85e2) | [Strategy-Sushi SPELL/ETH](undefined) |
+| 3 | arbJar 1c | [Curve MIM/2CRV](https://arbiscan.io/address/0x30dF229cefa463e991e29D42DB0bae2e122B2AC7) | [pCurve MIM/2CRV](https://arbiscan.io/address/0x973b669ef8c1459f7cb685bf7d7bcd4150977504) | [Strategy-Curve MIM/2CRV](undefined) |
+| 8 | arbJar 1d | [Sushi GOHM/ETH](https://arbiscan.io/address/0xaa5bD49f2162ffdC15634c87A77AC67bD51C6a6D) | [pSushi GOHM/ETH](https://arbiscan.io/address/0x6779EB2838f44300CB6025d17DEB9F2E27CC9540) | [Strategy-Sushi GOHM/ETH](undefined) |
+| 9 | arbJar 1e | [Sushi MAGIC/ETH](https://arbiscan.io/address/0xB7E50106A5bd3Cf21AF210A755F9C8740890A8c9) | [pSushi MAGIC/ETH](https://arbiscan.io/address/0xEcAf3149fdA215E46e792C65dc0aB7399C2eA78B) | [Strategy-Sushi MAGIC/ETH](undefined) |
+| 5 | arbJar 3a | [Dodo HND/ETH](https://arbiscan.io/address/0x65E17c52128396443d4A9A61EaCf0970F05F8a20) | [pDodo HND/ETH](https://arbiscan.io/address/0x4d622C1f40A83C6FA2c0E441AE393e6dE61E7dD2) | [Strategy-Dodo HND/ETH](undefined) |
+| 6 | arbJar 3b | [Dodo DODO/USDC](https://arbiscan.io/address/0x6a58c68FF5C4e4D90EB6561449CC74A64F818dA5) | [pDodo DODO/USDC](https://arbiscan.io/address/0x0A9eD9B39613850819a5f80857395bFeA434c22A) | [Strategy-Dodo DODO/USDC](undefined) |
+| 4 | arbJar 2b | [Curve Tricrypto](https://arbiscan.io/address/0x8e0b8c8bb9db49a46697f3a5bb8a308e744821d2) | [pCurve Tricrypto](https://arbiscan.io/address/0x8e93d85afa9e6a092676912c3eb00f46c533a07c) | [Strategy-Curve Tricrypto](undefined) |
+| 7 | arbJar 4a | [Balancer Tricrypto](https://arbiscan.io/address/0x64541216bafffeec8ea535bb71fbc927831d0595) | [pBalancer Tricrypto](https://arbiscan.io/address/0x0be790c83648c28ed285fee5e0bd79d1d57aae69) | [Strategy-Balancer Tricrypto](undefined) |
+| 10 | arbJar 4b | [Balancer PICKLE/ETH](https://arbiscan.io/address/0xc2F082d33b5B8eF3A7E3de30da54EFd3114512aC) | [pBalancer PICKLE/ETH](https://arbiscan.io/address/0x979Cb85f2fe4B6036c089c554c91fdfB7158bB28) | [Strategy-Balancer PICKLE/ETH](undefined) |
+| 11 | arbJar 4c | [Balancer BAL/ETH](https://arbiscan.io/address/0xcC65A812ce382aB909a11E434dbf75B34f1cc59D) | [pBalancer BAL/ETH](https://arbiscan.io/address/0x46573375eEDA7979e19fAEEdd7eF2843047D9E0d) | [Strategy-Balancer BAL/ETH](undefined) |
+| 12 | arbJar 5a | [Balancer VSTA/ETH](https://arbiscan.io/address/0xC61ff48f94D801c1ceFaCE0289085197B5ec44F0) | [pBalancer VSTA/ETH](https://arbiscan.io/address/0x0c02883103e64b62c4b52ABe7E743Cc50EB2D4C7) | [Strategy-Balancer VSTA/ETH](undefined) |
+| 13 | arbJar 6a | [STARGATE USDC](https://arbiscan.io/address/0x892785f33CdeE22A30AEF750F285E18c18040c3e) | [pSTARGATE USDC](https://arbiscan.io/address/0x1c498531310C0f81561F4723314EF54049d3a9ef) | [Strategy-STARGATE USDC](undefined) |
+| 14 | arbJar 6b | [STARGATE USDT](https://arbiscan.io/address/0xb6cfcf89a7b22988bfc96632ac2a9d6dab60d641) | [pSTARGATE USDT](https://arbiscan.io/address/0xa23d9e5094ac9582f9f09aaa017b79deccab5404) | [Strategy-STARGATE USDT](undefined) |
 | 16 | arbJar Ua | [UniV3 ETH/USDC](https://arbiscan.io/address/0xC31E54c7a869B9FcBEcc14363CF510d1c41fa443) | [pUniV3 ETH/USDC](https://arbiscan.io/address/0x1212ddd66c8eb227183fce794c4c13d1c5a87b88) | [StrategyUsdcEthUniV3Arbi](https://arbiscan.io/address/0x41A610baad8BfdB620Badff488A034B06B13790D) |
 | 17 | arbJar Ub | [UniV3 GMX/ETH](https://arbiscan.io/address/0x1aEEdD3727A6431b8F070C0aFaA81Cc74f273882) | [pUniV3 GMX/ETH](https://arbiscan.io/address/0xe5BD4954Bd6749a8E939043eEDCe4C62b41CC6D0) | [StrategyGmxEthUniV3Arbi](https://arbiscan.io/address/0x9C485ae43280dD0375C8c2290F1f77aee17CF512) |
 
@@ -887,6 +887,30 @@ treasury: [0xaCfE4511CE883C14c4eA40563F176C3C09b4c47C](https://blockscout.com/xd
 | - | gnosisJar 2e | [Swapr DXD/GNO](https://blockscout.com/xdai/mainnet/address/0x558d777B24366f011E35A9f59114D1b45110d67B) | [pSwapr DXD/GNO](https://blockscout.com/xdai/mainnet/address/0x13d59A941b8753Aea44c98b2f46fd92Db2aEc938) | [StrategySwaprDxdGnoLp](https://blockscout.com/xdai/mainnet/address/0x86D36e2c6c3d7EB7a740CF136D37a9a0EdB4fA8D) |
 | - | gnosisJar 2f | [Swapr XDAI/WETH](https://blockscout.com/xdai/mainnet/address/0x1865d5445010E0baf8Be2eB410d3Eae4A68683c2) | [pSwapr XDAI/WETH](https://blockscout.com/xdai/mainnet/address/0x9aae1e32d2b8A8F872c8a0593597D31bb27eAe48) | [StrategySwaprWethXdaiLp](https://blockscout.com/xdai/mainnet/address/0xE5A53836fF2213526Bf48569ea0BDe69057280E6) |
 | - | gnosisJar 2g | [Swapr COW/GNO](https://blockscout.com/xdai/mainnet/address/0xDBF14bce36F661B29F6c8318a1D8944650c73F38) | [pSwapr COW/GNO](https://blockscout.com/xdai/mainnet/address/0x0ba5150815bC9F97BB33FD176Fd3deeB31Db563a) | [StrategySwaprCowGnoLp](https://blockscout.com/xdai/mainnet/address/0x979Cb85f2fe4B6036c089c554c91fdfB7158bB28) |
+
+---
+
+
+
+## Pickle Jars Contracts (Kava)
+
+pickle: [0x0000000000000000000000000000000000000000](https://explorer.kava.io//address/0x0000000000000000000000000000000000000000)
+
+masterChef: [0x0000000000000000000000000000000000000000](https://explorer.kava.io//address/0x0000000000000000000000000000000000000000)
+
+controller: [0xBe6300C2fFC26F8C6Cdd3a468867CaF8bb01CFCe](https://explorer.kava.io//address/0xBe6300C2fFC26F8C6Cdd3a468867CaF8bb01CFCe)
+
+minichef: [0x0000000000000000000000000000000000000000](https://explorer.kava.io//address/0x0000000000000000000000000000000000000000)
+
+treasury: [0xaCfE4511CE883C14c4eA40563F176C3C09b4c47C](https://explorer.kava.io//address/0xaCfE4511CE883C14c4eA40563F176C3C09b4c47C)
+
+---
+
+## Pickle Jars (pJars - Kava)
+
+| Index | Name | Want | PickleJar | Strategy |
+| --- | ---  | --- | --- | --- |
+| - | kavaJar 1a | [Curve 3pool](https://explorer.kava.io//address/0x7A0e3b70b1dB0D6CA63Cac240895b2D21444A7b9) | [pCurve 3pool](https://explorer.kava.io//address/0xFa3Ad976c0bdeAdDe81482F5Fa8191aE1e7d84C0) | [StrategyKavaCurve3Crv](https://explorer.kava.io//address/0x6b30D99f4EF6e0Ac43560BB16F4eE503da05A1C1) |
 
 ---
 
