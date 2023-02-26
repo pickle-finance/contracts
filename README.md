@@ -99,6 +99,7 @@ SmartWalletChecker: [0x2ff4f44f86f49d45a1c3626bab9d222e84e9e78f](https://ethersc
 | pUWU FRAX | [0xCE3600D6d5C97b369ba37647A41E14A03aeF33f8](https://etherscan.io/address/0xCE3600D6d5C97b369ba37647A41E14A03aeF33f8) |
 | pUWU WETH | [0x84a812d6F65eC7BAd642AE3Dc39Abc3F7c1a3d8d](https://etherscan.io/address/0x84a812d6F65eC7BAd642AE3Dc39Abc3F7c1a3d8d) |
 | pUNIv2 FRAX/TEMPLE | [0xb7a632f93e3cbcc9444114bcd162b704e07355a9](https://etherscan.io/address/0xb7a632f93e3cbcc9444114bcd162b704e07355a9) |
+| pCurve GEAR/ETH | [0xf1766329212f04358292a9327364c8909481fE75](https://etherscan.io/address/0xf1766329212f04358292a9327364c8909481fE75) |
 
 
 ---
@@ -197,6 +198,7 @@ treasury: [0x066419eaef5de53cc5da0d8702b990c5bc7d1ab3](https://etherscan.io/addr
 | pJar u1 | [UwU FRAX](https://etherscan.io/address/0x853d955aCEf822Db058eb8505911ED77F175b99e) | [pUwU FRAX](https://etherscan.io/address/0x6a141468Aa1185e7616B8B35F4AE94A70d77a568) | [StrategyUwuFrax](https://etherscan.io/address/0x466c28f9fBd148c2E010307Ec9DA7EeDcB52FF1e) |
 | pJar u2 | [UwU WETH](https://etherscan.io/address/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2) | [pUwU WETH](https://etherscan.io/address/0xcd7F5f35E023fE9b2bDBa4A5dc6d5F23fD91814f) | [StrategyUwuWeth](https://etherscan.io/address/0x19c5990E1A04ab4567B29d5822F55CDA44d53D4C) |
 | pJar 2a | [UniV2 FRAX/TEMPLE](https://etherscan.io/address/0x6021444f1706f15465bEe85463BCc7d7cC17Fc03) | [pUniV2 FRAX/TEMPLE](https://etherscan.io/address/0x4eB6e19c043513db1451eEe57F0d58ebea2C6150) | [Strategy-UniV2 FRAX/TEMPLE](undefined) |
+| pJar 0l | [Curve GEAR/ETH](https://etherscan.io/address/0x5Be6C45e2d074fAa20700C49aDA3E88a1cc0025d) | [pCurve GEAR/ETH](https://etherscan.io/address/0x4a691833441730475b6a1c91Bde51BcE9644Bd6f) | [StrategyCurveGearEth](https://etherscan.io/address/0xc349f6700F7A3566178eD78d0c49B08b63E84fcf) |
 
 ---
 
@@ -216,8 +218,8 @@ Harvester Bot: [0x0f571d2625b503bb7c1d2b5655b483a2fa696fef](https://etherscan.io
 
 | Chain | Token | AllocPoint | % |
 | --- | --- | --- | --- |
-| Ethereum |  [mDILL](https://etherscan.io/address/0x45F7fa97BD0e0C212A844BAea35876C7560F465B) | 2996 | 30.0% |
-| Polygon+OKEx+Arbitrum+Moonriver+Cronos+Aurora+Metis+Moonbeam+Optimism+Fantom+Gnosis+Kava |  [MASTERCHEFP2](https://etherscan.io/address/0xD2EFfFDd1b55aaC34F6dd3707cBb7171EabeE51A) | 6998 | 70.0% |
+| Ethereum |  [mDILL](https://etherscan.io/address/0x45F7fa97BD0e0C212A844BAea35876C7560F465B) | 3035 | 30.4% |
+| Polygon+OKEx+Arbitrum+Moonriver+Cronos+Aurora+Metis+Moonbeam+Optimism+Fantom+Gnosis+Kava |  [MASTERCHEFP2](https://etherscan.io/address/0xD2EFfFDd1b55aaC34F6dd3707cBb7171EabeE51A) | 6960 | 69.6% |
 ---
 
 
@@ -353,7 +355,7 @@ treasury: [0xf02ceb58d549e4b403e8f85fbbaee4c5dfa47c01](https://arbiscan.io/addre
 | 12 | arbJar 5a | [Balancer VSTA/ETH](https://arbiscan.io/address/0xC61ff48f94D801c1ceFaCE0289085197B5ec44F0) | [pBalancer VSTA/ETH](https://arbiscan.io/address/0x0c02883103e64b62c4b52ABe7E743Cc50EB2D4C7) | [StrategyBalancerVstaEthLp](https://arbiscan.io/address/0x2752513320580D76AC2244e9b73fc981A5fFB3f9) |
 | 13 | arbJar 6a | [STARGATE USDC](https://arbiscan.io/address/0x892785f33CdeE22A30AEF750F285E18c18040c3e) | [pSTARGATE USDC](https://arbiscan.io/address/0x1c498531310C0f81561F4723314EF54049d3a9ef) | [StrategyAribtrumStargateUsdc](https://arbiscan.io/address/0x38f41F346577d1950A6d48b261c31f7C5eB6591D) |
 | 14 | arbJar 6b | [STARGATE USDT](https://arbiscan.io/address/0xb6cfcf89a7b22988bfc96632ac2a9d6dab60d641) | [pSTARGATE USDT](https://arbiscan.io/address/0xa23d9e5094ac9582f9f09aaa017b79deccab5404) | [StrategyAribtrumStargateUsdt](https://arbiscan.io/address/0x7945BD7a77c058E17ff1752Fe257D2187c3ab13B) |
-| 16 | arbJar Ua | [UniV3 ETH/USDC](https://arbiscan.io/address/0xC31E54c7a869B9FcBEcc14363CF510d1c41fa443) | [pUniV3 ETH/USDC](https://arbiscan.io/address/0x1212ddd66c8eb227183fce794c4c13d1c5a87b88) | [StrategyUsdcEthUniV3Arbi](https://arbiscan.io/address/0x41A610baad8BfdB620Badff488A034B06B13790D) |
+| 16 | arbJar Ua | [UniV3 ETH/USDC](https://arbiscan.io/address/0xC31E54c7a869B9FcBEcc14363CF510d1c41fa443) | [pUniV3 ETH/USDC](https://arbiscan.io/address/0x1212ddd66c8eb227183fce794c4c13d1c5a87b88) | [StrategyUsdcEthUniV3Arbi](https://arbiscan.io/address/0x01492d60b9e5463059FCda81a46B885Ab6DF0449) |
 | 17 | arbJar Ub | [UniV3 GMX/ETH](https://arbiscan.io/address/0x1aEEdD3727A6431b8F070C0aFaA81Cc74f273882) | [pUniV3 GMX/ETH](https://arbiscan.io/address/0xe5BD4954Bd6749a8E939043eEDCe4C62b41CC6D0) | [StrategyGmxEthUniV3Arbi](https://arbiscan.io/address/0x9C485ae43280dD0375C8c2290F1f77aee17CF512) |
 
 ---
